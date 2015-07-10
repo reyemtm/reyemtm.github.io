@@ -206,7 +206,7 @@ hr.small {
 .navbar-inverse .navbar-brand:focus,
 .navbar-inverse .navbar-brand:hover{
   color: #fff;
-  font-weight:600;
+  font-weight:500;
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle:focus {
