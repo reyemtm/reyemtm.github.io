@@ -19,15 +19,9 @@
         <li>
           <a href="{{ site.baseurl }}/map-gallery">GALLERY</a>
         </li>
-        <li>
-          <em>TOPICS</em>
-        </li>
-        <li>
-          <a href="{{ site.baseurl }}/tags">TAGS</a>
-        </li>
                 {% for page in site.pages %}{% if page.layout == "tag" %}
         <li>
-            <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+          <em><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></em>
         </li>
         {% endif %}{% endfor %}
     </ul>
