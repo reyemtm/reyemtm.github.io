@@ -25,7 +25,7 @@
         <li>
           <a href="{{ site.baseurl }}/tags">TAGS</a>
         </li>
-                {% for page in site.pages %}{% if page.layout == tag %}
+                {% for page in site.pages %}{% if page.layout == "tag" %}
         <li>
             <a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
         </li>
