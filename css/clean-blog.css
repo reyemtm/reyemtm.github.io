@@ -195,7 +195,7 @@ hr.small {
   border-color: rgba(255, 255, 255, 0.4);
 }
 .navbar-inverse .navbar-nav>li>a,
-.navbar-inverse .navbar-nav li,
+.navbar-inverse .navbar-nav>li>em,
 .navbar-inverse .navbar-brand a,
 .navbar-inverse .navbar-brand {
   color: #bbb;
