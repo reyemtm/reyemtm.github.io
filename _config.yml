@@ -1,0 +1,21 @@
+# Site settings
+title: getBounds
+header-img: img/header-3.png
+email: malcolmtmeyer@gmail.com
+description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
+baseurl: "http://reyemtm.github.io"
+testurl: "http://reyemtm.github.io"
+url: "http://reyemtm.github.io"
+twitter_username: rustyfolk
+github_username:  reyemtm
+google+_usename: malcolmmeyer
+facebook_username:
+linkedin_username:	malcolm-meyer/44/2a2/577
+author: Malcolm Meyer
+
+# Build settings
+markdown:	kramdown
+highlighter: pygments
+permalink: /blog/:title.html
+paginate: 10
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

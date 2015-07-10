@@ -1,0 +1,22 @@
+---
+layout: page
+title: "Blog"
+description: ""
+permalink: /blog/
+---
+{% for post in site.posts limit:200 %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">            {{ post.title }}
+        </h2>
+        {% if post.description %}
+        <h3 class="post-subtitle">
+            {{ post.description }}
+        </h3>
+        {% endif %}
+        <!--p>{{ post.content | truncatewords:25}}</p-->
+    </a>
+    <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
+</div>
+<hr>
+{% endfor %}

@@ -1,0 +1,6 @@
+/*Make control scroll on small phones*/
+@media screen and (max-width: 320px) {
+	.leaflet-control-layers-list {
+		overflow: scroll;
+		max-height: 400px;}
+}

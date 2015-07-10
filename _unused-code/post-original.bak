@@ -1,0 +1,77 @@
+---
+layout: default
+---
+
+<!-- Post Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <h1>{{ page.title }}</h1>
+                    {% if page.subtitle %}
+                    <h2 class="subheading">{{ page.subtitle }}</h2>
+                    {% endif %}
+                    <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>
+                    <br>
+                    <a class="scroll-left" data-speed="500" href="#content"><span class="hidden">Scroll Down</span><i class="fa fa-angle-down fa-2x" style="color:#FFF"></i></a>
+                </div>
+            </div>
+        </div>
+	</div>
+</header>
+
+<!-- Post Content -->
+<article id="content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+
+				{{ content }}
+				<div class="share-page" style="text-align:right;margin-top:-20px;">
+				<div class="g-plusone" data-size="small(none)" data-width="150" style="display:inline;"></div>
+				<!--<div class="share" style="font-style:italic;">Share this article:</div>-->				
+				<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+				                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+								</span>
+				</a>
+				<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+				                <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+								</span>				
+				</a>
+				</div>
+                <br>
+                <script src="https://apis.google.com/js/platform.js" async defer></script>
+                <g:plusone></g:plusone>
+                <hr>
+                <script src="https://apis.google.com/js/plusone.js"></script>
+                <div style="margin-top:30px">
+                  <div class="g-comments"
+                      data-href="{{site.url}}{{page.url}}"
+                      data-width="642"
+                      data-first_party_property="BLOGGER"
+                      data-view_type="FILTERED_POSTMOD">
+                  </div>
+                 </div>
+                <ul class="pager">
+                    {% if page.previous.url %}
+                    <li class="previous">
+                        <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+                    </li>
+                    {% endif %}
+                    {% if page.next.url %}
+                    <li class="next">
+                        <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+                    </li>
+                    {% endif %}
+                </ul>
+				
+
+            </div>
+        </div>
+    </div>
+</article>

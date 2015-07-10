@@ -1,0 +1,22 @@
+---
+layout: default
+---
+
+<!-- Page Header -->
+<header class="intro-header" style="background-image: url('{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
+    <div class="container">
+		<div class="site-heading">
+			<h1 style="font-family: 'montserrat', serif;">{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
+			<span class="subheading">{{ page.description }}</span>
+			<br>
+		</div>
+    </div>
+    <a class="scroll" data-speed="800" href="#content"><span class="hidden">Scroll Down</span><i class="fa fa-angle-down fa-2x" style="color:#FFF"></i></a>
+</header>
+
+<!-- Main Content -->
+<div class="container">
+	<div id="content">
+		{{ content }}
+	</div>
+</div>

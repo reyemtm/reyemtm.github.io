@@ -1,0 +1,41 @@
+---
+layout: default
+---
+<!-- Post Header -->
+{% include post-header.html %}
+<!-- Post Content -->
+<article id="content">
+    <div class="container">
+	{{ content }}
+	<div class="share-page">
+	<!--<div class="g-plusone" data-size="small(none)" data-width="150" style="display:inline;"></div>-->
+	<!--<div class="share" style="font-style:italic;">Share this article:</div>-->
+  <script src="https://apis.google.com/js/platform.js" async defer></script>
+  <g:plusone></g:plusone>
+  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+	                <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+					</span>
+	</a>
+	<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+        <span class="fa-stack fa-lg">
+        <i class="fa fa-circle fa-stack-2x"></i>
+        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+					</span>
+	</a>
+	</div>
+        <br>
+        <hr>
+        <!--<script src="https://apis.google.com/js/plusone.js"></script>
+        <div style="margin-top:30px">
+          <div class="g-comments"
+              data-href="{{site.url}}{{page.url}}"
+              data-width="642"
+              data-first_party_property="BLOGGER"
+              data-view_type="FILTERED_POSTMOD">
+          </div>
+        </div>-->
+		{% include pager.html %}
+    </div>
+</article>

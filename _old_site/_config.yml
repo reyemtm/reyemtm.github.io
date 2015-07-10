@@ -1,0 +1,16 @@
+# Site settings
+title: Clean Blog Test
+header-img: img/home-bg.jpg
+email: malcolmtmeyer@gmail.com
+description: "This is a description!"
+baseurl: "http://reyemtm.github.io"
+url: "http://reyemtm.github.io"
+twitter_username: 
+github_username:  
+facebook_username:  
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:categories/:title
+paginate: 5
+exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]

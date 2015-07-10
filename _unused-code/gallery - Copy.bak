@@ -1,0 +1,143 @@
+---
+layout: gallery-layout
+title: "Gallery"
+description: "Print & Interactive Map Examples"
+permalink: /gallery/
+---
+<div class="demo-wrapper">
+  <!--// Gallery Markup: A container that the plugin is called upon, and two lists for the images (use images with same aspect ratio) //-->
+  <div id="gallery-container">
+    <ul class="items--small">
+      <li class="item"><a href="#"><img class="img-small-image-trick" src="../images/basemap.jpg" alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small-image-trick"src="../images/hotspot.jpg" style="" alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/fieldcheck.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-4.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-5.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-6.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-7.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-8.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-9.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-10.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/hotspot.jpg"  alt="" /></a></li>
+      <li class="item"><a href="#"><img class="img-small"src="../images/big-12.jpg"  alt="" /></a></li>
+    </ul>
+    <ul class="items--big">
+      <li class="item--big">
+
+          <figure>
+            <img src="../images/basemap.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/hotspot.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-3.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-4.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-5.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-6.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-7.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-8.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-9.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-10.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-11.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+      <li class="item--big">
+          <figure>
+            <img src="../images/big-12.jpg" alt="" />
+            <figcaption class="img-caption">
+              Caption
+            </figcaption>
+          </figure>
+      </li>
+    </ul>
+    <div class="controls">
+      <span class="control icon-arrow-left" data-direction="previous"></span> 
+      <span class="control icon-arrow-right" data-direction="next"></span> 
+      <span class="grid icon-grid"></span>
+      <span class="fs-toggle icon-fullscreen"></span>
+    </div>
+  </div>
+  <p class="tips" style="color:darkgray;"> Use the shift key to switch back from slideshow to Grid view.</p>
+  <a href="https://github.com/SaraSoueidan/s-gallery-responsive-jquery-plugin" target="_blank" class="button" color="#f2f2f2">Gallery Plugin</a> 
+</div><!--end demo-wrapper-->
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/plugins.js"></script>
+  <script src="/js/scripts.js"></script>
+  <script>
+    $(document).ready(function(){
+     $('#gallery-container').sGallery({
+        fullScreenEnabled: true
+      });
+    });
+  </script>
