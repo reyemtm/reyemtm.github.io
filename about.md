@@ -1,12 +1,11 @@
 ---
 layout: page
 title: "About"
-description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
 permalink: /about/
 ---
-## About
-
 <pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
+
+## About
 
 My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other spatially-related topics. I am also a [musician](http://malcolmmeyer.tumblr.com) and avid gardener.
 
