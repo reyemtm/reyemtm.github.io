@@ -16,6 +16,6 @@ author: Malcolm Meyer
 # Build settings
 markdown:	kramdown
 highlighter: pygments
-permalink: /blog/:title.html
+permalink: /:title.html
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
