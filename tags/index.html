@@ -4,7 +4,7 @@ title: "Tag Index"
 permalink: /tags/
 ---
 {% for page in site.pages %}{% if page.layout == "tag" %}
-<a style="font-style:italic;"href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+<a style="font-style:italic;"href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>{{ page.tag }}
 {% for post in site.tags[{{ page.tag }}] %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
