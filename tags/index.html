@@ -5,10 +5,10 @@ permalink: /tags/
 ---
 {% for tag in site.tags %}
 <h2>{{ tag }}</h2>
-{% for post in site.tags[tag] %}
+{% for page in site.tags[tag] %}
 <div class="post-preview">
-<a href="{{ post.url }}"></a>
-<h2 class="post-title">{{ post.title }}</h2>
+<a href="{{ page.url }}"></a>
+<h2 class="post-title">{{ page.title }}</h2>
         <ul><li>{{ tag | last | size }}</li></ul>
 {% endfor %}
 {% endfor %}
