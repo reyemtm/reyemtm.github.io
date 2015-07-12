@@ -7,9 +7,7 @@ permalink: /tags/
 <h2>{{ tag }}</h2>
 {% for page in site.tags[tag] %}
 <div class="post-preview">
-<a href="{{ page.url }}"></a>
-<h2 class="post-title">{{ page.title }}</h2>
+<a href="{{ page.url | prepend: site.baseurl }}"><h2 class="post-title">{{ page.title }}</h2></a>
         <ul><li>{{ tag | last | size }}</li></ul>
 {% endfor %}
 {% endfor %}
-</div>
