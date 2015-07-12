@@ -20,3 +20,7 @@ permalink: /:title
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 include: ["_tags"]
+
+#plugins
+gems:
+ - jekyll-sitemap
