@@ -3,8 +3,9 @@ layout: page
 title: "Tag Index"
 permalink: /tags/
 ---
-
-{% for post in site.tags %}
+{% for page in site.pages %}{% if page.layout == "tag" %}
+<a style="font-style:italic;"href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+{% for post in site.tags[{{ page.tag }}] %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
@@ -19,4 +20,6 @@ permalink: /tags/
     <p class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</p>
 </div>
 <hr>
+{% endfor %}
+{% endif %}
 {% endfor %}
