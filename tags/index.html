@@ -11,7 +11,7 @@ permalink: /tags/
 {% assign sortedtags = tags | split:' ' | sort %}
 
 {% for tag in sortedtags %}
-<div class="post-preview" style="text-align:center">
+<div style="text-align:center">
   <h2 id="{{ tag }}" class="post-title">{{ tag | upcase }}</h2>
   <ul>
   {% for post in site.tags[tag] %}
