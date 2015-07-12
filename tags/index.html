@@ -15,8 +15,7 @@ permalink: /tags/
   <h2 id="{{ tag }}" class="post-title">{{ tag | upcase }}</h2>
   <ul>
   {% for post in site.tags[tag] %}
-    <ul><li><a href="{{ post.url }}">{{ post.title }}</a></li></ul>
+    <p><a href="{{ post.url }}">{{ post.title }}</a></p>
   {% endfor %}
-  </ul>
 </div>
 {% endfor %}
