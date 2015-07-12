@@ -11,8 +11,11 @@ permalink: /tags/
         {% endif %}{% endfor %}
 </ul>
 {% for tag in site.tags %}
-<ul><li>{{ tag | last | size }}</li></ul>
-{% for page in site.tags[tag] %}{% if page.layout == 'tag' %}
+<ul>
+<li>{{ tag }}<br>
+{{ tag | last | size }}</li>
+</ul>
+{% for page in site.tags[tag] %}{% if page.layout == "tag" %}
 <div class="post-preview">
 <a href="{{ page.url | prepend: site.baseurl }}"><h2 class="post-title">{{ page.title }}</h2></a>
 {% endif %}
