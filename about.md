@@ -5,7 +5,7 @@ permalink: /about/
 ---
 ## About
 
-My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other spatially-related topics. I am also a [musician](http://malcolmmeyer.tumblr.com) and avid gardener. The name of the site comes from a commonly code in web mapping. Here is a definition adapted from Leaflet:
+My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other spatially-related topics. I am also a [musician](http://malcolmmeyer.tumblr.com) and avid gardener. The name of the site comes from a commonly used function in web mapping. Here is a definition adapted from Leaflet:
 
 <pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
 
@@ -13,7 +13,8 @@ My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other
 
 Here are some examples of online and print maps I have created. Some are simply proof-of-concept.
 
-- [Virtual Resume](http://www.arcgis.com/apps/MapJournal/index.html?appid=97e1a75ea03043c392c1e6b09b1997d0&webmap=f21d3db8cc7e48c885e795bf679dd363)
-- [Print Map Gallery](http://getbounds.com/map-gallery "Map Gallery")
-- [GeoJson on GitHub](https://github.com/reyemtm/geojson/blob/gh-pages/parks.geojson "GeoJson Sample")
 - [ArcGIS Online Hosted Map](http://www.arcgis.com/apps/Viewer/index.html?appid=a7b9fe89135b4f69a51803704c8302b2)
+- [GeoJson in a Leaflet Map](http://getbounds.com/geojson)
+- [GeoJson on GitHub](https://github.com/reyemtm/geojson/blob/gh-pages/parks.geojson "GeoJson Sample")
+- [Print Map Gallery](http://getbounds.com/map-gallery "Map Gallery")
+- [Virtual Resume](http://www.arcgis.com/apps/MapJournal/index.html?appid=97e1a75ea03043c392c1e6b09b1997d0&webmap=f21d3db8cc7e48c885e795bf679dd363)
