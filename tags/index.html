@@ -12,7 +12,7 @@ permalink: /tags/
 </ul>
 {% for tag in site.tags %}
 <ul>
-<li>{{ tag }}<br>
+<li>{{ tag[0] }}<br>
 {{ tag | last | size }}</li>
 </ul>
 {% for page in site.tags[tag] %}{% if page.layout == "tag" %}
