@@ -12,7 +12,9 @@ permalink: /tags/
             {{ page.subtitle }}
         </h3>
         {% endif %}
+{% for tag in site.tags %}
         <li>{{ tag | last | size }}</li>
+{% endfor %}
 {% endif %}
 {% endfor %}
 </div>
