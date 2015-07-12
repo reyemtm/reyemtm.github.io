@@ -3,11 +3,18 @@ layout: page
 title: "Tag Index"
 permalink: /tags/
 ---
+<ul>
+{% for page in site.pages %}{% if page.layout == "tag" %}
+        <li>
+          <a style="font-style:italic;"href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a><br>
+        </li>
+        {% endif %}{% endfor %}
+</ul>
 {% for tag in site.tags %}
-<h2>{{ tag }}</h2>
-{% for page in site.tags[tag] %}
+<ul><li>{{ tag | last | size }}</li></ul>
+{% for page in site.tags[tag] %}{% if page.layout == 'tag' %}
 <div class="post-preview">
 <a href="{{ page.url | prepend: site.baseurl }}"><h2 class="post-title">{{ page.title }}</h2></a>
-        <ul><li>{{ tag | last | size }}</li></ul>
+{% endif %}
 {% endfor %}
 {% endfor %}
