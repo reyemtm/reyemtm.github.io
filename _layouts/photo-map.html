@@ -91,11 +91,14 @@
   <script src="{{ site.baseurl }}/map-plugins/Control.Loading.js"></script>
   <!--stamen tiles-->
   <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
-  <!--photo map-->
+  <!--photo map>
   <link rel="stylesheet" href="http://getbounds.com/map-plugins/Leaflet.Photo.css" />	
 	<link rel="stylesheet" href="http://getbounds.com/map-plugins/thematic-mapping-map.css" />
   <script src="http://getbounds.com/map-plugins/reqwest.js"></script>
-	<script src="http://getbounds.com/map-plugins/Leaflet.Photo.js"></script>
+	<script src="http://getbounds.com/map-plugins/Leaflet.Photo.js"></script>-->
+{% if page.plugins %}
+{% include {{ page.plugins }} %}
+{% endif %}
   <style>
     #map {height: 800px; width:100%;border:1px solid #ddd;}
   </style>
