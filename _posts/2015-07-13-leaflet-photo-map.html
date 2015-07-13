@@ -2,18 +2,14 @@
 layout: map
 title: "Leaflet Photo Map"
 ---
-	<link rel="stylesheet" href="{{ site.baeurl }}/map-plugins/Leaflet.Photo.css" />	
-	<link rel="stylesheet" href="{{ site.baeurl }}/map-plugins/thematic-mapping-map.css" />
-    <script src="{{ site.baseurl }}/map-plugins/reqwest.min.js"></script>
-	<script src="{{ site.baeurl }}/map-plugins/Leaflet.Photo.js"></script>	
+	<link itemprop="stylesheet" href="{{ site.baseurl }}/map-plugins/Leaflet.Photo.css" />	
+	<link itemprop="stylesheet" href="{{ site.baseurl }}/map-plugins/thematic-mapping-map.css" />
+    <script src="{{ site.baseurl }}/map-plugins/reqwest.js"></script>
+	<script src="{{ site.baseurl }}/map-plugins/Leaflet.Photo.js"></script>	
 	<script>
 
 	var map = L.map('map', {
-		maxZoom: 14
-	});
-
-	L.tileLayer('http://opencache.statkart.no/gatekeeper/gk/gk.open_gmaps?layers=norges_grunnkart&zoom={z}&x={x}&y={y}', {
-		attribution: '&copy; <a href="http://kartverket.no/">Kartverket</a>'
+		maxZoom: 20
 	});
 
     var toner = new L.StamenTileLayer("toner");
@@ -34,8 +30,7 @@ title: "Leaflet Photo Map"
 	});
 
 	reqwest({
-	url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6170973282606682673?alt=json-in-script',		
-/*url: 'https://picasaweb.google.com/data/feed/api/user/118196887774002693676/albumid/6052628080819524545?alt=json-in-script',*/
+	url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6170973282606682673?alt=json-in-script',
 		type: 'jsonp',
 		success: function (data) {
 			var photos = [];
