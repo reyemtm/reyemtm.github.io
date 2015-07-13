@@ -4,10 +4,10 @@
 {% include head.html %}
   <!--Font Awesome CDN and Bootstrap CSS -->
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <!--Mapping via MapboxJS updated 03-13-2015 -->
-  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
   <!--Mapping via LeafletCSS updated 03-13-2015 -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+  <!--Mapping via Leaflet updated 03-13-2015 -->
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
   <!--OVRDC Custom Style-->
   <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/ovrdc-style.css" />
   <!--Home Button ie Default Extent-->
@@ -20,11 +20,6 @@
   <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/easyPrint.css" />
   <script src="{{ site.baseurl }}/map-plugins/leaflet.easyPrint.js"></script>
   <script src="{{ site.baseurl }}/map-plugins/jQuery.print.js"></script>
-  <!--<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.css' rel='stylesheet' />
-  <!--[if lt IE 9]>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
-  <![endif]-->
   <!--locate control from source -->
   <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.css" />
   <script src="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.js"></script>
@@ -33,9 +28,6 @@
   <script src="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.js"></script>
   <!--Leaflet Hash via Mapbox CDN-->
   <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
-  <!-- Leafle Social -->
-  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.social.css" />
-  <script src="{{ site.baseurl }}/map-plugins/leaflet.social.js"></script>
   <!--Google Custom Map -->
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=placeskey=AIzaSyCpIjH_d3jfNPSwPuyrzy2G9H_Ylb1bEd8"></script>
   <script src="{{ site.baseurl }}/map-plugins/google.js"></script>
@@ -46,18 +38,11 @@
   <!-- Esri Leaflet Geocoder -->
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/map-plugins/esri-geo/esri-leaflet-geocoder.css" />
   <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
-  <!--link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css"-->
-  <!-- Full Screen via Mapbox
-  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script>
-  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />-->
   <!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
   <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
   <!-- leaflet measure -->
   <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.measure.css" />
   <script src="{{ site.baseurl }}/map-plugins/leaflet.measure.js"></script>
-  <!-- leaflet sidebar v 2
-  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-sidebar.css" />
-  <script src="{{ site.baseurl }}/map-plugins/leaflet-sidebar.js"></script>
   <!-- leaflet ajax geojson loader -->
   <script src="{{ site.baseurl }}/map-plugins/leaflet.ajax.min.js"></script>
   <!-- leaflet panel layers right side panel -->
@@ -91,22 +76,15 @@
   <script src="{{ site.baseurl }}/map-plugins/Control.Loading.js"></script>
   <!--stamen tiles-->
   <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
-  <!--photo map>
-  <link rel="stylesheet" href="http://getbounds.com/map-plugins/Leaflet.Photo.css" />	
-	<link rel="stylesheet" href="http://getbounds.com/map-plugins/thematic-mapping-map.css" />
-  <script src="http://getbounds.com/map-plugins/reqwest.js"></script>
-	<script src="http://getbounds.com/map-plugins/Leaflet.Photo.js"></script>-->
 {% if page.plugins %}
 {% include {{ page.plugins }} %}
 {% endif %}
-  <style>
-    #map {height: 800px; width:100%;border:1px solid #ddd;}
-  </style>
+<style>
+#map {height: 800px; width:100%;border:1px solid #ddd;}
+</style>
 </head>
 <body>
-
-    {% include nav.html %}
-
+{% include nav.html %}
 <!-- Post Header -->
 {% include post-header.html %}
 <!-- Post Content -->
@@ -145,10 +123,6 @@
         {% include pager.html %}
     </div>
 </article>
-
-
-    {% include footer.html %}
-
+{% include footer.html %}
 </body>
-
 </html>
