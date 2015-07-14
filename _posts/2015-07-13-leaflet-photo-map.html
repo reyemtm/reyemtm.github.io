@@ -28,8 +28,9 @@ tags: leaflet
 
 	evt.layer.bindPopup(L.Util.template(template, photo), {
 			className: 'leaflet-popup-photo',
-			minWidth: x
-		}).openPopup({keepInView:true});
+			minWidth: x,
+			keepInView: true
+		}).openPopup();
 	});
 
 	reqwest({
