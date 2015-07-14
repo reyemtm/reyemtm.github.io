@@ -8,9 +8,9 @@ description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2></a>
-        {% if page.description %}
+        {% if post.description %}
         <span class="post-description">
-            {{ page.description }}
+            {{ post.description }}
         </span>
         {% endif %}
         <!--p>{{ post.content | truncatewords:25}}</p-->
