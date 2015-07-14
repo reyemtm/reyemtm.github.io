@@ -17,9 +17,7 @@ tags: leaflet
 		var photo = evt.layer.photo,
 			template = '<a><img src="{url}"/></a><p>{caption}</p>';
 		/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
-		var w = function() {
-			document.getElementById('map').clientWidth
-			};
+		var w = $('#map').width();
 		var x = w;
 
 		if (photo.video && (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.42E01E,mp4a.40.2'))) {
