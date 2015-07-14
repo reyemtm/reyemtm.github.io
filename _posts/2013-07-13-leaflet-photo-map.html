@@ -18,7 +18,7 @@ tags: leaflet
 			template = '<a><img src="{url}"/></a><p>{caption}</p>';
 		/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
 		var w = function() {
-			document.getElementById("map").offsetWidth
+			document.getElementById("map").clientWidth
 			};
 		var x = w * 0.7;
 
