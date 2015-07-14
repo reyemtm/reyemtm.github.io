@@ -18,7 +18,7 @@ tags: leaflet
 			template = '<a><img src="{url}"/></a><p>{caption}</p>';
 		/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
 		var w = $('#map').width();
-		var x = w;
+		var x = w * 0.7;
 
 		if (photo.video && (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.42E01E,mp4a.40.2'))) {
 			template = '<video autoplay controls poster="{url}"><source src="{video}" type="video/mp4"/></video>';
