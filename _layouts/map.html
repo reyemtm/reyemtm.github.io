@@ -80,7 +80,11 @@
 {% include {{ page.plugin1 }} %}
 {% endif %}
 <style>
-#map {height: 800px; width:100%;border:1px solid #ddd;}
+{% if page.style %}
+{{ page.style }}
+{% else %}
+#map {height: 700px; width:100%;border:1px solid #ddd;}
+{% endif %}
 </style>
 </head>
 <body>
