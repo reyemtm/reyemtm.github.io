@@ -12,10 +12,12 @@ tags: leaflet
 
     var toner = new L.StamenTileLayer("toner");
 	toner.addTo(map);
-      
-	var photoLayer = L.photo.cluster().on('click', function (evt) {
+
+      	var photoLayer = L.photo.cluster().on('click', function (evt) {
 		var photo = evt.layer.photo,
 			template = '<a><img src="{url}"/></a><p>{caption}</p>';
+		var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;
+		var x = w * 0.8;
 
 		if (photo.video && (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.42E01E,mp4a.40.2'))) {
 			template = '<video autoplay controls poster="{url}"><source src="{video}" type="video/mp4"/></video>';
@@ -23,7 +25,7 @@ tags: leaflet
 
 		evt.layer.bindPopup(L.Util.template(template, photo), {
 			className: 'leaflet-popup-photo',
-			minWidth: 720
+			minWidth: x
 		}).openPopup();
 	});
 
