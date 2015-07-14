@@ -8,14 +8,14 @@ tags: leaflet
 
 <script>
 
-var map = L.map('map', {
-	maxZoom: 18
-});
+	var map = L.map('map', {
+		maxZoom: 18
+	});
 
   var toner = new L.StamenTileLayer("toner");
-toner.addTo(map);
+	toner.addTo(map);
 
-    	var photoLayer = L.photo.cluster().on('click', function (evt) {
+  var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
 		template = '<a><img src="{url}"/></a><p>{caption}</p>';
 	/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
@@ -27,19 +27,19 @@ toner.addTo(map);
 	};
 
 	evt.layer.bindPopup(L.Util.template(template, photo), {
-		className: 'leaflet-popup-photo',
-		minWidth: x
-	}).openPopup();
-});
+			className: 'leaflet-popup-photo',
+			minWidth: x
+		}).openPopup({keepInView:true});
+	});
 
-reqwest({
-url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6171132855421740513?alt=json-in-script&imgmax=720',
-	type: 'jsonp',
-	success: function (data) {
-		var photos = [];
-		data = data.feed.entry;
+	reqwest({
+		url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6171132855421740513?alt=json-in-script&imgmax=720',
+		type: 'jsonp',
+		success: function (data) {
+			var photos = [];
+			data = data.feed.entry;
 
-		for (var i = 0; i < data.length; i++) {
+			for (var i = 0; i < data.length; i++) {
 			var photo = data[i];
 			if (photo['georss$where']) {
 				var pos = photo['georss$where']['gml$Point']['gml$pos']['$t'].split(' ');
@@ -54,10 +54,10 @@ url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/album
 			};
 		}
 
-		photoLayer.add(photos).addTo(map);
-		map.fitBounds(photoLayer.getBounds());
-	}
-});
+			photoLayer.add(photos).addTo(map);
+			map.fitBounds(photoLayer.getBounds());
+		}
+	});
 
 </script>
 <!--https://picasaweb.google.com/data/feed/base/user/103469053044045468318/albumid/6170973282606682673?alt=rss&kind=photo&hl=en_US-->
