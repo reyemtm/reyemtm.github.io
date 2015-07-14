@@ -8,14 +8,13 @@ permalink: /blog/
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
-        </h2>
+        </h2></a>
         {% if post.description %}
-        <p class="post-subtitle">
+        <span class="post-subtitle">
             {{ post.description }}
-        </p>
+        </span>
         {% endif %}
         <!--p>{{ post.content | truncatewords:25}}</p-->
-    </a>
     <div class="post-meta">
     <ul class="fa-ul">
     {% for tag in post.tags %}
