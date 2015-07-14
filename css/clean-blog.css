@@ -81,6 +81,7 @@ blockquote {
   font-size: 24px;
   font-weight:300;
   /*padding-bottom: 115px;*/
+  padding-bottom: 15px;
  }
 
 hr.small {
