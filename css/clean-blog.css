@@ -4,6 +4,9 @@ body {
   color: #404040;
   font-weight: 300;
 }
+.dropdown:hover .dropdown-menu {
+display: block;
+}
 .share-page {
   text-align: right;
   margin-top: 20px;
