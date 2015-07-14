@@ -10,6 +10,7 @@ function start() {
 var map = new L.map('map', {
 scrollWheelZoom: false
 });
+var hash = L.hash(map);
 map.on('load', start);
 map.setView([39, -82], 9);
 
@@ -24,8 +25,8 @@ var terrain = new L.StamenTileLayer("toner");
 terrain.addTo(map);
 
 var marker1 = L.marker([39.5, -83.5]).bindPopup('This is an animated map!').addTo(map);
-var delay1 = 0, 
-	delay2 = 1000, 
+var delay1 = 0,
+	delay2 = 1000,
 	delay3 = 8000;
 
 function panzoom(){
