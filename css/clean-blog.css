@@ -4,7 +4,7 @@ body {
   color: #404040;
   font-weight: 300;
 }
-.dropdown:hover .dropdown-menu {
+.navbar-collapse.collapse:hover {
 display: block;
 }
 .share-page {
