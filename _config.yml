@@ -19,7 +19,7 @@ highlighter: pygments
 permalink: /blog/:title
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-include: ["_tags"]
+include: ["_maps"]
 
 #plugins
 gems:
