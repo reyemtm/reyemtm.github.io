@@ -80,7 +80,7 @@ blockquote {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   font-weight:300;
-  padding-bottom: 115px;
+  /*padding-bottom: 115px;*/
  }
 
 hr.small {
@@ -190,7 +190,7 @@ hr.small {
 .navbar-toggle {
 	margin-right: 23px;
 }
-.navbar-inverse .navbar-collapse, 
+.navbar-inverse .navbar-collapse,
 .navbar-inverse .navbar-form {
   border-color: rgba(255, 255, 255, 0.4);
 }
@@ -200,7 +200,7 @@ hr.small {
 .navbar-inverse .navbar-brand {
   color: #ddd;
 }
-.navbar-inverse .navbar-nav>li>a:focus, 
+.navbar-inverse .navbar-nav>li>a:focus,
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse .navbar-brand a:hover,
 .navbar-inverse .navbar-brand:focus,
