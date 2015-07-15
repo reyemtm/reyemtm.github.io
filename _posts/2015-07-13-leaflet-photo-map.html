@@ -10,12 +10,15 @@ map: leaflet.html
 </div>
 <script>
 
-	var map = L.map('map', {
-		maxZoom: 18
+var map = L.map('map', {
+	maxZoom: 18
+});
+
+var hash = L.hash(map);
+
+  var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 	});
-
-	var hash = L.hash(map);
-
   var toner = new L.StamenTileLayer("toner");
 	toner.setOpacity(0.7);
 	toner.addTo(map);
