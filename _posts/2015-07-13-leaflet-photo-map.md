@@ -26,7 +26,7 @@ var hash = L.hash(map);
 	accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
 });
   var toner = new L.StamenTileLayer("toner");
-	toner.setOpacity(0.7);
+	toner.setOpacity(1);
 	toner.addTo(map);
 
 var baseMaps = {
