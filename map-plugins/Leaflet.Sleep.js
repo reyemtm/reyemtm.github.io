@@ -1,7 +1,7 @@
 L.Map.mergeOptions({
   sleep: false,
-  sleepTime: 750,
-  wakeTime: 750,
+  sleepTime: 1000,
+  wakeTime: 1000,
   sleepNote: false,
   hoverToWake: true
 });
