@@ -17,6 +17,7 @@ map: leaflet.html
 	var hash = L.hash(map);
 
   var toner = new L.StamenTileLayer("toner");
+	toner.setOpacity(0.7);
 	toner.addTo(map);
 
   var photoLayer = L.photo.cluster().on('click', function (evt) {
