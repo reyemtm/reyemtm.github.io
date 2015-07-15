@@ -70,5 +70,7 @@ var hash = L.hash(map);
 	});
 
 </script>
+##This is an example of the Leaflet.Photo plugin.
+
 <!--https://picasaweb.google.com/data/feed/base/user/103469053044045468318/albumid/6170973282606682673?alt=rss&kind=photo&hl=en_US-->
 <!--https://picasaweb.google.com/103469053044045468318/Picasa?authuser=0&authkey=Gv1sRgCPzEjLbb4-aHdw&feat=directlink-->
