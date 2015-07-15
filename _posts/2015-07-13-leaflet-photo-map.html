@@ -60,7 +60,7 @@ map: leaflet.html
 		}
 
 			photoLayer.add(photos).addTo(map);
-			map.fitBounds(photoLayer.getBounds());
+			map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
 		}
 	});
 
