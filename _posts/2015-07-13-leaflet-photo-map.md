@@ -28,8 +28,14 @@ var hash = L.hash(map);
   var toner = new L.StamenTileLayer("toner");
 	toner.setOpacity(0.7);
 	toner.addTo(map);
-	
 
+var baseMaps = {
+	"Contrast": toner,
+	"Comic": comic,
+	"Topo": esritopo
+};
+var lyrs = new L.control.layers(baseMaps).addto(map);
+	
   var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
         template = '<img src="{url}"/><p>{caption}</p>';
@@ -75,11 +81,6 @@ var hash = L.hash(map);
 			map.setView([41.55012, -87.81197], 15);
 		}
 	});
-	L.control.layers({
-		"Contrast": toner,
-		"Comic": comic,
-		"Topo": esritopo
-	}, {}).addto(map);
 
 </script>
 
