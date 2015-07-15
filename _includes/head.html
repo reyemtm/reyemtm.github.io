@@ -22,6 +22,16 @@
 <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
-<link type="text/css" rel="stylesheet" href="{{ "/css/lightGallery.css" | prepend: site.baseurl }}"/>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script src="{{ "/js/lightGallery.js " | prepend: site.baseurl }}"></script>
+{% if page.map == leaflet %}
+{% include leaflet.html %}
+{% endif %}
+{% if page.plugin1 %}
+{% include {{ page.plugin1 }} %}
+{% endif %}
+{% if page.plugin2 %}
+{% include {{ page.plugin2 }} %}
+{% endif %}
+{% if page.plugin3 %}
+{% include {{ page.plugin3 }} %}
+{% endif %}
