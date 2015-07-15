@@ -21,7 +21,7 @@ map: leaflet.html
 
   var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
-		template = '<a><img src="{url}"/></a><p>{caption}</p>';
+        template = '<a href="{url}"><img src="{url}"/></a><p>{caption}</p>';
 	/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
 	var w = $('#map').width();
 	var x = w * 0.6;
@@ -38,7 +38,7 @@ map: leaflet.html
 	});
 
 	reqwest({
-		url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6171132855421740513?alt=json-in-script&imgmax=720',
+		url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6171132855421740513?alt=json-in-script&imgmax=1600',
 		type: 'jsonp',
 		success: function (data) {
 			var photos = [];
