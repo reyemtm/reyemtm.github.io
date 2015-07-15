@@ -79,7 +79,7 @@ var hash = L.hash(map);
 		"Contrast": toner,
 		"Comic": comic,
 		"Topo": esritopo
-	}, null).addto(map);
+	}, {}).addto(map);
 
 </script>
 
