@@ -3,15 +3,9 @@ layout: post
 title: "Vacation 1985"
 description: "An Example of the Leaflet.Photo Plugin"
 plugin1: photo-map-plugin.html
-plugin2: lightgallery.html
 tags: leaflet
 map: leaflet.html
 ---
-<script type="text/javascript">
-  $(document).ready(function() {
-    $("#lightGallery").lightGallery(); 
-  });
-</script>
 <div id="map"></script>
 </div>
 <script>
@@ -27,7 +21,7 @@ map: leaflet.html
 
   var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
-        template = '<ul id="lightGallery"><li data-src="{url}"><img src="{url}"/></li</ul><p>{caption}</p>';
+        template = '<img src="{url}"/><p>{caption}</p>';
 	/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
 	var w = $('#map').width();
 	var x = w * 0.6;
