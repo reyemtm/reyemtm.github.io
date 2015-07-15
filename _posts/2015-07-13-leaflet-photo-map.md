@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Vacation 1985"
-description: "An Example of the Leaflet.Photo Plugin"
+title: "Leaflet Photo Map"
+description: "A Trip Out West circa 1985"
 plugin1: photo-map-plugin.html
 tags: leaflet
 map: leaflet.html
