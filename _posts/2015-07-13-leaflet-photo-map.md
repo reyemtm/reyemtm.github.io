@@ -34,7 +34,7 @@ var baseMaps = {
 	"Comic": comic,
 	"Topo": esritopo
 };
-var lyrs = new L.control.layers(baseMaps).addto(map);
+var lyrs = new L.control.layers(baseMaps).addTo(map);
 	
   var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
