@@ -17,3 +17,14 @@ Here are some examples of online and print maps I have created. Some are simply 
 - [GeoJson in a Basic Leaflet Map](http://getbounds.com/geojson)
 - [Map Gallery](http://getbounds.com/map-gallery "Map Gallery")
 - [Virtual Resume via ArcGIS Online](http://www.arcgis.com/apps/MapJournal/index.html?appid=97e1a75ea03043c392c1e6b09b1997d0&webmap=f21d3db8cc7e48c885e795bf679dd363)
+
+## Leaflet Plugins 
+
+ - [GeoTagged Photos](https://github.com/turban/Leaflet.Photo)
+ - [Hash/Coordinates in URL](https://github.com/mlevans/leaflet-hash)
+ - [Home Button](https://github.com/nguyenning/Leaflet.defaultextent)
+ - [Marker Cluster](https://github.com/Leaflet/Leaflet.markercluster)
+ - [NavBar](https://github.com/davidchouse/Leaflet.NavBar)
+ - [Sleep](https://github.com/CliffCloud/Leaflet.Sleep)
+
+
