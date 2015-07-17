@@ -4,7 +4,7 @@ title: "About"
 permalink: /about/
 ---
 ## About
-
+***
 My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other spatially-related topics. I am also a [musician](http://malcolmmeyer.tumblr.com) and avid gardener. The name of the site comes from a commonly used function in web mapping. Here is a definition adapted from Leaflet:
 
 <pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
