@@ -5,7 +5,7 @@ description: "A Trip Out West circa 1985"
 plugin1: photo-map-plugin.html
 tags: leaflet
 map: leaflet.html
-header-img: header-vacay.jpg
+header-img: header-vacay-2.jpg
 ---
 <div id="map"></script>
 </div>
