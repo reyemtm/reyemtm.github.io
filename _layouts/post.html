@@ -27,7 +27,17 @@ layout: default
 	</div>
         <br>
         <hr>
-        <!--Disqus-->
+         <script src="https://apis.google.com/js/plusone.js"></script>
+        <div style="margin-top:30px">
+          <div class="g-comments"
+              data-href="{{site.url}}{{page.url}}"
+              data-width="642"
+              data-first_party_property="BLOGGER"
+              data-view_type="FILTERED_POSTMOD">
+          </div>
+        </div>
+        <hr>
+        <!--Disqus>
         <div id="disqus_thread"></div>
 	<script type="text/javascript">
 	    /* * * CONFIGURATION VARIABLES * * */
@@ -40,18 +50,8 @@ layout: default
 	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 	    })();
-	</script>
+	</script-->
 	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
-        <hr>
-        <!--<script src="https://apis.google.com/js/plusone.js"></script>
-        <div style="margin-top:30px">
-          <div class="g-comments"
-              data-href="{{site.url}}{{page.url}}"
-              data-width="642"
-              data-first_party_property="BLOGGER"
-              data-view_type="FILTERED_POSTMOD">
-          </div>
-        </div>-->
 		{% include pager.html %}
     </div>
 </article>
