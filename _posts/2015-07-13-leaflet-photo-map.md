@@ -12,7 +12,8 @@ map: leaflet.html
 
 var map = L.map('map', {
 	maxZoom: 18,
-	sleep: true
+	sleep: true,
+	defaultExtentControl: true
 });
 
 var hash = L.hash(map);
