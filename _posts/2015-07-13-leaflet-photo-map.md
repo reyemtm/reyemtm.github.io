@@ -5,45 +5,51 @@ description: "A Trip Out West circa 1985"
 plugin1: photo-map-plugin.html
 tags: leaflet
 map: leaflet.html
+header-img: header-vacay.jpg
 ---
 <div id="map"></script>
 </div>
 <script>
-
-var map = L.map('map', {
-	maxZoom: 16,
-	sleep: true,
-	defaultExtentControl: true
-});
-
-var hash = L.hash(map);
-
-  var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+//map
+	var map = L.map('map', {
+		maxZoom: 8,
+		sleep: true,
+		defaultExtentControl: true
 	});
-  var comic = L.tileLayer('http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-	attribution: 'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-	subdomains: 'abcd',
-	id: 'reyemtm.mnijk2mp',
-	accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
-});
-  var toner = new L.StamenTileLayer("toner");
-	toner.setOpacity(1);
-var cdb = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
-                      'contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">' +
-                      'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
-                      'CartoDB</a>'}).addTo(map);
 
-var baseMaps = {
-	"Contrast": toner,
-	"Comic": comic,
-	"Topo": esritopo,
-	"Light": cdb
-};
-var lyrs = new L.control.layers(baseMaps).addTo(map);
+	var hash = L.hash(map);
+//tiles
+	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+		});
+	var comic = L.tileLayer('http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		attribution: 'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		subdomains: 'abcd',
+		id: 'reyemtm.mnijk2mp',
+		accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
+	});
 	
-  var photoLayer = L.photo.cluster().on('click', function (evt) {
+	var toner = new L.StamenTileLayer("toner");
+	
+	var cdb = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+	        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
+	                      'contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">' +
+	                      'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
+	                      'CartoDB</a>'
+  	}).addTo(map);
+//controls
+	var baseMaps = {
+		"Contrast": toner,
+		"Comic": comic,
+		"Topo": esritopo,
+		"Light": cdb
+	};
+	
+	var lyrs = new L.control.layers(baseMaps).addTo(map);
+
+	L.control.navbar().addTo(map);
+//photo layer
+	var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
         template = '<img src="{url}"/><p>{caption}</p>';
 	/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
