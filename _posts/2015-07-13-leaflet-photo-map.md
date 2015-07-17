@@ -29,12 +29,17 @@ var hash = L.hash(map);
 });
   var toner = new L.StamenTileLayer("toner");
 	toner.setOpacity(1);
-	toner.addTo(map);
+var cdb = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+        ATTRIBUTION = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
+                      'contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">' +
+                      'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
+                      'CartoDB</a>'}).addTo(map);
 
 var baseMaps = {
 	"Contrast": toner,
 	"Comic": comic,
-	"Topo": esritopo
+	"Topo": esritopo,
+	"Light": cdb
 };
 var lyrs = new L.control.layers(baseMaps).addTo(map);
 	
