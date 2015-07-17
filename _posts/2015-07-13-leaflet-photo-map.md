@@ -78,8 +78,8 @@ var lyrs = new L.control.layers(baseMaps).addTo(map);
 		}
 
 			photoLayer.add(photos).addTo(map);
-			//map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
-			map.setView([41.55012, -87.81197], 15);
+			map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
+			//map.setView([41.55012, -87.81197], 15);
 		}
 	});
 
