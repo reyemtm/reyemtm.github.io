@@ -30,7 +30,7 @@ var hash = L.hash(map);
   var toner = new L.StamenTileLayer("toner");
 	toner.setOpacity(1);
 var cdb = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
-        ATTRIBUTION = 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
+        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
                       'contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">' +
                       'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
                       'CartoDB</a>'}).addTo(map);
