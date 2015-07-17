@@ -28,9 +28,9 @@ header-img: header-vacay-2.jpg
 		id: 'reyemtm.mnijk2mp',
 		accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
 	});
-	
+
 	var toner = new L.StamenTileLayer("toner");
-	
+
 	var cdb = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
 	        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
 	                      'contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">' +
@@ -44,10 +44,9 @@ header-img: header-vacay-2.jpg
 		"Topo": esritopo,
 		"Light": cdb
 	};
-	
+
 	var lyrs = new L.control.layers(baseMaps).addTo(map);
 
-	L.control.navbar().addTo(map);
 //photo layer
 	var photoLayer = L.photo.cluster().on('click', function (evt) {
 	var photo = evt.layer.photo,
@@ -92,6 +91,9 @@ header-img: header-vacay-2.jpg
 			photoLayer.add(photos).addTo(map);
 			map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
 			//map.setView([41.55012, -87.81197], 15);
+			//has to be added after center and zoom are set
+			L.control.navbar().addTo(map);
+
 		}
 	});
 
