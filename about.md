@@ -11,7 +11,7 @@ My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other
 
 ## Leaflet Plugins 
 
-Here is a list of map plugins currently implemented in the maps found on this site.
+Here is a list of plugins currently implemented in the maps found on this site.
 
  - [GeoTagged Photos](https://github.com/turban/Leaflet.Photo)
  - [Hash/Coordinates in URL](https://github.com/mlevans/leaflet-hash)
