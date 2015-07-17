@@ -29,6 +29,8 @@ Here are some examples of online and print maps I have created. Some are simply 
 - [Map Gallery](http://getbounds.com/map-gallery "Map Gallery")
 - [Virtual Resume via ArcGIS Online](http://www.arcgis.com/apps/MapJournal/index.html?appid=97e1a75ea03043c392c1e6b09b1997d0&webmap=f21d3db8cc7e48c885e795bf679dd363)
 
-
+## Comments
+***
+There are no comments on this site. I experimented with disqus and Google+ comments, but have decided leave the social interactions to social media.
 
 
