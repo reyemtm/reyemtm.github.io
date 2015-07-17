@@ -10,7 +10,7 @@ My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other
 <pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
 
 ## Leaflet Plugins 
-
+***
 Here is a list of plugins currently implemented in the maps found on this site.
 
  - [GeoTagged Photos](https://github.com/turban/Leaflet.Photo)
@@ -21,7 +21,7 @@ Here is a list of plugins currently implemented in the maps found on this site.
  - [Sleep](https://github.com/CliffCloud/Leaflet.Sleep)
 
 ## Work
-
+***
 Here are some examples of online and print maps I have created. Some are simply proof-of-concept.
 
 - [ArcGIS Online Hosted Map](http://www.arcgis.com/apps/Viewer/index.html?appid=a7b9fe89135b4f69a51803704c8302b2)
