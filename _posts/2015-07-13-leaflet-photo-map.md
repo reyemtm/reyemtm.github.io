@@ -11,7 +11,7 @@ map: leaflet.html
 <script>
 
 var map = L.map('map', {
-	maxZoom: 18,
+	maxZoom: 16,
 	sleep: true,
 	defaultExtentControl: true
 });
