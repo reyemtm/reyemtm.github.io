@@ -353,6 +353,7 @@ hr.small {
   background-size: cover;
   -o-background-size: cover;
   margin-bottom: 30px;
+  background-position:center;
 }
 .intro-header .site-heading,
 .intro-header .page-heading {
