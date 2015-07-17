@@ -48,7 +48,7 @@ header-img: header-vacay-2.jpg
 	var lyrs = new L.control.layers(baseMaps).addTo(map);
 
 //photo layer
-	var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 5}).on('click', function (evt) {
+	var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 2}).on('click', function (evt) {
 	var photo = evt.layer.photo,
         template = '<img src="{url}"/><p>{caption}</p>';
 	/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
