@@ -42,7 +42,7 @@ var lyrs = new L.control.layers(baseMaps).addTo(map);
         template = '<img src="{url}"/><p>{caption}</p>';
 	/*var w = (window.innerWidth > 0) ? window.innerWidth : screen.width;*/
 	var w = $('#map').width();
-	var x = w * 0.6;
+	var x = w * 0.5;
 
 	if (photo.video && (!!document.createElement('video').canPlayType('video/mp4; codecs=avc1.42E01E,mp4a.40.2'))) {
 		template = '<video autoplay controls poster="{url}"><source src="{video}" type="video/mp4"/></video>';
