@@ -14,7 +14,7 @@ header-img: header-vacay-2.jpg
 	var map = L.map('map', {
 		maxZoom: 8,
 		sleep: true,
-		defaultExtentControl: true
+		//defaultExtentControl: true
 	});
 
 	var hash = L.hash(map);
