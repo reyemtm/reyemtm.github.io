@@ -31,6 +31,4 @@ Here are some examples of online and print maps I have created. Some are simply 
 
 ## Comments
 ***
-There are no comments on this site. I experimented with disqus and Google+ comments, but have decided leave the social interactions to social media.
-
-
+There are no comments on this site. If you want to contact me or share a post, you can use your social media of choice.
