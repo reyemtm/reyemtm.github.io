@@ -16,7 +16,7 @@ header-img: header-vacay-2.jpg
 		sleep: true,
 		//defaultExtentControl: true
 	});
-
+	map.setView([45.446,-100.928], 5);
 	var hash = L.hash(map);
 //tiles
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -89,7 +89,7 @@ header-img: header-vacay-2.jpg
 		}
 
 			photoLayer.add(photos).addTo(map);
-			map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
+			//map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
 			//map.setView([41.55012, -87.81197], 15);
 			//has to be added after center and zoom are set
 			L.control.navbar().addTo(map);
