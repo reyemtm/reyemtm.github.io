@@ -2,7 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta property="og:title" content="{{ page.title }}" />
-<meta propety="og:tpye" content="{% if page.layout == 'map' %}article{% elseif page.layout == 'post' %}article{% else %}website{% endif %}" />
+<meta propety="og:type" content="{% if page.layout == 'map' %}article{% elsif page.layout == 'post' %}article{% else %}website{% endif %}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:image" content="{{ site.baseurl }}/img/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" />
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
