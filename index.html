@@ -1,6 +1,7 @@
 ---
 layout: page
 description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
+subtitle: "A (Jekyll) Blog Exploring Web Maps & Cartography."
 ---
 <!--page begin-->
 {% for post in paginator.posts %}
@@ -8,9 +9,9 @@ description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2></a>
-        {% if post.description %}
+        {% if post.subtitle %}
         <span class="post-description">
-            {{ post.description }}
+            {{ post.subtitle }}
         </span>
         {% endif %}
         <!--p>{{ post.content | truncatewords:25}}</p-->

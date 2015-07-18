@@ -1,7 +1,8 @@
 ---
 layout: post
 title: "Leaflet Photo Map"
-description: "A Trip Out West circa 1985"
+description: "This web map is an example of the Leaflet Photo plugin using photos from a family vacation in 1985. Photos include Yellowstone, Watertown Park, Baraboo Circus Museum and a Sod House."
+subtitle: "A Trip Out West circa 1985"
 plugin1: photo-map-plugin.html
 tags: leaflet
 map: leaflet.html

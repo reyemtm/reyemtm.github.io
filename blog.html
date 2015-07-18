@@ -2,6 +2,7 @@
 layout: page
 title: "Blog"
 description: "Blog Post Index"
+subtitle: "Blog Post Index"
 permalink: /blog/
 ---
 {% for post in site.posts limit:200 %}
@@ -9,9 +10,9 @@ permalink: /blog/
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
         </h2></a>
-        {% if post.description %}
-        <span class="post-subtitle">
-            {{ post.description }}
+        {% if post.subtitle %}
+        <span class="post-description">
+            {{ post.subtitle }}
         </span>
         {% endif %}
         <!--p>{{ post.content | truncatewords:25}}</p-->
