@@ -8,7 +8,7 @@ tags: leaflet
 map: leaflet.html
 header-img: header-vacay-2.jpg
 ---
-<div id="map"></script>
+<div id="map">
 </div>
 <script>
 //map
