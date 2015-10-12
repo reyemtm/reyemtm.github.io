@@ -44,7 +44,7 @@ header-img: header-vacay-2.jpg
 	                      'CartoDB</a>'
   	});
 //data
-	var hike = new L.geoJson.ajax(../data/c_hollow.geojson);
+	var hike = new L.geoJson.ajax("../data/c_hollow.geojson");
 	var hikeline = L.hotline(hike).addTo(map);
 //controls
 	var baseMaps = {
