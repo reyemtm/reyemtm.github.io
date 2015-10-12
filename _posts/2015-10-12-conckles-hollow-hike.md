@@ -16,7 +16,7 @@ header-img: header-vacay-2.jpg
 		sleep: true,
 		//defaultExtentControl: true
 	});
-	map.setView([45.446,-100.928], 4);
+	map.setView([39.4664,-82.5588], 11);
 	var hash = L.hash(map);
 //tiles
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -43,7 +43,7 @@ header-img: header-vacay-2.jpg
 	                      'CartoDB</a>'
   	});
 //data
-	var hike = new L.geoJson.ajax("data/c_hollow.geojson");
+	var hike = new L.geoJson.ajax("../../data/c_hollow.geojson");
 	var hikeline = L.hotline(hike).addTo(map);
 //controls
 	var baseMaps = {
