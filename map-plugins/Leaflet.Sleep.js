@@ -1,7 +1,7 @@
 L.Map.mergeOptions({
   sleep: false,
-  sleepTime: 1000,
-  wakeTime: 1000,
+  sleepTime: 750,
+  wakeTime: 750,
   sleepNote: false,
   hoverToWake: true
 });
@@ -19,7 +19,7 @@ L.Map.Sleep = L.Handler.extend({
     if( this._map.options.sleepNote ){
       this.sleepNote.appendChild(document.createTextNode( noteString ));
       style['max-width'] = '150px';
-      /*style.opacity = '.9';*/
+      style.opacity = '1';
       style.margin = 'auto';
       style['text-align'] = 'center';
       style['border-radius'] = '4px';
@@ -53,8 +53,8 @@ L.Map.Sleep = L.Handler.extend({
     this._stopWaiting();
     this._map.scrollWheelZoom.disable();
 	/*override to 1*/
-    L.DomUtil.setOpacity( this._map._container, 0.8);
-    this.sleepNote.style.opacity = .4;
+    L.DomUtil.setOpacity( this._map._container, 1);
+    this.sleepNote.style.opacity = 0;
     this._addSleepingListeners();
   },
 
