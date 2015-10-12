@@ -60,7 +60,7 @@ header-img: header-vacay-2.jpg
 	    opacity: 1,
 	    distanceMarkers: {offset: 1609.34},
 	    onEachFeature: el.addData.bind(el)
-	  });
+	  }).addTo(map);
 	
 	hike.on('data:loaded', function(){
 	  ride.addTo(map);
