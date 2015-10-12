@@ -13,7 +13,6 @@ header-img: header-vacay-2.jpg
 <script>
 //map
 	var map = L.map('map', {
-		maxZoom: 8,
 		sleep: true,
 		//defaultExtentControl: true
 	});
@@ -30,7 +29,7 @@ header-img: header-vacay-2.jpg
 		accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
 	});
 
-	var OpenStreetMap_HOT = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+	var osm = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
 		maxZoom: 19,
 		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
 	});
@@ -44,11 +43,11 @@ header-img: header-vacay-2.jpg
 	                      'CartoDB</a>'
   	});
 //data
-	var hike = new L.geoJson.ajax("../data/c_hollow.geojson");
+	var hike = new L.geoJson.ajax("data/c_hollow.geojson");
 	var hikeline = L.hotline(hike).addTo(map);
 //controls
 	var baseMaps = {
-		"OSM": OpenStreetMap,
+		"osm": OpenStreetMap,
 		"Contrast": toner,
 		"Comic": comic,
 		"Topo": esritopo,
