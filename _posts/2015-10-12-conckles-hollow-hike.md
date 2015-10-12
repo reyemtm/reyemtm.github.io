@@ -1,15 +1,18 @@
 ---
 layout: post
 title: "Conckle's Hollow Fall Hike"
-description: "Here I am using Leaflet 1.0 and Leaflet Heatline to show a GPS track recorded with MyTracks at Conckle's Hollow Nature Preserve in the Hocking Hills region of Ohio."
+description: "Here I am Leaflet Elevation to show a the elevation cross-section of a GPS track recorded with MyTracks at Conckle's Hollow Nature Preserve in the Hocking Hills region of Ohio."
 subtitle: "Mapping GPS Tracks"
 tags: leaflet
 map: leaflet-1.0.html
-plugin1: leaflet-hotline.html
+plugin1: elevation.html
 header-img: header-vacay-2.jpg
 ---
 <div id="map">
 </div>
+<script src="https://www.ovrdc.org/apps/cssjs/leaflet.geometryutil.js"></script>
+<script src="https://www.ovrdc.org/apps/cssjs/leaflet-distance-marker.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <script>
 //map
 	var map = L.map('map', {
@@ -43,9 +46,25 @@ header-img: header-vacay-2.jpg
 	                      'CartoDB</a>'
   	});
 //data
-	var hike = new L.geoJson.ajax("../../data/c_hollow.geojson");
-	hike.on('data:loaded', function() {
-		var hikeline = L.hotline(hike).addTo(map);
+	var el = L.control.elevation({
+		position: 'bottomleft',
+		theme: 'green-theme',
+		width: 500,
+		height: 105,
+		imperial: true
+	}).addTo(map);
+	
+	var hike = new L.geoJson.ajax("../../data/c_hollow.geojson", {
+	    color: '#629062',
+	    weight: 6,
+	    opacity: 1,
+	    distanceMarkers: {offset: 1609.34},
+	    onEachFeature: el.addData.bind(el)
+	  });
+	
+	hike.on('data:loaded', function(){
+	  ride.addTo(map);
+	  map.fitBounds(ride.getBounds());
 	});
 //controls
 	var baseMaps = {
@@ -55,7 +74,7 @@ header-img: header-vacay-2.jpg
 		"Topo": esritopo,
 		"Light": cdb
 	};
-
+	L.control.layers(baseMaps, null).addTo(map);
 </script>
 
 This is a map of a hike...more to come...
