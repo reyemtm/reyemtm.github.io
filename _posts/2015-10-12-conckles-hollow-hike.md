@@ -25,7 +25,6 @@ header-img: c-hollow.jpg
 <div id="map">
 </div>
 <script src="https://www.ovrdc.org/apps/cssjs/leaflet.geometryutil.js"></script>
-<script src="https://www.ovrdc.org/apps/cssjs/leaflet-distance-marker.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <script>
 //map
@@ -72,7 +71,6 @@ header-img: c-hollow.jpg
 	    color: '#629062',
 	    weight: 6,
 	    opacity: 1,
-	    distanceMarkers: {offset: 804.67},
 	    onEachFeature: el.addData.bind(el)
 	  }).addTo(map);
 	
