@@ -72,7 +72,7 @@ header-img: c-hollow.jpg
 	    color: '#629062',
 	    weight: 6,
 	    opacity: 1,
-	    distanceMarkers: {offset: 1609.34},
+	    distanceMarkers: {offset: 804.67},
 	    onEachFeature: el.addData.bind(el)
 	  }).addTo(map);
 	
