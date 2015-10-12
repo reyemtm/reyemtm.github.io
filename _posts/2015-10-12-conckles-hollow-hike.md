@@ -19,7 +19,7 @@ header-img: header-vacay-2.jpg
 		sleep: true,
 		//defaultExtentControl: true
 	});
-	map.setView([39.4664,-82.5588], 11);
+	map.setView([39.4570,-82.5776], 11);
 	var hash = L.hash(map);
 //tiles
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
