@@ -16,10 +16,10 @@ header-img: header-vacay-2.jpg
 <script>
 //map
 	var map = L.map('map', {
-		sleep: true,
-		//defaultExtentControl: true
+		maxZoom: 16,
+		sleep: true
 	});
-	map.setView([39.4570,-82.5776], 11);
+	map.setView([39.4570,-82.5778], 16);
 	var hash = L.hash(map);
 //tiles
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
@@ -50,7 +50,7 @@ header-img: header-vacay-2.jpg
 		position: 'bottomleft',
 		theme: 'green-theme',
 		width: 500,
-		height: 105,
+		height: 150,
 		imperial: true
 	}).addTo(map);
 	
