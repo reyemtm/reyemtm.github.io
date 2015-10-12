@@ -1,0 +1,60 @@
+---
+layout: post
+title: "Conckle's Hollow Fall Hike"
+description: "Here I am using Leaflet 1.0 and Leaflet Heatline to show a GPS track recorded with MyTracks at Conckle's Hollow Nature Preserve in the Hocking Hills region of Ohio."
+subtitle: "Mapping GPS Tracks"
+tags: leaflet
+map: leaflet-1.0.html
+plugin1: leaflet-hotline.html
+header-img: header-vacay-2.jpg
+---
+<div id="map">
+</div>
+<script>
+//map
+	var map = L.map('map', {
+		maxZoom: 8,
+		sleep: true,
+		//defaultExtentControl: true
+	});
+	map.setView([45.446,-100.928], 4);
+	var hash = L.hash(map);
+//tiles
+	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+		attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
+		}).addTo(map);
+	var comic = L.tileLayer('http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
+		attribution: 'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		subdomains: 'abcd',
+		id: 'reyemtm.mnijk2mp',
+		accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
+	});
+
+	var OpenStreetMap_HOT = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+		maxZoom: 19,
+		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>, Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>'
+	});
+
+	var toner = new L.StamenTileLayer("toner");
+
+	var cdb = L.tileLayer('http://a.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png', {
+	        attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> ' +
+	                      'contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">' +
+	                      'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
+	                      'CartoDB</a>'
+  	});
+//data
+	var hike = new L.geoJson.ajax(../data/c_hollow.geojson);
+	var hikeline = L.hotline(hike).addTo(map);
+//controls
+	var baseMaps = {
+		"OSM": OpenStreetMap,
+		"Contrast": toner,
+		"Comic": comic,
+		"Topo": esritopo,
+		"Light": cdb
+	};
+
+</script>
+
+This is a map of a hike...more to come...
