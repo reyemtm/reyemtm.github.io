@@ -6,7 +6,7 @@ subtitle: "Mapping GPS Tracks"
 tags: leaflet
 map: leaflet-1.0.html
 plugin1: elevation.html
-header-img: header-vacay-2.jpg
+header-img: c-hollow.jpg
 ---
 <div id="map">
 </div>
