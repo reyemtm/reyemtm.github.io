@@ -8,7 +8,7 @@ map: leaflet-1.0.html
 plugin1: elevation.html
 header-img: c-hollow.jpg
 ---
-<style>
+<!--style>
 .dist-marker {
 	font-size: 12px;
 	border: 1px solid #888;
@@ -21,7 +21,7 @@ header-img: c-hollow.jpg
   margin:-10px!important;
   font-weight:600;
 }
-</style>
+</style-->
 <div id="map">
 </div>
 <script src="https://www.ovrdc.org/apps/cssjs/leaflet.geometryutil.js"></script>
