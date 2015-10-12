@@ -44,10 +44,12 @@ header-img: header-vacay-2.jpg
   	});
 //data
 	var hike = new L.geoJson.ajax("../../data/c_hollow.geojson");
-	var hikeline = L.hotline(hike).addTo(map);
+	hike.on('data:loaded', function() {
+		var hikeline = L.hotline(hike).addTo(map);
+	});
 //controls
 	var baseMaps = {
-		"osm": OpenStreetMap,
+		"OpenStreetMap": osm,
 		"Contrast": toner,
 		"Comic": comic,
 		"Topo": esritopo,
