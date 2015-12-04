@@ -1,12 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<script type="text/javascript">
-  if (window.location.protocol == "http:") {
-      var url = window.location.href.substr(5);
-      window.location = "https:" + url;
-  }
-</script>
 {% include head.html %}
   </head>
 <body>
@@ -18,5 +12,10 @@
     {% include footer.html %}
 
 </body>
-
+<script type="text/javascript">
+  if (window.location.protocol == "http:") {
+      var url = window.location.href.substr(5);
+      window.location = "https:" + url;
+  }
+</script>
 </html>
