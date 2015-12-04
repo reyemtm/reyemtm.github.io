@@ -2,7 +2,7 @@
 
 This is a modified version of the Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
-My modifications are mostly in site style and the menu. Thanks to snazzymaps for the cool header.
+Using Cloudflare this site can be viewed over ssl with no warnings, though it is currently redirected from http to http via javascript. Not ideal but it works. Chrome alerts that fullscreen, which is key to viewing maps, will be depricated for http sites in the near future, hence the need for ssl. My other modifications are mostly in site style and the menu. Thanks to snazzymaps for the cool header.
 
 ###[View Live Demo &rarr;](http://ironsummitmedia.github.io/startbootstrap-clean-blog-jekyll/)
 
