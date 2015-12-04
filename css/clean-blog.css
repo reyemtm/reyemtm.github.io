@@ -673,6 +673,9 @@ body {
 	.intro-header .page-heading .subheading {
 	font-size:20px;
 	}
+	.intro-header .site-heading, .intro-header .page-heading {
+    	padding: 80px 0 0px;
+	}
 }
 
 /* Used to fade in title/desc on the home page */
