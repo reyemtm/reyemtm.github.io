@@ -3,9 +3,9 @@ title: getBounds
 header-img: header-2.png
 email: malcolmtmeyer@gmail.com
 description: "A (Jekyll) Blog Exploring Web Maps & Cartography"
-baseurl: "http://getbounds.com"
-testurl: "http://reyemtm.github.io"
-url: "http://getbounds.com"
+baseurl: "//getbounds.com"
+testurl: "//reyemtm.github.io"
+url: "//getbounds.com"
 twitter_username: getbounds
 github_username:  reyemtm
 google+_usename: malcolmmeyer
