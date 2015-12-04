@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "A Modern Leaflet Toolbar"
-description: "This is my first iteration of a modern-looking ui for leaflet maps."
+description: "This is my first iteration of a modern-looking UI for leaflet maps."
 subtitle: "Stlying the Leaflet Control Class to Create a Modern Looking Toolbar"
 tags: leaflet
 feature-img: modern-ui.gif
