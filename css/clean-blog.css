@@ -279,7 +279,7 @@ hr.small {
         display: none!important;
     }
     .navbar-nav {
-        float: right;
+        float: none;
 	margin-top: 7.5px;
 	font-size: 15px;
 	text-align: center;
