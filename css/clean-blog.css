@@ -222,7 +222,7 @@ hr.small {
 /*Navbar always collapsed*/
 @media (max-width: 3000px) {
     .navbar-inverse {
-    	background-color: rgba(32, 32, 32, 0.4);
+    	background-color: rgba(32, 32, 32, 0.7);
     	border-color: rgba(32, 32, 32, 0.1);
     }
     .navbar-header {
