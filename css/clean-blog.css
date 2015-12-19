@@ -283,6 +283,8 @@ hr.small {
 	margin-top: 7.5px;
 	font-size: 15px;
 	text-align: center;
+	font-size: inherit;
+    	font-weight: 400;
 	}
 	.navbar-nav>li {
         float: none;
