@@ -8,6 +8,7 @@ permalink: /404.html
 <div id="random_posts"></div>
 <script type="text/javascript">
 
+
     function generateRandomPosts()
     {
         $.getJSON("/search.json", function(data) {
@@ -22,7 +23,7 @@ permalink: /404.html
 
             var divRandomPosts = $("#random_posts");
 
-            divRandomPosts.append('<h2>other posts</h2><hr />');
+            /*divRandomPosts.append('<h2>other posts</h2><hr />');*/
 
             while (counter < numberOfPosts)
             {
@@ -35,11 +36,17 @@ permalink: /404.html
 
                     if (counter == (numberOfPosts - 1))
                     {
-                        divRandomPosts.append('<p><a href="' + postHREF + '">' + postTitle + '</a></p>');
+                        divRandomPosts.append('
+                        <div class="post-preview">
+                            <a href="' + postHREF + '">' + '<h2 class="post-title">' + postTitle + '</h2></a>' +
+                                  '<div class="post-meta">' + postMonth + '&nbsp' + postDay + '&nbsp,' + postYear + '</div></div><hr>');
                     }
                     else
                     {
-                        divRandomPosts.append('<p><a href="' + postHREF + '">' + postTitle + '</a></p><hr />');
+                        divRandomPosts.append('
+                        <div class="post-preview">
+                            <a href="' + postHREF + '">' + '<h2 class="post-title">' + postTitle + '</h2></a>' +
+                                  '<div class="post-meta">' + postMonth + '&nbsp' + postDay + '&nbsp,' + postYear + '</div></div><hr>');');
                     }
 
                     randomIndexUsed.push(randomIndex);
