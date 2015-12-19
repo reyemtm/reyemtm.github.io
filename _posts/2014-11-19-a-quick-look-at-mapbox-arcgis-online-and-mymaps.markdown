@@ -12,7 +12,7 @@ Google has long been the standard for map embeds sharing, but there are other pl
 
 ###Leaflet - Hosted on GitHub
 ---
-<iframe height="450" src="https://reyemtm.github.io/geojson/" style="width:100%;height:480px;" frameborder='0'></iframe>
+<iframe height="450" src="https://getbounds.com/geojson/" style="width:100%;height:480px;" frameborder='0'></iframe>
 
 ####ArcGIS Online
 ---
