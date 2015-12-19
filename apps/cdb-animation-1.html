@@ -22,8 +22,8 @@ var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/da
 
 cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { 
   https: true
-  /*time_slider: false,
-  cartodb_logo: false*/
+  time_slider: false,
+  cartodb_logo: false
   }).addTo(map)
   .on('error', function(err) {
     alert("some error occurred: " + err);
