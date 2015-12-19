@@ -1,8 +1,14 @@
 <!--Font Awesome CDN and Bootstrap CSS -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+{% if page.map == "leaflet" %}
 <!--Leaflet-03-13-2015 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+{% elsif page.map == "cartodb" %}
+<!-- CartoDB -->
+<link rel="stylesheet" href="http://libs.cartocdn.com/cartodb.js/v3/3.15/themes/css/cartodb.css" />
+<script src="http://libs.cartocdn.com/cartodb.js/v3/3.15/cartodb.js"></script>
+{% endif %}
 <!--Custom Style-->
 <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/ovrdc-style.css" />
 <!--Home Button ie Default Extent-->
