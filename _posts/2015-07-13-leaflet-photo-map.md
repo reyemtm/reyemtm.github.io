@@ -5,7 +5,7 @@ description: "This web map is an example of the Leaflet Photo plugin using photo
 subtitle: "A Trip Out West circa 1985"
 plugin1: photo-map-plugin.html
 tags: leaflet
-map: leaflet.html
+map: leaflet
 header-img: header-vacay-2.jpg
 ---
 <div id="map">
