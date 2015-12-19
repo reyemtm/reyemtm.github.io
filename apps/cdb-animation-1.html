@@ -5,7 +5,13 @@ layout: blank
 <script src="https://cartodb-libs.global.ssl.fastly.net/cartodb.js/v3/3.15/cartodb.js"></script>
 <div id="map"></div>
 <script>
-window.onload = function() {
-  cartodb.createVis('map', 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json');
-}
+var map = new L.Map('map', {
+  center: [40, -80],
+  zoom: 10
+})
+cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { https: true })
+  .addTo(map)
+  .on('error', function(err) {
+    alert("some error occurred: " + err);
+  });
 </script>
