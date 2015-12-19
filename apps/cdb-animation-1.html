@@ -11,14 +11,14 @@ var map = new L.Map('map', {
   attributionControl: false,
   zoomControl: false
 })
-var hash = L.hash(map);
+//var hash = L.hash(map);
 var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
   subdomains: 'abcd',
   minZoom: 0,
   maxZoom: 20,
   maxNativeZoom: 18
-}).addTo(map);
+});
 
 cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { 
   https: true
