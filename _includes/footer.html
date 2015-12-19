@@ -69,7 +69,25 @@
 <script src="{{ "/js/jquery.bootstrap-autohidingnavbar.js " | prepend: site.baseurl }}"></script>
 <script>$("div.navbar-fixed-top").autoHidingNavbar();</script>
 <script>
-	$('#menutoggle').on('click',function(){
-    $(this).toggleClass('collapsed');
+$('#menutoggle').on('click',function(){
+	$(this).toggleClass('collapsed');
+});
+</script>
+<script>
+//Check to see if the window is top if not then display button
+$(document).ready(function(){
+   //Check to see if the window is top if not then display button
+   $(window).scroll(function(){
+      if ($(this).scrollTop() > 100) {
+         $('.scrollToTop').fadeIn();
+      } else {
+         $('.scrollToTop').fadeOut();
+      }
+   });
+   //Click event to scroll to top
+   $('.scrollToTop').click(function(){
+      $('html, body').animate({scrollTop : 0},800);
+      return false;
+   });
 });
 </script>
