@@ -1,12 +1,20 @@
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<!--Open Graph meta data-->
 <meta property="og:title" content="{{ page.title }}" />
 <meta propety="og:type" content="{% if page.layout == post %}article{% else %}website{% endif %}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:image" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}" />
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
 <meta property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
+<!--Twitter Cards-->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@getbounds">
+<meta name="twitter:creator" content="@getbounds">
+<meta name="twitter:title" content="{{ page.title }}">
+<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:image" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}">
 <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <link rel="canonical" href="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/">
 <!-- Bootstrap Core CSS -->
