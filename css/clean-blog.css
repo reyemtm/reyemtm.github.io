@@ -91,6 +91,7 @@ text-decoration: none;
 }
 a {
 	color: #404040;
+  font-weight: 400;
 }
 p a {
   /*color: #404040;*/
