@@ -1,39 +1,35 @@
-/*nav toggle to x*/
-.navbar-toggle.collapsed {
-  .top-bar {
-    transform: rotate(0);
-  }
-  .middle-bar {
+.navbar-toggle.collapsed.middle-bar {
     opacity: 1;
   }
-  .bottom-bar {
+.navbar-toggle.collapsed.bottom-bar {
     transform: rotate(0);
   }
-}
+.navbar-toggle.collapsed.top-bar {
+  	transform: rotate(0);
+	}
 .navbar-toggle {
   border: none;
   background: transparent !important;
-
-  &:hover {
+}
+ .navbar-toggle:hover {
     background: transparent !important;
   }
 
-  .icon-bar {
+ .navbar-toggle.icon-bar {
     width: 22px;
     transition: all 0.2s;
   }
-  .top-bar {
+ .navbar-toggle.top-bar {
     transform: rotate(45deg);
     transform-origin: 10% 10%;
   }
-  .middle-bar {
+ .navbar-toggle.middle-bar {
     opacity: 0;
   }
-  .bottom-bar {
+ .navbar-toggle.bottom-bar {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
   }
-}
 body {
   font-family: 'Open Sans', san-serif;
   font-size: 20px;
