@@ -288,6 +288,7 @@ hr.small {
 	}
 	.navbar-nav>li {
         float: none;
+        margin-bottom: 5px;
     }
     .navbar-nav>li>a {
         padding-top: 5px;
