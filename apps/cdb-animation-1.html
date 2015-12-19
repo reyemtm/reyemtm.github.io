@@ -17,7 +17,8 @@ map: leaflet.html
 var map = new L.Map('map', {
   center: [40, -80],
   zoom: 10,
-  attribution: false
+  attributionControl: false,
+  zoomControl: false
 })
 var hash = L.hash(map);
 var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
