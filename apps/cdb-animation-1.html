@@ -13,7 +13,8 @@ var map = new L.Map('map', {
   center: [41.2399,-80.8120],
   zoom: 12,
   attributionControl: false,
-  zoomControl: false
+  zoomControl: false,
+  scrollWheelZoom: false
 });
 var hash = L.hash(map);
 var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
