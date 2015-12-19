@@ -7,9 +7,9 @@ tags: cartodb
 <script>
 var map = new L.Map('map', {
   center: [41.24398,-80.805931],
-  zoom: 10,
+  zoom: 13,
   attributionControl: false,
-  zoomControl: true
+  zoomControl: false
 })
 //var hash = L.hash(map);
 var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
@@ -30,4 +30,5 @@ cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-
   });
 /*var cdb_url = 'https://ovrdc.cartodb.com/api/v2/viz/8733715a-ae12-11e4-a03d-0e018d66dc29/viz.json';
 cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map);*/
+attributionControl.removeFrom(map);
 </script>
