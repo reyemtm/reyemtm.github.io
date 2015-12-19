@@ -67,3 +67,8 @@
 <script src="{{ "/js/smooth-scroll.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/jquery.bootstrap-autohidingnavbar.js " | prepend: site.baseurl }}"></script>
 <script>$("div.navbar-fixed-top").autoHidingNavbar();</script>
+<script>
+	$('#menutoggle').on('click',function(){
+    $(this).toggleClass('collapsed');
+});
+</script>
