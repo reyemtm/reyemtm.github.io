@@ -4,10 +4,9 @@ title: "These are Not the Droids You're Looking For"
 description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
 permalink: /404.html
 ---
-<h2>The page you are looking has moved or does not exist, but check out these other posts I found.</h2>
+<h3>The page you are looking has moved or does not exist, but check out these other posts I found.</h3>
 <div id="random_posts"></div>
 <script type="text/javascript">
-
 
     function generateRandomPosts()
     {
@@ -36,11 +35,11 @@ permalink: /404.html
 
                     if (counter == (numberOfPosts - 1))
                     {
-                        divRandomPosts.append('<div class="post-preview"><a href="' + postHREF + '">' + '<h2 class="post-title">' + postTitle + '</h2></a></div><hr>');
+                        divRandomPosts.append('<div class="post-preview"><a href="' + postHREF + '">' + '<h3 class="post-title">' + postTitle + '</h3></a></div><hr>');
                     }
                     else
                     {
-                        divRandomPosts.append('<div class="post-preview"><a href="' + postHREF + '">' + '<h2 class="post-title">' + postTitle + '</h2></a></div><hr>');
+                        divRandomPosts.append('<div class="post-preview"><a href="' + postHREF + '">' + '<h3 class="post-title">' + postTitle + '</h3></a></div><hr>');
                     }
 
                     randomIndexUsed.push(randomIndex);
