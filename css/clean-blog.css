@@ -1,10 +1,10 @@
-.navbar-toggle .collapsed .middle-bar {
+.navbar-toggle.collapsed .middle-bar {
     opacity: 1;
   }
-.navbar-toggle .collapsed .bottom-bar {
+.navbar-toggle.collapsed .bottom-bar {
     transform: rotate(0);
   }
-.navbar-toggle .collapsed .top-bar {
+.navbar-toggle.collapsed .top-bar {
   	transform: rotate(0);
 	}
 .navbar-toggle {
