@@ -3,6 +3,7 @@
    right:30px;
    bottom:30px;
    display:none;
+   opacity:0.5;
 }
 .navbar-toggle.collapsed .middle-bar {
     opacity: 1;
