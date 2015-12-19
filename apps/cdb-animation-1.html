@@ -15,10 +15,21 @@ layout: blank
 <script>
 var map = new L.Map('map', {
   center: [40, -80],
-  zoom: 10
+  zoom: 10,
+  attribution: false
 })
-cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { https: true })
-  .addTo(map)
+var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  subdomains: 'abcd',
+  minZoom: 0,
+  maxZoom: 20,
+  maxNativeZoom: 18
+});
+cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { 
+  https: true, 
+  time_slider: false,
+  cartodb_logo: false
+  }).addTo(map)
   .on('error', function(err) {
     alert("some error occurred: " + err);
   });
