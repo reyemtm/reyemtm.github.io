@@ -1,3 +1,9 @@
+.scrollToTop {
+   position:fixed;
+   right:30px;
+   bottom:30px;
+   display:none;
+}
 .navbar-toggle.collapsed .middle-bar {
     opacity: 1;
   }
