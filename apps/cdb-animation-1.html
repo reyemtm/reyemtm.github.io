@@ -3,6 +3,9 @@ layout: cartodb
 map: cartodb
 tags: cartodb
 ---
+<style>
+  .leaflet-container .leaflet-control-attribution {display:none};
+</style>
 <div id="map" style="top:0;left:0;width:100%;height:400px;"></div>
 <script>
 var map = new L.Map('map', {
@@ -18,7 +21,7 @@ var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/da
   minZoom: 0,
   maxZoom: 20,
   maxNativeZoom: 18
-});
+}).addTo(map);
 
 cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { 
   https: true,
@@ -28,7 +31,4 @@ cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-
   .on('error', function(err) {
     alert("some error occurred: " + err);
   });
-/*var cdb_url = 'https://ovrdc.cartodb.com/api/v2/viz/8733715a-ae12-11e4-a03d-0e018d66dc29/viz.json';
-cartodb.createLayer(map, cdb_url, {legends:false, cartodb_logo:false}).addTo(map);*/
-attributionControl.removeFrom(map);
 </script>
