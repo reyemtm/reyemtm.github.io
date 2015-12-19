@@ -26,7 +26,7 @@ var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/da
   minZoom: 0,
   maxZoom: 20,
   maxNativeZoom: 18
-});
+}).addTo(map);
 cartodb.createLayer(map, 'https://malcolmtmeyer.cartodb.com/api/v2/viz/9c039002-a5fa-11e5-9303-0ecd1babdde5/viz.json', { 
   https: true, 
   time_slider: false,
