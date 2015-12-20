@@ -4,9 +4,11 @@
 <!--Twitter Cards-->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbounds">
+<meta name="twitter:creator" content="@getbounds">
 <meta name="twitter:title" content="{{ page.title }}">
 <meta name="twitter:description" content="{{ page.description }}">
-<meta name="twitter:image" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}">
+<meta name="twitter:domain" content="getBounds.com"/>
+<meta name="twitter:image:src" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}">
 <!--Open Graph meta data-->
 <meta property="og:title" content="{{ page.title }}" />
 <meta propety="og:type" content="{% if page.layout == post %}article{% else %}website{% endif %}" />
