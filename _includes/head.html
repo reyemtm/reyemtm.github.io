@@ -16,9 +16,9 @@
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:image" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}" />
 <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-<meta property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
+<link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
 <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-<link rel="canonical" href="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/">
+<!--link rel="canonical" href="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/"-->
 <!-- Bootstrap Core CSS -->
 <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}">
 <!-- Custom CSS -->
