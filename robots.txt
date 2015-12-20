@@ -11,5 +11,4 @@ Disallow: /js/
 Disallow: /class/
 Disallow: /fonts/
 Disallow: /img/
-Disallow: /images/
 Disallow: /less/
