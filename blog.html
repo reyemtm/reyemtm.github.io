@@ -4,8 +4,9 @@ title: "Blog"
 description: "Blog Post Archive"
 subtitle: "Blog Post Archive"
 permalink: /blog/
+post-limit: "5"
 ---
-{% for post in site.posts limit:200 %}
+{% for post in site.posts limit:{{ page.post-limit }} %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
         <h2 class="post-title">            {{ post.title }}
