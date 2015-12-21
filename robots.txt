@@ -12,3 +12,7 @@ Disallow: /class/
 Disallow: /fonts/
 Disallow: /img/
 Disallow: /less/
+User-agent: Twitterbot
+Disallow: *
+
+Allow: /images
