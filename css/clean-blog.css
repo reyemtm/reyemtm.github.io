@@ -22,7 +22,6 @@
 .navbar-toggle:hover {
     background: transparent !important;
   }
-
 .navbar-toggle .icon-bar {
     width: 22px;
     transition: all 0.2s;
