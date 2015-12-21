@@ -5,7 +5,7 @@ subtitle: "A (Jekyll) Blog Exploring Web Maps & Cartography."
 postlimit: "limit:5"
 ---
 <style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
-<!--begin post-loop.html -->
+<!--begin post-loop.html {{ page.postlimit }} -->
 {% for post in paginator.posts {{ page.postlimit }} %}
 {% if post.feature-img contains ".gif" %}
 <div class="post-preview" style="min-height:160px;">
