@@ -1,8 +1,9 @@
-@media only scren and (max-width:500px) {
+@media only screen and (max-width:500px) {
 	.index-img {
 		margin-bottom:20px
 		width:100%;
 	}
+}
 .scrollToTop {
    position:fixed;
    right:30px;
