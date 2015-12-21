@@ -1,6 +1,6 @@
 <!--begin post-loop.html -->
 <style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
-{% for post in paginator.posts limit:page.limit %}
+{% for post in site.posts limit:page.limit %}
 {% if post.feature-img contains ".gif" %}
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">
@@ -32,16 +32,16 @@
 <hr>
 {% endfor %}
 <!-- Pager -->
-{% if paginator.total_pages > 1 %}
+{% if site.total_pages > 1 %}
 <ul class="pager">
-    {% if paginator.previous_page %}
+    {% if site.previous_page %}
     <li class="previous">
-        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
+        <a href="{{ site.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
-    {% if paginator.next_page %}
+    {% if site.next_page %}
     <li class="next">
-        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
+        <a href="{{ site.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
     {% endif %}
 </ul>
