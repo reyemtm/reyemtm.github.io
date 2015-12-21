@@ -725,11 +725,16 @@ body {
     	padding: 100px 0 0px;
 	}
 	.index-img {
-	margin-bottom:20px;
 	width:100%;
 	}
 }
-
+.index-img {
+	float:left;
+	background-position:center;
+	background-repeat:no-repeat;
+	padding:80px 130px;
+	margin: 0 40px 20px 0;
+}
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {
     0% {
