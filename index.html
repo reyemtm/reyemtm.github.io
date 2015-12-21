@@ -6,7 +6,7 @@ postlimit: "limit:5"
 ---
 <style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
 <!--begin post-loop.html {{ page.postlimit }} -->
-{% for post in paginator.posts {{ page.postlimit }} %}
+{% for post in paginator.posts limit:5 %}
 {% if post.feature-img contains ".gif" %}
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">
