@@ -2,10 +2,11 @@
 layout: page
 description: "A (Jekyll) Blog Exploring Web Maps & Cartography."
 subtitle: "A (Jekyll) Blog Exploring Web Maps & Cartography."
+post-limit: 5
 ---
 <style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
-<!--page begin-->
-{% for post in paginator.posts %}
+<!--begin post-loop.html -->
+{% for post in paginator.posts limit:{{ page.post-limit }} %}
 {% if post.feature-img contains ".gif" %}
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">
