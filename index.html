@@ -9,11 +9,11 @@ subtitle: "A (Jekyll) Blog Exploring Web Maps & Cartography."
 {% if post.feature-img contains ".gif" %}
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">
-    <span style="float:left;background-image:url(/images/{{ post.feature-img }});background-position:initial;background-repeat:no-repeat;padding:80px 120px;margin-right: 30px;"></span>
+    <span class="index-img" style="float:left;background-image:url(/images/{{ post.feature-img }});background-position:initial;background-repeat:no-repeat;padding:80px 120px;margin-right: 30px;"></span>
 {% elsif post.feature-img %}
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">
-    <span style="float:left;background-image:url(/images/{{ post.feature-img }});background-position:center;background-repeat:no-repeat;padding:80px 120px;margin-right: 30px;"></span>
+    <span class="index-img" style="float:left;background-image:url(/images/{{ post.feature-img }});background-position:center;background-repeat:no-repeat;padding:80px 120px;margin-right: 30px;"></span>
 {% else %}
 <div class="post-preview">
     <a href="{{ post.url | prepend: site.baseurl }}">
