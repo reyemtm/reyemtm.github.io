@@ -737,6 +737,9 @@ body {
 	.post-preview>a>.post-title {
     	font-size: 30px;
 	}
+	.post-description {
+	font-size:20px;
+	}
 }
 .index-img {
 	float:left;
