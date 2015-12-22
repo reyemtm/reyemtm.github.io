@@ -1,0 +1,14 @@
+{% assign n_posts = 0 %}
+{% for post in site.posts %}
+    {%if post.id == page.id %}{% continue %}{% endif %}
+    {% for this_tag in page.tags %}
+        {% if post.tags contains this_tag%}
+            {% if n_posts == 0 %}{{include.heading}}<ul>{% endif %}
+            <li>{% include post_node.liquid post=post element="h3" %}</li>
+            {% assign n_posts = n_posts | plus: 1 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {%if n_posts > 5 %}{% break %}{% endif %}
+{% endfor %}
+{% if n_posts > 0 %}</ul>{% endif %}
