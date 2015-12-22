@@ -3,8 +3,14 @@
     {%if post.id == page.id %}{% continue %}{% endif %}
     {% for this_tag in page.tags %}
         {% if post.tags contains this_tag%}
-            {% if n_posts == 0 %}{{include.heading}}<ul>{% endif %}
-            <li>{% include post_node.liquid post=post element="h3" %}</li>
+            {% if n_posts == 0 %}<h4>Related Posts</h4><ul>{% endif %}
+                <li class="relatedPost">
+                    <a href="{{ site.url }}{{ post.url }}">{{ post.title }}
+                    {% if post.series %}
+                        (Series: {{ post.series }})
+                    {% endif %}
+                    </a>
+                </li>
             {% assign n_posts = n_posts | plus: 1 %}
             {% break %}
         {% endif %}
