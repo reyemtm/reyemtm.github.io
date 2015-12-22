@@ -726,8 +726,16 @@ body {
 	.intro-header .site-heading, .intro-header .page-heading {
     	padding: 100px 0 0px;
 	}
+	.post-preview>a>.post-title {
+    	font-size: 24px;
+	}
+}
+@media only screen and (max-width: 580px) {
 	.index-img {
 	width:100%;
+	}
+	.post-preview>a>.post-title {
+    	font-size: 30px;
 	}
 }
 .index-img {
