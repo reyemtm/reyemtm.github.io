@@ -13,7 +13,7 @@ To read my initial thoughts on these three platforms, continue reading.
 ---
 Google has long been the standard for map embeds sharing, but there are other platforms out there. The following maps show a basic polyline layer rendered in three different map platforms: Google's MyMaps, Leaflet and ArcGIS Online.
 
-####Google MyMaps
+###Google MyMaps
 ---
 <iframe src="https://www.google.com/maps/d/embed?mid=zohGjDikXVzw.k1Spqlzpqkws" style="width:100%;height:480px;" frameborder='0'></iframe>
 
@@ -21,7 +21,7 @@ Google has long been the standard for map embeds sharing, but there are other pl
 ---
 <iframe height="450" src="https://getbounds.com/geojson/" style="width:100%;height:480px;" frameborder='0'></iframe>
 
-####ArcGIS Online
+###ArcGIS Online
 ---
 <iframe style="width:100%;height:480px;" frameborder='0' src="https://www.arcgis.com/apps/Viewer/index.html?appid=a7b9fe89135b4f69a51803704c8302b2"></iframe>
 
