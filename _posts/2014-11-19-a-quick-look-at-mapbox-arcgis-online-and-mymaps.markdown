@@ -6,7 +6,7 @@ tags: leaflet
 ---
 ####Update 12/2015
 
-Since I wrote this I have come to rely almost exclusively on [Leaflet](http://leafletjs.com/) for web mapping. For one, leaflet maps are fast, really fast. There are also hundreds of plugins to choose from, which makes it a very flexible platform. Of course map rendering speed depends on how much data you are pushing to the client, and the speed of your map tile provider. With Leafleat 1.0 (beta) speed has increased even further. The fact that I can host a searchable parcel map for a small city of 5,000 people without a GIS server is one of the reasons I will continue to develop in leaflet for the forseeable future.
+Since I wrote this I have come to rely almost exclusively on [Leaflet](http://leafletjs.com/) for web mapping. For one, leaflet maps are fast, really fast. There are also hundreds of plugins to choose from, which makes it a very flexible platform. Of course map rendering speed depends on how much data you are pushing to the client, and the speed of your map tile provider. With Leafleat 1.0 (beta) speed has increased even further. The fact that I can host a searchable parcel map for a small city of 5,000 people without a GIS server is one of the reasons I will continue to develop in leaflet for the foreseeable future.
 
 To read my initial thoughts on these three platforms, continue reading.
 ---
