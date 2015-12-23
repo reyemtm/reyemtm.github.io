@@ -4,3 +4,8 @@
 		overflow: scroll;
 		max-height: 400px;}
 }
+.leaflet-touch .leaflet-bar a {
+    width: 24px;
+    height: 24px;
+    line-height: 24px;
+}
