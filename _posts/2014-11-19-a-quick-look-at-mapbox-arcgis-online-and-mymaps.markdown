@@ -4,7 +4,10 @@ title: Google MyMaps, Leaflet and ArcGIS Online
 date: '2014-11-19 17:47:09'
 tags: leaflet
 ---
-Google has long been the standard for map embeds sharing, but there are other platforms out there. The following maps show a basic polyling layer rendered in three different map platforms: Google's MyMaps, Leaflet and ArcGIS Online.
+####Update 12/2015
+Since I wrote this I have come to rely almosst exclusively on Leaflet for web mapping. For one, leaflet map are fast, really fast.Also, there are humdreds of plugins to choose from, which makes it a very flexible platform. To read my initial thoughts on these three platforms, continue reading.
+---
+Google has long been the standard for map embeds sharing, but there are other platforms out there. The following maps show a basic polyline layer rendered in three different map platforms: Google's MyMaps, Leaflet and ArcGIS Online.
 
 ####Google MyMaps
 ---
@@ -19,3 +22,4 @@ Google has long been the standard for map embeds sharing, but there are other pl
 <iframe style="width:100%;height:480px;" frameborder='0' src="https://www.arcgis.com/apps/Viewer/index.html?appid=a7b9fe89135b4f69a51803704c8302b2"></iframe>
 
 One major difference between the services are the free webapp templates offered through ArcGIS Online. Although the other two services allow for customization through backend programming, the ArcGIS templates, free and customizable with most published on GitHub, make the presentation of spatial data both simple and flexible.
+
