@@ -14,4 +14,4 @@ The toolbar is a fixed width on larger screens, and full width on smaller device
 
 It would be great to see someone take this idea and create another leaflet 'position' like this or possibly turn this into a leaflet plugin.
 
-View the entire css [here](//getbounds.com/data/ovrdc-modern-ui.css).
+View the entire css [here](//www.ovrdc.org/assets/ovrdc-css/modern-ui.css).
