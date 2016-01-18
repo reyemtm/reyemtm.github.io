@@ -586,7 +586,8 @@ form .row:first-child .floating-label-form-group {
   color: white;
 }
 .pager {
-  margin: 20px 0 0;
+  /*margin: 20px 0 0;*/
+  margin: 20px 15px;
 }
 .pager li > a,
 .pager li > span {
