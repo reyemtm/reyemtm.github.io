@@ -12,11 +12,11 @@
 				{% if post.feature-img contains ".gif" %}
 				<div class="post-preview" style="min-height:160px;">
 					<a href="{{ post.url | prepend: site.baseurl }}">
-					<span class="index-img" style="background-image:url(/images/{{ post.feature-img }});background-position:initial;"></span>
+					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});background-position:initial;float:none;"></div>
 				{% elsif post.feature-img %}
 				<div class="post-preview" style="min-height:160px;">
 					<a href="{{ post.url | prepend: site.baseurl }}">
-					<span class="index-img" style="background-image:url(/images/{{ post.feature-img }});"></span>
+					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});float:none"></div>
 				{% else %}
 				<div class="post-preview">
 					<a href="{{ post.url | prepend: site.baseurl }}">
