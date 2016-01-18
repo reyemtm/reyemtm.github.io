@@ -8,7 +8,7 @@
         {% if post.tags contains this_tag%}
             {% if n_posts == 0 %}<h3 style="letter-spacing:6px;text-align:center;margin:0;font-weight:500;">Related Posts</h3><hr>{% endif %}
                 <!--begin post-loop.html -->
-				<div class="col-md-4">
+				<div class="col-md-4 col-sm-4">
 				{% if post.feature-img contains ".gif" %}
 				<div class="post-preview" style="min-height:160px;">
 					<a href="{{ post.url | prepend: site.baseurl }}">
