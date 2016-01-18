@@ -747,6 +747,7 @@ body {
 	background-repeat:no-repeat;
 	padding:80px 130px;
 	margin: 0 40px 20px 0;
+	background-size: cover;
 }
 /* Used to fade in title/desc on the home page */
 @-webkit-keyframes fade-in-down {
