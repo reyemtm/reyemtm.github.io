@@ -20,6 +20,7 @@
 				{% else %}
 					<div class="post-preview">
 						<a href="{{ post.url | prepend: site.baseurl }}">
+						<div class="index-img" style="background-image:url(/images/{{ site.header-img }});float:none"></div>
 					{% endif %}
 						<h3>{{ post.title }}</h3></a>
 						<div class="post-meta">
@@ -30,6 +31,7 @@
 						</ul>
 						</div>
 					</div>
+					<hr>
 				</div>
                 <!--<li class="relatedPost">
                     <a href="{{ site.url }}{{ post.url }}">{{ post.title }}
