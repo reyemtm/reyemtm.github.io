@@ -1,26 +1,26 @@
 <div class="containter">
-<div class="row" style="margin: 0;">
+<div class="row" style="margin:0;">
 <style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
 {% assign n_posts = 0 %}
 {% for post in site.posts %}
     {%if post.id == page.id %}{% continue %}{% endif %}
     {% for this_tag in page.tags %}
         {% if post.tags contains this_tag%}
-            {% if n_posts == 0 %}<h3 style="letter-spacing:6px;text-align:center;">Related Posts</h3><hr>{% endif %}
+            {% if n_posts == 0 %}<h3 style="letter-spacing:6px;text-align:center;margin:0;">Related Posts</h3><hr>{% endif %}
                 <!--begin post-loop.html -->
 				<div class="col-md-4">
 				{% if post.feature-img contains ".gif" %}
 				<div class="post-preview" style="min-height:160px;">
 					<a href="{{ post.url | prepend: site.baseurl }}">
-					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});background-position:initial;float:none;"></div>
+					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});background-position:initial;float:none;margin:0;"></div>
 				{% elsif post.feature-img %}
 				<div class="post-preview" style="min-height:160px;">
 					<a href="{{ post.url | prepend: site.baseurl }}">
-					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});float:none"></div>
+					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});float:none;margin:0;"></div>
 				{% else %}
 					<div class="post-preview">
 						<a href="{{ post.url | prepend: site.baseurl }}">
-						<div class="index-img" style="background-image:url(/images/{{ site.header-img }});float:none"></div>
+						<div class="index-img" style="background-image:url(/images/{{ site.header-img }});float:none;margin:0;"></div>
 					{% endif %}
 						<h3>{{ post.title }}</h3></a>
 						<div class="post-meta">
