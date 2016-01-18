@@ -17,11 +17,15 @@
 				<div class="post-preview" style="min-height:160px;">
 					<a href="{{ post.url | prepend: site.baseurl }}">
 					<div class="index-img" style="background-image:url(/images/{{ post.feature-img }});float:none;margin:0;"></div>
+				{% elsif post.header-img %}
+				<div class="post-preview" style="min-height:160px;">
+					<a href="{{ post.url | prepend: site.baseurl }}">
+					<div class="index-img" style="background-image:url(/images/{{ post.header-img }});float:none;margin:0;"></div>
 				{% else %}
 					<div class="post-preview">
 						<a href="{{ post.url | prepend: site.baseurl }}">
 						<div class="index-img" style="background-image:url(/images/{{ site.header-img }});float:none;margin:0;"></div>
-					{% endif %}
+				{% endif %}
 						<h3>{{ post.title }}</h3></a>
 						<div class="post-meta">
 						<ul class="fa-ul">
