@@ -1,12 +1,12 @@
 <div class="containter">
-<div class="row">
+<div class="row" style="margin: 0;">
 <style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
 {% assign n_posts = 0 %}
 {% for post in site.posts %}
     {%if post.id == page.id %}{% continue %}{% endif %}
     {% for this_tag in page.tags %}
         {% if post.tags contains this_tag%}
-            {% if n_posts == 0 %}<h3 style="letter-sapcing:6px;">Related Posts</h3><hr>{% endif %}
+            {% if n_posts == 0 %}<h3 style="letter-spacing:6px;">Related Posts</h3><hr>{% endif %}
                 <!--begin post-loop.html -->
 				<div class="col-md-4">
 				{% if post.feature-img contains ".gif" %}
