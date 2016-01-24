@@ -409,15 +409,15 @@ var tileOptions = {
             maxZoom: 18,  // max zoom to preserve detail on
             tolerance: 14, // simplification tolerance (higher means simpler)
             extent: 4096,  // 4096 tile extent (both width and height)
-            buffer: 32,   // default 64 tile buffer on each side
+            buffer: 0,   // default 64 tile buffer on each side
             debug: 0,      // logging level (0 to disable, 1 or 2)
             indexMaxZoom: 0,        // 0 max zoom in the initial tile index
             indexMaxPoints: 10000, // 100000 max number of points per tile in the index
         };
 var tileIndex = geojsonvt(data, tileOptions);
 
-/*var tileLayer = L.canvasTiles()
-							 .params({ debug: false, padding: 5 })
+var tileLayer = L.canvasTiles()
+							 .params({ debug: true, padding: 5 })
 							 .drawing(drawingOnCanvas)
  var pad = 0;
  tileLayer.addTo(map);
@@ -477,7 +477,7 @@ var tileIndex = geojsonvt(data, tileOptions);
             }
 
         };
-*/
+
 		});
 </script>
 </body>
