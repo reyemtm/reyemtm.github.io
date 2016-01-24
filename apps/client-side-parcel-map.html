@@ -75,14 +75,12 @@
 </div>
 </div>
 <script>
-if (L.Browser.touch) {
+if (L.Browser.mobile) {
 	console.log('touch device');
-	    if (confirm("This page loads a 30 mb file which may not load on mobile. Click ok to try or cancel to view the mobile version.") != true) {
-				window.location.href = "http://www.cnn.com";
+	   if (confirm("This page loads a 30 mb file which may not load on mobile. Click ok to try or cancel to view the mobile version.") != true) {
+		window.location.href = "http://www.cnn.com";
 	};
-};
-/*	function code(){
-		if(!confirm("This is an onLoad confirm or cancel PopUp....hit OK to stay and get the script."))history.go(-1);return""}document.writeIn(code())*/
+}
 var map = L.map('map', {
   zoomControl: false,
 	maxZoom: 18,
@@ -319,6 +317,7 @@ if (window.innerWidth < 481) {
 };
 //end mobile tools menu
 //end OVRDC Modern UI Toolbar
+var tilename;
 var esritopomini = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
 maxZoom: 20,
@@ -494,7 +493,7 @@ var tileLayer = L.canvasTiles()
 });
 }
 $(document).ready(function() {
-	var tilename = 'fairfieldParcelsMin.json';
+	tilename = 'fairfieldParcelsMin.json';
 	console.log(tilename);
 	makeMap();
 	});
