@@ -59,7 +59,7 @@
 <style>*{font-family: "Open Sans", sans-serif;}</style>
 </head>
 <body>
-<div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...<br>This could take a while. Relax.</h2></div>
+<div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
 <div id='map'>
 <div id="sidebar"><div class="list-group" style="text-align:left;">
 	<hr><h4>Pinch & zoom disabled. Use zoom controls.</h4>
@@ -344,14 +344,13 @@ tileData.on('error', function() {
 	console.log('omnivore error')
 });
 tileData.on('ready', function() {
-//$(document).ready(function() {
+	var data = tileData.toGeoJSON();
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
 	$(".blank").html('Your Map is Loaded!');
 	$(".blank").delay(500).fadeOut();
-	//var seachdata = tileData;
-	alert('parcel data ready');
+	console.log('parcel data ready');
 	search = new L.Control.Search({
     layer: ffParcels,
 		propertyName: 'index',
