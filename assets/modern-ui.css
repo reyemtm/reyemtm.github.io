@@ -1,3 +1,7 @@
+.leaflet-control-zoom.leaflet-bar.leaflet-control .leaflet-control-loading {
+	position: initial;
+	box-shadow: none!important;
+}
 .leaflet-control-minimap {
 	border-radius: 0;
 }
