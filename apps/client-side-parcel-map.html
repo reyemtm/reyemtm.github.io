@@ -338,7 +338,7 @@ var ffParcels = L.geoJson(null, {
     layer.bindPopup(feature.properties.owner)
   }
 });
-var url = 'https://getbounds/data/';
+var url = 'https://getbounds.com/data/';
 var fullurl = url + tilename;
 console.log(fullurl);
 var tileData = omnivore.topojson(fullurl, null, ffParcels);
