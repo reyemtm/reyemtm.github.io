@@ -5,23 +5,23 @@
 <head>
 <title>Client-Side Test Map | getBounds</title>
 <!--fonts and jquery-->
-<link href='//fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'>
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <!--Font Awesome CDN and Bootstrap CSS -->
-<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 <!--Mapping via LeafletJS updated 03-13-2015 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
 <!--leaflet sleep updated Jan 2016 -->
-<script src="../assets/leaflet-sleep/Leaflet.Sleep.js"></script>
+<script src="https://getbounds.com/assets/leaflet-sleep/Leaflet.Sleep.js"></script>
 <!--Home Button ie Default Extent-->
-<link rel="stylesheet" href="../assets/leaflet-defaultextent/leaflet.defaultextent.css" />
-<script src="../assets/leaflet-defaultextent/leaflet.defaultextent.js"></script>
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-defaultextent/leaflet.defaultextent.css" />
+<script src="https://getbounds.com/assets/leaflet-defaultextent/leaflet.defaultextent.js"></script>
 <!--locate control from source -->
-<link rel="stylesheet" href="../assets/leaflet-locate-control/L.Control.Locate.min.css" />
-<script src="../assets/leaflet-locate-control/L.Control.Locate.min.js"></script>
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-locate-control/L.Control.Locate.min.css" />
+<script src="https://getbounds.com/assets/leaflet-locate-control/L.Control.Locate.min.js"></script>
 <!--Leaflet Hash via Mapbox CDN-->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <!--Google Custom Map -->
@@ -29,32 +29,32 @@
 <!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <!-- leaflet search -->
-<link rel="stylesheet" href="../assets/leaflet-search/leaflet-search.min.css" />
-<script src="../assets/leaflet-search/leaflet-search.src.js"></script>
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-search/leaflet-search.min.css" />
+<script src="https://getbounds.com/assets/leaflet-search/leaflet-search.src.js"></script>
 <!--minimap-->
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
 <!-- Leaflet Easy button Updated Dec 2015-->
-<link rel="stylesheet" href="../assets/easy-button/easy-button.css" />
-<script src="../assets/easy-button/easy-button.js"></script>
+<link rel="stylesheet" href="https://getbounds.com/assets/easy-button/easy-button.css" />
+<script src="https://getbounds.com/assets/easy-button/easy-button.js"></script>
 <!--Leaflet sidebar v1 aka menu -->
-<link rel="stylesheet" href="../assets/leaflet-sidebar/L.Control.Sidebar.css" />
-<script src="../assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-sidebar/L.Control.Sidebar.css" />
+<script src="https://getbounds.com/assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
 <!-- leaflet loading and leaflet-spin works with leaflet ajax and map tiles -->
-<link rel="stylesheet" href="../assets/leaflet-loading/Control.Loading.css" />
-<script src="../assets/leaflet-loading/Control.Loading.js"></script>
-<script src="../assets/leaflet-spin/spin.js"></script>
-<script src="../assets/leaflet-spin/leaflet.spin.js"></script>
-<script src="../assets/google-tiles/google.js"></script>
-<script src="../assets/google-tiles/gglegrey.js"></script>
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-loading/Control.Loading.css" />
+<script src="https://getbounds.com/assets/leaflet-loading/Control.Loading.js"></script>
+<script src="https://getbounds.com/assets/leaflet-spin/spin.js"></script>
+<script src="https://getbounds.com/assets/leaflet-spin/leaflet.spin.js"></script>
+<script src="https://getbounds.com/assets/google-tiles/google.js"></script>
+<script src="https://getbounds.com/assets/google-tiles/gglegrey.js"></script>
 <!--Mapbox fullscreen standalone js added in ovrdc-toolbar-->
-<link href='//api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <!--OVRDC Custom Styles-->
 <link rel="stylesheet" href="https://www.ovrdc.org/apps/assets/ovrdc-css/ovrdc-style.css" />
 <link rel="stylesheet" href="https://www.ovrdc.org/apps/assets/ovrdc-css/modern-ui.css" />
-<script src="../assets/geojson-tiles/geojson-vt-dev.js"></script>
-<script src="../assets/geojson-tiles/L.CanvasTiles.js"></script>
+<script src="https://getbounds.com/assets/geojson-tiles/geojson-vt-dev.js"></script>
+<script src="https://getbounds.com/assets/geojson-tiles/L.CanvasTiles.js"></script>
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.1.0/leaflet-pip.min.js'></script>
 <style>*{font-family: "Open Sans", sans-serif;}</style>
 </head>
@@ -70,11 +70,18 @@
   <li class="list-group-item"><i class='fa fa-globe fa-fw fa-lg'></i> Default Map Extent</li>
   <li class="list-group-item"><i class='fa fa-map-marker fa-fw fa-lg'></i> Show/Follow Your Location</li>
   <li class="list-group-item"><i class='fa fa-cogs fa-fw fa-lg'></i> Toggle Map Tools (Mobile Only)</li>
-  <li class="list-group-item"><img src="../assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li>
+  <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li>
   <hr>
 </div>
 </div>
 <script>
+if (L.Browser.mobile) {
+	$window.load(function () {
+	    if (confirm("This page loads a 30 mb file which may not load on mobile. Click ok to continue or cancel to view another example with a smaller file.") == true) {
+				window.location.href = "http://www.cnn.com";
+	    }
+	});
+};
 var map = L.map('map', {
   zoomControl: false,
 	maxZoom: 18,
@@ -93,7 +100,7 @@ setTimeout(function() {
 }, 20000);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 //--begin map-tiles
-var osm = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    maxNativeZoom:19,
    maxZoom: 22,
    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -116,7 +123,7 @@ var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/da
   maxZoom: 20,
   maxNativeZoom: 18
 });
-var esritopo = L.tileLayer('//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+var esritopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
 	maxZoom: 20,
 	maxNativeZoom: 18
@@ -138,7 +145,7 @@ var basemaps = {
 //OVRDC Modern UI Toolbar
 //OVRDC New marker
 var ovrdcMarker = L.icon({
-    iconUrl: '../assets/images/ovrdc-marker.png',
+    iconUrl: 'https://getbounds.com/assets/images/ovrdc-marker.png',
     //shadowUrl: 'leaf-shadow.png',
     iconSize:     [48, 48], // size of the icon
     //shadowSize:   [50, 64], // size of the shadow
@@ -311,7 +318,7 @@ if (window.innerWidth < 481) {
 };
 //end mobile tools menu
 //end OVRDC Modern UI Toolbar
-var esritopomini = L.tileLayer('//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+var esritopomini = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
 maxZoom: 20,
 maxNativeZoom: 18
@@ -337,17 +344,17 @@ tileData.on('error', function() {
 	console.log('omnivore error')
 });
 tileData.on('ready', function() {
+//$(document).ready(function() {
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
 	$(".blank").html('Your Map is Loaded!');
 	$(".blank").delay(500).fadeOut();
-	var data = ffParcels.toGeoJSON();
+	//var seachdata = tileData;
 	alert('parcel data ready');
-	/*
 	search = new L.Control.Search({
     layer: ffParcels,
-    propertyName: 'index',
+		propertyName: 'index',
     initial: false,
     zoom: 17,
     collapsed: false,
@@ -465,7 +472,7 @@ var tileLayer = L.canvasTiles()
                     for (var k = 0; k < geom.length; k++) {
                         var p = geom[k];
                         var extent = 4096;
- 
+
                         var x = p[0] / extent * 256;
                         var y = p[1] / extent * 256;
                         if (k) ctx.lineTo(x  + pad, y   + pad);
@@ -478,8 +485,9 @@ var tileLayer = L.canvasTiles()
             }
 
         };
-*/
+
 		});
+	}
 </script>
 </body>
 </html>
