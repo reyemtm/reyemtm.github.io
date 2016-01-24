@@ -344,7 +344,7 @@ tileData.on('ready', function() {
       map.removeLayer(point);
     }
     var layer = e.layer.feature.properties.index;
-    var attributes = layer.split('-', 2);
+    var attributes = layer.split('|', 2);
     var name = attributes[0];
     var pin  = attributes[1];
     var popup = 'Parcel ID: ' + pin + '<hr>' + name;
@@ -378,7 +378,7 @@ map.on('click', function(e) {
 	 filter: function(feature, layer) {
 		return feature.properties.index == clicked
 		}}).addTo(map);
-   var attributes = clicked.split('-', 2);
+   var attributes = clicked.split('|', 2);
    var name = attributes[0];
    var pin  = attributes[1];
    var popup = 'Parcel ID: ' + pin + '<hr>' + name;
