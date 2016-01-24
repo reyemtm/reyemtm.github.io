@@ -333,7 +333,6 @@ sidebar.on('hide', function() {
 	customZoom.addTo(map);
 });
 
-function makeMap(){
 var ffParcels = L.geoJson(null, {
   onEachFeature: function(feature, layer) {
     layer.bindPopup(feature.properties.owner)
