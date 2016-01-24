@@ -324,6 +324,9 @@ var tileData = omnivore.topojson("../data/fairfieldParcelsMin.topojson", null, f
 var search;
 var point;
 var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
+tileData.on('error', function() {
+	console.log('omnivore error')
+});
 tileData.on('ready', function() {
 	var data = ffParcels.toGeoJSON();
 	console.log('parcel data ready');
