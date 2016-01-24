@@ -337,7 +337,7 @@ tileData.on('error', function() {
 	console.log('omnivore error')
 });
 tileData.on('ready', function() {
-	var data = ffParcels.toGeoJSON();
+	//var data = ffParcels.toGeoJSON();
 	console.log('parcel data ready');
   if (L.Browser.mobile) {
 		sidebar.show();
@@ -414,7 +414,7 @@ var tileOptions = {
             indexMaxZoom: 0,        // 0 max zoom in the initial tile index
             indexMaxPoints: 100000, // 100000 max number of points per tile in the index
         };
-var tileIndex = geojsonvt(data, tileOptions);
+/*var tileIndex = geojsonvt(data, tileOptions);
 var tileLayer = L.canvasTiles()
 							 .params({ debug: false, padding: 5 })
 							 .drawing(drawingOnCanvas)
@@ -476,7 +476,8 @@ var tileLayer = L.canvasTiles()
             }
 
         };
-});
+*/
+		});
 </script>
 </body>
 </html>
