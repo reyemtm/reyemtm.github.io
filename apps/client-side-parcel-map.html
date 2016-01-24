@@ -337,13 +337,14 @@ tileData.on('error', function() {
 	console.log('omnivore error')
 });
 tileData.on('ready', function() {
-	alert('parcel data ready');
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
 	$(".blank").html('Your Map is Loaded!');
 	$(".blank").delay(500).fadeOut();
-	/*var data = ffParcels.toGeoJSON();
+	var data = ffParcels.toGeoJSON();
+	alert('parcel data ready');
+	/*
 	search = new L.Control.Search({
     layer: ffParcels,
     propertyName: 'index',
