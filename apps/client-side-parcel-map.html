@@ -320,7 +320,7 @@ sidebar.on('show', function() {
 sidebar.on('hide', function() {
 	customZoom.addTo(map);
 });
-var tileData = omnivore.topojson("../data/fairfieldParcelsMin.topojson", null, ffParcels);
+var tileData = omnivore.topojson("../data/fairfieldParcelsMin.json", null, ffParcels);
 var search;
 var point;
 var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
