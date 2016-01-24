@@ -83,7 +83,7 @@ if (L.Browser.mobile) {
 	};
 }
 var tilename;
-function makeMap() {
+var mkMap = function makeMap() {
 var map = L.map('map', {
   zoomControl: false,
 	maxZoom: 18,
@@ -496,7 +496,7 @@ var tileLayer = L.canvasTiles()
 $(document).ready(function() {
 	tilename = 'fairfieldParcelsMin.json';
 	console.log(tilename);
-	makeMap();
+	mkMap;
 	});
 $( "#test" ).click(function() {
 	map.remove();
@@ -506,7 +506,7 @@ $( "#test" ).click(function() {
 	$("#map-container").append('<div id="map"></div>');
 	}, 10);
 	setTimeout(function() {
-	makeMap();
+	mkMap();
 	}, 50);
 });	
 </script>
