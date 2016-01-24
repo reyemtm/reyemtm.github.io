@@ -60,7 +60,6 @@
 </head>
 <body>
 <div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
-<div id='map-container'>
 <div id="sidebar"><div class="list-group" style="text-align:left;">
 	<hr><h4>Pinch & zoom disabled. Use zoom controls.</h4>
 	<hr>
@@ -73,7 +72,7 @@
   <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li>
   <hr>
 </div>
-</div>
+<div id='map-container'></div>
 <script>
 if (L.Browser.mobile) {
 	console.log('touch device');
