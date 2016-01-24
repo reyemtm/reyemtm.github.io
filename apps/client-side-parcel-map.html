@@ -61,19 +61,19 @@
 <body>
 <div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
 <div id='map-container'>
-<div id="sidebar"><div class="list-group" style="text-align:left;">
-	<hr><h4>Pinch & zoom disabled. Use zoom controls.</h4>
-	<hr>
-  <li id="test" class="list-group-item"><i class='fa fa-bars fa-fw fa-lg'></i> Open Sidebar</li>
-  <li class="list-group-item"><i class='fa fa-exchange fa-fw fa-lg'></i> Toggle Address Search</li>
-  <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li>
-  <li class="list-group-item"><i class='fa fa-globe fa-fw fa-lg'></i> Default Map Extent</li>
-  <li class="list-group-item"><i class='fa fa-map-marker fa-fw fa-lg'></i> Show/Follow Your Location</li>
-  <li class="list-group-item"><i class='fa fa-cogs fa-fw fa-lg'></i> Toggle Map Tools (Mobile Only)</li>
-  <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li>
-  <hr>
-</div>
-<div id="map"></div>
+	<div id="sidebar"><div class="list-group" style="text-align:left;">
+		<hr><h4>Pinch & zoom disabled. Use zoom controls.</h4>
+		<hr>
+	  <li id="test" class="list-group-item"><i class='fa fa-bars fa-fw fa-lg'></i> Open Sidebar</li>
+	  <li class="list-group-item"><i class='fa fa-exchange fa-fw fa-lg'></i> Toggle Address Search</li>
+	  <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li>
+	  <li class="list-group-item"><i class='fa fa-globe fa-fw fa-lg'></i> Default Map Extent</li>
+	  <li class="list-group-item"><i class='fa fa-map-marker fa-fw fa-lg'></i> Show/Follow Your Location</li>
+	  <li class="list-group-item"><i class='fa fa-cogs fa-fw fa-lg'></i> Toggle Map Tools (Mobile Only)</li>
+	  <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li>
+	  <hr>
+	</div>
+	<div id="map"></div>
 </div>
 <script>
 if (L.Browser.mobile) {
@@ -82,8 +82,11 @@ if (L.Browser.mobile) {
 		window.location.href = "http://www.cnn.com";
 	};
 }
+$(document).ready(function() {
 var tilename;
-var mkMap = function makeMap() {
+tilename = 'fairfieldParcelsMin.json';
+console.log(tilename);
+function makeMap() {
 var map = L.map('map', {
   zoomControl: false,
 	maxZoom: 18,
@@ -493,22 +496,19 @@ var tileLayer = L.canvasTiles()
 
 });
 }
-$(document).ready(function() {
-	tilename = 'fairfieldParcelsMin.json';
-	console.log(tilename);
-	mkMap;
-	});
-$( "#test" ).click(function() {
-	map.remove();
-	setTimeout(function() {
-	tilename = 'extract.json';
-	console.log(tilename);
-	$("#map-container").append('<div id="map"></div>');
-	}, 10);
-	setTimeout(function() {
-	mkMap();
-	}, 50);
-});	
+	$( "#test" ).click(function() {
+		map.remove();
+		setTimeout(function() {
+		tilename = 'extract.json';
+		console.log(tilename);
+		$("#map-container").append('<div id="map"></div>');
+		}, 10);
+		setTimeout(function() {
+		mkMap();
+		}, 50);
+	});	
+});
+
 </script>
 </body>
 </html>
