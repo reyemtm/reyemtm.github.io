@@ -417,7 +417,7 @@ var tileOptions = {
 var tileIndex = geojsonvt(data, tileOptions);
 
 var tileLayer = L.canvasTiles()
-							 .params({ debug: true, padding: 5 })
+							 .params({ debug: false, padding: 5 })
 							 .drawing(drawingOnCanvas)
  var pad = 0;
  tileLayer.addTo(map);
