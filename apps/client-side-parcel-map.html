@@ -341,7 +341,7 @@ tileData.on('error', function() {
 });
 tileData.on('ready', function() {
 	var data = tileData.toGeoJSON();
-	map.fitBounds(data.getBounds());
+	map.fitBounds(ffParcels.getBounds());
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
