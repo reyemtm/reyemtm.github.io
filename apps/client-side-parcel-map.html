@@ -77,11 +77,10 @@
 <script>
 if (L.Browser.touch) {
 	console.log('touch device');
-	function () {
 	    if (confirm("This page loads a 30 mb file which may not load on mobile. Click ok to continue or cancel to view another example with a smaller file.") == true) {
 				window.location.href = "http://www.cnn.com";
-	    }
 	};
+};
 /*	function code(){
 		if(!confirm("This is an onLoad confirm or cancel PopUp....hit OK to stay and get the script."))history.go(-1);return""}document.writeIn(code())*/
 var map = L.map('map', {
