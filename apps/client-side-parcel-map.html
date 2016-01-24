@@ -338,13 +338,13 @@ tileData.on('error', function() {
 });
 tileData.on('ready', function() {
 	alert('parcel data ready');
-	/*var data = ffParcels.toGeoJSON();
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
 	$(".blank").html('Your Map is Loaded!');
-  $(".blank").delay(500).fadeOut();
-  search = new L.Control.Search({
+	$(".blank").delay(500).fadeOut();
+	/*var data = ffParcels.toGeoJSON();
+	search = new L.Control.Search({
     layer: ffParcels,
     propertyName: 'index',
     initial: false,
