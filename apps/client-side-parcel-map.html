@@ -326,18 +326,23 @@ maxNativeZoom: 18
 });
 var miniMap = new L.Control.MiniMap(esritopomini).addTo(map);
 ortho.addTo(map);
-var ffParcels = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup(feature.properties.owner)
-  }
-});
 sidebar.on('show', function() {
 	map.removeControl(customZoom)
 });
 sidebar.on('hide', function() {
 	customZoom.addTo(map);
 });
-var tileData = omnivore.topojson("../data/fairfieldParcelsMin.json", null, ffParcels);
+
+function makeMap(){
+var ffParcels = L.geoJson(null, {
+  onEachFeature: function(feature, layer) {
+    layer.bindPopup(feature.properties.owner)
+  }
+});
+var url = '..data/';
+var fullurl = url + tilename;
+console.log(fullurl);
+var tileData = omnivore.topojson(fullurl, null, ffParcels);
 var search;
 var point;
 var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
@@ -487,6 +492,12 @@ var tileLayer = L.canvasTiles()
         };
 
 });
+}
+$(document).ready(function() {
+	var tilename = 'fairfieldParcelsMin.json';
+	console.log(tilename);
+	makeMap();
+	);
 </script>
 </body>
 </html>
