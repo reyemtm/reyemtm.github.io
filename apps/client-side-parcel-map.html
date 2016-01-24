@@ -82,7 +82,6 @@ if (L.Browser.mobile) {
 		window.location.href = "http://www.cnn.com";
 	};
 }
-$(document).ready(function() {
 var tilename;
 tilename = 'fairfieldParcelsMin.json';
 console.log(tilename);
@@ -496,18 +495,17 @@ var tileLayer = L.canvasTiles()
 
 });
 }
-	$( "#test" ).click(function() {
-		map.remove();
-		setTimeout(function() {
-		tilename = 'extract.json';
-		console.log(tilename);
-		$("#map-container").append('<div id="map"></div>');
-		}, 10);
-		setTimeout(function() {
-		mkMap();
-		}, 50);
-	});	
-});
+$( "#test" ).click(function() {
+	map.remove();
+	setTimeout(function() {
+	tilename = 'extract.json';
+	console.log(tilename);
+	$("#map-container").append('<div id="map"></div>');
+	}, 10);
+	setTimeout(function() {
+	mkMap();
+	}, 50);
+});	
 
 </script>
 </body>
