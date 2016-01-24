@@ -60,7 +60,7 @@
 </head>
 <body>
 <div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
-<div id='map'>
+<div id='map-container'>
 <div id="sidebar"><div class="list-group" style="text-align:left;">
 	<hr><h4>Pinch & zoom disabled. Use zoom controls.</h4>
 	<hr>
@@ -495,12 +495,14 @@ var tileLayer = L.canvasTiles()
 $(document).ready(function() {
 	tilename = 'fairfieldParcelsMin.json';
 	console.log(tilename);
+	$("#map-container").append('<div id="map"></div>');
 	makeMap();
 	});
 $( "#test" ).click(function() {
 	map.remove();
 	tilename = 'extract.json';
 	console.log(tilename);
+	$("#map-container").append('<div id="map"></div>');
 	makeMap();
 });	
 </script>
