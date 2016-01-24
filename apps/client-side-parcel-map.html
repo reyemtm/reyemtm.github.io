@@ -81,6 +81,8 @@ if (L.Browser.mobile) {
 		window.location.href = "http://www.cnn.com";
 	};
 }
+var tilename;
+function makeMap() {
 var map = L.map('map', {
   zoomControl: false,
 	maxZoom: 18,
@@ -317,7 +319,6 @@ if (window.innerWidth < 481) {
 };
 //end mobile tools menu
 //end OVRDC Modern UI Toolbar
-var tilename;
 var esritopomini = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
 maxZoom: 20,
@@ -498,6 +499,7 @@ $(document).ready(function() {
 	makeMap();
 	});
 $( "#test" ).click(function() {
+	map.remove();
 	tilename = 'extract.json';
 	console.log(tilename);
 	makeMap();
