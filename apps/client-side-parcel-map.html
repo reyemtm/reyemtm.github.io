@@ -82,6 +82,9 @@ var map = L.map('map', {
   touchZoom: false
 }).setView([39.1339,-82.9863], 14);
 map.spin(true);
+setTimeout(function() {
+	$(".blank").html('Be Patient...Still Loading');
+}, 5000);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 //--begin map-tiles
 var osm = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
@@ -330,8 +333,11 @@ tileData.on('error', function() {
 tileData.on('ready', function() {
 	var data = ffParcels.toGeoJSON();
 	console.log('parcel data ready');
-  sidebar.show();
-  $(".blank").delay(50).fadeOut();
+  if (L.Browser.mobile) {
+		sidebar.show();
+	};
+	$(".blank").html('Your Map is Loaded!');
+  $(".blank").delay(500).fadeOut();
   search = new L.Control.Search({
     layer: ffParcels,
     propertyName: 'index',
