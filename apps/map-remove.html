@@ -178,7 +178,7 @@ tileData.on('ready', function() {
 	$(".blank").fadeOut();
 	alert('parcel data ready');
 	console.log('parcel data ready');
-	var layerData = [];
+	var layerData = [""];
 	var highlight;
 	
 	map.on('click', function(e) {
@@ -191,7 +191,7 @@ tileData.on('ready', function() {
 	 var x = e.latlng.lng;
 	 var y = e.latlng.lat;
 	 layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
-		if (layerData[index] != null) {
+		if (!layerData[index]) {
 		alert('found something');   
 		var clicked = layerData[0].feature.properties.index;
 		highlight = new L.geoJson(data, {
