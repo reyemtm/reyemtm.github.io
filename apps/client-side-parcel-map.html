@@ -493,9 +493,11 @@ var maptext = '<div id="sidebar"> <div class="list-group" style="text-align:left
 function remove(){
 	map.remove()
 };
-$(".twpselect").click(function(e){
+$(".twpselect").on('touchstart click', function(e){
 	remove();
-/*	var twp = $(this).attr('id') + '.json';
+});
+/*$(".twpselect").click(function(e){
+	var twp = $(this).attr('id') + '.json';
 	alert(tilename);
 	console.log(tilename);
 	if (tilename != twp) {
