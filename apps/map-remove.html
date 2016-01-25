@@ -77,8 +77,10 @@ setTimeout(function() {
 }, 20000);
 
 var loaded = false;
+function makeMap() {
+var point, search, tilename;
+var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
 
-var tilename;
 if (L.Browser.mobile) {
 	tilename = 'amanda.json';
 console.log(tilename);
@@ -88,11 +90,7 @@ if (L.Browser.mobile == false) {
 	tilename = 'clearcreek.json';
 console.log(tilename);
 }
-
-function makeMap() {
-var point, search;
 alert('make map fired');
-
 console.log('make map fired');
 
 var map = L.map('map', {
