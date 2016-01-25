@@ -502,7 +502,7 @@ $(".twpselect").click(function(e){
 		$('.blank').html('');
 		tilename = twp;
 		console.log(tilename);
-		setTimout(function() {
+		setTimeout(function() {
 			$("#map-container").append(maptext);
 			makeMap();	
 		}, 100);
