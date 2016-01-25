@@ -160,11 +160,7 @@ sidebar.on('hide', function() {
 	customZoom.addTo(map);
 });
 
-var ffParcels = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup(layer.feature.properties.owner)
-  }
-}).addTo(map);
+var ffParcels = L.geoJson(null).addTo(map);
 
 var url = 'https://getbounds.com/data/topojson/';
 
