@@ -92,8 +92,10 @@ var map = L.map('map', {
 	zoomControl: false,
 	maxZoom: 18,
 	minZoom: 11,
-	touchZoom: false
-}).setView([39.7216,-82.6038], 11);
+	touchZoom: false,
+	center: [39.7216,-82.6038]
+	zoom: 11	
+});
 map.spin(true);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 //--begin map-tiles
@@ -291,7 +293,7 @@ if ( toggled == true && window.innerWidth > 480) {
 	fullScreen.addTo(map);
 	globalsearchToggle.addTo(map);
 	map.removeControl(tools);
-toggled = false;
+	toggled = false;
 }
 else if ( toggled == false && window.innerWidth < 481) {
 	map.removeControl(gpsLocate);
@@ -315,12 +317,6 @@ if (window.innerWidth < 481) {
 };
 //end mobile tools menu
 //end OVRDC Modern UI Toolbar
-var esritopomini = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
-maxZoom: 20,
-maxNativeZoom: 18
-});
-//var miniMap = new L.Control.MiniMap(esritopomini).addTo(map);
 ortho.addTo(map);
 sidebar.on('show', function() {
 	map.removeControl(customZoom)
@@ -333,7 +329,7 @@ var ffParcels = L.geoJson(null, {
   onEachFeature: function(feature, layer) {
     layer.bindPopup(feature.properties.owner)
   }
-});
+}).addTo(map);
 var url = 'https://getbounds.com/data/topojson/';
 var fullurl = url + tilename;
 console.log(fullurl);
@@ -352,33 +348,33 @@ tileData.on('ready', function() {
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
-	$(".blank").delay(100).fadeOut();
+	$(".blank").fadeOut();
 	console.log('parcel data ready');
 	search = new L.Control.Search({
-    layer: ffParcels,
+		layer: ffParcels,
 		propertyName: 'index',
-    initial: false,
-    zoom: 17,
-    collapsed: false,
-    textPlaceholder: 'Search Owner or Parcel ID',
-    minLength: 4
-  }).addTo(map);
-  search.on('search_locationfound', function(e) {
-    if (point){
-	  point.closePopup();
-      map.removeLayer(point);
-    }
-    var layer = e.layer.feature.properties.index;
-    var attributes = layer.split('|', 2);
-    var name = attributes[0];
-    var pin  = attributes[1];
-    var popup = 'Parcel ID: ' + pin + '<hr>' + name;
-    var y = e.latlng.lat;
-    var x = e.latlng.lng;
-    point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
-    setTimeout(function(){
-    point.addTo(map);
-    point.openPopup();
+		initial: false,
+		zoom: 17,
+		collapsed: false,
+		textPlaceholder: 'Search Owner or Parcel ID',
+		minLength: 4
+  	}).addTo(map);
+  	search.on('search_locationfound', function(e) {
+    	if (point){
+		point.closePopup();
+      		map.removeLayer(point);
+    	}
+    	var layer = e.layer.feature.properties.index;
+	var attributes = layer.split('|', 2);
+	var name = attributes[0];
+	var pin  = attributes[1];
+	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
+	var y = e.latlng.lat;
+	var x = e.latlng.lng;
+	point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
+	setTimeout(function(){
+	point.addTo(map);
+	point.openPopup();
     }, 500);
     console.log('search result found');
     point.on('popupclose', function() {
@@ -388,37 +384,37 @@ tileData.on('ready', function() {
   });
 map.spin(false);
 var highlight;
-map.on('click', function(e) {
+/*map.on('click', function(e) {
   if (point){
     map.removeLayer(point)
   }
 	if (highlight){
-	map.removeLayer(highlight)
+		map.removeLayer(highlight)
 	}
-   var x = e.latlng.lng;
-   var y = e.latlng.lat;
-   var layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
-if (layerData[0].feature.properties.index) {
-alert('found something');   
-var clicked = layerData[0].feature.properties.index;
-	 highlight = new L.geoJson(data, {
-	 filter: function(feature, layer) {
-		return feature.properties.index == clicked
+  var x = e.latlng.lng;
+  var y = e.latlng.lat;
+  var layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
+	if (layerData[0].feature.properties.index) {
+		alert('found something');   
+		var clicked = layerData[0].feature.properties.index;
+		highlight = new L.geoJson(data, {
+	 		filter: function(feature, layer) {
+				return feature.properties.index == clicked
 		}}).addTo(map);
-   var attributes = clicked.split('|', 2);
-   var name = attributes[0];
-   var pin  = attributes[1];
-   var popup = 'Parcel ID: ' + pin + '<hr>' + name;
-   point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
-   point.addTo(map);
-   point.openPopup();
-   point.on('popupclose', function() {
-     map.removeLayer(point)
-     map.removeLayer(highlight)
+		var attributes = clicked.split('|', 2);
+   	var name = attributes[0];
+   	var pin  = attributes[1];
+   	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
+   	point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
+   	point.addTo(map);
+   	point.openPopup();
+   	point.on('popupclose', function() {
+    	map.removeLayer(point)
+    	map.removeLayer(highlight)
    });
-}
- });
-var tileOptions = {
+	}
+});*/
+/*var tileOptions = {
             maxZoom: 18,  // max zoom to preserve detail on
             tolerance: 14, // simplification tolerance (higher means simpler)
             extent: 4096,  // 4096 tile extent (both width and height)
@@ -489,7 +485,7 @@ var tileLayer = L.canvasTiles()
                 ctx.stroke();
             }
 
-        };
+        };*/
 
 });
 var maptext = '<div id="sidebar"> <div class="list-group" style="text-align:left;"> <hr> <h4>Filter by Township of City</h4> <hr> <div id="twpselect"><button id="lancaster" type="button" class="twpselect btn btn-default btn-lg btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-lg btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-lg btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-lg btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-lg btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-lg btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-lg btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-lg btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-lg btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-lg btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-lg btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-lg btn-block">Walnut Township</button> <hr> <li id="test" class="list-group-item"><i class="fa fa-bars fa-fw fa-lg"></i> Open Sidebar</li> <li class="list-group-item"><i class="fa fa-exchange fa-fw fa-lg"></i> Toggle Address Search</li> <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li> <li class="list-group-item"><i class="fa fa-globe fa-fw fa-lg"></i> Default Map Extent</li> <li class="list-group-item"><i class="fa fa-map-marker fa-fw fa-lg"></i> Show/Follow Your Location</li> <li class="list-group-item"><i class="fa fa-cogs fa-fw fa-lg"></i> Toggle Map Tools (Mobile Only)</li> <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li> <hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> </div>';
