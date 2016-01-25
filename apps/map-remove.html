@@ -98,25 +98,6 @@ var basemaps = {
 var overlays;
 var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });
 sidebar.addTo(map);
-
-  	states: [{
-  		stateName: 'show',
-  		icon: 'fa-exchange fa-lg',
-  		title: 'Search Addresses',
-  		onClick: function(btn, map) {
-  			osmsearch.addTo(map);
-			btn.state('hide');
-  			}
-  		},{
-  		stateName: 'hide',
-		icon: 'fa-exchange fa-border fa-lg',
-  		title: 'Search Features',
-  		onClick: function(btn, map) {
-  			map.removeControl(osmsearch);
-			  btn.state('show');
-  		}
-		}]
-  }).addTo(map);
 var sidebarToggle = L.easyButton({
       states: [{
               stateName: 'open-sidebar',   // name the state
@@ -137,19 +118,21 @@ var sidebarToggle = L.easyButton({
       }],
   	id: 'menu'
 });
+
 var stogglebar = L.easyBar([sidebarToggle], {id: 'toggle'}).addTo(map);
+
 sidebar.on('hide', function () {
     sidebarToggle.state('open-sidebar');
 });
+
 sidebar.on('show', function () {
     sidebarToggle.state('close-sidebar');
 });
-//end mobile tools menu
-//end OVRDC Modern UI Toolbar
-ortho.addTo(map);
+
 sidebar.on('show', function() {
 	map.removeControl(customZoom)
 });
+
 sidebar.on('hide', function() {
 	customZoom.addTo(map);
 });
@@ -175,6 +158,7 @@ tileData.on('ready', function() {
 });
 
 var maptext = '<div id="sidebar"> <div class="list-group" style="text-align:left;"> <hr> <h4>Filter by Township of City</h4> <hr> <div id="twpselect"><button id="lancaster" type="button" class="twpselect btn btn-default btn-lg btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-lg btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-lg btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-lg btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-lg btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-lg btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-lg btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-lg btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-lg btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-lg btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-lg btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-lg btn-block">Walnut Township</button> <hr> <li id="test" class="list-group-item"><i class="fa fa-bars fa-fw fa-lg"></i> Open Sidebar</li> <li class="list-group-item"><i class="fa fa-exchange fa-fw fa-lg"></i> Toggle Address Search</li> <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li> <li class="list-group-item"><i class="fa fa-globe fa-fw fa-lg"></i> Default Map Extent</li> <li class="list-group-item"><i class="fa fa-map-marker fa-fw fa-lg"></i> Show/Follow Your Location</li> <li class="list-group-item"><i class="fa fa-cogs fa-fw fa-lg"></i> Toggle Map Tools (Mobile Only)</li> <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li> <hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> </div>';
+
 $(".twpselect").on('touchstart click', function(e){
 	map.remove();
 });
