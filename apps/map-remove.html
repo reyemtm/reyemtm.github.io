@@ -200,6 +200,40 @@ tileData.on('ready', function() {
 			makeMap();	
 		}, 500);
 	});
+	//start search
+	search = new L.Control.Search({
+		layer: ffParcels,
+		propertyName: 'index',
+		initial: false,
+		zoom: 17,
+		collapsed: false,
+		textPlaceholder: 'Search Owner/Parcel ID',
+		minLength: 4
+	}).addTo(map);
+	search.on('search_locationfound', function(e) {
+	    	console.log('search result found');
+		if (point){
+			point.closePopup();
+			map.removeLayer(point);
+		}
+	    	var layer = e.layer.feature.properties.index;
+		var attributes = layer.split('|', 2);
+		var name = attributes[0];
+		var pin  = attributes[1];
+		var popup = 'Parcel ID: ' + pin + '<hr>' + name;
+		var y = e.latlng.lat;
+		var x = e.latlng.lng;
+		point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
+		setTimeout(function(){
+			point.addTo(map);
+			point.openPopup();
+		}, 500);
+	    	point.on('popupclose', function() {
+	      		map.removeLayer(point)
+	  	});
+	  	search.collapse();
+	  });
+	//end search
 	//start geojson-vt map tiles
 	var layerData;
 	var highlight;
@@ -292,7 +326,7 @@ tileData.on('ready', function() {
 	//end geojson-vt map tiles
 });//end tile data on ready function
 }//end makeMap function	
-
+//make map on document ready
 $(document).ready(function() {
 	if (loaded == false) {
 		console.log('document ready');
