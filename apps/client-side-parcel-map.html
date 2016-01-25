@@ -180,7 +180,7 @@ osmsearch.on('search_locationfound', function(e) {
 	marker = new L.marker([e.latlng.lat, e.latlng.lng], {icon: ovrdcMarker}).addTo(map);
 });
 //Toggle OSM Search and Feature Search - remove if no feature search
-var hash = L.hash(map);
+//var hash = L.hash(map);
 var layerControl = L.control.layers(basemaps, overlays, {position: 'topleft', autoZIndex: true}).addTo(map);
 var gpsLocate = L.control.locate({follow: true, locateOptions: {enableHighAccuracy: true}}).addTo(map);
 var homeExtent = L.control.defaultExtent({}).addTo(map);
