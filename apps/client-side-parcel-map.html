@@ -503,8 +503,10 @@ $(".twpselect").click(function(e){
 		$('.blank').html('');
 		tilename = twp;
 		console.log(tilename);
-		$("#map-container").append(maptext);
-		makeMap();
+		setTimout(function() {
+			$("#map-container").append(maptext);
+			makeMap();	
+		}, 100);
 	})
 	}
 });
