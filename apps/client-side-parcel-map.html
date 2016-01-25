@@ -497,7 +497,6 @@ $(".twpselect").click(function(e){
 //	alert(twp);
 //	return false;
 	if (tilename != twp) {
-	map.remove();
 	map.on('unload', function() {
 		$('.blank').css('opacity', '0.4');
 		$('.blank').html('');
@@ -507,7 +506,8 @@ $(".twpselect").click(function(e){
 			$("#map-container").append(maptext);
 			makeMap();	
 		}, 100);
-	})
+	});
+	map.remove();
 	}
 });
 }
