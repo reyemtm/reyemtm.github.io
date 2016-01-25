@@ -498,6 +498,7 @@ $(".twpselect").click(function(e){
 //	return false;
 	if (tilename != twp) {
 	map.on('unload', function() {
+		console.log('map destroyed';)
 		$('.blank').css('opacity', '0.4');
 		$('.blank').html('');
 		tilename = twp;
