@@ -75,12 +75,11 @@ setTimeout(function() {
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
 }, 20000);
-
+//variables to keep across maps
 var loaded = false;
-function makeMap() {
 var point, search, tilename;
 var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
-
+//choose tile on load
 if (L.Browser.mobile) {
 	tilename = 'amanda.json';
 console.log(tilename);
@@ -90,6 +89,7 @@ if (L.Browser.mobile == false) {
 	tilename = 'clearcreek.json';
 console.log(tilename);
 }
+function makeMap() {
 alert('make map fired');
 console.log('make map fired');
 
