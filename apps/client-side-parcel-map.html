@@ -91,7 +91,7 @@ var map = L.map('map', {
 	maxZoom: 18,
   minZoom: 11,
   touchZoom: false
-}).setView([39.7216,-82.6038], 14);
+}).setView([39.7216,-82.6038], 11);
 map.spin(true);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 //--begin map-tiles
@@ -344,9 +344,9 @@ tileData.on('error', function() {
 });
 tileData.on('ready', function() {
 	var data = tileData.toGeoJSON();
-	var bounds = ffParcels.getBounds();
-	map.fitBounds(bounds);
-	console.log(bounds);
+	//var bounds = ffParcels.getBounds();
+	//map.fitBounds(bounds);
+	//console.log(bounds);
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
