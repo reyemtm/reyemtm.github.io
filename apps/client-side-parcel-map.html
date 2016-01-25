@@ -494,6 +494,7 @@ $(".twpselect").click(function(e){
 	alert(twp);
 //	return false;
 	if (tilename != twp) {
+$('.blank').css('opacity', '0.4');
 		map.remove();
 		setTimeout(function() {
 		tilename = twp;
