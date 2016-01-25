@@ -76,6 +76,7 @@ if (L.Browser.mobile == false) {
 console.log(tilename);
 }
 function makeMap() {
+alert('make map fired');
 console.log('make map fired');
 $(".blank").fadeIn();
 setTimeout(function() {
@@ -512,7 +513,7 @@ map.on('unload', function() {
 		alert('creating new map');
 		$("#map-container").append(maptext);
 		makeMap();	
-	}, 100);
+	}, 500);
 });
 }
 $(document).ready(function() {
