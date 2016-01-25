@@ -77,7 +77,6 @@ console.log(tilename);
 function makeMap() {
 console.log('make map fired');
 $(".blank").fadeIn();
-$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2>');
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...<br><br>The map is almost ready.</h2>');
 }, 4000);
@@ -495,6 +494,7 @@ $(".twpselect").click(function(e){
 //	return false;
 	if (tilename != twp) {
 $('.blank').css('opacity', '0.4');
+$('.blank').html('');
 		map.remove();
 		setTimeout(function() {
 		tilename = twp;
