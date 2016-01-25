@@ -184,15 +184,36 @@ var maptext = '<div id="sidebar"> <div class="list-group" style="text-align:left
 
 $(".twpselect").on('touchstart click', function(e){
 	map.remove();
+	var twp = $(this).attr('id') + '.json';
+	alert(tilename);
+	console.log(tilename);
+	if (tilename != twp) {
+		tilename = twp;
+		alert(tilename);
+		console.log(tilename);
+	//	map.remove();
+	}
 });
-
+/*map.on('unload', function() {
+	alert('map destroyed');
+	console.log('map destroyed');
+	$('.blank').css('opacity', '0.5');
+	$('.blank').html('<div>&nbsp</div>');
+	alert(tilename);
+	console.log(tilename);
+	setTimeout(function() {
+		alert('creating new map');
+		$("#map-container").append(maptext);
+		makeMap();	
+	}, 500);
+});*/
 }
 
 $(document).ready(function() {
 	if (loaded == false) {
-	console.log('document ready');
-	makeMap();
-	loaded = true;
+		console.log('document ready');
+		makeMap();
+		loaded = true;
 	}
 });
 </script>
