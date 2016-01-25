@@ -96,6 +96,7 @@ var map = L.map('map', {
 	center: [39.7216,-82.6038],
 	zoom: 11	
 });
+alert(tilename);//--//
 map.spin(true);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 //--begin map-tiles
@@ -498,7 +499,7 @@ $(".twpselect").click(function(e){
 		map.remove();
 	}
 });
-map.on('unload', function() {
+/*map.on('unload', function() {
 	alert('map destroyed');
 	console.log('map destroyed');
 	$('.blank').css('opacity', '0.5');
@@ -510,14 +511,14 @@ map.on('unload', function() {
 		$("#map-container").append(maptext);
 		makeMap();	
 	}, 500);
-});
+});*/
 }
 $(document).ready(function() {
 	if (loaded == false) {
 	console.log('document ready');
 	makeMap();
 	loaded = true;
-}
+	}
 });
 </script>
 </body>
