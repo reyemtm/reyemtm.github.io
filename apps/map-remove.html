@@ -142,7 +142,7 @@ sidebar.on('hide', function() {
 
 var ffParcels = L.geoJson(null, {
   onEachFeature: function(feature, layer) {
-    layer.bindPopup(feature.properties.owner)
+    layer.bindPopup(layer.feature.properties.owner)
   }
 }).addTo(map);
 
