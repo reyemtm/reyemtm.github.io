@@ -497,21 +497,23 @@ $(".twpselect").click(function(e){
 //	alert(twp);
 //	return false;
 	if (tilename != twp) {
-map.remove();
-$('.blank').css('opacity', '0.4');
-$('.blank').html('');
+	map.remove();
+	map.on('unload', function() {
+		$('.blank').css('opacity', '0.4');
+		$('.blank').html('');
 		tilename = twp;
 		console.log(tilename);
 		$("#map-container").append(maptext);
 		makeMap();
+	})
 	}
 });
 }
 $(document).ready(function() {
 	if (loaded == false) {
-console.log('document ready');
+	console.log('document ready');
 	makeMap();
-loaded = true;
+	loaded = true;
 }
 });
 </script>
