@@ -74,15 +74,6 @@ if (L.Browser.mobile == false) {
 console.log(tilename);
 }
 console.log(tilename);
-function makeMap() {
-console.log('make map fired');
-var map = L.map('map', {
-  zoomControl: false,
-	maxZoom: 18,
-  minZoom: 11,
-  touchZoom: false
-}).setView([39.7216,-82.6038], 14);
-map.spin(true);
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...<br><br>The map is almost ready.</h2>');
 }, 4000);
@@ -92,6 +83,15 @@ setTimeout(function() {
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
 }, 20000);
+function makeMap() {
+console.log('make map fired');
+var map = L.map('map', {
+  zoomControl: false,
+	maxZoom: 18,
+  minZoom: 11,
+  touchZoom: false
+}).setView([39.7216,-82.6038], 14);
+map.spin(true);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 //--begin map-tiles
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
