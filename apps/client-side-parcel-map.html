@@ -396,7 +396,9 @@ map.on('click', function(e) {
    var x = e.latlng.lng;
    var y = e.latlng.lat;
    var layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
-   var clicked = layerData[0].feature.properties.index;
+if (layerData[index] != null) {
+alert('found something');   
+var clicked = layerData[0].feature.properties.index;
 	 highlight = new L.geoJson(data, {
 	 filter: function(feature, layer) {
 		return feature.properties.index == clicked
@@ -412,6 +414,7 @@ map.on('click', function(e) {
      map.removeLayer(point)
      map.removeLayer(highlight)
    });
+}
  });
 var tileOptions = {
             maxZoom: 18,  // max zoom to preserve detail on
