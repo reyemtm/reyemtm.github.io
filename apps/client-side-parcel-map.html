@@ -74,7 +74,9 @@ if (L.Browser.mobile == false) {
 	tilename = 'amanda.json';
 console.log(tilename);
 }
-console.log(tilename);
+function makeMap() {
+console.log('make map fired');
+$(".blank").css('display', 'block').html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2>';
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...<br><br>The map is almost ready.</h2>');
 }, 4000);
@@ -84,8 +86,6 @@ setTimeout(function() {
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
 }, 20000);
-function makeMap() {
-console.log('make map fired');
 var map = L.map('map', {
   zoomControl: false,
 	maxZoom: 18,
@@ -350,8 +350,7 @@ tileData.on('ready', function() {
 	if (L.Browser.mobile) {
 		sidebar.show();
 	};
-	$(".blank").html('Your Map is Loaded!');
-	$(".blank").delay(500).fadeOut();
+	$(".blank").delay(100).fadeOut();
 	console.log('parcel data ready');
 	search = new L.Control.Search({
     layer: ffParcels,
