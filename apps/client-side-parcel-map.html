@@ -495,6 +495,7 @@ var maptext = '<div id="sidebar"> <div class="list-group" style="text-align:left
 $(".twpselect").click(function(e){
 	var twp = $(this).attr('id') + '.json';
 	tilename = twp;
+	console.log(tilename);
 	if (tilename != twp) {
 		map.remove();
 	}
