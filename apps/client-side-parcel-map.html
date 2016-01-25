@@ -150,7 +150,7 @@ var ovrdcMarker = L.icon({
 });
 //end marker
 var overlays;
-var sidebar = L.control.sidebar('sidebar', { autoPan: true, closeButton: false });
+var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });
 sidebar.addTo(map);
 //Leaflet Search with OSM Geocode
 var osmsearch = new L.Control.Search({
