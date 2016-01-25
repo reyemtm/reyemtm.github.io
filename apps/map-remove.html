@@ -187,7 +187,7 @@ tileData.on('ready', function() {
 	 var x = e.latlng.lng;
 	 var y = e.latlng.lat;
 	 layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
-		if (layerData.length > 0) {
+		if (!layerData[0]) {
 			console.log('nothing to see here')
 		}else{
 		alert('found something');   
