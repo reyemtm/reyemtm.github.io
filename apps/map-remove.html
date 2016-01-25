@@ -191,7 +191,7 @@ tileData.on('ready', function() {
 	 var x = e.latlng.lng;
 	 var y = e.latlng.lat;
 	 var layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
-		if (layerData[0].feature.properties.index) {
+		if (layerData[index] != null) {
 		alert('found something');   
 		var clicked = layerData[0].feature.properties.index;
 		highlight = new L.geoJson(data, {
@@ -211,7 +211,7 @@ tileData.on('ready', function() {
 	   	});
 		}
 		else {
-			return false;
+			console.log('nothing here');
 		}
 	});
 	
