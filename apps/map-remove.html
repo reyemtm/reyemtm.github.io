@@ -218,7 +218,6 @@ tileData.on('ready', function() {
 		if (!layerData[0]) {
 			console.log('nothing to see here')
 		}else{
-		alert('found something');   
 		var clicked = layerData[0].feature.properties.index;
 		highlight = new L.geoJson(data, {
 		 		filter: function(feature, layer) {
