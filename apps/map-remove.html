@@ -79,8 +79,15 @@ setTimeout(function() {
 var loaded = false;
 
 var tilename;
-
-tilename = 'amanda.json';
+if (L.Browser.mobile) {
+	tilename = 'amanda.json';
+console.log(tilename);
+}
+if (L.Browser.mobile == false) {
+	//tilename = 'fairfieldParcelsMin.json';
+	tilename = 'clearcreek.json';
+console.log(tilename);
+}
 
 function makeMap() {
 
