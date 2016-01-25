@@ -496,17 +496,13 @@ $(".twpselect").click(function(e){
 //	alert(twp);
 //	return false;
 	if (tilename != twp) {
+map.remove();
 $('.blank').css('opacity', '0.4');
 $('.blank').html('');
-		map.remove();
-		setTimeout(function() {
 		tilename = twp;
 		console.log(tilename);
 		$("#map-container").append(maptext);
-		}, 10);
-		setTimeout(function() {
 		makeMap();
-		}, 50);
 	}
 });
 }
