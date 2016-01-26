@@ -86,8 +86,8 @@ if (L.Browser.mobile) {
 console.log(tilename);
 }
 if (L.Browser.mobile == false) {
-	//tilename = 'fairfieldParcelsMin.json';
-	tilename = 'clearcreek.json';
+	tilename = 'fairfieldParcelsMin.json';
+	//tilename = 'clearcreek.json';
 console.log(tilename);
 }
 function makeMap() {
@@ -103,7 +103,7 @@ var map = L.map('map', {
 	zoom: 10
 });
 map.spin(true);
-
+var hash = L.hash(map);
 //alert(tilename);//--//
 
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
