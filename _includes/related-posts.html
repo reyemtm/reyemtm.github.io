@@ -6,7 +6,7 @@
     {%if post.id == page.id %}{% continue %}{% endif %}
     {% for this_tag in page.tags %}
         {% if post.tags contains this_tag%}
-            {% if n_posts == 0 %}<a href="/{{this_tag}}"></a><h3 style="letter-spacing:6px;text-align:center;margin:0;font-weight:500;">Related Posts</h3></a><hr>{% endif %}
+            {% if n_posts == 0 %}<a href="/{{this_tag}}"><h3 style="letter-spacing:6px;text-align:center;margin:0;font-weight:500;">Related Posts</h3></a><hr>{% endif %}
                 <!--begin post-loop.html -->
 				<div class="col-md-4 col-sm-4">
 				{% if post.feature-img contains ".gif" %}
