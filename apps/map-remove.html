@@ -91,7 +91,7 @@ if (L.Browser.mobile == false) {
 console.log(tilename);
 }
 function makeMap() {
-alert('make map fired');
+//alert('make map fired');
 console.log('make map fired');
 
 var map = L.map('map', {
@@ -104,7 +104,7 @@ var map = L.map('map', {
 });
 map.spin(true);
 
-alert(tilename);//--//
+//alert(tilename);//--//
 
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 
@@ -171,7 +171,7 @@ console.log(fullurl);
 var tileData = omnivore.topojson(fullurl, null, ffParcels);
 
 tileData.on('ready', function() {
-	alert('parcel data ready');
+	//alert('parcel data ready');
 	console.log('parcel data ready');
 map.fitBounds(ffParcels.getBounds());
 	$(".blank").fadeOut();
@@ -181,25 +181,25 @@ map.fitBounds(ffParcels.getBounds());
 //twp select function
 	$(".twpselect").on('click', function(e){
 		var twp = $(this).attr('id') + '.json';
-		alert(tilename);
+		//alert(tilename);
 		console.log(tilename);
 		if (tilename != twp) {
 			tilename = twp;
-			alert(tilename);
+			//alert(tilename);
 			console.log(tilename);
 			map.remove();
 		}
 	});
 //remake map after map.remove is fired
 	map.on('unload', function() {
-		alert('map destroyed');
+		//alert('map destroyed');
 		console.log('map destroyed');
 		$('.blank').css('opacity', '0.5');
 		$('.blank').html('<div>&nbsp</div>');
-		alert(tilename);
+		//alert(tilename);
 		console.log(tilename);
 		setTimeout(function() {
-			alert('creating new map');
+			//alert('creating new map');
 			$("#parcelmap").append(maptext);
 			makeMap();
 		}, 500);
