@@ -10,7 +10,7 @@
 <!--            <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>-->
 				<div class="meta">
 					{% if page.date %}Posted on {{ page.date | date: "%B %-d, %Y" }} by Malcolm Meyer{% endif %}
-					{% if page.tag %}
+					{% if page.tags %}
 					<ul class="fa-ul">
 					{% for tag in page.tags %}
 					<li class="fa-li" style="position:relative;display:inline;"><a href="/{{ tag }}" style="text-decoration:none;"><i class="fa fa-tag fa-flip-horizontal" style="margin-right:5px;"></i>{{ tag }}</a></li>
