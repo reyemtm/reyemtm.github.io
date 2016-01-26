@@ -236,8 +236,9 @@ map.fitBounds(ffParcels.getBounds());
 	    	point.on('popupclose', function() {
 	      		map.removeLayer(point)
 	  	});*/
-alert(e.latlng);
-map.fire('click', e.latlng);
+var x = e.latlng.lng;
+var y = elatlng.lat;
+map.fire('click', {latng:[y,x]});
 	  	search.collapse();
 	  });
 //end search
