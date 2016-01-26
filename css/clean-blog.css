@@ -1,6 +1,6 @@
 .site-heading a {
 	color: white;
-	font-weight: inherit;
+	font-weight: 300;
 	opacity: 0.6;
 }
 .site-heading a:hover, a:focus {
