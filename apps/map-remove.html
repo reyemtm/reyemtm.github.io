@@ -170,6 +170,7 @@ console.log(fullurl);
 var tileData = omnivore.topojson(fullurl, null, ffParcels);
 
 tileData.on('ready', function() {
+
 	$(".blank").fadeOut();
 	map.spin(false);
 	alert('parcel data ready');
