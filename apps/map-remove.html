@@ -76,7 +76,7 @@ setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
 }, 20000);
 //variables to keep across maps
-var loaded = false;
+var reloladed = false;
 var point, search, tilename;
 var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
 var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
@@ -173,7 +173,9 @@ var tileData = omnivore.topojson(fullurl, null, ffParcels);
 tileData.on('ready', function() {
 	//alert('parcel data ready');
 	console.log('parcel data ready');
-map.fitBounds(ffParcels.getBounds());
+	if (reloaded == false) {
+		map.fitBounds(ffParcels.getBounds());	
+	}
 	$(".blank").fadeOut();
 	map.spin(false);
 //update map on township click - first remake sidebar div destroyed in map.remove
@@ -339,10 +341,10 @@ map.fitBounds(ffParcels.getBounds());
 
 //make map on document ready
 $(document).ready(function() {
-	if (loaded == false) {
+	if (reloaded == false) {
 		console.log('document ready');
 		makeMap();
-		loaded = true;
+		reloaded = true;
 	}
 });
 </script>
