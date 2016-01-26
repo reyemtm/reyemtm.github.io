@@ -263,7 +263,6 @@ tileData.on('ready', function() {
 	            indexMaxPoints: 10000, // 100000 max number of points per tile in the index
 	        };
 	var tileIndex = geojsonvt(data, tileOptions);
-	console.log(tileIndex);
 //take json output from geojson-vt and draw it with the now depricated (in leaflet-beta) L.canvasTiles and code from here - http://blog.sumbera.com/2015/05/31/geojson-vt-on-leaflet/
 	var tileLayer = L.canvasTiles().params({ debug: false, padding: 5 }).drawing(drawingOnCanvas)
 	var pad = 0;
