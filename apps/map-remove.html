@@ -77,8 +77,7 @@ setTimeout(function() {
 }, 20000);
 //variables to keep across maps
 var reloaded = false;
-var point, search, tilename;
-var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
+var search, tilename;
 var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
 //choose tile on load
 if (L.Browser.mobile) {
@@ -218,10 +217,6 @@ tileData.on('ready', function() {
 	}).addTo(map);
 	search.on('search_locationfound', function(e) {
 		console.log('search result found');
-		if (point){
-			point.closePopup();
-			map.removeLayer(point);
-		}
 		map.fire('click', {latlng:e.latlng});
 	  	search.collapse();
 	  });
@@ -233,9 +228,6 @@ tileData.on('ready', function() {
 	var data = tileData.toGeoJSON();
 //interaction on the underlying polygon represented by the tiles - they draw better
 	map.on('click', function(e) {
-	if (point){
-		map.removeLayer(point)
-	}
 	if (highlight){
 		map.removeLayer(highlight)
 	}
@@ -255,13 +247,10 @@ tileData.on('ready', function() {
 	   	var name = attributes[0];
 	   	var pin  = attributes[1];
 	   	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
-	   	point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
-	   	point.addTo(map);
-	   	point.openPopup();
-	   	point.on('popupclose', function() {
-	    		map.removeLayer(point)
-	    		map.removeLayer(highlight)
-	   	});
+	   	map.openPopup(popup, e.latlng);
+	     	map.on('popupclose', function() {
+	       		map.removeLayer(highlight)
+	     	});
 		}
 	});
 	var tileOptions = {
