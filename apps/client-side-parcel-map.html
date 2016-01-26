@@ -61,44 +61,52 @@
 <body>
 <div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
 <div id='parcelmap'>
-<div id="sidebar"><div class="list-group" style="text-align:left;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="lancaster" type="button" class="twpselect btn btn-default btn-lg btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-lg btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-lg btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-lg btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-lg btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-lg btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-lg btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-lg btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-lg btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-lg btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-lg btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-lg btn-block">Walnut Township</button> <hr> <li id="test" class="list-group-item"><i class="fa fa-bars fa-fw fa-lg"></i> Open Sidebar</li> <li class="list-group-item"><i class="fa fa-exchange fa-fw fa-lg"></i> Toggle Address Search</li> <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li> <li class="list-group-item"><i class="fa fa-globe fa-fw fa-lg"></i> Default Map Extent</li> <li class="list-group-item"><i class="fa fa-map-marker fa-fw fa-lg"></i> Show/Follow Your Location</li> <li class="list-group-item"><i class="fa fa-cogs fa-fw fa-lg"></i> Toggle Map Tools (Mobile Only)</li> <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li> <hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> <div id="map"></div>
+<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="lancaster" type="button" class="twpselect btn btn-default btn-sm btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-sm btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-sm btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-sm btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-sm btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-sm btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-sm btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-sm btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-sm btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-sm btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-sm btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-sm btn-block">Walnut Township</button></div><div style="text-align:left;"> <hr> <li id="test" class="list-group-item"><i class="fa fa-bars fa-fw fa-lg"></i> Open Sidebar</li> <li class="list-group-item"><i class="fa fa-exchange fa-fw fa-lg"></i> Toggle Address Search</li> <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li> <li class="list-group-item"><i class="fa fa-globe fa-fw fa-lg"></i> Default Map Extent</li> <li class="list-group-item"><i class="fa fa-map-marker fa-fw fa-lg"></i> Show/Follow Your Location</li> <li class="list-group-item"><i class="fa fa-cogs fa-fw fa-lg"></i> Toggle Map Tools (Mobile Only)</li> <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li> <hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> <div id="map"></div>
 </div>
 <script>
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...<br><br>The map is almost ready.</h2>');
 }, 4000);
+
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Almost there...Please allow the browser to continue.</h2>');
-}, 8000);
+}, 6000);
+
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
 }, 20000);
-var loaded = false;
-var tilename;
+//variables to keep across maps
+var reloaded = false;
+var search, tilename;
+var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
+//choose tile on load
 if (L.Browser.mobile) {
-	tilename = 'amanda.json';
+	tilename = 'lancaster.json';
 console.log(tilename);
 }
 if (L.Browser.mobile == false) {
-	//tilename = 'fairfieldParcelsMin.json';
-	tilename = 'amanda.json';
+	tilename = 'fairfieldParcelsMin.json';
+	//tilename = 'clearcreek.json';
 console.log(tilename);
 }
 function makeMap() {
-alert('make map fired');
+//alert('make map fired');
 console.log('make map fired');
-//$(".blank").fadeIn();
+
 var map = L.map('map', {
 	zoomControl: false,
-	maxZoom: 18,
-	minZoom: 11,
+	maxZoom: 19,
+	minZoom: 10,
 	touchZoom: false,
-	center: [39.7216,-82.6038],
-	zoom: 11	
+	center: [39.7147,-82.6052],
+	zoom: 14
 });
-alert(tilename);//--//
 map.spin(true);
+//var hash = L.hash(map);
+//alert(tilename);//--//
+
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
+//--ovrdc tools
 //--begin map-tiles
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    maxNativeZoom:19,
@@ -318,214 +326,178 @@ if (window.innerWidth < 481) {
 };
 //end mobile tools menu
 //end OVRDC Modern UI Toolbar
-ortho.addTo(map);
+//--end ovrdc tools
+
+
+var overlays;
+
 sidebar.on('show', function() {
 	map.removeControl(customZoom)
 });
+
 sidebar.on('hide', function() {
 	customZoom.addTo(map);
 });
 
-var ffParcels = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup(feature.properties.owner)
-  }
-}).addTo(map);
+var ffParcels = L.geoJson(null);
+
 var url = 'https://getbounds.com/data/topojson/';
+
 var fullurl = url + tilename;
+
 console.log(fullurl);
+
 var tileData = omnivore.topojson(fullurl, null, ffParcels);
-var search;
-var point;
-var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
-tileData.on('error', function() {
-	console.log('omnivore error')
-});
+
 tileData.on('ready', function() {
-	var data = tileData.toGeoJSON();
-	//var bounds = ffParcels.getBounds();
-	//map.fitBounds(bounds);
-	//console.log(bounds);
-	if (L.Browser.mobile) {
-		sidebar.show();
-	};
-	$(".blank").fadeOut();
+	//alert('parcel data ready');
 	console.log('parcel data ready');
+	if (reloaded != false) {
+		map.fitBounds(ffParcels.getBounds());	
+	}
+	$(".blank").fadeOut();
+	map.spin(false);
+//update map on township click - first remake sidebar div destroyed in map.remove
+	var maptext = '<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="lancaster" type="button" class="twpselect btn btn-default btn-sm btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-sm btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-sm btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-sm btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-sm btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-sm btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-sm btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-sm btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-sm btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-sm btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-sm btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-sm btn-block">Walnut Township</button></div><div style="text-align:left;"> <hr> <li id="test" class="list-group-item"><i class="fa fa-bars fa-fw fa-lg"></i> Open Sidebar</li> <li class="list-group-item"><i class="fa fa-exchange fa-fw fa-lg"></i> Toggle Address Search</li> <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li> <li class="list-group-item"><i class="fa fa-globe fa-fw fa-lg"></i> Default Map Extent</li> <li class="list-group-item"><i class="fa fa-map-marker fa-fw fa-lg"></i> Show/Follow Your Location</li> <li class="list-group-item"><i class="fa fa-cogs fa-fw fa-lg"></i> Toggle Map Tools (Mobile Only)</li> <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li> <hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div>';
+//twp select function
+	$(".twpselect").on('click', function(e){
+		var twp = $(this).attr('id') + '.json';
+		//alert(tilename);
+		console.log(tilename);
+		if (tilename != twp) {
+			tilename = twp;
+			//alert(tilename);
+			console.log(tilename);
+			map.remove();
+		}
+	});
+//remake map after map.remove is fired
+	map.on('unload', function() {
+		//alert('map destroyed');
+		console.log('map destroyed');
+		$('.blank').css('opacity', '0.5');
+		$('.blank').html('<div>&nbsp</div>');
+		//alert(tilename);
+		console.log(tilename);
+		setTimeout(function() {
+			//alert('creating new map');
+			$("#parcelmap").append(maptext);
+			makeMap();
+		}, 500);
+	});
+//start search
 	search = new L.Control.Search({
 		layer: ffParcels,
 		propertyName: 'index',
 		initial: false,
 		zoom: 17,
 		collapsed: false,
-		textPlaceholder: 'Search Owner or Parcel ID',
+		textPlaceholder: 'Search Owner/Parcel ID',
 		minLength: 4
-  	}).addTo(map);
-  	search.on('search_locationfound', function(e) {
-    	if (point){
-		point.closePopup();
-      		map.removeLayer(point);
-    	}
-    	var layer = e.layer.feature.properties.index;
-	var attributes = layer.split('|', 2);
-	var name = attributes[0];
-	var pin  = attributes[1];
-	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
-	var y = e.latlng.lat;
-	var x = e.latlng.lng;
-	point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
-	setTimeout(function(){
-	point.addTo(map);
-	point.openPopup();
-    }, 500);
-    console.log('search result found');
-    point.on('popupclose', function() {
-      map.removeLayer(point)
-    });
-    search.collapse();
-  });
-map.spin(false);
-var highlight;
-/*map.on('click', function(e) {
-  if (point){
-    map.removeLayer(point)
-  }
+	}).addTo(map);
+	search.on('search_locationfound', function(e) {
+		console.log('search result found');
+		map.fire('click', {latlng:e.latlng});
+	  	search.collapse();
+	  });
+//end search
+//----------
+//start geojson-vt map tiles
+	var layerData;
+	var highlight;
+	var data = tileData.toGeoJSON();
+//interaction on the underlying polygon represented by the tiles - they draw better
+	map.on('click', function(e) {
 	if (highlight){
 		map.removeLayer(highlight)
 	}
-  var x = e.latlng.lng;
-  var y = e.latlng.lat;
-  var layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
-	if (layerData[0].feature.properties.index) {
-		alert('found something');   
+	 var x = e.latlng.lng;
+	 var y = e.latlng.lat;
+	 layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
+		if (!layerData[0]) {
+			console.log('nothing to see here')
+		}else{
 		var clicked = layerData[0].feature.properties.index;
 		highlight = new L.geoJson(data, {
-	 		filter: function(feature, layer) {
-				return feature.properties.index == clicked
-		}}).addTo(map);
+		 		filter: function(feature, layer) {
+					return feature.properties.index == clicked
+				},
+				style: highlightOptions}).addTo(map);
 		var attributes = clicked.split('|', 2);
-   	var name = attributes[0];
-   	var pin  = attributes[1];
-   	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
-   	point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
-   	point.addTo(map);
-   	point.openPopup();
-   	point.on('popupclose', function() {
-    	map.removeLayer(point)
-    	map.removeLayer(highlight)
-   });
-	}
-});*/
-/*var tileOptions = {
-            maxZoom: 18,  // max zoom to preserve detail on
-            tolerance: 14, // simplification tolerance (higher means simpler)
-            extent: 4096,  // 4096 tile extent (both width and height)
-            buffer: 16,   // default 64 tile buffer on each side
-            debug: 0,      // logging level (0 to disable, 1 or 2)
-            indexMaxZoom: 0,        // 0 max zoom in the initial tile index
-            indexMaxPoints: 10000, // 100000 max number of points per tile in the index
-        };
-var tileIndex = geojsonvt(data, tileOptions);
+	   	var name = attributes[0];
+	   	var pin  = attributes[1];
+	   	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
+	   	map.openPopup(popup, e.latlng);
+	     	map.on('popupclose', function() {
+	       		map.removeLayer(highlight)
+	     	});
+		}
+	});
+	var tileOptions = {
+	            maxZoom: 19,  // max zoom to preserve detail on
+	            tolerance: 5, // simplification tolerance (higher means simpler)
+	            extent: 4096,  // 4096 tile extent (both width and height)
+	            buffer: 32,   // default 64 tile buffer on each side
+	            debug: 0,      // logging level (0 to disable, 1 or 2)
+	            indexMaxZoom: 0,        // 0 max zoom in the initial tile index
+	            indexMaxPoints: 10000, // 100000 max number of points per tile in the index
+	        };
+	var tileIndex = geojsonvt(data, tileOptions);
+//take json output from geojson-vt and draw it with the now depricated (in leaflet-beta) L.canvasTiles and code from here - http://blog.sumbera.com/2015/05/31/geojson-vt-on-leaflet/
+	var tileLayer = L.canvasTiles().params({ debug: false, padding: 5 }).drawing(drawingOnCanvas)
+	var pad = 0;
+	tileLayer.addTo(map);
+	tileLayer.setZIndex(10);
+	function drawingOnCanvas(canvasOverlay, params) {
+	            var bounds = params.bounds;
+	            params.tilePoint.z = params.zoom;
+	            var ctx = params.canvas.getContext('2d');
+	            ctx.globalCompositeOperation = 'source-over';
+	            //console.log('getting tile z' + params.tilePoint.z + '-' + params.tilePoint.x + '-' + params.tilePoint.y);
+	            var tile = tileIndex.getTile(params.tilePoint.z, params.tilePoint.x, params.tilePoint.y);
+	            if (!tile) {
+	                console.log('tile empty');
+	                return;
+	            }
+	            ctx.clearRect(0, 0, params.canvas.width, params.canvas.height);
+	            var features = tile.features;
+	            ctx.strokeStyle = 'orange';
+	            for (var i = 0; i < features.length; i++) {
+	                var feature = features[i],
+	                    type = feature.type;
+	                ctx.fillStyle = feature.tags.color ? feature.tags.color : 'transparent';
+	                ctx.beginPath();
+	                for (var j = 0; j < feature.geometry.length; j++) {
+	                    var geom = feature.geometry[j];
+	                    if (type === 1) {
+	                        ctx.arc(geom[0] * ratio + pad, geom[1] * ratio + pad, 2, 0, 2 * Math.PI, false);
+	                        continue;
+	                    }
+	                    for (var k = 0; k < geom.length; k++) {
+	                        var p = geom[k];
+	                        var extent = 4096;
+	                        var x = p[0] / extent * 256;
+	                        var y = p[1] / extent * 256;
+	                        if (k) ctx.lineTo(x  + pad, y   + pad);
+	                        else ctx.moveTo(x  + pad, y  + pad);
+	                    }
+	                }
+	                if (type === 3 || type === 1) ctx.fill();
+	                ctx.stroke();
+	            }
+	        };
+//end geojson-vt map tiles
 
-var tileLayer = L.canvasTiles()
-							 .params({ debug: false, padding: 5 })
-							 .drawing(drawingOnCanvas)
- var pad = 0;
- tileLayer.addTo(map);
- tileLayer.setZIndex(10);
- function drawingOnCanvas(canvasOverlay, params) {
+});//end tile data on ready function
 
-            var bounds = params.bounds;
-            params.tilePoint.z = params.zoom;
+}//end makeMap function
 
-            var ctx = params.canvas.getContext('2d');
-            ctx.globalCompositeOperation = 'source-over';
-
-
-            //console.log('getting tile z' + params.tilePoint.z + '-' + params.tilePoint.x + '-' + params.tilePoint.y);
-
-            var tile = tileIndex.getTile(params.tilePoint.z, params.tilePoint.x, params.tilePoint.y);
-            if (!tile) {
-                console.log('tile empty');
-                return;
-            }
-
-            ctx.clearRect(0, 0, params.canvas.width, params.canvas.height);
-
-            var features = tile.features;
-
-            ctx.strokeStyle = 'orange';
-
-
-            for (var i = 0; i < features.length; i++) {
-                var feature = features[i],
-                    type = feature.type;
-
-                ctx.fillStyle = feature.tags.color ? feature.tags.color : 'transparent';
-                ctx.beginPath();
-
-                for (var j = 0; j < feature.geometry.length; j++) {
-                    var geom = feature.geometry[j];
-
-                    if (type === 1) {
-                        ctx.arc(geom[0] * ratio + pad, geom[1] * ratio + pad, 2, 0, 2 * Math.PI, false);
-                        continue;
-                    }
-
-                    for (var k = 0; k < geom.length; k++) {
-                        var p = geom[k];
-                        var extent = 4096;
-
-                        var x = p[0] / extent * 256;
-                        var y = p[1] / extent * 256;
-                        if (k) ctx.lineTo(x  + pad, y   + pad);
-                        else ctx.moveTo(x  + pad, y  + pad);
-                    }
-                }
-
-                if (type === 3 || type === 1) ctx.fill();
-                ctx.stroke();
-            }
-
-        };*/
-
-});
-var maptext = '<div id="sidebar"> <div class="list-group" style="text-align:left;"> <hr> <h4>Filter by Township of City</h4> <hr> <div id="twpselect"><button id="lancaster" type="button" class="twpselect btn btn-default btn-lg btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-lg btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-lg btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-lg btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-lg btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-lg btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-lg btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-lg btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-lg btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-lg btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-lg btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-lg btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-lg btn-block">Walnut Township</button> <hr> <li id="test" class="list-group-item"><i class="fa fa-bars fa-fw fa-lg"></i> Open Sidebar</li> <li class="list-group-item"><i class="fa fa-exchange fa-fw fa-lg"></i> Toggle Address Search</li> <li class="list-group-item"><img src="https://www.ovrdc.org/apps/assets/images/fullscreen-img.png" style="padding:0 1px;width:22px;" /> Fullscreen</li> <li class="list-group-item"><i class="fa fa-globe fa-fw fa-lg"></i> Default Map Extent</li> <li class="list-group-item"><i class="fa fa-map-marker fa-fw fa-lg"></i> Show/Follow Your Location</li> <li class="list-group-item"><i class="fa fa-cogs fa-fw fa-lg"></i> Toggle Map Tools (Mobile Only)</li> <li class="list-group-item"><img src="https://getbounds.com/assets/images/layers-bl.png" style="padding:0 1px;width:22px;" /> Toggle Map Layers</li> <hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> </div>';
-function remove(){
-	map.remove()
-};
-$(".twpselect").on('touchstart click', function(e){
-	remove();
-});
-/*$(".twpselect").click(function(e){
-	var twp = $(this).attr('id') + '.json';
-	alert(tilename);
-	console.log(tilename);
-	if (tilename != twp) {
-		tilename = twp;
-		alert(tilename);
-		console.log(tilename);
-		map.remove();
-	}
-});*/
-/*map.on('unload', function() {
-	alert('map destroyed');
-	console.log('map destroyed');
-	$('.blank').css('opacity', '0.5');
-	$('.blank').html('<div>&nbsp</div>');
-	alert(tilename);
-	console.log(tilename);
-	setTimeout(function() {
-		alert('creating new map');
-		$("#map-container").append(maptext);
-		makeMap();	
-	}, 500);
-});*/
-}
+//make map on document ready
 $(document).ready(function() {
-	if (loaded == false) {
-	console.log('document ready');
-	makeMap();
-	loaded = true;
+	if (reloaded == false) {
+		console.log('document ready');
+		makeMap();
+		reloaded = true;
 	}
 });
 </script>
