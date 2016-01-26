@@ -236,9 +236,9 @@ map.fitBounds(ffParcels.getBounds());
 	    	point.on('popupclose', function() {
 	      		map.removeLayer(point)
 	  	});*/
-var x = e.latlng.lng;
-var y = elatlng.lat;
-map.fire('click', {latng:[y,x]});
+		var x = e.latlng.lng;
+		var y = e.latlng.lat;
+		map.fire('click', {latng:[y,x]});
 	  	search.collapse();
 	  });
 //end search
@@ -265,8 +265,8 @@ map.fire('click', {latng:[y,x]});
 		highlight = new L.geoJson(data, {
 		 		filter: function(feature, layer) {
 					return feature.properties.index == clicked
-		},
-style: highlightOptions}).addTo(map);
+				},
+				style: highlightOptions}).addTo(map);
 		var attributes = clicked.split('|', 2);
 	   	var name = attributes[0];
 	   	var pin  = attributes[1];
