@@ -4,7 +4,7 @@
 	opacity: 0.6;
 }
 .site-heading a:hover, a:focus {
-    color: #7aa482;
+    color: white;
     font-weight: 400;
     opacity: 1;
 }
