@@ -79,6 +79,7 @@ setTimeout(function() {
 var loaded = false;
 var point, search, tilename;
 var circleOptions = {radius: 10, fill: 'deepskyblue', opacity: 1, color:'deepskyblue'};
+var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
 //choose tile on load
 if (L.Browser.mobile) {
 	tilename = 'amanda.json';
@@ -219,6 +220,7 @@ map.fitBounds(ffParcels.getBounds());
 			point.closePopup();
 			map.removeLayer(point);
 		}
+/*
 	    	var layer = e.layer.feature.properties.index;
 		var attributes = layer.split('|', 2);
 		var name = attributes[0];
@@ -233,7 +235,8 @@ map.fitBounds(ffParcels.getBounds());
 		}, 500);
 	    	point.on('popupclose', function() {
 	      		map.removeLayer(point)
-	  	});
+	  	});*/
+map.fire('click', e.latlng);
 	  	search.collapse();
 	  });
 //end search
@@ -260,7 +263,8 @@ map.fitBounds(ffParcels.getBounds());
 		highlight = new L.geoJson(data, {
 		 		filter: function(feature, layer) {
 					return feature.properties.index == clicked
-		}}).addTo(map);
+		},
+style: highlightOptions}).addTo(map);
 		var attributes = clicked.split('|', 2);
 	   	var name = attributes[0];
 	   	var pin  = attributes[1];
