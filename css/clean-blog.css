@@ -1,3 +1,8 @@
+.site-heading a {
+	color: white;
+	font-weight: inherit;
+	opacity: 0.6;
+}
 .scrollToTop {
    position:fixed;
    right:30px;
