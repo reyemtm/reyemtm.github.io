@@ -96,7 +96,7 @@ console.log('make map fired');
 
 var map = L.map('map', {
 	zoomControl: false,
-	maxZoom: 18,
+	maxZoom: 19,
 	minZoom: 10,
 	touchZoom: false,
 	center: [39.7216,-82.6038],
@@ -280,8 +280,8 @@ map.fitBounds(ffParcels.getBounds());
 	});
 
 	var tileOptions = {
-	            maxZoom: 18,  // max zoom to preserve detail on
-	            tolerance: 10, // simplification tolerance (higher means simpler)
+	            maxZoom: 19,  // max zoom to preserve detail on
+	            tolerance: 5, // simplification tolerance (higher means simpler)
 	            extent: 4096,  // 4096 tile extent (both width and height)
 	            buffer: 32,   // default 64 tile buffer on each side
 	            debug: 0,      // logging level (0 to disable, 1 or 2)
