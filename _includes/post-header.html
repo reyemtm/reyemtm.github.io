@@ -8,7 +8,7 @@
 			<h2 class="subheading">{{ page.subtitle }}</h2>
 			{% endif %}
 <!--            <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>-->
-				<div class="meta">{% if page.date %}Posted on {{ page.date | date: "%B %-d, %Y" }} by Malcolm Meyer{% endif %}</div>
+				<div class="meta">{% if page.date %}Posted on {{ page.date | date: "%B %-d, %Y" }} by Malcolm Meyer{% endif %}{% if page.tag %}{% endif %}</div>
 	   </div>
 	</div>
   <a class="scroll" data-speed="500" href="#content"><span class="hidden">Scroll Down</span><i class="fa fa-angle-down fa-2x" style="color:#FFF"></i></a>
