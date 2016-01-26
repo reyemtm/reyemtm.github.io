@@ -173,7 +173,7 @@ var tileData = omnivore.topojson(fullurl, null, ffParcels);
 tileData.on('ready', function() {
 	//alert('parcel data ready');
 	console.log('parcel data ready');
-	if (reloaded == false) {
+	if (reloaded != false) {
 		map.fitBounds(ffParcels.getBounds());	
 	}
 	$(".blank").fadeOut();
@@ -222,22 +222,6 @@ tileData.on('ready', function() {
 			point.closePopup();
 			map.removeLayer(point);
 		}
-/*
-	    	var layer = e.layer.feature.properties.index;
-		var attributes = layer.split('|', 2);
-		var name = attributes[0];
-		var pin  = attributes[1];
-		var popup = 'Parcel ID: ' + pin + '<hr>' + name;
-		var y = e.latlng.lat;
-		var x = e.latlng.lng;
-		point = new L.circleMarker([y,x], circleOptions).bindPopup(popup);
-		setTimeout(function(){
-			point.addTo(map);
-			point.openPopup();
-		}, 500);
-	    	point.on('popupclose', function() {
-	      		map.removeLayer(point)
-	  	});*/
 		map.fire('click', {latlng:e.latlng});
 	  	search.collapse();
 	  });
