@@ -3,6 +3,11 @@
 	font-weight: inherit;
 	opacity: 0.6;
 }
+.site-heading a:hover, a:focus {
+    color: #7aa482;
+    font-weight: 400;
+    opacity: 1;
+}
 .scrollToTop {
    position:fixed;
    right:30px;
