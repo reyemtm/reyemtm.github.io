@@ -1,4 +1,7 @@
-.site-heading a {
+.site-heading ul {
+	margin-top: 10px;
+}
+.si4te-heading a {
 	color: white;
 	font-weight: 300;
 	opacity: 0.6;
