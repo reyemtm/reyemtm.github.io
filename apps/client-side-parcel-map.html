@@ -88,8 +88,8 @@ if (L.Browser.mobile) {
 console.log(tilename);
 }
 if (L.Browser.mobile == false) {
-	tilename = 'fairfieldParcelsMin.json';
-	//tilename = 'clearcreek.json';
+	//tilename = 'fairfieldParcelsMin.json';
+	tilename = 'lancaster.json';
 console.log(tilename);
 }
 function makeMap() {
@@ -98,8 +98,7 @@ console.log('make map fired');
 
 var map = L.map('map', {
 	zoomControl: false,
-	zoomAnimation:false,
-maxZoom: 19,
+	maxZoom: 19,
 	minZoom: 10,
 	touchZoom: false,
 	center: [39.7147,-82.6052],
@@ -110,114 +109,20 @@ map.spin(true);
 //alert(tilename);//--//
 
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
-//--ovrdc tools
-//--begin map-tiles
+
 var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    maxNativeZoom:19,
    maxZoom: 22,
    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
- });
-var ggle = 	new L.Google('HYBRID', {
-  maxZoom: 20,
-  maxNativeZoom: 20
-	});
-var cdblight = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
-	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-	subdomains: 'abcd',
-	minZoom: 0,
-	maxZoom: 20,
-	maxNativeZoom: 18
-});
-var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
-  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
-  subdomains: 'abcd',
-  minZoom: 0,
-  maxZoom: 20,
-  maxNativeZoom: 18
-});
-var esritopo = L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
-	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
-	maxZoom: 20,
-	maxNativeZoom: 18
-});
-var ortho = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets-satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3ZyZGMiLCJhIjoiRUtXeFFzZyJ9.ufnW36oCZo96m_L9QsAkYg', {
-	attribution: '<a href="https://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-	subdomains: 'abcd', maxZoom: 20, maxNativeZoom: 18
-});
+ }).addTo(map);
 
 var basemaps = {
-  "Streets": osm,
-  "Hybrid (Google)": ggle,
-  "Satellite": ortho,
-  "Topo": esritopo,
-  "Grayscale": cdblight,
-  "Dark Matter": cdbdark
+  "Streets": osm
 };
-//--end map-tiles
-//OVRDC Modern UI Toolbar
-//OVRDC New marker
-var ovrdcMarker = L.icon({
-    iconUrl: 'https://getbounds.com/assets/images/ovrdc-marker.png',
-    //shadowUrl: 'leaf-shadow.png',
-    iconSize:     [48, 48], // size of the icon
-    //shadowSize:   [50, 64], // size of the shadow
-    iconAnchor:   [24, 42], // point of the icon which will correspond to marker's location - half the width and height of icon
-    //shadowAnchor: [4, 62],  // the same for the shadow
-    popupAnchor:  [0, -42] // point from which the popup should open relative to the iconAnchor
-});
-//end marker
+
 var overlays;
 var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });
 sidebar.addTo(map);
-//Leaflet Search with OSM Geocode
-var osmsearch = new L.Control.Search({
-		url: 'https://nominatim.openstreetmap.org/search?format=json&q={s}',
-		jsonpParam: 'json_callback',
-		propertyName: 'display_name',
-		propertyLoc: ['lat','lon'],
-		circleLocation: false,
-		autoType: false,
-		autoCollapse: false,
-		minLength: 2,
-		zoom:13,
-		textPlaceholder: 'Search Addresses',
-		collapsed: false
-	}).addTo(map);
-var circle;
-var marker;
-osmsearch.on('search_locationfound', function(e) {
-	if(marker){
-		map.removeLayer(marker)
-	}
-  var name = e.display_name;
-	marker = new L.marker([e.latlng.lat, e.latlng.lng], {icon: ovrdcMarker}).addTo(map);
-});
-//Toggle OSM Search and Feature Search - remove if no feature search
-//var hash = L.hash(map);
-var layerControl = L.control.layers(basemaps, overlays, {position: 'topleft', autoZIndex: true}).addTo(map);
-var gpsLocate = L.control.locate({follow: true, locateOptions: {enableHighAccuracy: true}}).addTo(map);
-var homeExtent = L.control.defaultExtent({}).addTo(map);
-var fullScreen = L.control.fullscreen({}).addTo(map);
-var globalsearchToggle = new L.easyButton({
-  	states: [{
-  		stateName: 'show',
-  		icon: 'fa-exchange fa-lg',
-  		title: 'Search Addresses',
-  		onClick: function(btn, map) {
-  			osmsearch.addTo(map);
-			btn.state('hide');
-  			}
-  		},{
-  		stateName: 'hide',
-		icon: 'fa-exchange fa-border fa-lg',
-  		title: 'Search Features',
-  		onClick: function(btn, map) {
-  			map.removeControl(osmsearch);
-			  btn.state('show');
-  		}
-		}]
-  }).addTo(map);
-var loading = L.Control.loading({}).addTo(map);
 var sidebarToggle = L.easyButton({
       states: [{
               stateName: 'open-sidebar',   // name the state
@@ -236,104 +141,18 @@ var sidebarToggle = L.easyButton({
                   btn.state('open-sidebar');
               }
       }],
-  	id: 'menu',
- });
- var stogglebar = L.easyBar([sidebarToggle], {id: 'toggle'}).addTo(map);
-//end toolbar
- /*Attribution Toggle*/
- var toggleAttribution = L.Control.extend({
-   options: {position: 'bottomright'},
-   onAdd: function (map) {
-           this._div = L.DomUtil.create('button', 'btn btn-link');
-           this._div.innerHTML = "Leaflet | Map Tiles" ;
-           L.DomEvent.on(this._div, "click", this._click )
-           return this._div;
-   },
-   _click: function(e){
-     L.DomEvent.stop(e);
-     x = document.getElementsByClassName("leaflet-control-attribution")[0];
-     x.style.display = x.style.display === 'block' ? '' : 'block';
-   },
- });
-map.addControl(new toggleAttribution());
-//Close Layer Control on Layer Change on mobile
-if (L.Browser.mobile) {
-	map.on('baselayerchange', function() {
-		//map.fire('click');
-		setTimeout(function() {
-			$(".leaflet-control-layers").removeClass("leaflet-control-layers-expanded")
-		},5000);
-	});
-}
+  	id: 'menu'
+});
+
+var stogglebar = L.easyBar([sidebarToggle], {id: 'toggle'}).addTo(map);
+
 sidebar.on('hide', function () {
     sidebarToggle.state('open-sidebar');
 });
+
 sidebar.on('show', function () {
     sidebarToggle.state('close-sidebar');
 });
-//mobile toolbar menu
-var tools = L.easyButton({
-      states: [{
-              stateName: 'show-tools',   // name the state
-              icon:      'fa-cogs fa-lg',          // and define it's properties
-              title:     'Show Map Tools', // like it's title
-              onClick: function(btn, map) {  // and it's callback
-                  gpsLocate.addTo(map);
-                  homeExtent.addTo(map);
-                  fullScreen.addTo(map);
-                  globalsearchToggle.addTo(map);
-                  btn.state('hide-tools'); // change state on click!
-              }
-          }, {
-              stateName: 'hide-tools',
-              icon:      'fa-cogs fa-border fa-lg',
-              title:     'Hide Map Tools',
-              onClick: function(btn, map) {
-                  map.removeControl(gpsLocate);
-					map.removeControl(homeExtent);
-					map.removeControl(fullScreen);
-					map.removeControl(globalsearchToggle);
-                  btn.state('show-tools');
-              }
-      }],
-  	id: 'tools',
- });
-var toggled = false;
-window.onresize = function() {
-if ( toggled == true && window.innerWidth > 480) {
-	gpsLocate.addTo(map);
-	homeExtent.addTo(map);
-	fullScreen.addTo(map);
-	globalsearchToggle.addTo(map);
-	map.removeControl(tools);
-	toggled = false;
-}
-else if ( toggled == false && window.innerWidth < 481) {
-	map.removeControl(gpsLocate);
-	map.removeControl(homeExtent);
-	map.removeControl(fullScreen);
-	map.removeControl(globalsearchToggle);
-	tools.addTo(map);
-	toggled = true;
-}
-else {}
-};
-window.onload = function () {
-if (window.innerWidth < 481) {
-	map.removeControl(gpsLocate);
-	map.removeControl(homeExtent);
-	map.removeControl(fullScreen);
-	map.removeControl(globalsearchToggle);
-	tools.addTo(map);
-	toggled = true;
-}
-};
-//end mobile tools menu
-//end OVRDC Modern UI Toolbar
-//--end ovrdc tools
-
-
-var overlays;
 
 sidebar.on('show', function() {
 	map.removeControl(customZoom)
@@ -439,7 +258,7 @@ tileData.on('ready', function() {
 	});
 	var tileOptions = {
 	            maxZoom: 20,  // max zoom to preserve detail on
-	            tolerance: 7, // 5 simplification tolerance (higher means simpler)
+	            tolerance: 4, // simplification tolerance (higher means simpler)
 	            extent: 4096,  // 4096 tile extent (both width and height)
 	            buffer: 64,   // default 64 tile buffer on each side
 	            debug: 0,      // logging level (0 to disable, 1 or 2)
@@ -493,7 +312,7 @@ tileData.on('ready', function() {
 //end geojson-vt map tiles
 
 });//end tile data on ready function
-layerControl.addOverlay(ffParcels, "Parcels GeoJson");
+
 }//end makeMap function
 
 //make map on document ready
@@ -504,7 +323,6 @@ $(document).ready(function() {
 		reloaded = true;
 	}
 });
-
 </script>
 </body>
 </html>
