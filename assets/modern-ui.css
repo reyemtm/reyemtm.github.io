@@ -173,7 +173,7 @@ background: transparent;
 .leaflet-top.leaflet-left .geocoder-control-input {
   padding: 5px 0 5px 30px;
   width: 100%;
-  height: 44px;
+  height: 38px;
   direction: ltr;
   box-shadow: none;
   font-size: large;
@@ -201,7 +201,7 @@ background: transparent;
   z-index: initial;
   -webkit-border-radius: 0;
   border-radius: 0;
-  height: 44px;
+  height: 38px;
   /*box-shadow: 0 1px 7px #999!important;*/
   direction: ltr;
   left:0;
