@@ -434,13 +434,13 @@ tileData.on('ready', function() {
 		}
 	});
 	var tileOptions = {
-	            maxZoom: 19,  // max zoom to preserve detail on
-	            tolerance: 5, // simplification tolerance (higher means simpler)
+	            maxZoom: 20,  // max zoom to preserve detail on
+	            tolerance: 7, // 5 simplification tolerance (higher means simpler)
 	            extent: 4096,  // 4096 tile extent (both width and height)
 	            buffer: 32,   // default 64 tile buffer on each side
 	            debug: 0,      // logging level (0 to disable, 1 or 2)
 	            indexMaxZoom: 0,        // 0 max zoom in the initial tile index
-	            indexMaxPoints: 10000, // 100000 max number of points per tile in the index
+	            indexMaxPoints: 50000, // 100000 max number of points per tile in the index
 	        };
 	var tileIndex = geojsonvt(data, tileOptions);
 //take json output from geojson-vt and draw it with the now depricated (in leaflet-beta) L.canvasTiles and code from here - http://blog.sumbera.com/2015/05/31/geojson-vt-on-leaflet/
