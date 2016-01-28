@@ -98,7 +98,7 @@ console.log('make map fired');
 
 var map = L.map('map', {
 	zoomControl: false,
-	maxZoom: 19,
+	maxZoom: 18,
 	minZoom: 10,
 //	touchZoom: false,
 zoomAnimationThreshold: 3,
@@ -291,12 +291,12 @@ tileData.on('ready', function() {
 		}
 	});
 	var tileOptions = {
-	            maxZoom: 20,  // max zoom to preserve detail on
+	            maxZoom: 18,  // max zoom to preserve detail on
 	            tolerance: 4, // simplification tolerance (higher means simpler)
 	            extent: 4096,  // 4096 tile extent (both width and height)
 	            buffer: 64,   // default 64 tile buffer on each side
 	            debug: 0,      // logging level (0 to disable, 1 or 2)
-	            indexMaxZoom: 20,        // 0 max zoom in the initial tile index
+	            indexMaxZoom: 0,        // 0 max zoom in the initial tile index
 	            indexMaxPoints: 100000, // 100000 max number of points per tile in the index
 	        };
 	var tileIndex = geojsonvt(data, tileOptions);
