@@ -115,13 +115,14 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    maxNativeZoom:19,
    maxZoom: 22,
    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
- }).addTo(map);
+ });
 
 var basemaps = {
   "Streets": osm
 };
 
 var overlays;
+var layerControl = L.control.layers(basemaps, null).addTo(map);
 var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });
 sidebar.addTo(map);
 var sidebarToggle = L.easyButton({
