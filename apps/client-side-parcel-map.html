@@ -110,19 +110,51 @@ map.spin(true);
 //alert(tilename);//--//
 
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
-
-var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+var osm = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    maxNativeZoom:19,
    maxZoom: 22,
    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
  });
 
-var basemaps = {
-  "Streets": osm
-};
+var ggle = 	new L.Google('HYBRID', {
+  maxZoom: 20,
+  maxNativeZoom: 20
+	});
 
-var overlays;
-var layerControl = L.control.layers(basemaps, null).addTo(map);
+var cdblight = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	maxNativeZoom: 18
+});
+var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  subdomains: 'abcd',
+  minZoom: 0,
+  maxZoom: 20,
+  maxNativeZoom: 18
+});
+
+var esritopo = L.tileLayer('//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
+	maxZoom: 20,
+	maxNativeZoom: 18
+});
+
+var ortho = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets-satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3ZyZGMiLCJhIjoiRUtXeFFzZyJ9.ufnW36oCZo96m_L9QsAkYg', {
+	attribution: '<a href="https://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd', maxZoom: 20, maxNativeZoom: 18
+});
+
+var basemaps = {
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/osm-streets.png'></div> Streets": osm,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/mapbox-ortho.png'></div> Satellite": ortho,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/esri-topo.png'></div> Topography": esritopo,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/cdb-light.png'></div> Grayscale": cdblight,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/cdb-dark.png'></div> Dark Matter": cdbdark
+};
+var layerControl = L.control.layers(basemaps, null, {position: 'topright', autoZIndex: true}).addTo(map);
 var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });
 sidebar.addTo(map);
 var sidebarToggle = L.easyButton({
@@ -178,7 +210,7 @@ tileData.on('ready', function() {
 	//alert('parcel data ready');
 	console.log('parcel data ready');
 	if (reloaded != false) {
-		map.fitBounds(ffParcels.getBounds());	
+		map.fitBounds(ffParcels.getBounds());
 	}
 	$(".blank").fadeOut();
 	map.spin(false);
