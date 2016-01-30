@@ -210,7 +210,7 @@ var tileData = omnivore.topojson(fullurl, null, grid);
 
 tileData.on('ready', function() {
 	//alert('parcel data ready');
-	console.log(grid);
+	console.log('grid data loaded');
 	if (reloaded != false) {
 		map.fitBounds(grid.getBounds());
 	}
