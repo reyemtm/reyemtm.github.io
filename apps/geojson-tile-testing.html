@@ -233,6 +233,9 @@ tileData.on('ready', function() {
 	});
 //remake map after map.remove is fired
 	map.on('unload', function() {
+		tileData.length = 0;
+		grid.length = 0;
+		data.length = 0;
 		//alert('map destroyed');
 		console.log('map destroyed');
 		$('.blank').css('opacity', '0.5');
