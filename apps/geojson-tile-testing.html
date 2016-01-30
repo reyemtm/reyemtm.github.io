@@ -333,7 +333,9 @@ tileData.on('ready', function() {
 var loaded = performance.now();
 var time = (loaded - loading)/1000;
 $("#subtitle").html('The grid loaded in ' + time.toFixed(4) + ' seconds.');
-sidebar.show();
+setTimeout(function(){
+	sidebar.show();
+}, 500);
 //time.toFixed()
 });//end tile data on ready function
 
