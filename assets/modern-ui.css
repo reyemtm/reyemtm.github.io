@@ -89,6 +89,7 @@ background: transparent;
 /*Media queries*/
 @media only screen and (max-width: 520px) {
   .leaflet-top.leaflet-left {
+    width: auto;
     right: 61px;
   }
   .leaflet-sidebar.left.visible {
@@ -114,7 +115,7 @@ background: transparent;
     width:60%;
   }
 }*/
-@media only screen and (min-width: 620px/*992*/) {
+@media only screen and (min-width: 521px/*992*/) {
   .leaflet-top.leaflet-left,
   .leaflet-sidebar {
     width: 450px;
