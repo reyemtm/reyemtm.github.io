@@ -64,7 +64,7 @@ background-color: black
 <body>
 <div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
 <div id='parcelmap'>
-<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="grid14k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 14k Features</button> <button id="grid30k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 30k Features</button> <button id="grid40k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 40k Features<button> <button id="grid58k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 58k Features</button> <hr /> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> <div id="map"></div>
+<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Try Loading Another Grid</h4> <hr><button id="grid14k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 14k Features</button> <button id="grid30k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 30k Features</button> <button id="grid40k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 40k Features<button> <button id="grid58k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 58k Features</button> <hr /> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> <div id="map"></div>
 </div>
 <script>
 setTimeout(function() {
@@ -195,7 +195,7 @@ var fullurl = url + tilename;
 
 console.log(fullurl);
 
-var tileData = omnivore.topojson(fullurl, null, ffParcels);
+var tileData = omnivore.topojson(fullurl, null, grid);
 
 tileData.on('ready', function() {
 	//alert('parcel data ready');
@@ -206,7 +206,7 @@ tileData.on('ready', function() {
 	$(".blank").fadeOut();
 	map.spin(false);
 //update map on township click - first remake sidebar div destroyed in map.remove
-	var maptext = '<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="grid14k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 14k Features</button> <button id="grid30k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 30k Features</button> <button id="grid40k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 40k Features<button> <button id="grid58k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 58k Features</button> <hr /> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> ';
+	var maptext = '<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Try Loading Another Grid</h4> <hr><button id="grid14k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 14k Features</button> <button id="grid30k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 30k Features</button> <button id="grid40k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 40k Features<button> <button id="grid58k" type="button" class="twpselect btn btn-default btn-sm btn-block">Grid 58k Features</button> <hr /> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> ';
 //twp select function
 	$(".twpselect").on('click', function(e){
 		var twp = $(this).attr('id') + '.json';
@@ -247,20 +247,17 @@ tileData.on('ready', function() {
 	}
 	 var x = e.latlng.lng;
 	 var y = e.latlng.lat;
-	 layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
+	 layerData = leafletPip.pointInLayer([x,y], grid, true);
 		if (!layerData[0]) {
 			console.log('nothing to see here')
 		}else{
-		var clicked = layerData[0].feature.properties.index;
+		var id = layerData[0].feature.properties.id;
 		highlight = new L.geoJson(data, {
 		 		filter: function(feature, layer) {
-					return feature.properties.index == clicked
+					return feature.properties.id == id
 				},
 				style: highlightOptions}).addTo(map);
-		var attributes = clicked.split('|', 2);
-	   	var name = attributes[0];
-	   	var pin  = attributes[1];
-	   	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
+	   	var popup = 'Grid #: ' + id;
 	   	map.openPopup(popup, e.latlng);
 	     	map.on('popupclose', function() {
 	       		map.removeLayer(highlight)
