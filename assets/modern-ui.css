@@ -115,7 +115,7 @@ background: transparent;
     width:60%;
   }
 }*/
-@media only screen and (min-width: 521px/*992*/) {
+@media only screen and (min-width: 521px) {
   .leaflet-top.leaflet-left,
   .leaflet-sidebar {
     width: 450px;
