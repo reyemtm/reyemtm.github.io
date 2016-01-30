@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+<head>
+<title>Client-Side Test Map | getBounds</title>
+<!--fonts and jquery-->
+<link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Open+Sans:400italic,400,800,700' rel='stylesheet' type='text/css'>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<!--Font Awesome CDN and Bootstrap CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+<!--Mapping via LeafletJS updated 03-13-2015 -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
+<!--leaflet sleep updated Jan 2016 -->
+<script src="https://getbounds.com/assets/leaflet-sleep/Leaflet.Sleep.js"></script>
+<!--Home Button ie Default Extent-->
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-defaultextent/leaflet.defaultextent.css" />
+<script src="https://getbounds.com/assets/leaflet-defaultextent/leaflet.defaultextent.js"></script>
+<!--locate control from source -->
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-locate-control/L.Control.Locate.min.css" />
+<script src="https://getbounds.com/assets/leaflet-locate-control/L.Control.Locate.min.js"></script>
+<!--Leaflet Hash via Mapbox CDN-->
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+<!--Google Custom Map -->
+<script src="https://maps.google.com/maps/api/js?v=3"></script>
+<!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+<!-- leaflet search -->
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-search/leaflet-search.min.css" />
+<script src="https://getbounds.com/assets/leaflet-search/leaflet-search.src.js"></script>
+<!--minimap-->
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
+<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
+<!-- Leaflet Easy button Updated Dec 2015-->
+<link rel="stylesheet" href="https://getbounds.com/assets/easy-button/easy-button.css" />
+<script src="https://getbounds.com/assets/easy-button/easy-button.js"></script>
+<!--Leaflet sidebar v1 aka menu -->
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-sidebar/L.Control.Sidebar.css" />
+<script src="https://getbounds.com/assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
+<!-- leaflet loading and leaflet-spin works with leaflet ajax and map tiles -->
+<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-loading/Control.Loading.css" />
+<script src="https://getbounds.com/assets/leaflet-loading/Control.Loading.js"></script>
+<script src="https://getbounds.com/assets/leaflet-spin/spin.js"></script>
+<script src="https://getbounds.com/assets/leaflet-spin/leaflet.spin.js"></script>
+<script src="https://getbounds.com/assets/google-tiles/google.js"></script>
+<script src="https://getbounds.com/assets/google-tiles/gglegrey.js"></script>
+<!--Mapbox fullscreen standalone js added in ovrdc-toolbar-->
+<link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+<!--OVRDC Custom Styles-->
+<link rel="stylesheet" href="/assets/ovrdc-style.css" />
+<link rel="stylesheet" href="/assets/modern-ui.css" />
+<script src="https://getbounds.com/assets/geojson-tiles/geojson-vt-dev.js"></script>
+<script src="https://getbounds.com/assets/geojson-tiles/L.CanvasTiles.js"></script>
+<script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.1.0/leaflet-pip.min.js'></script>
+<style>*{font-family: "Open Sans", sans-serif;}
+.leaflet-container{
+background-color: black
+}</style>
+</head>
+<body>
+<div class="blank"><h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...</h2></div>
+<div id='parcelmap'>
+<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="lancaster" type="button" class="twpselect btn btn-default btn-sm btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-sm btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-sm btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-sm btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-sm btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-sm btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-sm btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-sm btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-sm btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-sm btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-sm btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-sm btn-block">Walnut Township</button></div><hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> <div id="map"></div>
+</div>
+<script>
+setTimeout(function() {
+	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Loading...<br><br>The map is almost ready.</h2>');
+}, 4000);
+
+setTimeout(function() {
+	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Almost there...Please allow the browser to continue.</h2>');
+}, 6000);
+
+setTimeout(function() {
+	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
+}, 20000);
+//variables to keep across maps
+var reloaded = false;
+var search, tilename;
+var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
+//choose tile on load
+if (L.Browser.mobile) {
+	tilename = 'lancaster.json';
+console.log(tilename);
+}
+if (L.Browser.mobile == false) {
+	//tilename = 'fairfieldParcelsMin.json';
+	tilename = 'lancaster.json';
+console.log(tilename);
+}
+function makeMap() {
+//alert('make map fired');
+console.log('make map fired');
+
+var map = L.map('map', {
+	zoomControl: false,
+	maxZoom: 18,
+	minZoom: 10,
+//	touchZoom: false,
+zoomAnimationThreshold: 3,
+	center: [39.7147,-82.6052],
+	zoom: 14
+});
+map.spin(true);
+//var hash = L.hash(map);
+//alert(tilename);//--//
+
+var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
+var osm = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+   maxNativeZoom:19,
+   maxZoom: 22,
+   attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+ });
+
+var ggle = 	new L.Google('HYBRID', {
+  maxZoom: 20,
+  maxNativeZoom: 20
+	});
+
+var cdblight = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+	attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+	subdomains: 'abcd',
+	minZoom: 0,
+	maxZoom: 20,
+	maxNativeZoom: 18
+});
+var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+  attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+  subdomains: 'abcd',
+  minZoom: 0,
+  maxZoom: 20,
+  maxNativeZoom: 18
+});
+
+var esritopo = L.tileLayer('//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
+	attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
+	maxZoom: 20,
+	maxNativeZoom: 18
+});
+
+var ortho = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets-satellite/{z}/{x}/{y}.png?access_token=pk.eyJ1Ijoib3ZyZGMiLCJhIjoiRUtXeFFzZyJ9.ufnW36oCZo96m_L9QsAkYg', {
+	attribution: '<a href="https://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+	subdomains: 'abcd', maxZoom: 20, maxNativeZoom: 18
+});
+
+var basemaps = {
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/osm-streets.png'></div> Streets": osm,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/mapbox-ortho.png'></div> Satellite": ortho,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/esri-topo.png'></div> Topography": esritopo,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/cdb-light.png'></div> Grayscale": cdblight,
+  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/cdb-dark.png'></div> Dark Matter": cdbdark
+};
+var layerControl = L.control.layers(basemaps, null, {position: 'topright', autoZIndex: true}).addTo(map);
+var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });
+sidebar.addTo(map);
+var sidebarToggle = L.easyButton({
+      states: [{
+              stateName: 'open-sidebar',   // name the state
+              icon:      'fa-bars fa-lg',          // and define it's properties
+              title:     'Show Sidebar', // like it's title
+              onClick: function(btn, map) {  // and it's callback
+                  sidebar.show();
+                  btn.state('close-sidebar'); // change state on click!
+              }
+          }, {
+              stateName: 'close-sidebar',
+              icon:      'fa-times fa-lg fa-2x',
+              title:     'Hide Sidebar',
+              onClick: function(btn, map) {
+                  sidebar.hide();
+                  btn.state('open-sidebar');
+              }
+      }],
+  	id: 'menu'
+});
+
+var stogglebar = L.easyBar([sidebarToggle], {id: 'toggle'}).addTo(map);
+
+sidebar.on('hide', function () {
+    sidebarToggle.state('open-sidebar');
+});
+
+sidebar.on('show', function () {
+    sidebarToggle.state('close-sidebar');
+});
+
+sidebar.on('show', function() {
+	map.removeControl(customZoom)
+});
+
+sidebar.on('hide', function() {
+	customZoom.addTo(map);
+});
+
+var ffParcels = L.geoJson(null);
+
+var url = 'https://getbounds.com/data/topojson/';
+
+var fullurl = url + tilename;
+
+console.log(fullurl);
+
+var tileData = omnivore.topojson(fullurl, null, ffParcels);
+
+tileData.on('ready', function() {
+	//alert('parcel data ready');
+	console.log('parcel data ready');
+	if (reloaded != false) {
+		map.fitBounds(ffParcels.getBounds());
+	}
+	$(".blank").fadeOut();
+	map.spin(false);
+//update map on township click - first remake sidebar div destroyed in map.remove
+	var maptext = '<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="lancaster" type="button" class="twpselect btn btn-default btn-sm btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-sm btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-sm btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-sm btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-sm btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-sm btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-sm btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-sm btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-sm btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-sm btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-sm btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-sm btn-block">Walnut Township</button></div><hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> ';
+//twp select function
+	$(".twpselect").on('click', function(e){
+		var twp = $(this).attr('id') + '.json';
+		//alert(tilename);
+		console.log(tilename);
+		if (tilename != twp) {
+			tilename = twp;
+			//alert(tilename);
+			console.log(tilename);
+			map.remove();
+		}
+	});
+//remake map after map.remove is fired
+	map.on('unload', function() {
+		//alert('map destroyed');
+		console.log('map destroyed');
+		$('.blank').css('opacity', '0.5');
+		$('.blank').html('<div>&nbsp</div>');
+		//alert(tilename);
+		console.log(tilename);
+		setTimeout(function() {
+			//alert('creating new map');
+			$("#parcelmap").append(maptext);
+			makeMap();
+		}, 500);
+	});
+//start search
+	search = new L.Control.Search({
+		layer: ffParcels,
+		propertyName: 'index',
+		initial: false,
+		zoom: 17,
+		collapsed: false,
+		textPlaceholder: 'Search Owner/Parcel ID',
+		minLength: 4
+	}).addTo(map);
+	search.on('search_locationfound', function(e) {
+		console.log('search result found');
+		map.fire('click', {latlng:e.latlng});
+	  	search.collapse();
+	  });
+//end search
+//----------
+//start geojson-vt map tiles
+	var layerData;
+	var highlight;
+	var data = tileData.toGeoJSON();
+//interaction on the underlying polygon represented by the tiles - they draw better
+	map.on('click', function(e) {
+	if (highlight){
+		map.removeLayer(highlight)
+	}
+	 var x = e.latlng.lng;
+	 var y = e.latlng.lat;
+	 layerData = leafletPip.pointInLayer([x,y], ffParcels, true);
+		if (!layerData[0]) {
+			console.log('nothing to see here')
+		}else{
+		var clicked = layerData[0].feature.properties.index;
+		highlight = new L.geoJson(data, {
+		 		filter: function(feature, layer) {
+					return feature.properties.index == clicked
+				},
+				style: highlightOptions}).addTo(map);
+		var attributes = clicked.split('|', 2);
+	   	var name = attributes[0];
+	   	var pin  = attributes[1];
+	   	var popup = 'Parcel ID: ' + pin + '<hr>' + name;
+	   	map.openPopup(popup, e.latlng);
+	     	map.on('popupclose', function() {
+	       		map.removeLayer(highlight)
+	     	});
+		}
+	});
+	var tileOptions = {
+	            maxZoom: 18,  // max zoom to preserve detail on
+	            tolerance: 3, // simplification tolerance (higher means simpler)
+	            extent: 4096,  // 4096 tile extent (both width and height)
+	            buffer: 64,   // default 64 tile buffer on each side
+	            debug: 0,      // logging level (0 to disable, 1 or 2)
+	            indexMaxZoom: 0,        // 0 max zoom in the initial tile index
+	            indexMaxPoints: 100000, // 100000 max number of points per tile in the index
+	        };
+	var tileIndex = geojsonvt(data, tileOptions);
+//take json output from geojson-vt and draw it with the now depricated (in leaflet-beta) L.canvasTiles and code from here - http://blog.sumbera.com/2015/05/31/geojson-vt-on-leaflet/
+	var tileLayer = L.canvasTiles().params({ debug: false, padding: 5 }).drawing(drawingOnCanvas)
+	var pad = 0;
+	tileLayer.addTo(map);
+	tileLayer.setZIndex(10);
+	function drawingOnCanvas(canvasOverlay, params) {
+	            var bounds = params.bounds;
+	            params.tilePoint.z = params.zoom;
+	            var ctx = params.canvas.getContext('2d');
+	            ctx.globalCompositeOperation = 'source-over';
+	            //console.log('getting tile z' + params.tilePoint.z + '-' + params.tilePoint.x + '-' + params.tilePoint.y);
+	            var tile = tileIndex.getTile(params.tilePoint.z, params.tilePoint.x, params.tilePoint.y);
+	            if (!tile) {
+	                console.log('tile empty');
+	                return;
+	            }
+	            ctx.clearRect(0, 0, params.canvas.width, params.canvas.height);
+	            var features = tile.features;
+	            ctx.strokeStyle = 'orange';
+	            for (var i = 0; i < features.length; i++) {
+	                var feature = features[i],
+	                    type = feature.type;
+	                ctx.fillStyle = feature.tags.color ? feature.tags.color : 'transparent';
+	                ctx.beginPath();
+	                for (var j = 0; j < feature.geometry.length; j++) {
+	                    var geom = feature.geometry[j];
+	                    if (type === 1) {
+	                        ctx.arc(geom[0] * ratio + pad, geom[1] * ratio + pad, 2, 0, 2 * Math.PI, false);
+	                        continue;
+	                    }
+	                    for (var k = 0; k < geom.length; k++) {
+	                        var p = geom[k];
+	                        var extent = 4096;
+	                        var x = p[0] / extent * 256;
+	                        var y = p[1] / extent * 256;
+	                        if (k) ctx.lineTo(x  + pad, y   + pad);
+	                        else ctx.moveTo(x  + pad, y  + pad);
+	                    }
+	                }
+	                if (type === 3 || type === 1) ctx.fill();
+	                ctx.stroke();
+	            }
+	        };
+//end geojson-vt map tiles
+
+});//end tile data on ready function
+
+}//end makeMap function
+
+//make map on document ready
+$(document).ready(function() {
+	if (reloaded == false) {
+		console.log('document ready');
+		makeMap();
+		reloaded = true;
+	}
+});
+</script>
+</body>
+</html>
