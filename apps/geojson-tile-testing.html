@@ -84,6 +84,17 @@ var search, tilename;
 var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
 tilename = 'grid14k.json';
 function makeMap() {
+    if (tilename == 'grid58k.json') {
+       var load = confirm("Do you really want to load the 60k feature grid? This may crash your browser or device.");
+           if( load == true ){
+            alert("You've been warned.");
+            }
+           else{
+               alert('The 14k grid will now load.');
+               tilename = 'grid14k.json';
+           }
+        };
+	
 //alert('make map fired');
 console.log('make map fired');
 
@@ -252,7 +263,6 @@ tileData.on('ready', function() {
 			console.log('nothing to see here')
 		}else{
 		var id = layerData[0].feature.id;
-		alert(id);
 		highlight = new L.geoJson(data, {
 		 		filter: function(feature, layer) {
 					return feature.id == id
