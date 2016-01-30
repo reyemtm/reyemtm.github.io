@@ -332,7 +332,7 @@ tileData.on('ready', function() {
 //end geojson-vt map tiles
 var loaded = performance.now();
 var time = loaded - loading;
-$("#subtitle").html('The grid loaded in ' + time + ' seconds.');
+$("#subtitle").html('The grid loaded in ' + time.toFixed(4) + ' seconds.');
 sidebar.show();
 //time.toFixed()
 });//end tile data on ready function
