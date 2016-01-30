@@ -30,7 +30,7 @@
 .leaflet-top.leaflet-right .leaflet-control-zoom-in,
 .leaflet-top.leaflet-left .leaflet-control-zoom-in {
   border-bottom: 1px solid #ACACAC;
-	border-radius: 1px;
+  border-radius: 1px 1px 0 0;
   width: 28px;
   height: 28px;
   line-height: 28px;
@@ -38,7 +38,7 @@
 .leaflet-top.leaflet-right .leaflet-control-zoom-out,
 .leaflet-top.leaflet-left .leaflet-control-zoom-out,
 .leaflet-top.leaflet-left .leaflet-control-loading {
-	border-radius: 1px;
+  border-radius: 0 0 1px 1px;
   width: 28px;
   height: 28px;
   line-height: 28px;
