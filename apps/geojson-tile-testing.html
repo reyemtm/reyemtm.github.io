@@ -84,8 +84,7 @@ var search, tilename;
 var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
 tilename = 'grid14k.json';
 function makeMap() {
-var loading = 0;
-loading = performance.now();
+var loading = performance.now();
     if (tilename == 'grid58k.json') {
        var load = confirm("Do you really want to load the 60k feature grid? This may crash your browser or device.");
            if( load == true ){
@@ -331,11 +330,11 @@ tileData.on('ready', function() {
 	            }
 	        };
 //end geojson-vt map tiles
-var loaded = 0;
-loaded = performance.now();
-var time = (loaded - load)/1000;
-$("#subtitle").html('The grid loaded in ' + time.toFixed(4) + ' seconds.');
+var loaded = performance.now();
+var time = loaded - load;
+$("#subtitle").html('The grid loaded in ' + time + ' seconds.');
 sidebar.show();
+//time.toFixed()
 });//end tile data on ready function
 
 }//end makeMap function
