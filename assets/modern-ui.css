@@ -91,20 +91,28 @@ background: transparent;
   .leaflet-top.leaflet-left {
     right: 61px;
   }
-  .leaflet-sidebar {
-    width: 70%;
+  .leaflet-sidebar.left.visible {
+  	width:auto;
+  	right 61px;
   }
+  /*.leaflet-sidebar {
+    width: 70%;
+  }*/
   .leaflet-control-search .search-cancel {
     right: 115px!important;
   }
 }
 @media only screen and (min-width: 480px) {
   .leaflet-top.leaflet-left {
-    right: 61px;
+    /*right: 61px;*/
+    width:450px;
   }
-  .leaflet-sidebar {
+  .leaflet-sidebar.left.visible {
+  width:450px;
+  }
+/*  .leaflet-sidebar {
     width:60%;
-  }
+  }*/
 }
 @media only screen and (min-width: 620px/*992*/) {
   .leaflet-top.leaflet-left,
