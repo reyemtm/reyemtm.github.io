@@ -199,7 +199,7 @@ var tileData = omnivore.topojson(fullurl, null, grid);
 
 tileData.on('ready', function() {
 	//alert('parcel data ready');
-	console.log('parcel data ready');
+	console.log(grid);
 	if (reloaded != false) {
 		map.fitBounds(grid.getBounds());
 	}
@@ -277,7 +277,7 @@ tileData.on('ready', function() {
 //take json output from geojson-vt and draw it with the now depricated (in leaflet-beta) L.canvasTiles and code from here - http://blog.sumbera.com/2015/05/31/geojson-vt-on-leaflet/
 	var tileLayer = L.canvasTiles().params({ debug: false, padding: 5 }).drawing(drawingOnCanvas)
 	var pad = 0;
-	tileLayer.addTo(map);
+	//tileLayer.addTo(map);
 	tileLayer.setZIndex(10);
 	function drawingOnCanvas(canvasOverlay, params) {
 	            var bounds = params.bounds;
