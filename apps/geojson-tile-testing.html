@@ -251,10 +251,11 @@ tileData.on('ready', function() {
 		if (!layerData[0]) {
 			console.log('nothing to see here')
 		}else{
-		var id = layerData[0].feature.properties.id;
+		var id = layerData[0].feature.id;
+		alert(id);
 		highlight = new L.geoJson(data, {
 		 		filter: function(feature, layer) {
-					return feature.properties.id == id
+					return feature.id == id
 				},
 				style: highlightOptions}).addTo(map);
 	   	var popup = 'Grid #: ' + id;
