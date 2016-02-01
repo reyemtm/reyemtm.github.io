@@ -9,7 +9,7 @@ tags:
 published: true
 header-img: parcel-wide-2.png
 ---
-A county engineer recently asked me if it would be possible to create a low-cost or even free parcel viewer. Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygon features in the map. The map below is a test case of for this county parcel viewer. Yearly hosting costs for apps such as this can run in the thousands if not tens of thousands, so having a free alternative could be of great economic benefit to many counties across the country.
+A county engineer recently asked me if it would be possible to create a low-cost or even free parcel viewer. Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons in the map. Below is a test case of for this county parcel viewer. Yearly hosting costs for apps such as this can run in the thousands if not tens of thousands, so having a free alternative could be of great economic benefit to many counties across the country. With the average parcel count per county in the US right around 50k (see [Core Logic](http://www.corelogic.com/products/parcelpoint.aspx)) and the upper limit of feature rendering between 25k and 40k features, I would guess about a third of the counties in the US could host their parcels for minimal cost using client-side apps such as this one.
 
 <h2>Simplification & TopoJson</h2>
 
