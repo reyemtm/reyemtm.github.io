@@ -110,10 +110,11 @@ var map = L.map('map', {
 	zoomControl: false,
 	maxZoom: 18,
 	minZoom: 10,
-//	touchZoom: false,
-zoomAnimationThreshold: 3,
+  //	touchZoom: false,
+  zoomAnimationThreshold: 3,
 	center: [39.7147,-82.6052],
-	zoom: 14
+	zoom: 14,
+  scrollWheelZoom:false,
 });
 map.spin(true);
 //var hash = L.hash(map);

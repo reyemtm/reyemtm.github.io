@@ -95,7 +95,7 @@ var loading = performance.now();
                tilename = 'grid14k.json';
            }
         };
-	
+
 //alert('make map fired');
 console.log('make map fired');
 
@@ -106,7 +106,8 @@ var map = L.map('map', {
 	touchZoom: false,
 	zoomAnimationThreshold: 3,
 	center: [39.7147,-82.6052],
-	zoom: 14
+	zoom: 14,
+  scrollWheelZoom: false,
 });
 map.spin(true);
 //var hash = L.hash(map);
