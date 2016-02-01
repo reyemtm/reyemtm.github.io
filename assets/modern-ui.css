@@ -157,6 +157,7 @@ background: transparent;
     box-shadow: 0 1px 7px #999!important;
     height: 36px;
     padding-right:6px;
+    border-radius: 1px;
 }
 .leaflet-top.leaflet-left .leaflet-control {
   margin: 5px 1px;
