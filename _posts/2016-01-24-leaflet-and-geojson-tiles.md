@@ -17,7 +17,9 @@ One of the first things to prepare a shapefile for a leaflet map is to eliminate
 
 
 <iframe id="map" src="" name="map" allowfullscreen width="100%" height="0px" style="border:0;"></iframe>
-<div id="openMap" style="cursor:default;background-image:url('https://getbounds.com/images/parcel-wide-2.png');vertical-align:middle;height:350px;width:100%"><a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map"><h2>Click Here to Open the Parcel Map</h2></a></div>
+<div id="openMap" style="cursor:default;background-image:url('https://getbounds.com/images/parcel-wide-2.png');height:350px;width:100%;text-align:center;">
+	<a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map"><h2 style="padding-top:150px;color:whitesmoke;">Click Here to Open the Parcel Map</h2></a>
+</div>
 
 
 ##GeoJson Tiles
@@ -46,6 +48,6 @@ The one issue with the geojson tiles is that they are not interactive, so I used
 <script>
 $('#openMap').click(function() {
 	$('#map').css('height', '350px');
-	$('#openMap').css('height', '0px');
+	$('#openMap').hide();
 	});
 </script>
