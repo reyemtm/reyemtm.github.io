@@ -54,8 +54,12 @@
                     </li>
                     {% endif %}
                 </ul>
+                {% if page.homepage == true %}
                 <p class="copyright text-muted"><a href="http://jekyllrb.com/" target="_blank">Jekyll</a> | <a href="https://github.com" target="_blank">GitHub</a><br />
 				Map data &copy; Google<br />
+                {% else %}
+                <p class="copyright text-muted"><a href="http://jekyllrb.com/" target="_blank">Jekyll</a> | <a href="https://github.com" target="_blank">GitHub</a><br />
+        Site Authored by Malcolm Meyer<br />
                 Copyright &copy; {{ site.title }} {{ site.time | date: '%Y' }}</p>
             </div>
         </div>
