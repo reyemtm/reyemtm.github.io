@@ -29,7 +29,7 @@ The bulk of the code for creating the vector tiles from geojson was obtained fro
       indexMaxPoints: 100000, // 100000 max number of points per tile in the index
     };
 
-<iframe src="https://www.ovrdc.org/apps/geojson-tiles.html" allowfullscreen width="100%" height="350px"></iframe>
+<iframe src="https://www.ovrdc.org/apps/geojson-tiles.html" allowfullscreen width="100%" height="350px" style="border:0;"></iframe>
 
 ##Search and Identify
 
