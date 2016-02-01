@@ -48,11 +48,18 @@ To test the limits of this method I used another county parcel layer, this time 
 
 The map below uses a series of square grids to test the limits of the geojson tiles. On most devices the browser will crash when trying to load the 58k feature grid, though it does load on my work pc just fine. Click on the grids in the sidebar to find out what your devices and browser can handle!
 
-<iframe src="/apps/geojson-tile-grids.html" allowfullscreen width="100%" height="350px" style="border:0;"></iframe>
+<iframe id="gridMap" name="grid" src="" allowfullscreen width="100%" height="350px" style="border:0;display:none;"></iframe>
+<div id="openGrid" style="cursor:default;background-color:black;height:350px;width:100%;text-align:center;">
+	<a href="/apps/geojson-tile-grids.html" target="grid"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Parcel Map</h2></a>
+</div>
 
 <script>
 $('#openMap').click(function() {
 	$('#map').show();
 	$('#openMap').hide();
-	});
+});
+$('#openGrid').click(function() {
+	$('#gridMap').show();
+	$('#openGrid').hide();
+});
 </script>
