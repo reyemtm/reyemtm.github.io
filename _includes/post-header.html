@@ -9,7 +9,7 @@
 			{% endif %}
 <!--            <span class="meta">Posted by {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %} on {{ page.date | date: "%B %-d, %Y" }}</span>-->
 				<div class="meta">
-					{% if page.date %}Posted on {{ page.date | date: "%B %-d, %Y" }} by Malcolm Meyer{% endif %}
+					{% if page.date %}Posted on {{ page.date | date: "%B %-d, %Y" }}{% endif %}
 					{% if page.tags %}
 					<ul class="fa-ul">
 					{% for tag in page.tags %}
