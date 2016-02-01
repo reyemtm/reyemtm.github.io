@@ -4,7 +4,7 @@
 .site-heading a {
 	color: white;
 	font-weight: 300;
-	opacity: 0.6;
+	opacity: 0.8;
 }
 .site-heading a:hover, a:focus {
     color: white;
@@ -135,7 +135,6 @@ blockquote {
 .intro-header .page-heading .subheading {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
-  font-weight:300;
   /*padding-bottom: 115px;*/
   padding-bottom: 15px;
  }
@@ -188,7 +187,7 @@ hr.small {
 	animation: fade-in-down 0.9s;
 	-webkit-animation-delay: 0.1s;
 	animation-delay: 0.1s;
-	opacity: 0.9;
+	opacity: 1;
 }
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
@@ -196,7 +195,7 @@ hr.small {
   animation: fade-in-down 0.9s;
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
-  opacity:0.8
+  opacity:01;
 }
   /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
@@ -444,20 +443,17 @@ hr.small {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   margin: 10px 0 30px;
-  font-weight: 600;
 }
 .intro-header .post-heading .meta {
   font-family: 'Lora', 'Times New Roman', serif;
-  font-weight: 300;
   font-size: 18px;
   /*font-style: italic;*/
 }
 .intro-header .site-heading .meta {
   /*font-family: 'Lora', 'Times New Roman', serif;*/
-  font-weight: 300;
   font-size: 17px;
   padding-bottom:95px;
-  opacity: 0.5;
+  opacity: 1;
   /*font-style: italic;*/
 }
 .intro-header .post-heading .meta a {
@@ -677,7 +673,6 @@ body {
   line-height: 1.1,
 			display: block;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 300;
   margin: 10px 0 0;
   padding-left: 10px;
 }
