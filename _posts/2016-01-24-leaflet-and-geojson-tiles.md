@@ -9,7 +9,15 @@ tags:
 published: false
 feature-img: parcel-wide2.png
 ---
-When displaying very  
+A county engineer recently asked me if it would be possible to create a low-cost or even free parcel viewer. Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygon features drawn on the map.
+
+###Simplification & TopoJson
+
+One of the first things to prepare a shapefile for a leaflet map is to eliminate unecessary fields. For the parcel map all the fields were removed spare the owner name and parcel ID, which were concantenated into an index field. The original 22mb shapefile was then simplified via [mapshaper](http://mapshaper.com) and exported as topojson. This shaved 16mb off the shapefile, and the raw topojson would load on my work pc. However the map was still not usable on a mobile device, due to load times and overall performance. So when redering tens of thousands of polygons, field purging, simplication and topojson is still not enough. Luckily [mourner](https://github.com/mourner) created [geojson-vt](https://github.com/mapbox/geojson-vt).
+
+###GeoJson Tiles
+
+###Search and Identify
 
 <iframe src="apps/county-parcel-test-map.html" allowfullscreen width="100%" height="500px"></iframe>
 
