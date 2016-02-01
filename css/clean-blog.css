@@ -3,7 +3,7 @@
 }
 .site-heading a {
 	color: white;
-	font-weight: 300;
+	font-weight: 400;
 	opacity: 0.8;
 }
 .site-heading a:hover, a:focus {
@@ -54,7 +54,7 @@ body {
   font-family: 'Open Sans', san-serif;
   font-size: 20px;
   color: #404040;
-  font-weight: 300;
+  font-weight: 400;
 }
 .navbar-collapse.collapse:hover {
 display: block!important;
@@ -102,7 +102,7 @@ h4,
 h5,
 h6 {
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  font-weight: 600;
+  font-weight: 700;
 }
 a,
 a:hover,
@@ -195,7 +195,7 @@ hr.small {
   animation: fade-in-down 0.9s;
   -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
-  opacity:01;
+  opacity:1;
 }
   /* Create a bouncing scroll-down arrow on homepage with cover image */
 .scroll-down {
@@ -476,7 +476,7 @@ hr.small {
 }
 .post-preview > a > .post-subtitle {
   margin: 0;
-  font-weight: 300;
+  font-weight: 400;
   margin-bottom: 10px;
 }
 .post-preview > .post-meta {

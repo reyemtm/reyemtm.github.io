@@ -15,10 +15,9 @@ A county engineer recently asked me if it would be possible to create a low-cost
 
 One of the first things to prepare a shapefile for a leaflet map is to eliminate unnecessary fields. For the parcel map all the fields were removed spare the owner name and parcel ID, which were concantenated into an index field. The original 22mb shapefile was then simplified (40%) via [mapshaper](http://mapshaper.com) and exported as topojson. This shaved 16mb off the shapefile, and the raw topojson would load quickly and performance was acceptable on my work pc. However the map was not usable on a mobile device, due to load times and overall performance. So when when it comes to rendering tens of thousands of polygons, field purging, simplification and topojson are still not enough. Luckily [mourner](https://github.com/mourner) created [geojson-vt](https://github.com/mapbox/geojson-vt).
 
-
-<iframe id="map" src="" name="map" allowfullscreen width="100%" height="0px" style="border:0;"></iframe>
+<iframe id="map" src="" name="map" allowfullscreen width="100%" height="350px" style="border:0;display:none;"></iframe>
 <div id="openMap" style="cursor:default;background-image:url('https://getbounds.com/images/parcel-wide-2.png');height:350px;width:100%;text-align:center;">
-	<a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map"><h2 style="padding-top:150px;color:whitesmoke;">Click Here to Open the Parcel Map</h2></a>
+	<a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Parcel Map</h2></a>
 </div>
 
 
@@ -47,7 +46,7 @@ The one issue with the geojson tiles is that they are not interactive, so I used
 
 <script>
 $('#openMap').click(function() {
-	$('#map').css('height', '350px');
+	$('#map').show();
 	$('#openMap').hide();
 	});
 </script>
