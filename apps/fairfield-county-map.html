@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8" />
@@ -86,12 +84,11 @@ var search, tilename;
 var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
 //choose tile on load
 if (L.Browser.mobile) {
-	tilename = 'lancaster.json';
+	tilename = 'fairfieldCounty.json';
 console.log(tilename);
 }
 if (L.Browser.mobile == false) {
-	//tilename = 'fairfieldParcelsMin.json';
-	tilename = 'lancaster.json';
+	tilename = 'fairfieldCounty.json';
 console.log(tilename);
 }
 function makeMap() {
@@ -245,7 +242,7 @@ tileData.on('ready', function() {
 		}
 	});
   $("#fairfieldCounty").on('click', function(e){
-    window.location = "{{ site.baseurl }}/apps/fairfield-county-map.html";
+    window.location = "{{site.baseurl}}/apps/fairfield-county-map.html";
   });
 //remake map after map.remove is fired
 	map.on('unload', function() {

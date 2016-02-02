@@ -107,12 +107,13 @@ var map = L.map('map', {
 	zoomAnimationThreshold: 3,
 	center: [39.7147,-82.6052],
 	zoom: 14,
-  scrollWheelZoom: false,
 });
 map.spin(true);
 //var hash = L.hash(map);
 //alert(tilename);//--//
-
+var gpsLocate = L.control.locate({follow: true, locateOptions: {enableHighAccuracy: true}}).addTo(map);
+var homeExtent = L.control.defaultExtent({}).addTo(map);
+var fullScreen = L.control.fullscreen({}).addTo(map);
 var customZoom = L.control.zoom({position:'topleft'}).addTo(map);
 var osm = L.tileLayer('//{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
    maxNativeZoom:19,

@@ -24,3 +24,4 @@ include: ["_maps"]
 #plugins
 gems:
  - jekyll-sitemap
+

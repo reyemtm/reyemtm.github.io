@@ -1,3 +1,13 @@
+.inverse-txt {
+  color:whitesmoke;
+}
+.inverse-txt a:hover {
+  color:#7aa482!important;
+}
+blockquote p:last-child,
+blockquote p {
+  margin:10px 5px;
+}
 .site-heading ul {
 	margin-top: 10px;
 }
@@ -52,7 +62,7 @@
   }
 body {
   font-family: 'Open Sans', san-serif;
-  font-size: 20px;
+  font-size: 14px;
   color: #404040;
   font-weight: 400;
 }
@@ -246,7 +256,7 @@ hr.small {
 .navbar-toggle {
 	margin-right: 23px;
 }
-.navbar-toggle .icon-bar {
+.navbar-inverse .navbar-toggle .icon-bar {
   background-color: #404040;
 }
 .navbar-inverse .navbar-collapse,
@@ -264,8 +274,8 @@ hr.small {
 .navbar-inverse .navbar-brand a:hover,
 .navbar-inverse .navbar-brand:focus,
 .navbar-inverse .navbar-brand:hover{
-  color: #fff;
-  font-weight:600;
+  color: #7aa482;
+  font-weight: 400;
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle:focus {
@@ -277,7 +287,8 @@ hr.small {
 /*Navbar always collapsed*/
 @media (max-width: 3000px) {
     .navbar-inverse {
-    	background-color: rgba(32, 32, 32, 0.7);
+      background-color: white;
+    	/*background-color: rgba(32, 32, 32, 0.7);*/
     	border-color: rgba(32, 32, 32, 0.5);
     }
     .navbar-header {
@@ -357,6 +368,58 @@ hr.small {
 
 }
 @media only screen and (min-width: 768px) {
+  .intro-header .site-heading,
+  .intro-header .page-heading {
+    padding-top: 100px 0;
+    height: 400px;
+  }
+  .intro-header .post-heading {
+	   padding-top: 80px 0;
+   }
+  .intro-header .site-heading,
+  .intro-header .page-heading {
+    text-align: center;
+  }
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    margin-top: 0;
+    font-size: 50px;
+  }
+  .scroll-left{
+  	/*margin-left: 375px;*/
+  }
+
+  .intro-header .site-heading .subheading,
+  .intro-header .page-heading .subheading {
+    font-size: 24px;
+    line-height: 1.1,
+  	display: block;
+    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 10px 0 0;
+    padding-left: 10px;
+  }
+  .pager li > a,
+  .pager li > span {
+    font-size: 14px;
+    padding: 15px 25px;
+  }
+  .post-preview > a > .post-title {
+   /*font-size: 36px;*/
+  }
+  .intro-header .post-heading h1 {
+    font-size: 50px;
+	font-family: Montserrat;
+  }
+  .intro-header .post-heading .subheading {
+    font-size: 30px;
+  }
+  .intro-header .site-heading h1,
+  .intro-header .page-heading h1 {
+    font-size: 50px;
+  }
+  body {
+    font-size: 16px;
+  }
   .navbar-header {
     -webkit-transition: background-color 0.3s;
     -moz-transition: background-color 0.3s;
@@ -648,57 +711,6 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #7aa482;
-}
-@media only screen and (min-width: 768px) {
-  .intro-header .site-heading,
-  .intro-header .page-heading {
-    padding-top: 100px 0;
-	height: 400px;
-  }
-    .intro-header .post-heading {
-	padding-top: 80px 0;
-}
-.intro-header .site-heading,
-.intro-header .page-heading {
-  text-align: center;
-}
-.intro-header .site-heading h1,
-.intro-header .page-heading h1 {
-  margin-top: 0;
-  font-size: 50px;
-}
-.scroll-left{
-	/*margin-left: 375px;*/
-}
-
-.intro-header .site-heading .subheading,
-.intro-header .page-heading .subheading {
-  font-size: 24px;
-  line-height: 1.1,
-			display: block;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  margin: 10px 0 0;
-  padding-left: 10px;
-}
-  .pager li > a,
-  .pager li > span {
-    font-size: 14px;
-    padding: 15px 25px;
-  }
-  .post-preview > a > .post-title {
-   /*font-size: 36px;*/
-  }
-  .intro-header .post-heading h1 {
-    font-size: 50px;
-	font-family: Montserrat;
-  }
-  .intro-header .post-heading .subheading {
-    font-size: 30px;
-  }
-  .intro-header .site-heading h1,
-  .intro-header .page-heading h1 {
-    font-size: 50px;
-  }
 }
 
 @media only screen and (max-width: 768px) {
