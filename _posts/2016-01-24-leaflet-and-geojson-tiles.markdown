@@ -9,11 +9,15 @@ tags:
 published: true
 header-img: parcel-wide-2.png
 ---
-A county engineer recently asked me if it would be possible to create a low-cost or even free parcel viewer. Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons in the map. Below is a test case of for this county parcel viewer. Yearly hosting costs for apps such as this can run in the thousands if not tens of thousands, so having a free alternative could be of great economic benefit to many counties across the country. With the average parcel count per county in the US right around 50k (see [Core Logic](http://www.corelogic.com/products/parcelpoint.aspx)) and the upper limit of feature rendering between 25k and 40k features, I would guess about a third of the counties in the US could host their parcels for minimal cost using client-side apps such as this one.
+##A Simple Question
+
+>Is possible to create a low-cost or even free parcel viewer?
+
+I all started with this simple question from a county engineer. Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons rendered in a map. Below is a test case of for this county parcel viewer. Yearly hosting costs for apps such as this can run in the thousands if not tens of thousands, so having a free alternative could be of great economic benefit to many counties across the country. With the average parcel count per county in the US right around 50k (see [Core Logic](http://www.corelogic.com/products/parcelpoint.aspx)) and the upper limit of client-side feature rendering between 25k and 40k, it follows that at least a third if not half of US counties could share their parcels with the public via client-side web apps.
 
 <h2>Simplification & TopoJson</h2>
 
-One of the first things to prepare a shapefile for a leaflet map is to eliminate unnecessary fields. For the parcel map all the fields were removed spare the owner name and parcel ID, which were concantenated into an index field. The original 22mb shapefile was then simplified (40%) via [mapshaper](http://mapshaper.com) and exported as topojson. This shaved 16mb off the shapefile, and the raw topojson would load quickly and performance was acceptable on my work pc. However the map was not usable on a mobile device, due to load times and overall performance. So when when it comes to rendering tens of thousands of polygons, field purging, simplification and topojson are still not enough. Luckily [mourner](https://github.com/mourner) created [geojson-vt](https://github.com/mapbox/geojson-vt).
+One of the first things to prepare a shapefile for hosting on a web app is to eliminate unnecessary fields. For the parcel map all the fields were removed spare the owner name and parcel ID, which were concantenated into an index field. The original 22mb shapefile was then simplified (40%) via [mapshaper](http://mapshaper.com) and exported as topojson. This shaved off 16mb resulting in an app that would load quickly with adequate performance on a desktop pc. However the map was not usable on a mobile device, due to load times and panning issues. So when when it comes to rendering tens of thousands of polygons, field purging, simplification and topojson are still not enough. Luckily [mourner](https://github.com/mourner) created [geojson-vt](https://github.com/mapbox/geojson-vt).
 
 <h2>GeoJson Tiles</h2>
 
@@ -50,7 +54,7 @@ The map below uses a series of square grids to test the limits of the geojson ti
 
 <iframe id="gridMap" name="grid" src="" allowfullscreen width="100%" height="350px" style="border:0;display:none;"></iframe>
 <div id="openGrid" style="cursor:default;background-color:black;height:350px;width:100%;text-align:center;">
-	<a href="/apps/geojson-tile-grids.html" target="grid"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Parcel Map</h2></a>
+	<a href="/apps/geojson-tile-grids.html" target="grid"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Grid Map</h2></a>
 </div>
 
 <script>
