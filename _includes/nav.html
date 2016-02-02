@@ -22,11 +22,6 @@
         <li style="color:#ddd;padding:5px;font-weight:600;">
           <a href="{{ site.baseurl }}/tags">TAGS</a>
         </li>
-                {% for page in site.pages %}{% if page.layout == "tag" %}
-        <li>
-          <a style="font-style:italic;"href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-        </li>
-        {% endif %}{% endfor %}
     </ul>
 <!--    <div class="navbar-header navbar-right"><p class="navbar-text"><a href="#" class="navbar-link">Username</a></p></div>-->
   </div>

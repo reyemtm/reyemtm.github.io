@@ -19,6 +19,9 @@
    opacity:0.5;
    z-index:9999;
 }
+.navbar-inverse .navbar-toggle .icon-bar {
+	background-color: #404040;
+}
 .navbar-toggle.collapsed .middle-bar {
     opacity: 1;
   }
@@ -52,7 +55,7 @@
   }
 body {
   font-family: 'Open Sans', san-serif;
-  font-size: 20px;
+  font-size: 18px;
   color: #404040;
   font-weight: 400;
 }
@@ -254,15 +257,15 @@ hr.small {
 .navbar-inverse .navbar-nav>li>em,
 .navbar-inverse .navbar-brand a,
 .navbar-inverse .navbar-brand {
-  color: #ddd;
+  color: #404040;
 }
 .navbar-inverse .navbar-nav>li>a:focus,
 .navbar-inverse .navbar-nav>li>a:hover,
 .navbar-inverse .navbar-brand a:hover,
 .navbar-inverse .navbar-brand:focus,
 .navbar-inverse .navbar-brand:hover{
-  color: #fff;
-  font-weight:500;
+  color: #404040;
+  font-weight:600;
   background-color: transparent;
 }
 .navbar-inverse .navbar-toggle:focus {
@@ -274,8 +277,10 @@ hr.small {
 /*Navbar always collapsed*/
 @media (max-width: 3000px) {
     .navbar-inverse {
-    	background-color: rgba(32, 32, 32, 0.7);
-    	border-color: rgba(32, 32, 32, 0.1);
+    	/*background-color: rgba(32, 32, 32, 0.7);*/
+			background-color: white;
+    	border-color: rgba(32, 32, 32, 0.5);
+			opacity: 1;
     }
     .navbar-header {
         float: none;
@@ -299,12 +304,12 @@ hr.small {
         display: none!important;
     }
     .navbar-nav {
-        float: none;
-	margin-top: 7.5px;
-	font-size: 15px;
-	text-align: center;
-	font-size: inherit;
-    	font-weight: 400;
+      float: right;
+			margin-top: 7.5px;
+			font-size: 15px;
+			text-align: center;
+			font-size: inherit;
+			font-weight: 400;
 	}
 	.navbar-nav>li {
         float: none;
@@ -413,7 +418,7 @@ hr.small {
 }
 .intro-header .site-heading,
 .intro-header .page-heading {
-  padding: 130px 0 0px;
+  padding: 150px 0 0px;
   height: 400px;
   color: white;
   text-align: center;
@@ -453,7 +458,7 @@ hr.small {
   /*font-family: 'Lora', 'Times New Roman', serif;*/
   font-size: 17px;
   padding-bottom:95px;
-  opacity: 1;
+  opacity: 0.9;
   /*font-style: italic;*/
 }
 .intro-header .post-heading .meta a {
@@ -648,7 +653,7 @@ body {
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .page-heading {
-    padding-top: 100px 0;
+    padding-top: 110px 0;
 	height: 400px;
   }
     .intro-header .post-heading {
@@ -708,6 +713,9 @@ body {
 	}
 	.post-description {
 	font-size:initial;
+	}
+	body {
+		font-size: 15px;
 	}
 }
 
