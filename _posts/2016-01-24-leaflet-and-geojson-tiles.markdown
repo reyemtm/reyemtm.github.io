@@ -50,9 +50,9 @@ The one issue with the geojson tiles is that they are not interactive, so I used
 
 To test the limits of this method I tested the app with another county parcel layer, this time with over 70k features. The app would load fine on desktops, but would performance was not ideal on mobile devices and sometimes crashed the mobile browser. To get around this I broke apart the county by township and city boundaries (using model builder in Esri's ArcMap), allowing the user to switch between these areas via the sidebar. When the user switches to another area, the entire map gets redrawn with the map.destroy() function. One drawback is that the search and point in polygon only work on one area of the county at a time. To load the full county open the sidebar, scroll to the bottom and click 'Fairfield County'.
 
-<iframe id="cityMap" name="cityMap" src="/apps/county-parcel-test-map.html" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none;"></iframe>
+<iframe id="cityMap" name="cityMap" src="" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none;"></iframe>
 <div id="openCity" style="cursor:default;background-image:url('/images/parcel-wide.png');height:350px;width:100%;text-align:center;">
-	<a href="https://www.ovrdc.org/apps/county-parcel-test-map.html" target="cityMap" class="inverse-txt"><h2 style="padding-top:160px;">Click Here to Open the Fairfield County Map</h2></a>
+	<a href="/apps/county-parcel-test-map.html" target="cityMap" class="inverse-txt"><h2 style="padding-top:160px;">Click Here to Open the Fairfield County Map</h2></a>
 </div>
 
 
