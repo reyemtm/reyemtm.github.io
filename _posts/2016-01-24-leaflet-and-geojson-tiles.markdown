@@ -33,13 +33,13 @@ One of the first things to prepare a shapefile for hosting on a web app is to el
 The bulk of the code for creation of this app comes from [Sumbera](http://bl.ocks.org/Sumbera/c67e5551b21c68dc8299). This method uses the leaflet canvas layer to draw the tiles (deprecated in leaflet 1.0 in favor of the new grid layer). As you can see above, this method easily renders the 22k parcels in the map above. The only major difference with this map as compared to most web maps is that touch zoom has been disabled on mobile, which eliminates some issues with zoom animations. I am using the following parameters for the geojson-vt tile options:
 
     var tileOptions = {
-      maxZoom: 22,  // max zoom to preserve detail on
-      tolerance: 7, // 5 simplification tolerance (higher means simpler)
-      extent: 4096, //4096, // 4096 tile extent (both width and height)
-      buffer: 64,   // 64 default 64tile buffer on each side
-      debug: 0,      // logging level (0 to disable, 1 or 2)
-      indexMaxZoom: 0,        // 0 max zoom in the initial tile index
-      indexMaxPoints: 100000, // 100000 max number of points per tile in the index
+      maxZoom: 22,  
+      tolerance: 7, 
+      extent: 4096, 
+      buffer: 64,   
+      debug: 0,      
+      indexMaxZoom: 0,       
+      indexMaxPoints: 100000,
     };
 
 <h2>Search and Identify</h2>
