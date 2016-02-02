@@ -11,7 +11,7 @@ published: true
 header-img: parcel-wide-2.png
 feature-img: parcel-wide.png
 ---
-##The Client-Side County Parcel App
+<h2>The Client-Side County Parcel App</h2>
 
 It all started with this simple question from a county engineer: Would it be possible to create a low-cost or even free parcel viewer? Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons rendered in a map. The geojson-vt plugin expands this limit by converting the polygons into vector tiles. The resulting parcel test app is shown below.
 
@@ -50,7 +50,11 @@ The one issue with the geojson tiles is that they are not interactive, so I used
 
 To test the limits of this method I tested the app with another county parcel layer, this time with over 70k features. The app would load fine on desktops, but would performance was not ideal on mobile devices and sometimes crashed the mobile browser. To get around this I broke apart the county by township and city boundaries (using model builder in Esri's ArcMap), allowing the user to switch between these areas via the sidebar. When the user switches to another area, the entire map gets redrawn with the map.destroy() function. One drawback is that the search and point in polygon only work on one area of the county at a time. To load the full county open the sidebar, scroll to the bottom and click 'Fairfield County'.
 
-<iframe src="/apps/county-parcel-test-map.html" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid"></iframe>
+<iframe id="cityMap" name="city" src="/apps/county-parcel-test-map.html" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none"></iframe>
+<div id="openCity" style="cursor:default;background-image:url('/images/parcel-wide.png');height:350px;width:100%;text-align:center;">
+	<a href="https://www.ovrdc.org/apps/county-parcel-test-map.html" target="city" class="inverse-txt"><h2 style="padding-top:160px;">Click Here to Open the Fairfield County Map</h2></a>
+</div>
+
 
 <h2>Crashing the Browser</h2>
 
@@ -66,8 +70,8 @@ $('#openMap').click(function() {
 	$('#map').show();
 	$('#openMap').hide();
 });
-$('#openGrid').click(function() {
-	$('#gridMap').show();
-	$('#openGrid').hide();
+$('#openCity').click(function() {
+	$('#cityMap').show();
+	$('#openCity').hide();
 });
 </script>
