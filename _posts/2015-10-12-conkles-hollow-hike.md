@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Conckle's Hollow Fall Hike"
-description: "Here I am Leaflet Elevation to show a the elevation cross-section of a GPS track recorded with MyTracks at Conckle's Hollow Nature Preserve in the Hocking Hills region of Ohio."
+title: "Conkle's Hollow Fall Hike"
+description: "Here I am Leaflet Elevation to show a the elevation cross-section of a GPS track recorded with MyTracks at Conkle's Hollow Nature Preserve in the Hocking Hills region of Ohio."
 subtitle: "Mapping GPS Tracks"
 tags: leaflet
 map: leaflet-beta
