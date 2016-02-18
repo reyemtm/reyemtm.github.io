@@ -1,4 +1,4 @@
-#Clean Blog by Start Bootstrap - Jekyll Version - Modified
+##Clean Blog - Jekyll Version - Modified
 
 This is a modified version of the Jekyll version of the Clean Blog theme by [Start Bootstrap](http://startbootstrap.com/).
 
