@@ -5,7 +5,6 @@ description: "Improving Leaflet performance using the geojson-vt plugin with two
 subtitle: "A County Parcel App: No GIS Server? No Problem!"
 tags:
  - leaflet
- - geojsonvt
  - esri
 published: true
 header-img: parcel-wide-2.png
