@@ -485,6 +485,7 @@ hr.small {
   height: 400px;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .intro-header .post-heading {
