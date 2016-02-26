@@ -147,6 +147,7 @@ blockquote {
   font-size: 24px;
   /*padding-bottom: 115px;*/
   padding-bottom: 15px;
+  position: relative;
  }
 
 hr.small {
@@ -370,7 +371,7 @@ hr.small {
 @media only screen and (min-width: 768px) {
   .intro-header .site-heading,
   .intro-header .page-heading {
-    padding-top: 100px 0;
+    padding-top: 100px;
     height: 400px;
   }
   .intro-header .post-heading {
