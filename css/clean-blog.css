@@ -676,7 +676,7 @@ form .row:first-child .floating-label-form-group {
   font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 800;
+  /*font-weight: 800;*/
   letter-spacing: 1px;
   padding: 10px 5px;
   background-color: white;
