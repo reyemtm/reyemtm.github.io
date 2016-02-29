@@ -13,7 +13,7 @@ permalink: /projects/index.html
 
 A simple static html, javascript and jquery parcel web map, capable of rendering up to 50k polygons on desktop and mobile. The app uses Leaflet as the mapping api and Jekyll to build the static pages. Color, initial map center/zoom and the search field are defined in the yaml front matter, with minimal to zero extra coding needed. The polygons should be in topojson format.
 
-```
+```javascript
 ---
 layout: map
 title: Parcel Viewer
