@@ -9,10 +9,12 @@ permalink: /projects/index.html
  - A
  - B
  - C
+
 ## Project 2
  - A
  - B
  - C
+
 ## Project 3
  - A
  - B
