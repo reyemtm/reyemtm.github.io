@@ -7,7 +7,7 @@ permalink: /projects/index.html
 ---
 ##Open Parcel Viewer
 
-<img src="/images/parcel-img.png" width="50%" alt-text="Open Parcel Viewer" />
+<img src="/images/parcel-img.png" width="50%" />
 
 A simple static html, javascript and jquery parcel web map, capable of rendering up to 50k polygons on deesktop and mobile. The app uses Leaflet as the mapping api and Jekyll to build the static pages. Color, initial map center/zoom and the search field are defined in the yaml front matter, with minimal to zero extra coding needed. The polygon should be in topojson format.
 
