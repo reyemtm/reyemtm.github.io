@@ -7,7 +7,7 @@ permalink: /projects/index.html
 ---
 <div class='col-md-3'>
 
-![Parcel Viewer](https://github.com/ovrdc/parcel-viewer/raw/gh-pages/assets/images/parcel-img.png)
+<img src='https://github.com/ovrdc/parcel-viewer/raw/gh-pages/assets/images/parcel-img.png' />
 
 </div>
 
