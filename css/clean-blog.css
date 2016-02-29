@@ -61,7 +61,7 @@ blockquote p {
     transform-origin: 10% 90%;
   }
 body {
-  font-family: 'Open Sans', san-serif;
+  font-family: 'Source Sans Pro', san-serif;
   font-size: 15px;
   color: #404040;
   font-weight: 400;
@@ -102,7 +102,7 @@ p {
   margin: 30px 0;
 }
 h1 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 800;
 }
 
@@ -111,7 +111,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-weight: 600;
 }
 a,
@@ -143,7 +143,7 @@ blockquote {
 
 .intro-header .site-heading .subheading,
 .intro-header .page-heading .subheading {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   /*padding-bottom: 115px;*/
   padding-bottom: 15px;
@@ -167,7 +167,7 @@ hr.small {
   left: 0;
   width: 100%;
   z-index: 3;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   border:none;
 }
 .navbar-custom .navbar-brand {
@@ -395,7 +395,7 @@ hr.small {
     font-size: 24px;
     line-height: 1.1,
   	display: block;
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 10px 0 0;
     padding-left: 10px;
   }
@@ -509,7 +509,7 @@ hr.small {
   display: block;
 }
 .intro-header .post-heading .subheading {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 24px;
   margin: 10px 0 30px;
 }
@@ -553,7 +553,7 @@ hr.small {
   font-size: 13px;
   /*&font-style: italic;*/
   margin-top: 0;
-  font-family: 'Open Sans';
+  font-family: 'Source Sans Pro';
   padding-left: 3px;
 }
 .post-preview > .post-meta > a {
@@ -645,7 +645,7 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #eeeeee;
 }
 .btn {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
@@ -669,7 +669,7 @@ form .row:first-child .floating-label-form-group {
 }
 .pager li > a,
 .pager li > span {
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 800;
