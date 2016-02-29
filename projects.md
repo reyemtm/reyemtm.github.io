@@ -8,11 +8,13 @@ permalink: /projects/index.html
 <h2>Open Parcel Viewer</h2>
 <h6><a href="https://ovrdc.github.io/parcel-viewer">Demo Link</a></h6>
 <hr />
+<div>
 <div class="col-md-6">
 <img src="/images/parcel-img.png" />
 </div>
 <div class="col-md-6">
 A simple static html, javascript and jquery parcel web map, capable of rendering up to 50k polygons on desktop and mobile. The app uses Leaflet as the mapping api and Jekyll to build the static pages. Color, initial map center/zoom and the search field are defined in the yaml front matter, with minimal to zero extra coding needed. The polygons should be in topojson format.
+</div>
 </div>
 
 ```javascript
