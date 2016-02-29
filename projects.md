@@ -17,20 +17,6 @@ permalink: /projects/index.html
  </div>
 </div>
 
-```javascript
----
-layout: map
-title: Parcel Viewer
-data: parcels.topojson
-zoom: 11
-center: "38.8103,-82.3933"
-split: " | "
-indexnumber: 2
-date: "2016-02-18"
-color: orange
----
-```
-
 ***
 
 ##Project 2
