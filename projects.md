@@ -6,7 +6,7 @@ description: A list of my most recent web apps, print maps and misc projects hos
 permalink: /projects/index.html
 ---
 <h2>Open Parcel Viewer</h2>
-<h6><a href="https://ovrdc.github.io/parcel-viewer">Live Link</a></h6>
+<h6><a href="https://ovrdc.github.io/parcel-viewer">Demo Link</a></h6>
 <hr />
 <div class="col-md-6">
 <img src="/images/parcel-img.png" />
