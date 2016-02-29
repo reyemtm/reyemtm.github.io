@@ -5,7 +5,7 @@ subtitle: A list of my most recent web apps, print maps and misc projects.
 description: A list of my most recent web apps, print maps and misc projects hosted on getBounds by Malcolm Meyer.
 permalink: /projects/index.html
 ---
-<span class="index-img" style="background-image:url(/images/parcel-img.png);"></span>
+<img src="/images/parcel-img.png" width="100%" alt-text="Open Parcel Viewer"/>
 
 ## Project 1
  - A
