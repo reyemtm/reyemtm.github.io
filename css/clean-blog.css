@@ -108,6 +108,10 @@ h1 {
 
 h2,
 h3,
+{
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 800;
+}
 h4,
 h5,
 h6 {
@@ -541,7 +545,7 @@ hr.small {
   font-size: 30px;
 /*  margin-top: 30px;*/
   margin-bottom: 10px;
-  font-weight: 600;
+  font-weight: 800;
 }
 .post-preview > a > .post-subtitle {
   margin: 0;
