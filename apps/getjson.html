@@ -25,7 +25,7 @@
                 	opacity: 1
                 },
 				onEachFeature: function( feature, layer ){
-                        layer.bindPopup(feature.properties.type);
+                        layer.bindPopup(feature.properties.name);
                     }
                 });
   	$.getJSON("../data/c_hollow.geojson", function(data) {
