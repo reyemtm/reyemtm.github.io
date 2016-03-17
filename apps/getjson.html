@@ -13,28 +13,25 @@
 <body>
 <div id="map"></div>
 <script>
-
-  // initialize the map
 	var map = L.map('map').setView([36.090, -87.281], 11);
 	var cartodb = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
   		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
   		subdomains: 'abcd'
   	}).addTo(map);
-  var trails = {};
-	$.getJSON("../data/c_hollow.geojson", function(data) {
+	var trails = {};
+  	$.getJSON("../data/c_hollow.geojson", function(data) {
          trails = L.geoJson(data ,{
-                    style:  function (feature)
-                        {
-                            return {"color": "#00ff00","weight": 5,"opacity": 1}
-                        }
+                style:  {
+                	color: "#00ff00",
+                	weight: 5,
+                	opacity: 1
                 },
-                {
-					onEachFeature: function( feature, layer ){
-                             layer.bindPopup(feature.properties.type);
-                        }
+				onEachFeature: function( feature, layer ){
+                        layer.bindPopup(feature.properties.type);
+                    }
                 }
         ).addTo(map);
-		});
+  	});
   </script>
 </body>
 </html>
