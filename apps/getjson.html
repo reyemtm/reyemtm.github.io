@@ -22,9 +22,10 @@
                 style:  {
                 	color: "#00ff00",
                 	weight: 5,
-                	opacity: 1
+                	opacity: 1,
+                	dashArray: '5,5',
                 },
-				onEachFeature: function( feature, layer ){
+		onEachFeature: function( feature, layer ){
                         layer.bindPopup(feature.properties.name);
                     }
                 });
