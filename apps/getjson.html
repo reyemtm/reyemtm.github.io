@@ -7,7 +7,7 @@
 	<script src="../assets/leaflet.0.7.7/leaflet.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<style>
-    #map{position:absolute;top:0;left:0;width:100%; }
+		#map{position:absolute;top:0;left:0;width:100%;height:100%;}
   	</style>
 </head>
 <body>
@@ -18,9 +18,20 @@
   		attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
   		subdomains: 'abcd'
   	}).addTo(map);
-	var trails = {};
+	var trails = L.geoJson(null,{
+                style:  {
+                	color: "#00ff00",
+                	weight: 5,
+                	opacity: 1
+                },
+				onEachFeature: function( feature, layer ){
+                        layer.bindPopup(feature.properties.type);
+                    }
+                });
   	$.getJSON("../data/c_hollow.geojson", function(data) {
-         trails = L.geoJson(data ,{
+         trails.addData(data);
+         trails.addTo(map);
+         /*trails = L.geoJson(data ,{
                 style:  {
                 	color: "#00ff00",
                 	weight: 5,
@@ -30,7 +41,7 @@
                         layer.bindPopup(feature.properties.type);
                     }
                 }
-        ).addTo(map);
+        ).addTo(map);*/
   	});
   </script>
 </body>
