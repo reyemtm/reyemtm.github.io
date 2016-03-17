@@ -31,6 +31,7 @@
   	$.getJSON("../data/c_hollow.geojson", function(data) {
          trails.addData(data);
          trails.addTo(map);
+         map.fitBounds(trails.getBounds());
          /*trails = L.geoJson(data ,{
                 style:  {
                 	color: "#00ff00",
@@ -43,6 +44,14 @@
                 }
         ).addTo(map);*/
   	});
+  	map.on('zoomend', function() {
+  		if (map.getZoom() < 12 && map.hasLayer(trails)) {
+  			map.removeLayer(trails)
+  			}
+  		else if (map.getZoom() >= 12 && !map.hasLayer(trails)) {
+  			trails.addTo(map)
+  			}
+  		});
   </script>
 </body>
 </html>
