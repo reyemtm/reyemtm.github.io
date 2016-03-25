@@ -52,8 +52,6 @@
 {% if page.plugin3 %}
 {% include {{ page.plugin3 }} %}
 {% endif %}
-{% if page.map != 'fullscreen' %}
+{% if page.map %}
 {% include map-style.html %}
-{% elsif page.map == 'fullscreen' %}
-<style>#map {position::absolute;top:0;left:0;width:100%;height:100%}</style>
 {% endif %}

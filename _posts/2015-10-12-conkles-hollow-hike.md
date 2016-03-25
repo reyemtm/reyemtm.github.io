@@ -66,14 +66,14 @@ header-img: c-hollow.jpg
 		height: 150,
 		imperial: true
 	}).addTo(map);
-	
+
 	var hike = new L.geoJson.ajax("../../data/c_hollow.geojson", {
 	    color: '#629062',
 	    weight: 6,
 	    opacity: 1,
 	    onEachFeature: el.addData.bind(el)
 	  }).addTo(map);
-	
+
 	hike.on('data:loaded', function(){
 	  ride.addTo(map);
 	  map.fitBounds(ride.getBounds());
@@ -89,4 +89,4 @@ header-img: c-hollow.jpg
 	L.control.layers(baseMaps, null).addTo(map);
 </script>
 
-This is a map of a hike...more to come...
+This is a map of a hike using the Leaflet elevation plugin. I added a green theme.
