@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% include head.html %}
+  <!--Font Awesome CDN and Bootstrap CSS -->
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!--Mapping via MapboxJS updated 03-13-2015 -->
+<script src='https://api.tiles.mapbox.com/mapbox.js/v2.2.1/mapbox.standalone.js'></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+  <!--Mapping via LeafletCSS updated 03-13-2015 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+  <!--OVRDC Custom Style-->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/ovrdc-style.css" />
+  <!--Home Button ie Default Extent-->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.defaultextent.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.defaultextent.js"></script>
+  <!--Alternative zoom home plugin-->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.zoomhome.css"/>
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.zoomhome.min.js"></script>
+  <!--Easy Print Plugin Does not work well -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/easyPrint.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.easyPrint.js"></script>
+  <script src="{{ site.baseurl }}/map-plugins/jQuery.print.js"></script>
+  <!--<script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.24.0/L.Control.Locate.css' rel='stylesheet' />
+  <!--[if lt IE 9]>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-locatecontrol/v0.21.0/L.Control.Locate.ie.css' rel='stylesheet' />
+  <![endif]-->
+  <!--locate control from source -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.css" />
+  <script src="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.js"></script>
+  <!--Awesome Marker Plugin -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.css">
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.js"></script>
+  <!--Leaflet Hash via Mapbox CDN-->
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
+  <!-- Leafle Social -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.social.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.social.js"></script>
+  <!--Google Custom Map -->
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=placeskey=AIzaSyCpIjH_d3jfNPSwPuyrzy2G9H_Ylb1bEd8"></script>
+  <script src="{{ site.baseurl }}/map-plugins/google.js"></script>
+  <script src="{{ site.baseurl }}/map-plugins/gglegrey.js"></script>
+  <!-- Esri Leaflet Core -->
+  <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-core.js"></script>
+  <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
+  <!-- Esri Leaflet Geocoder -->
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/map-plugins/esri-geo/esri-leaflet-geocoder.css" />
+  <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
+  <!--link rel="stylesheet" type="text/css" href="http://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.css"-->
+  <!-- Full Screen via Mapbox
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/Leaflet.fullscreen.min.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />-->
+  <!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
+  <!-- leaflet measure -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.measure.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.measure.js"></script>
+  <!-- leaflet sidebar v 2
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-sidebar.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet-sidebar.js"></script>
+  <!-- leaflet ajax geojson loader -->
+  <script src="{{ site.baseurl }}/map-plugins/leaflet.ajax.min.js"></script>
+  <!-- leaflet panel layers right side panel -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-panel-layers.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet-panel-layers.js"></script>
+  <!-- leaflet search -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-search.min.css" />
+  <script src="{{ site.baseurl }}/map-plugins/leaflet-search.min.js"></script>
+  <!--marker cluster -->
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/leaflet.markercluster.js'></script>
+  <!--minimap-->
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
+  <!--leaflet label via mapbox-->
+  <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
+  <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
+  <!--leaflet sleep-->
+  <script src="{{ site.baseurl }}/map-plugins/Leaflet.Sleep.js"></script>
+  <!--leaflet providers simplify adding tiled basemaps -->
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/Leaflet.NavBar.css" />
+  <script src="{{ site.baseurl }}/map-plugins/Leaflet.NavBar.js"></script>
+  <script src="{{ site.baseurl }}/map-plugins/leaflet-providers.js"></script>
+  <script src="{{ site.baseurl }}/map-plugins/easy-button.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/L.Control.Sidebar.css" />
+  <script src="{{ site.baseurl }}/map-plugins/L.Control.Sidebar.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/Control.FullScreen.css" />
+  <script src="{{ site.baseurl }}/map-plugins/Control.FullScreen.js"></script>
+  <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/Control.Loading.css" />
+  <script src="{{ site.baseurl }}/map-plugins/Control.Loading.js"></script>
+  <style>
+    #map {height: 800px; width:100%;}
+  </style>
+</head>
+<body>
+
+    {% include nav.html %}
+
+<!-- Post Header -->
+{% include header.html %}
+<!-- Post Content -->
+<article id="content">
+    <div class="container">
+    	<div id="map"></div>
+		{{ content }}
+		<div class="share-page">
+			<!--<div class="g-plusone" data-size="small(none)" data-width="150" style="display:inline;"></div>-->
+			<!--<div class="share" style="font-style:italic;">Share this article:</div>-->
+		  <script src="https://apis.google.com/js/platform.js" async defer></script>
+		  <g:plusone></g:plusone>
+		  <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
+			                <span class="fa-stack fa-lg">
+		        <i class="fa fa-circle fa-stack-2x"></i>
+		        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+							</span>
+			</a>
+			<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
+		        <span class="fa-stack fa-lg">
+		        <i class="fa fa-circle fa-stack-2x"></i>
+		        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+							</span>
+			</a>
+			</div>
+		        <br>
+		        <hr>
+		        <!--<script src="https://apis.google.com/js/plusone.js"></script>
+		        <div style="margin-top:30px">
+		          <div class="g-comments"
+		              data-href="{{site.url}}{{page.url}}"
+		              data-width="642"
+		              data-first_party_property="BLOGGER"
+		              data-view_type="FILTERED_POSTMOD">
+		          </div>-->
+        <ul class="pager">
+            {% if page.previous.url %}
+            <li class="previous">
+                <a href="{{ page.previous.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title}}">&larr; Previous Post</a>
+            </li>
+            {% endif %}
+            {% if page.next.url %}
+            <li class="next">
+                <a href="{{ page.next.url | prepend: site.baseurl | replace: '//', '/' }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title}}">Next Post &rarr;</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</article>
+
+
+    {% include footer.html %}
+
+</body>
+
+</html>
