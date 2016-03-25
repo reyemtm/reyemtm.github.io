@@ -15,7 +15,7 @@ author: Malcolm Meyer
 
 # Build settings
 markdown:	kramdown
-highlighter: rogue
+highlighter: rouge
 permalink: /blog/:title
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
@@ -24,4 +24,3 @@ include: ["_maps"]
 #plugins
 gems:
  - jekyll-sitemap
-
