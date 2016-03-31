@@ -329,7 +329,7 @@ hr.small {
         float: none;
         margin-bottom: 5px;
     }
-    .navbar-nav>li>a:hover {
+    .navbar-nav>li>:hover {
 	background-color: gainsboro;
     }
     .navbar-nav>li>a {
