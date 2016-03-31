@@ -338,6 +338,7 @@ hr.small {
     }
     .collapse.in{
   		display:block !important;
+		border-top: solid thin gainsboro;;
 	}
 	.navbar-inverse .navbar-toggle:active {
 		background-color: transparent;
