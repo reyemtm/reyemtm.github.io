@@ -280,7 +280,7 @@ hr.small {
 .navbar-inverse .navbar-brand:hover{
   color: #7aa482;
   font-weight: 400;
-  background-color: transparent;
+  background-color: gainsboro;
 }
 .navbar-inverse .navbar-toggle:focus {
   background-color: transparent;
