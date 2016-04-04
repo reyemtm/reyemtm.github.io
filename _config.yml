@@ -1,5 +1,6 @@
 # Site settings
 title: getBounds
+name: getBounds
 header-img: header-2.png
 email: malcolmtmeyer@gmail.com
 description: "A (Jekyll) Blog Exploring Web Maps & Cartography"
