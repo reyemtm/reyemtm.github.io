@@ -5,8 +5,12 @@
 {% include head.html %}
 </head>
 <body>
-
-    {{ content }}
-
+{%if page.template == true %}
+{% include map.template.html %}
+{{ content }}
+</script>
+{% else %}
+{{ content }}
+{% endif %}
 </body>
 </html>
