@@ -283,9 +283,9 @@
         map.removeControl(gpsLocate);
         map.removeControl(homeExtent);
         map.removeControl(fullscreen);
-
+{% if page.search == true %}
         map.removeControl(globalsearchToggle);
-
+{% endif %}
         btn.state('show-tools');
         toolshidden = true;
         //console.log(toolshidden+ ' state changed to showTools');
@@ -305,7 +305,9 @@
     gpsLocate.addTo(map);
     homeExtent.addTo(map);
     fullscreen.addTo(map);
+    {% if page.search == true %}
     globalsearchToggle.addTo(map);
+{% endif %}
     toolshidden = false;
   }
   window.onresize = function() {
@@ -314,7 +316,9 @@
       gpsLocate.addTo(map);
       homeExtent.addTo(map);
       fullscreen.addTo(map);
+      {% if page.search == true %}
       globalsearchToggle.addTo(map);
+      {% endif %}
       map.removeControl(tools);
       toolshidden = false;
       mobilescreen = false;
@@ -327,7 +331,9 @@
       map.removeControl(gpsLocate);
       map.removeControl(homeExtent);
       map.removeControl(fullscreen);
+      {% if page.search == true %}
       map.removeControl(globalsearchToggle);
+      {% endif %}
       tools.addTo(map);
       toolshidden = true;
       mobilescreen = true;
