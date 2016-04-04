@@ -38,4 +38,9 @@ var map = L.map('map', {
   zoomAnimationThreshold: 2,
   doubleClickZoom: false
 }).setView([ {{ page.center }} ], {{ page.zoom }});
+ var sidebar = L.control.sidebar('sidebar', {
+    autoPan: false,
+    closeButton: false
+  });
+  sidebar.addTo(map);
 </script>
