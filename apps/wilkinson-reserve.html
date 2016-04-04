@@ -11,5 +11,6 @@ basemap: ortho
 ---
 var land = omnivore.geojson('/data/land.geojson').addTo(map);
 land.on('ready', function() {
+  map.fitBounds(land.getBounds());
   map.spin(false);
 });
