@@ -1,3 +1,6 @@
+h1, h2, h3, .archivo-black {
+  font-family: 'Archivo Black', sans-serif;
+}
 .leaflet-bar,
 .leaflet-bar a:first-child, a:last-child  {
 	border-radius: 1px;
@@ -97,7 +100,7 @@ background: transparent;
     width: 70%;
   }*/
   .leaflet-control-search .search-cancel {
-    right: 115px!important;
+    right: 110px!important;
   }
 }
 /*@media only screen and (min-width: 480px) {
@@ -125,7 +128,7 @@ background: transparent;
   }
 	.leaflet-top.leaflet-right {
 		top: 0px;
-    z-index: 999;
+    z-index: 9999;
 	}
 }
 /*end media queries*/
