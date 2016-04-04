@@ -9,33 +9,33 @@ zoom: 10
 ---
 <div id='map'>
   <div id="sidebar">
-    <div id="mapTitle">
-      <h2 style="font-family:Archivo Black, sans-serif;">{{ page.title }}</h2>
-      <hr />
-    </div>
-    <div id="mapDescription">
-      {{ page.description }}
-      <hr />
-    </div>
-    <div id="mapInfo">
-      <strong>{{ page.notes }}</strong>
-      <hr />
-    </div>
-    <div id="mapLegend"></div>
-    <div id="mapLegal">
-      <em>{{ page.legal }}</em>
-    </div>
-    {% include map-tools-legend.html %}
+  <div id="mapTitle">
+    <h2 style="font-family:Archivo Black, sans-serif;">{{ page.title }}</h2>
+    <hr />
+  </div>
+  <div id="mapDescription">
+    {{ page.description }}
+    <hr />
+  </div>
+  <div id="mapInfo">
+    <strong>{{ page.notes }}</strong>
+    <hr />
+  </div>
+  <div id="mapLegend"></div>
+  <div id="mapLegal">
+    <em>{{ page.legal }}</em>
+  </div>
+  {% include map-tools-legend.html %}
     <h6><a href='{{ site.baseurl }}' target='_blank' style='text-decoration:none;'>{{ site.name }}</a> | Map data updated {{ page.date | date: "%m/%-d/%Y" }}</h6>
   </div>
 </div>
 <script>
-  var map = L.map('map', {
-    zoomControl: false,
-    maxZoom: 20,
-    minZoom: 10,
-    touchZoom: false,
-    zoomAnimationThreshold: 2,
-    doubleClickZoom: false
-  }).setView([ {{ page.center }} ], {{ page.zoom }});
+var map = L.map('map', {
+zoomControl: false,
+maxZoom: 20,
+minZoom: 10,
+touchZoom: false,
+zoomAnimationThreshold: 2,
+doubleClickZoom: false
+}).setView([ {{ page.center }} ], {{ page.zoom }});
 </script>
