@@ -10,6 +10,6 @@ zoom: 10
 basemap: ortho
 ---
 var land = omnivore.geojson('/data/land.geojson').addTo(map);
-land.on('ready' function() {
+land.on('ready', function() {
   map.spin(false);
 });
