@@ -106,6 +106,12 @@
     "<div class='layers-control-img'><img src='assets/images/layer-control-images/cdb-dark.png'></div> Dark Matter": cdbdark,
   };
 
+  {% if page.basemap %}
+  {{ page.basemap }}.addTo(map);
+  {% else %}
+  light.addTo(map);
+  {% endif %}
+
   //--show google imagery at higher zoom levels
   map.on('zoomend', function() {
     if (map.getZoom() > 18 && map.hasLayer(ortho)) {
