@@ -31,11 +31,11 @@ zoom: 10
 </div>
 <script>
 var map = L.map('map', {
-zoomControl: false,
-maxZoom: 20,
-minZoom: 10,
-touchZoom: false,
-zoomAnimationThreshold: 2,
-doubleClickZoom: false
+  zoomControl: false,
+  maxZoom: 20,
+  minZoom: 10,
+  touchZoom: false,
+  zoomAnimationThreshold: 2,
+  doubleClickZoom: false
 }).setView([ {{ page.center }} ], {{ page.zoom }});
 </script>
