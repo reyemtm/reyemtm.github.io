@@ -110,7 +110,7 @@ console.log('make map fired');
 
 var map = L.map('map', {
 	zoomControl: false,
-	maxZoom: 18,
+	maxZoom: 20,
 	minZoom: 10,
   	touchZoom: false,
         zoomAnimationThreshold: 3,
@@ -311,7 +311,7 @@ tileData.on('ready', function() {
 		}
 	});
 	var tileOptions = {
-	            maxZoom: 18,  // max zoom to preserve detail on
+	            maxZoom: 22,  // max zoom to preserve detail on
 	            tolerance: 3, // simplification tolerance (higher means simpler)
 	            extent: 4096,  // 4096 tile extent (both width and height)
 	            buffer: 64,   // default 64 tile buffer on each side
