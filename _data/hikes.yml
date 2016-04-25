@@ -1,6 +1,6 @@
 - name: "Lookout Trail" 
- - number: "001"
- - state: NC
- - city: Ashville
- - difficulty: medium
+ number: "001"
+ state: NC
+ city: Ashville
+ difficulty: medium
 
