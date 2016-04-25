@@ -1,3 +1,9 @@
 ---
+
 ---
-this will be a list of hiikes
+{% for hike in site.data.hikes %}
+<div>
+<div id="map{{ hike.number }}" style="float:left;"></div>
+<h2>{{ hike.name }}</h2>
+</div>
+{% endfor %}
