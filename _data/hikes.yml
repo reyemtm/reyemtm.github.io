@@ -1,0 +1,5 @@
+- name: "Lookout Trail" 
+ - state: NC
+ - city: Ashville
+ - difficulty: medium
+
