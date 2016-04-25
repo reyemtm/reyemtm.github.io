@@ -1,7 +1,7 @@
-- name: "Lookout Trail" 
- number: "001" 
- park: Montreat
- state: NC
- city: Ashville
- difficulty: medium
+- name: Lookout Trail 
+  number: 001 
+  park: Montreat
+  state: NC
+  city: Ashville
+  difficulty: medium
 
