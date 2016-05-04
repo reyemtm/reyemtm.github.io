@@ -266,7 +266,7 @@ hr.small {
 
 /*Navbar always collapsed*/
 
-@media (min-width: 1171px) {
+@media (min-width: 5000px) {
     .navbar-inverse {
         background-color: white;
         /*background-color: rgba(32, 32, 32, 0.7);*/
