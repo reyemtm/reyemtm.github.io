@@ -265,21 +265,25 @@ hr.small {
 }
 
 /*navbar*/
-  @media (min-width: 1171px) {
-  .navbar-inverse {
-    background-color: white;
-    border: none;
-  }
-  .navbar .navbar-inverse .navbar-fixed-top {
-    height: 50px
-  }
-  .navbar-nav {
-    float: right;
-    margin: 0 20px;
-    font-size: 16px;
-  }
+.navbar-inverse {
+  background-color: white;
 }
+@media (min-width: 1171px) {
+    .navbar-inverse {
+        border: none;
+    }
+    .navbar .navbar-inverse .navbar-fixed-top {
+        height: 50px
+    }
+    .navbar-nav {
+        float: right;
+        margin: 0 20px;
+        font-size: 16px;
+    }
+}
+
 /*Navbar always collapsed*/
+
 @media (min-width: 5000px) {
     .navbar-inverse {
         background-color: white;
@@ -306,7 +310,7 @@ hr.small {
         /*	position:absolute;*/
     }
     .navbar-collapse.collapse {
-/*        display: none!important;*/
+        /*        display: none!important;*/
         display: block;
     }
     .navbar-nav {
@@ -387,7 +391,8 @@ hr.small {
     }
     .intro-header .site-heading .subheading, .intro-header .page-heading .subheading {
         font-size: 24px;
-        line-height: 1.1, display: block;
+        line-height: 1.1;
+        display: block;
         font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
         margin: 10px 0 0;
         padding-left: 10px;
@@ -688,7 +693,6 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #7aa482;
 }
-
 @media only screen and (max-width: 768px) {
     .intro-header .site-heading h1, .intro-header .post-heading h1, .intro-header .page-heading h1 {
         font-size: 50px;
@@ -700,7 +704,6 @@ body {
         font-size: initial;
     }
 }
-
 @media only screen and (max-width: 680px) {
     .intro-header .site-heading h1, .intro-header .post-heading h1, .intro-header .page-heading h1 {
         font-size: 50px;
@@ -709,7 +712,6 @@ body {
         padding: 100px 0 0px;
     }
 }
-
 @media only screen and (max-width: 600px) {
     .intro-header .site-heading h1, .intro-header .post-heading h1, .intro-header .page-heading h1 {
         font-size: 35px;
@@ -735,7 +737,6 @@ body {
         font-size: 20px;
     }
 }
-
 .index-img {
     float: left;
     background-position: center;
