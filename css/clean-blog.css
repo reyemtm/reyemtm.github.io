@@ -292,7 +292,8 @@ hr.small {
         /*	position:absolute;*/
     }
     .navbar-collapse.collapse {
-        display: none!important;
+/*        display: none!important;*/
+        display: block;
     }
     .navbar-nav {
         float: none;
