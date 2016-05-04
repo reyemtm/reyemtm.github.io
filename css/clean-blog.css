@@ -266,7 +266,7 @@ hr.small {
 .navbar-inverse {
     background-color: white;
 }
-@media (min-width: 1171px) {
+/*@media (min-width: 1171px) {
     .navbar-inverse {
         border: none;
     }
@@ -278,7 +278,7 @@ hr.small {
         margin: 0 20px;
         font-size: 16px;
     }
-}
+}*/
 
 /*Navbar always collapsed*/
 
@@ -347,6 +347,17 @@ hr.small {
 
 @media only screen and (min-width: 768px) {
     /*----1170-----*/
+    .navbar-inverse {
+        border: none;
+    }
+    .navbar .navbar-inverse .navbar-fixed-top {
+        height: 50px
+    }
+    .navbar-nav {
+        float: right;
+        margin: 0 20px;
+        font-size: 16px;
+    }
     .navbar-custom {
         background: transparent;
         border-bottom: 1px solid transparent;
