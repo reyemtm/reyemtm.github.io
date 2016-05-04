@@ -3,4 +3,6 @@ layout: page
 title: talks
 permalink: /talks/index.html
 ---
-Coming Soon...
+{% for slides in site.data.talks %}
+<a href="{{ talk.url }}">{{ talk.title }}</a>
+{% endfor %}
