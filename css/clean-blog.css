@@ -347,7 +347,8 @@ hr.small {
 
 /**/
 
-@media only screen and (min-width: 1170px) {
+@media only screen and (min-width: 768px) {
+/*----1170-----*/
     .navbar-custom {
         background: transparent;
         border-bottom: 1px solid transparent;
@@ -370,6 +371,7 @@ hr.small {
         content: "/";
         padding: 0 12px 0 12px;
     }
+/*---------*/
 }
 @media only screen and (min-width: 768px) {
     .intro-header .site-heading, .intro-header .page-heading {
