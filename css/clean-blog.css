@@ -176,6 +176,7 @@ hr.small {
 }
 
 /*Navbar*/
+/*toggle*/
 
 .navbar-toggle.collapsed .middle-bar {
     opacity: 1;
@@ -189,6 +190,7 @@ hr.small {
 .navbar-toggle {
     border: none;
     background: transparent !important;
+    margin-right: 23px;
 }
 .navbar-toggle:hover {
     background: transparent !important;
@@ -208,6 +210,11 @@ hr.small {
     transform: rotate(-45deg);
     transform-origin: 10% 90%;
 }
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #404040;
+}
+/*navbar cutom*/
+
 .navbar-custom {
     background: rgba(32, 32, 32, 0.5);
     position: absolute;
@@ -231,6 +238,9 @@ hr.small {
 .navbar-custom .nav li a:hover {
     color: #618368;
 }
+
+/*default*/
+
 .navbar-default .navbar-toggle {
     border: none;
 }
@@ -240,12 +250,9 @@ hr.small {
 .navbar-collapse.collapse:hover {
     display: block!important;
 }
-.navbar-toggle {
-    margin-right: 23px;
-}
-.navbar-inverse .navbar-toggle .icon-bar {
-    background-color: #404040;
-}
+
+/*inverse*/
+
 .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
     border-color: rgba(255, 255, 255, 0.4);
 }
