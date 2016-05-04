@@ -289,7 +289,7 @@ hr.small {
   background-color: transparent;
 }
 /*Navbar always collapsed*/
-@media (max-width: 3000px) {
+@media (max-width: 1200px) {
     .navbar-inverse {
       background-color: white;
     	/*background-color: rgba(32, 32, 32, 0.7);*/
