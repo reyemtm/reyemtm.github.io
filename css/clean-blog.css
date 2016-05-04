@@ -265,18 +265,20 @@ hr.small {
 }
 
 /*navbar*/
-.navbar-inverse {
+  @media (min-width: 1171px) {
+  .navbar-inverse {
     background-color: white;
-    border-color: white;
+    border: none;
+  }
+  .navbar .navbar-inverse .navbar-fixed-top {
+    height: 50px
+  }
+  .navbar-nav {
+    float: right;
+    margin: 0 20px;
+    font-size: 16px;
+  }
 }
-.navbar .navbar-inverse .navbar-fixed-top {
-  height: 50px
-}
-.navbar-nav {
-  float: right;
-  margin: 0 20px;
-}
-
 /*Navbar always collapsed*/
 @media (min-width: 5000px) {
     .navbar-inverse {
