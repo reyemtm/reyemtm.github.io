@@ -348,7 +348,7 @@ hr.small {
 @media only screen and (min-width: 768px) {
     /*----1170-----*/
     .navbar-inverse {
-        border: none;
+      border-color: gainsboro;
     }
     .navbar .navbar-inverse .navbar-fixed-top {
         height: 50px
