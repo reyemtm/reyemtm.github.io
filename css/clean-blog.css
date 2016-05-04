@@ -28,45 +28,11 @@ blockquote p:last-child, blockquote p {
     opacity: 0.5;
     z-index: 9999;
 }
-.navbar-toggle.collapsed .middle-bar {
-    opacity: 1;
-}
-.navbar-toggle.collapsed .bottom-bar {
-    transform: rotate(0);
-}
-.navbar-toggle.collapsed .top-bar {
-    transform: rotate(0);
-}
-.navbar-toggle {
-    border: none;
-    background: transparent !important;
-}
-.navbar-toggle:hover {
-    background: transparent !important;
-}
-.navbar-toggle .icon-bar {
-    width: 22px;
-    transition: all 0.2s;
-}
-.navbar-toggle .top-bar {
-    transform: rotate(45deg);
-    transform-origin: 10% 10%;
-}
-.navbar-toggle .middle-bar {
-    opacity: 0;
-}
-.navbar-toggle .bottom-bar {
-    transform: rotate(-45deg);
-    transform-origin: 10% 90%;
-}
 body {
     font-family: 'Source Sans Pro', san-serif;
     font-size: 15px;
     color: #404040;
     font-weight: 400;
-}
-.navbar-collapse.collapse:hover {
-    display: block!important;
 }
 .share-page {
     text-align: right;
@@ -151,35 +117,6 @@ hr.small {
     -webkit-animation-delay: 0.1s;
     animation-delay: 0.1s
 }
-.navbar-custom {
-    background: rgba(32, 32, 32, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 3;
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    border: none;
-}
-.navbar-custom .navbar-brand {
-    font-weight: 800;
-}
-.navbar-custom .nav li a {
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #fff;
-}
-.navbar-custom .nav li a:hover {
-    color: #618368;
-}
-.navbar-default .navbar-toggle {
-    border: none;
-}
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background-color: inherit;
-}
 .intro-header .site-heading, .intro-header .post-heading, .intro-header .page-heading {
     -webkit-animation: fade-in-down 0.9s;
     animation: fade-in-down 0.9s;
@@ -240,6 +177,69 @@ hr.small {
 
 /*Navbar*/
 
+.navbar-toggle.collapsed .middle-bar {
+    opacity: 1;
+}
+.navbar-toggle.collapsed .bottom-bar {
+    transform: rotate(0);
+}
+.navbar-toggle.collapsed .top-bar {
+    transform: rotate(0);
+}
+.navbar-toggle {
+    border: none;
+    background: transparent !important;
+}
+.navbar-toggle:hover {
+    background: transparent !important;
+}
+.navbar-toggle .icon-bar {
+    width: 22px;
+    transition: all 0.2s;
+}
+.navbar-toggle .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+}
+.navbar-toggle .middle-bar {
+    opacity: 0;
+}
+.navbar-toggle .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+}
+.navbar-custom {
+    background: rgba(32, 32, 32, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 3;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    border: none;
+}
+.navbar-custom .navbar-brand {
+    font-weight: 800;
+}
+.navbar-custom .nav li a {
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #fff;
+}
+.navbar-custom .nav li a:hover {
+    color: #618368;
+}
+.navbar-default .navbar-toggle {
+    border: none;
+}
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: inherit;
+}
+.navbar-collapse.collapse:hover {
+    display: block!important;
+}
 .navbar-toggle {
     margin-right: 23px;
 }
@@ -263,10 +263,8 @@ hr.small {
 .navbar-inverse .navbar-toggle:hover {
     background-color: transparent;
 }
-
-/*navbar*/
 .navbar-inverse {
-  background-color: white;
+    background-color: white;
 }
 @media (min-width: 1171px) {
     .navbar-inverse {
@@ -348,7 +346,7 @@ hr.small {
 /**/
 
 @media only screen and (min-width: 768px) {
-/*----1170-----*/
+    /*----1170-----*/
     .navbar-custom {
         background: transparent;
         border-bottom: 1px solid transparent;
@@ -371,7 +369,7 @@ hr.small {
         content: "/";
         padding: 0 12px 0 12px;
     }
-/*---------*/
+    /*---------*/
 }
 @media only screen and (min-width: 768px) {
     .intro-header .site-heading, .intro-header .page-heading {
