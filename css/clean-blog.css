@@ -378,7 +378,8 @@ hr.small {
     .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
         color: rgba(255, 255, 255, 0.8);
     }
-    .navbar-custom .nav li a:after {
+    .navbar-custom .nav li a:after,
+    .navbar .nav li a:after {
         content: "/";
         padding: 0 12px 0 12px;
     }
