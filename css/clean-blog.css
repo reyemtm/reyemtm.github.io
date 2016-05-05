@@ -290,11 +290,10 @@ hr.small {
 
 
 /*Navbar always collapsed*/
-
+/*
 @media (min-width: 5000px) {
     .navbar-inverse {
         background-color: white;
-        /*background-color: rgba(32, 32, 32, 0.7);*/
         border-color: rgba(32, 32, 32, 0.5);
     }
     .navbar-header {
@@ -304,7 +303,6 @@ hr.small {
         float: none !important;
     }
     .navbar-toggle {
-        /*        display: block;*/
         display: none;
     }
     .navbar-collapse {
@@ -314,10 +312,8 @@ hr.small {
     .navbar-fixed-top {
         top: 0;
         border-width: 0 0 1px;
-        /*	position:absolute;*/
     }
     .navbar-collapse.collapse {
-        /*        display: none!important;*/
         display: block;
     }
     .navbar-nav {
@@ -352,7 +348,7 @@ hr.small {
     }
 }
 
-/**/
+*/
 
 @media only screen and (min-width: 768px) {
     /*----1170-----*/
@@ -368,7 +364,7 @@ hr.small {
     .navbar-nav {
         float: right;
         margin: 0 20px;
-        font-size: 16px;
+        font-size: 14px;
     }
     .navbar-custom {
         background: transparent;
@@ -391,7 +387,7 @@ hr.small {
     .navbar-custom .nav li a:after,
     .navbar .nav li a:after {
         content: "/";
-        padding: 0 12px 0 12px;
+        padding: 0 10px;
     }
     /*---------*/
 }
