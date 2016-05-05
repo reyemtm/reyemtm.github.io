@@ -352,9 +352,9 @@ hr.small {
 
 @media only screen and (min-width: 768px) {
     /*----1170-----*/
-    .navbar-nav>li>a {
+    /*.navbar-nav>li>a {
         padding: 15px 0;
-    }
+    }*/
     .navbar-inverse {
         border-color: gainsboro;
     }
@@ -384,11 +384,11 @@ hr.small {
     .navbar-custom .nav li a:hover, .navbar-custom .nav li a:focus {
         color: rgba(255, 255, 255, 0.8);
     }
-    .navbar-custom .nav li a:after,
+    /*.navbar-custom .nav li a:after,
     .navbar .nav li a:after {
         content: "/";
         padding: 0 10px;
-    }
+    }*/
     /*---------*/
 }
 @media only screen and (min-width: 768px) {
