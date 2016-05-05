@@ -4,6 +4,9 @@ description: "Presentations, Print Maps & Projects"
 permalink: /work/
 ---
 ## Presentations
+{% for talk in site.data.talks %}
+###[{{ talk.title }}]({{ talk.url}})
+{% endfor %}
 
 ## Print Maps
 - [Print Map Gallery](http://getbounds.com/map-gallery "Map Gallery")
