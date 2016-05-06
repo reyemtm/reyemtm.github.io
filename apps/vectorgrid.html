@@ -28,7 +28,7 @@
 		}).addTo(map);
 
 
-		fetch('/data/topojson/').then(function(response){
+		fetch('/data/topojson/amanda.json').then(function(response){
 			return response.json();
 		}).then(function(json){
 
@@ -37,7 +37,7 @@
 			var vectorGrid = L.vectorGrid.slicer( json, {
 				rendererFactory: L.canvas.tile,
 				vectorTileLayerStyles: {
-					'eu-countries': function(properties, zoom) {
+					'amanda': function(properties, zoom) {
 					console.log(properties);
 						var p = properties.mapcolor7 % 5;
 						return {
@@ -58,8 +58,10 @@
 
 			}).addTo(map);
 
-			map.setView({ lat: 47.040182144806664, lng: 9.667968750000002 }, 0);
-
+			map.setView({ lat: 39, lng: 82 }, 0);
+			map.on('click', function(e) {
+				alert(e.latlng)
+			});
 		});
 
 
