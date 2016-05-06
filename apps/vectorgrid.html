@@ -5,11 +5,11 @@
 	<meta charset="utf-8" />
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="./leaflet.css" />
-	<script src="./leaflet-src.js"></script>
+	<link rel="stylesheet" href="/assets/leaflet.1.0/leaflet.css" />
+	<script src="/assets/leaflet.1.0/leaflet-src.js"></script>
 	<script src="/assets/vectorgrid/Leaflet.VectorGrid.bundled.js"></script>
 
-	<script type="text/javascript" src="./eu-countries.js"></script>
+	<!--script type="text/javascript" src="./eu-countries.js"></script-->
 
 </head>
 <body style='margin:0'>
@@ -28,7 +28,7 @@
 		}).addTo(map);
 
 
-		fetch('./eu-countries.topo.json').then(function(response){
+		fetch('/data/topojson/').then(function(response){
 			return response.json();
 		}).then(function(json){
 
