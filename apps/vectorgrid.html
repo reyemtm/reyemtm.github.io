@@ -20,25 +20,17 @@
 		var map = L.map('map');
 // 		var canvasRenderer = L.canvas();
 
-		var cartodbAttribution = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, &copy; <a href="http://cartodb.com/attributions">CartoDB</a>';
-
-		var positron = L.tileLayer('http://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-			attribution: cartodbAttribution,
-			opacity: 1
-		}).addTo(map);
-
-
 		fetch('/data/topojson/amanda.json').then(function(response){
 			return response.json();
 		}).then(function(json){
 
-			console.log(json);
+			//console.log(json);
 
 			var vectorGrid = L.vectorGrid.slicer( json, {
 				rendererFactory: L.canvas.tile,
 				vectorTileLayerStyles: {
 					'amanda': function(properties, zoom) {
-					console.log(properties);
+					//console.log(properties);
 						var p = properties.mapcolor7 % 5;
 						return {
 							fillColor: p === 0 ? '#800026' :
@@ -58,9 +50,9 @@
 
 			}).addTo(map);
 
-			map.setView({ lat: 39, lng: -82 }, 0);
-			map.on('click', function(e) {
-				alert(e.latlng)
+			map.setView({ lat: 39.69, lng: -442 }, 11);
+			vectorGrid.on('click', function(e) {
+				console.log(e)
 			});
 		});
 
