@@ -28,7 +28,7 @@
 
 			var vectorGrid = L.vectorGrid.slicer( json, {
 				rendererFactory: L.canvas.tile,
-				vectorTileLayerStyles: {
+				/*vectorTileLayerStyles: {
 					'amanda': function(properties, zoom) {
 					//console.log(properties);
 						var p = properties.mapcolor7 % 5;
@@ -46,9 +46,10 @@
 							weight: 2,
 						}
 					}
-				}
+				}*/
 
 			}).addTo(map);
+			console.log(vectorGrid);
 			console.log(slices.layers)
 			map.setView({ lat: 39.69, lng: -82.5 }, 11);
 			vectorGrid.on('click', function(e) {
