@@ -26,7 +26,7 @@
 
 			//console.log(json);
 
-			var vectorGrid = L.vectorGrid.slicer( json, {
+			var vectorGrid = L.vectorGrid.slicer( json.toGeoJSON(), {
 				rendererFactory: L.canvas.tile,
 				/*vectorTileLayerStyles: {
 					'amanda': function(properties, zoom) {
@@ -52,7 +52,7 @@
 			console.log(vectorGrid);
 			//console.log(sliced.layers)
 			map.setView({ lat: 39.69, lng: -82.5 }, 11);
-			amanda.on('click', function(e) {
+			vectorGrid.on('click', function(e) {
 				console.log('amanda')
 			});
 			var test = sliced.layers.amanda;
