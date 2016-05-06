@@ -50,10 +50,10 @@
 
 			}).addTo(map);
 			console.log(vectorGrid);
-			console.log(slices.layers)
+			console.log(sliced.layers)
 			map.setView({ lat: 39.69, lng: -82.5 }, 11);
-			vectorGrid.on('click', function(e) {
-				console.log(vectorGrid.layers)
+			sliced.on('click', function(e) {
+				console.log('sliced')
 			});
 		});
 
