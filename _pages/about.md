@@ -3,15 +3,16 @@ layout: page
 title: "About"
 permalink: /about/
 ---
-## About
+## Malcolm Meyer 
 ***
-My name is Malcolm Meyer, and I write about web maps, cartography, GIS and other spatially-related topics. I am also a [musician](http://malcolmmeyer.tumblr.com) and avid gardener. The name of the site comes from a commonly used function in web mapping. Here is a definition adapted from Leaflet:
 
 <pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
 
+I have a passion for web-based data visualization and analysis. Formally, I am a graduate of the Ohio University International Studies Program, with a BA in Sociology and Urban Planning from The College of Wooster. I also love [music](http://malcolmmeyer.tumblr.com) and gardening.
+
 ## Leaflet Plugins 
 ***
-Here is a list of plugins currently implemented in the maps found on this site.
+Some of my favorite Leaflet plugins.
 
  - [GeoTagged Photos](https://github.com/turban/Leaflet.Photo)
  - [Hash/Coordinates in URL](https://github.com/mlevans/leaflet-hash)
