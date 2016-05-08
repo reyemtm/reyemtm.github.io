@@ -1,8 +1,15 @@
 - title: Introduction to Leaflet | OGRIP 2015
   date: 2015-08-10
   location: 2015 Ohio GIS Conference
-  about: A presentation introduing the Leaflet web mapping library with a few live examples.
+  about: A presentation introducing the Leaflet web mapping library with a few live examples.
   url: https://www.ovrdc.org/apps/presentations/leaflet-ogrip/index.html
   pdf: pdf 
   type: ["pdf", "slides"]
   tags: ["leaflet"]
+- title: Open Source Data Visualizations for Non-Profits and Rural Areas 
+  date: 2016-04-28
+  location: DDAA GIS User Group Conference
+  about: An arguement for open source data visualization solutions for small organizations and rural governments.
+  url: https://www.ovrdc.org/apps/presentations/ddaa-gis-2016/index.html
+  type: ["slides"]
+  tags ["leaflet"] 
