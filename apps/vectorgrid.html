@@ -26,7 +26,7 @@
 
 			//console.log(json);
 
-			var vectorGrid = L.vectorGrid.slicer( json.toGeoJSON(), {
+			var vectorGrid = L.vectorGrid.slicer( json, {
 				rendererFactory: L.canvas.tile,
 				/*vectorTileLayerStyles: {
 					'amanda': function(properties, zoom) {
