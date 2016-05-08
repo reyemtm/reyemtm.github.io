@@ -2,6 +2,7 @@
 layout: page
 title: "About"
 permalink: /about/
+subtitle: "Cartographer, Data Analyst & Web Mapping Enthusiast"
 ---
 ## Malcolm Meyer 
 <!--pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre-->
@@ -19,6 +20,11 @@ Some of my favorite Leaflet plugins.
  - [Marker Cluster](https://github.com/Leaflet/Leaflet.markercluster)
  - [NavBar](https://github.com/davidchouse/Leaflet.NavBar)
  - [Sleep](https://github.com/CliffCloud/Leaflet.Sleep)
+
+***
+
+## About this Site
+This site is powered by Jekyll and hosted on GitHub. It uses the Clean Blog theme from Start Bootstrap.
 
 ***
 
