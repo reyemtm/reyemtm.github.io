@@ -31,7 +31,8 @@ blockquote p:last-child, blockquote p {
 body {
     font-family: 'Source Sans Pro', san-serif;
     font-size: 15px;
-    color: #404040;
+    /*color: #404040;*/
+    color: 'black';
     font-weight: 400;
 }
 .share-page {
@@ -68,7 +69,7 @@ p {
 }
 h1 {
     font-family: 'Monstserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 800;
+    font-weight: 700;
 }
 h2, h3 {
     font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
