@@ -20,15 +20,6 @@ Here is a list of plugins currently implemented in the maps found on this site.
  - [NavBar](https://github.com/davidchouse/Leaflet.NavBar)
  - [Sleep](https://github.com/CliffCloud/Leaflet.Sleep)
 
-## Work
-***
-Here are some examples of online and print maps I have created. Some are simply proof-of-concept.
-
-- [ArcGIS Online Hosted Map](http://www.arcgis.com/apps/Viewer/index.html?appid=a7b9fe89135b4f69a51803704c8302b2)
-- [GeoJson in a Basic Leaflet Map](http://getbounds.com/geojson)
-- [Map Gallery](http://getbounds.com/map-gallery "Map Gallery")
-- [Virtual Resume via ArcGIS Online](http://www.arcgis.com/apps/MapJournal/index.html?appid=97e1a75ea03043c392c1e6b09b1997d0&webmap=f21d3db8cc7e48c885e795bf679dd363)
-
 ## Comments
 ***
 There are no comments on this site. If you want to contact me or share a post, you can use your social media of choice.
