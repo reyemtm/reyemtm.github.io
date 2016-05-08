@@ -6,6 +6,7 @@
   pdf: pdf 
   type: ["pdf", "slides"]
   tags: ["leaflet"]
+
 - title: Open Source Data Visualizations for Non-Profits and Rural Areas 
   date: 2016-04-28
   location: DDAA GIS User Group Conference
