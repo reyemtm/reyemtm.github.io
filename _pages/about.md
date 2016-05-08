@@ -5,8 +5,7 @@ permalink: /about/
 ---
 ## Malcolm Meyer 
 ***
-
-<pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
+<!--pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre-->
 
 I have a passion for web-based data visualization and analysis. Formally, I am a graduate of the Ohio University International Studies Program, with a BA in Sociology and Urban Planning from The College of Wooster. I also love [music](http://malcolmmeyer.tumblr.com) and gardening.
 
