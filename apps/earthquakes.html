@@ -9,4 +9,7 @@ center: "38.90543,-80.68725"
 zoom: 10
 basemap: dark
 ---
-var quakes = L.geoJson.ajax('//earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson').addTo(map);
+//var quakes = L.geoJson.ajax('//earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson').addTo(map);
+$.getJSON('http://earthquake.usgs.gov/fdsnws/event/1/query?format=jsonp&starttime=2014-01-01&endtime=2014-01-02', function(data {
+  console.log(data)
+});
