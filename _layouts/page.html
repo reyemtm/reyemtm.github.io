@@ -2,7 +2,11 @@
 layout: default
 ---
 <!--default-->
+{% if page.homepage == true %}
+{% include home-slider-header.html %}
+{% else %}
 {% include header.html %}
+{% endif %}
 <!-- Main Content -->
 <div id="content" class="container">
 	{{ content }}

@@ -26,3 +26,4 @@ include: ["_maps", "_pages"]
 #plugins
 gems:
  - jekyll-sitemap
+ - jekyll-paginate

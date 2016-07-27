@@ -1,3 +1,13 @@
+.flex-direction-nav a:before {
+	color: white!important;
+	display: none!important;
+}
+.flex-direction-nav {
+	display:none;
+}
+.flex-control-nav {
+	display: none;
+}
 .inverse-txt {
     color: whitesmoke;
 }
