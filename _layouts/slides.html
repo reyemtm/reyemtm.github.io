@@ -117,7 +117,7 @@
       parallaxBackgroundImage: '{{ page.parallax }}',
       { % endif %
       }
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
+      transition: '{% if page.transition %}{{ page.transition }}{% else %}slide{%endif %}', // none/fade/slide/convex/concave/zoom
 
       // Optional reveal.js plugins
       dependencies: [{
