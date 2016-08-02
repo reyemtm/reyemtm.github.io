@@ -2,15 +2,12 @@
 	margin:0;
 	border:none;
 }
+.flex-direction-nav a {
+    height: 45px;
+}
 .flex-direction-nav a:before {
 	color: white!important;
 }
-/*.flex-direction-nav {
-	display:none;
-}
-.flex-control-nav {
-	display: none;
-}*/
 .inverse-txt {
     color: whitesmoke;
 }
