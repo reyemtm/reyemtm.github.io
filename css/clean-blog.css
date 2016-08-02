@@ -743,7 +743,7 @@ body {
         font-size: 50px;
     }
     .intro-header .site-heading, .intro-header .page-heading {
-        padding: 50px 0 0px;
+        padding: 100px 0 0px;
     }
 }
 @media only screen and (max-width: 600px) {
@@ -754,7 +754,7 @@ body {
         font-size: 20px;
     }
     .intro-header .site-heading, .intro-header .page-heading {
-        padding: 100px 0 0px;
+        padding: 50px 0 0px;
     }
     .post-preview>a>.post-title {
         font-size: 24px;
