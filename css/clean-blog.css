@@ -1,3 +1,7 @@
+.flexslider {
+	margin:0;
+	border:none;
+}
 .flex-direction-nav a:before {
 	color: white!important;
 	display: none!important;
