@@ -416,17 +416,20 @@ Reveal.addEventListener( 'customevent', function() {
 		function present(e) {
 			var x = 0;
 			// this would test for whichever key is 40 and the ctrl key at the same time
-		    	if (e.altKey && x == 0) {
-		    	console.log('alt');
-		        // call your function to do the thing
-		        document.getElementById("test").style.display = 'none';
-		        x = 1;
-		       }
-		       else {
-		        // call your function to do the thing
-		        document.getElementById("test").style.display = 'block';
-		        x = 0;
-		    }
+			if (e.altKey && x == 0) {
+				console.log('alt');
+				// call your function to do the thing
+				var p = document.getElementById("test");
+				if(e.style.display == 'block')
+					p.style.display = 'none';
+				else
+					p.style.display = 'block';
+			}
+			else {
+			/*	// call your function to do the thing
+				document.getElementById("test").style.display = 'block';
+				x = 0;*/
+			}
 		}
 		// register the handler 
 		document.addEventListener('keyup', present, false);
