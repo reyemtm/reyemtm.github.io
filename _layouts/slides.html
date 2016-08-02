@@ -88,8 +88,15 @@
       <!--begin reveal.js presentation post -->
       {% if page.background %}
       <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$" data-background="{{ page.background }}">
-        {{ content }} {% else %}{{ content }}{% endif %}
-        <!--end post-->
+      	<script type="text/template">
+          {{ content }}
+        </script>
+      {% else %}
+      <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$">
+      	<script type="text/template">
+          {{ content }}
+        </script>{% endif %}
+      <!--end post-->
     </div>
   </div>
 
