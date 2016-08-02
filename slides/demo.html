@@ -420,6 +420,11 @@ Reveal.addEventListener( 'customevent', function() {
 		        // call your function to do the thing
 		        document.getElementById("test").style.display = 'none';
 		        x = 1;
+		       }
+		       if (e.ctrlKey && e.keyCode == 40 && x == 1) {
+		        // call your function to do the thing
+		        document.getElementById("test").style.display = 'block';
+		        x = 0;
 		    }
 		}
 		// register the handler 
