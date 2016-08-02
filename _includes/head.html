@@ -23,8 +23,6 @@
 <!-- Bootstrap Core CSS>
 <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}"-->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
-<!-- Custom CSS -->
-<link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
 <!-- Pygments Github CSS -->
 <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
 <!-- Custom Fonts -->
@@ -44,6 +42,8 @@
 <link rel="stylesheet" href="{{ "/css/flexslider.css" | prepend: site.baseurl }}">
 <script src="{{ baseurl }}/js/flexslider-min.js"></script>
 <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script-->
+<!-- Custom CSS -->
+<link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
 {% if page.map %}
 {% include map.html %}
 {% endif %}
@@ -59,3 +59,4 @@
 {% if page.map %}
 {% include map-style.html %}
 {% endif %}
+
