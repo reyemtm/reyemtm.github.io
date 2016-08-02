@@ -5,8 +5,12 @@
 .flex-direction-nav a {
     height: 45px;
 }
+.flex-direction-nav a {
+    margin: -5px 0 0;
+}
 .flex-direction-nav a:before {
 	color: white!important;
+	font-size:30px;
 }
 .inverse-txt {
     color: whitesmoke;
