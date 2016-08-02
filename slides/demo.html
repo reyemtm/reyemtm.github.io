@@ -416,12 +416,13 @@ Reveal.addEventListener( 'customevent', function() {
 		function present(e) {
 			var x = 0;
 			// this would test for whichever key is 40 and the ctrl key at the same time
-		    	if (e.ctrlKey && e.keyCode == 40 && x == 0) {
+		    	if (e.altKey && x == 0) {
+		    		console.log('alt');
 		        // call your function to do the thing
 		        document.getElementById("test").style.display = 'none';
 		        x = 1;
 		       }
-		       if (e.ctrlKey && e.keyCode == 40 && x == 1) {
+		       if (e.altKey && x == 1) {
 		        // call your function to do the thing
 		        document.getElementById("test").style.display = 'block';
 		        x = 0;
