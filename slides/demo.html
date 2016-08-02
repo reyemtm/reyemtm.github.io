@@ -35,7 +35,7 @@
 	</head>
 
 	<body>
-<div>
+<div id="test" style="height:400px">
 	test
 	asdf
 	asd
@@ -411,6 +411,19 @@ Reveal.addEventListener( 'customevent', function() {
 			});
 
 		</script>
-
+		<script>
+		// define a handler
+		function present(e) {
+			var x = 0;
+			// this would test for whichever key is 40 and the ctrl key at the same time
+		    	if (e.ctrlKey && e.keyCode == 40 && x = 0) {
+		        // call your function to do the thing
+		        document.getElementById("test").style.display = 'none';
+		        x = 1;
+		    }
+		}
+		// register the handler 
+		document.addEventListener('keyup', present, false);
+		</script>
 	</body>
 </html>
