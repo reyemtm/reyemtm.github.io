@@ -14,7 +14,7 @@
     </li>
     {% for post in site.posts limit: 3 %}
 	<li>
-		<div class="intro-header" style="background-image: url('{{ site.baseurl }}/images/{% if post.header-img %}{{ post.header-img }}{% endif %}')">
+		<div class="intro-header" style="background-image: url('{{ site.baseurl }}/images/{% if post.header-img %}{{ post.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
 		  <div class="container">
 			<div class="site-heading">
 			  <h1>{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}</h1>
