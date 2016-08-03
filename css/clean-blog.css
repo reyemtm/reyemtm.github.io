@@ -2,6 +2,9 @@
 	margin:0;
 	border:none;
 }
+.flex-control-nav {
+    display: none;
+}
 .flex-direction-nav a {
     height: 45px;
 }
