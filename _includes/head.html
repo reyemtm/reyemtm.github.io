@@ -2,13 +2,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 <meta name="author" content="Malcolm Meyer">
-<meta name="description" content="{{ page.description }}">
+<meta name="description" content="{{ page.subtitle }}">
 <!--Twitter Cards-->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:site" content="@getbounds">
 <meta name="twitter:creator" content="@getbounds">
 <meta name="twitter:title" content="{{ page.title }}">
-<meta name="twitter:description" content="{{ page.description }}">
+<meta name="twitter:descriptio n" content="{{ page.subtitle }}">
 <meta name="twitter:domain" content="getBounds.com"/>
 <meta name="twitter:image" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}">
 <!--Open Graph meta data-->
@@ -16,7 +16,7 @@
 <meta propety="og:type" content="{% if page.layout == post %}article{% else %}website{% endif %}" />
 <meta property="og:site_name" content="{{ site.title }}" />
 <meta property="og:image" content="{{ site.baseurl }}/images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}" />
-<meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+<meta property="og:descriptio n" content="{% if page.subtitle %}{{ page.subtitle }}{% else %}{{ site.description }}{% endif %}" />
 <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
 <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 <!--link rel="canonical" href="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/"-->
@@ -59,4 +59,3 @@
 {% if page.map %}
 {% include map-style.html %}
 {% endif %}
-
