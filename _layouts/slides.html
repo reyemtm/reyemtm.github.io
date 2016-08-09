@@ -30,10 +30,10 @@
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <link rel="stylesheet" href="/slides/css/reveal.css">
-  <link rel="stylesheet" href="/slides/css/theme/{{ page.theme }}.css" id="theme">
+  <link rel="stylesheet" href="/slides/css/theme/{% if page.theme %}{{ page.theme }}.css{% else %}blood.css{% endif %}" id="theme">
 
   <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="/slides/css/lib/css/zenburn.css">
+  <link rel="stylesheet" href="/slides/lib/css/zenburn.css">
 
   <!-- Printing and PDF exports -->
   <script>
@@ -111,12 +111,9 @@
       progress: true,
       history: true,
       center: true,
-      { %
-        if page.parallax %
-      }
+      {% if page.parallax %}
       parallaxBackgroundImage: '{{ page.parallax }}',
-      { % endif %
-      }
+      {% endif %}
       transition: '{% if page.transition %}{{ page.transition }}{% else %}slide{%endif %}', // none/fade/slide/convex/concave/zoom
 
       // Optional reveal.js plugins
