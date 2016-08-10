@@ -1,105 +1,55 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8">
-
-  <meta name="description" content="{{ page.description }}">
-  <meta name="author" content="Malcolm Meyer">
-
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-
-  <!--Twitter Cards-->
-  <meta name="twitter:card" content="summary">
-  <meta name="twitter:site" content="@getbounds">
-  <meta name="twitter:creator" content="@getbounds">
-  <meta name="twitter:title" content="{{ page.title }}">
-  <meta name="twitter:description" content="{{ page.description }}">
-  <meta name="twitter:domain" content="getBounds.com" />
-  <meta name="twitter:image" content="{{ site.baseurl }}/slides/img/{% if page.feature-img %}{{ page.feature-img }}{% endif %}">
-  <!--Open Graph meta data-->
-  <meta property="og:title" content="{{ page.title }}" />
-  <meta propety="og:type" content="{% if page.layout == post %}article{% else %}website{% endif %}" />
-  <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:image" content="{{ site.baseurl }}/slides/images/{% if page.feature-img %}{{ page.feature-img }}{% endif %}" />
-  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
-  <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
-
-  <link rel="stylesheet" href="/slides/css/reveal.css">
-  <link rel="stylesheet" href="/slides/css/theme/{% if page.theme %}{{ page.theme }}.css{% else %}blood.css{% endif %}" id="theme">
-
-  <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="/slides/lib/css/zenburn.css">
-
-  <!-- Printing and PDF exports -->
-  <script>
-    var link = document.createElement('link');
-    link.rel = 'stylesheet';
-    link.type = 'text/css';
-    link.href = window.location.search.match(/print-pdf/gi) ? '/slides/css/print/pdf.css' : '../css/print/paper.css';
-    document.getElementsByTagName('head')[0].appendChild(link);
-  </script>
-
-  <!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-</head>
+<!--script type="text/javascript">if(window.location.protocol != "https:"){var url = window.location.href.substr(5);window.location = "https:" + url;}</script-->
+{% include head.html %}
+<!--Begin Slides Layout-->
 <style>
+  * { text-shadow: none;}
+  #reveal-container {height:80%;padding-top: 15%;}
+  .reveal h1, .reveal h2 {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .reveal h3, .reveal h4, .reveal h5, p {
+    font-family: 'Source Sans Pro', sans-serif;
+  }
   .reveal .slides> section,
   .reveal .slides> section> section {
     padding: 0;
     line-height: 1.2;
   }
-
   .reveal p {
     margin: inherit;
   }
-
   .reveal ul {
     line-height: 1.3;
   }
 
-  {
-    % if page.style %
-  }
-  /*custom page styles*/
-
-  {
-    {
-      page.style
-    }
-  }
-  /*end custom page styles*/
-
-  {
-    % endif %
-  }
+  {% if page.style %}/*custom page styles*/
+  {{page.style}}
+  /*end custom page styles*/{% endif %}
 </style>
-
 <body>
-
-  <div class="reveal">
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
-      <!--begin reveal.js presentation post -->
-      {% if page.background %}
-      <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$" data-background="{{ page.background }}">
-      	<script type="text/template">
-          {{ content }}
-        </script>
-      {% else %}
-      <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$">
-      	<script type="text/template">
-          {{ content }}
-        </script>{% endif %}
-      <!--end post-->
+  {% include nav.html %}
+  <div id="reveal-container">
+    <div class="reveal">
+      <!-- Any section element inside of this container is displayed as a slide -->
+      <div class="slides" id="slides">
+        <!--begin reveal.js presentation post -->
+        {% if page.background %}
+        <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$" data-background="{{ page.background }}">
+        	<script type="text/template">
+            {{ content }}
+          </script>
+        {% else %}
+        <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$">
+        	<script type="text/template">
+            {{ content }}
+          </script>{% endif %}
+        <!--end post-->
+      </div>
     </div>
   </div>
-
   <script src="/slides/lib/js/head.min.js"></script>
   <script src="/slides/js/reveal.js"></script>
 
@@ -149,6 +99,19 @@
         async: true
       }]
     });
+    var fs = 0;
+    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function() {
+      $('#nav').fadeToggle("fast");
+      $('#footer').fadeToggle("fast");
+      fs = fs + 1;
+      function check(num) { return num % 2;}
+      console.log(check(fs))
+      if (check(fs) === 1) {
+        $('#reveal-container').css({'height': '100%','padding': '0'});
+      }else{
+        $('#reveal-container').css({'height': '80%','padding-top': '15%'});
+      }
+    });
   </script>
   {% if page.mouse == "true" %}
   <script>
@@ -165,7 +128,6 @@
     }
   </script>
   {% endif %}
-</body>
-{% include google-analytics.html %}
-
+  {% include footer.html %}
+  </body>
 </html>

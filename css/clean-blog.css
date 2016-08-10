@@ -86,15 +86,15 @@ p {
 }
 h1 {
     font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
+    font-weight: 900;
 }
 h2, h3 {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 700;
 }
 h4, h5, h6 {
-    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 600;
+    font-family: 'Montserrat', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
 }
 a, a:hover, a:focus {
     text-decoration: none;
@@ -188,7 +188,10 @@ hr.small {
     -webkit-animation: none;
     animation: none;
 }
-.intro-header .site-heading h1, .intro-header .page-heading h1, .intro-header .post-heading h1 {
+.intro-header .site-heading h1,
+.intro-header .page-heading h1,
+.intro-header .post-heading h1,
+.post-preview h2 {
     font-size: 50px;
     font-family: 'Montserrat', serif;
 }
@@ -382,7 +385,7 @@ hr.small {
     .navbar-nav {
         float: right;
         margin: 0 20px;
-        font-size: 14px;
+        font-size: 16px;
     }
     .navbar-custom {
         background: transparent;
@@ -444,7 +447,7 @@ hr.small {
     }
     .intro-header .post-heading h1 {
         font-size: 50px;
-        font-family: Montserrat;
+        font-family: 'Montserrat', sans-serif;;
     }
     .intro-header .post-heading .subheading {
         font-size: 30px;
@@ -527,11 +530,7 @@ hr.small {
 }
 .intro-header .post-heading h1 {
     font-size: 50px;
-    font-family: Montserrat;
-}
-.intro-header .post-heading h1 {
-    font-size: 50px;
-    font-family: Montserrat;
+    font-family: 'Montserrat', sans-serif;;
 }
 .intro-header .post-heading .subheading, .intro-header .post-heading .meta {
     line-height: 1.1;
@@ -568,7 +567,7 @@ hr.small {
     font-size: 30px;
     /*  margin-top: 30px;*/
     margin-bottom: 10px;
-    font-weight: 600;
+    font-weight: 700;
 }
 .post-preview > a > .post-subtitle {
     margin: 0;
