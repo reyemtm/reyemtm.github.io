@@ -10,7 +10,7 @@
     font-family: 'Montserrat', sans-serif;
   }
 
-  .reveal h3, .reveal h4, .reveal h5, p {
+  .reveal, .reveal h3, .reveal h4, .reveal h5, p {
     font-family: 'Source Sans Pro', sans-serif;
   }
   .reveal .slides> section,
@@ -37,22 +37,35 @@
       <div class="slides" id="slides">
         <!--begin reveal.js presentation post -->
         {% if page.background %}
-        <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$" data-background="{{ page.background }}">
-        	<script type="text/template">
             {{ content }}
-          </script>
         {% else %}
-        <section data-markdown data-separator="___" data-separator-vertical="^\n--\n$">
-        	<script type="text/template">
             {{ content }}
-          </script>{% endif %}
+        {% endif %}
         <!--end post-->
       </div>
     </div>
   </div>
   <script src="/slides/lib/js/head.min.js"></script>
   <script src="/slides/js/reveal.js"></script>
-
+  <script>
+  var fs = 1;
+  function check(num) { return num % 2;}
+  console.log(check(fs))
+  $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function() {
+    fs = fs + 1;
+    console.log(check(fs))
+    if (check(fs) === 0) {
+      console.log('max')
+      $('#reveal-container').css({'height': '100%','padding': '0'});
+    }
+    if (check(fs) === 1){
+      console.log('min')
+      $('#reveal-container').css({'height': '80%','padding': '15% 0 0 0'});
+    }
+    $('#nav').fadeToggle("fast");
+    $('#footer').fadeToggle("fast");
+  });
+  </script>
   <script>
     // Full list of configuration options available at:
     // https://github.com/hakimel/reveal.js#configuration
@@ -98,22 +111,6 @@
         src: '/slides/plugin/notes/notes.js',
         async: true
       }]
-    });
-    var fs = 0;
-    $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function() {
-      $('#nav').fadeToggle("fast");
-      $('#footer').fadeToggle("fast");
-      fs = fs + 1;
-      function check(num) { return num % 2;}
-      console.log(check(fs))
-      if (check(fs) === 1) {
-        console.log('max')
-        $('#reveal-container').css({'height': '100%','padding': '0'});
-      }
-      if (check(fs) === 0){
-        console.log('min')
-        $('#reveal-container').css({'height': '80%','padding': '15%'});
-      }
     });
   </script>
   {% if page.mouse == "true" %}

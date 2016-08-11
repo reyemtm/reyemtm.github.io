@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: "Jekyll, Leaflet & Turf"
+title: "Jekyll, Leaflet &amp; Turf"
 subtitle: "Open Source Tools for Web Mapping <br /> A Presentation to the 2016 Northeast Ohio GIS Symposium"
 date: 2016-08-02
 description: Using the power of open source through Jekyll, Leaflet and TurfJS for web mapping. A Presentation to the 2016 Northeast Ohio GIS Symposium.
@@ -8,59 +8,177 @@ theme: blood
 category: slides
 permalink: /slides/:title/
 tags: ["jekyll", "leaflet", "slides"]
-style: ".reveal h1{font-size:4.9em;} .reveal h2{font-size:3.3em;}"
+style: ".reveal h1{font-size:4.9em;text-shadow:none;} .reveal h2{font-size:3.3em;}"
 ---
-# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) & [Turf](http://turfjs.com)
+<section data-markdown data-separator="---">
+<script type="text/template">
+# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [Turf](http://turfjs.com)
 
 {{ page.subtitle }}
-___
-# Location <!-- .element: class="fragment" -->
-# **Information** <!-- .element: class="fragment" -->
-___
+---
+##Location
+##**Information** <!-- .element: class="fragment" -->
+---
 #Maps tell a **Story**
-___
+---
+###[Demographic Explorer](http://www.ovrdc.org/maps/demographic-explorer)
+![](/slides/img/demo-explore.png)
 </script>
 </section>
 
-<section data-background="img/ohio.png">
-<h2>A Basic Fullscreen Map</h2>
-<pre><code data-trim contenteditable>
+<section>
+<h3>Components of a <strong>Leaflet</strong> Map</h3>
+<div style="float:left;">
+<h3>The Webpage</h3>
+<li>
+  HTML
+</li>
+<li>
+  CSS
+</li>
+ <li>
+   JavaScript
+ </li>
+</div>
+<div style="float:right;">
+  <h3>The Map</h3>
+   <li>
+     Control Positions
+   </li>
+   <li>
+     BaseLayers (Basemaps)
+   </li>
+   <li>
+     OverLays (Layers)
+   </li>
+ </div>
+</section>
+
+<section>
+<h3>Basic Leaflet Map</h3>
+
+<pre><code data-trim>
 
 &lt;html lang=&quot;en&quot;&gt;
-&lt;head&gt;
-&lt;meta charset=&quot;utf-8&quot; /&gt;
-&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no&quot;&gt;
-&lt;link rel=&quot;stylesheet&quot; href=&quot;../assets/leaflet.css&quot; /&gt;
-&lt;script src=&quot;../assets/leaflet.js&quot;&gt;&lt;/script&gt;
-&lt;style&gt;
-#map {position:absolute;top:0;bottom:0;left:0;width:100%;}
-.leaflet-control-attribution.leaflet-control a {color: #7F9F7F;}
-&lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-&lt;div id='map'&gt;&lt;/div&gt;
-&lt;script src=&quot;map.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
+    &lt;head&gt;
+      &lt;meta charset=&quot;utf-8&quot; /&gt;
+      &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no&quot;&gt;
+      &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/leaflet.css&quot; /&gt;
+      &lt;script src=&quot;/assets/leaflet.js&quot;&gt;&lt;/script&gt;
+      &lt;style&gt;
+      #map {position:absolute;top:0;bottom:0;left:0;width:100%;}
+      &lt;/style&gt;
+    &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id='map'&gt;&lt;/div&gt;
+    &lt;script src=&quot;map.js&quot;&gt;&lt;/script&gt;
+  &lt;/body&gt;
 &lt;/html&gt;
-&lt;div id=&quot;map&quot;&gt;&lt;/div&gt;
+
 </code></pre>
 </section>
-<!--
-##Leaflet Examples
-A
-___
-B
-___
-C
-___
-## Turf
-Turf Splash Image
-___
-Turf Examples
-___
-##True Cost of Free?
-License Fees: $0.00
-Real Cost is Time
-___
-Thanks
--->
+
+<section>
+  <p data-height="900" data-theme-id="dark" data-slug-hash="VjqxWN" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+
+<section>
+<h3>Adding Basemaps</h3>
+<h4><a href="https://leaflet-extras.github.io/leaflet-providers/preview/" target="_blank">Leaflet Providers</a></h4>
+
+<pre><code data-trim>
+  var gray = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/light_all/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+      subdomains: 'abcd',
+      maxZoom: 19
+  }).addTo(map);
+
+  var fire = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  });
+
+  var pioneer = L.tileLayer('https://{s}.tile.thunderforest.com/pioneer/{z}/{x}/{y}.png', {
+      attribution: '&copy; <a href="http://www.thunderforest.com/">Thunderforest</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  });
+
+  var basemaps = {
+    "Gray": gray,
+    "<strong style='color:red;'>Fire</strong>": fire,
+    "Pioneer": pioneer,
+  };
+
+  var layerControl = new L.control.layers(basemaps).addTo(map);
+</code></pre>
+
+</section>
+
+<section>
+<h3>Adding Layers</h3>
+<h4>Simplification via <a href="http://www.mapshaper.org">Mapshaper</a></h4>
+</section>
+
+<section>
+  <h2>Ok, so what's your <strong>story</strong>?</h2>
+</section>
+
+<section>
+  <h3>Choropleth Made Simple</h3></h3>
+  <h4><a href="https://github.com/timwis/leaflet-choropleth" target="_blank">Choropleth Plugin</a></h4>
+
+  <pre><code data-trim>
+    L.choropleth(counties, {
+        valueProperty: 'pci', // which property in the features to use
+        scale: ['white', 'red'], // chroma.js scale - include as many as you like
+        steps: 5, // number of breaks or steps in range
+        mode: 'q', // q for quantile, e for equidistant, k for k-means
+        style: {
+            color: '#fff', // border color
+            weight: 2,
+            fillOpacity: 0.8
+        },
+        onEachFeature: function(feature, layer) {
+            layer.bindPopup(feature.properties.value)
+        }
+    }).addTo(map)
+  </code></pre>
+
+</section>
+
+<section>
+  <h3>Analysis with Turf</h3>
+  <h4><a href="http://turfjs.org/docs/" target="_blank">Turf Documentation</a></h4>
+</section>
+
+<section>
+  <h3>Jekyll Intro 01 - Layouts</h3>
+</section>
+
+<section data-markdown>
+<script type="text/template">
+  ### Thanks!
+
+  **Malcolm Meyer**, Transportation Planning Coordinator
+
+  [Ohio Valley Regional Development Commission](http://www.ovrdc.org)
+  <br><br>
+  ##### Awesome Examples
+  [Bushwick Community Map](http://clhenrick.github.io/BushwickCommunityMap/#) /
+  [Census Reporter](http://censusreporter.org/profiles/05000US39131-pike-county-oh/) /
+  [In Flight](http://www.theguardian.com/world/ng-interactive/2014/aviation-100-years) /
+  [Into The Okavango](http://intotheokavango.org/) /
+  [Jamaican Slave Revolt](http://revolt.axismaps.com/map/) /
+  [Landrover Stories](http://wellstoried.com) /
+  [Second City Zoning](http://secondcityzoning.org/) /
+  [Welcome to Vienna](http://www.wien.info/en/search?address=oper&geo_search=)
+  <br><br>
+  ##### Resources
+  [Leaflet](http://leafletjs.com) /
+  [CartoDB](https://cartodb.com) /
+  [Mapbox](https://www.mapbox.com) /
+  [MapCentia](http://www.mapcentia.com/) /
+  [Story Maps](https://storymap.knightlab.com) /
+  [Tutorial](http://maptimeboston.github.io/leaflet-intro/) /
+  [uMap](http://umap.openstreetmap.fr/en/)
+</script>
+</section>
