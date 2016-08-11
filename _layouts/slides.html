@@ -5,7 +5,7 @@
 <!--Begin Slides Layout-->
 <style>
   * { text-shadow: none;}
-  #reveal-container {height:80%;padding-top: 15%;}
+  #reveal-container {height:80%;padding:15% 0 0 0;}
   .reveal h1, .reveal h2 {
     font-family: 'Montserrat', sans-serif;
   }
@@ -107,9 +107,12 @@
       function check(num) { return num % 2;}
       console.log(check(fs))
       if (check(fs) === 1) {
+        console.log('max')
         $('#reveal-container').css({'height': '100%','padding': '0'});
-      }else{
-        $('#reveal-container').css({'height': '80%','padding-top': '15%'});
+      }
+      if (check(fs) === 0){
+        console.log('min')
+        $('#reveal-container').css({'height': '80%','padding': '15%'});
       }
     });
   </script>

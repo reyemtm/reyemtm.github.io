@@ -2,23 +2,32 @@
 layout: slides
 title: "Jekyll, Leaflet & Turf"
 subtitle: "Open Source Tools for Web Mapping <br /> A Presentation to the 2016 Northeast Ohio GIS Symposium"
-category: slides
 date: 2016-08-02
 description: Using the power of open source through Jekyll, Leaflet and TurfJS for web mapping. A Presentation to the 2016 Northeast Ohio GIS Symposium.
 theme: blood
-published: false
+category: slides
+permalink: /slides/:title/
 tags: ["jekyll", "leaflet", "slides"]
+style: ".reveal h1{font-size:4.9em;} .reveal h2{font-size:3.3em;}"
 ---
-## [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) & [Turf](http://turfjs.com)
+# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) & [Turf](http://turfjs.com)
 
 {{ page.subtitle }}
 ___
-## Jekyll
+# Location <!-- .element: class="fragment" -->
+# **Information** <!-- .element: class="fragment" -->
 ___
-## Jekyll Layout
+#Maps tell a **Story**
 ___
-## Leaflet
-___
+<section>
+<h2>Components of a Leaflet Map</h2>
+<pre>
+    <code class="data-trim contenteditable">
+    var map = L.map('map').setView(41.5, -81.7);
+    </code>
+</pre>
+</section>
+<!--
 ##Leaflet Examples
 A
 ___
@@ -36,3 +45,4 @@ License Fees: $0.00
 Real Cost is Time
 ___
 Thanks
+-->
