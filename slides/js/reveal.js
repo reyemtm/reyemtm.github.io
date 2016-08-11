@@ -1993,8 +1993,9 @@
 	 * @see http://fullscreen.spec.whatwg.org/
 	 * @see https://developer.mozilla.org/en-US/docs/DOM/Using_fullscreen_mode
 	 */
-	function enterFullscreen() {
 
+  //function check(num) { return num % 2;}
+	function enterFullscreen() {
 		var element = document.documentElement;
 
 		// Check which implementation is available
@@ -2006,9 +2007,40 @@
 
 		if( requestMethod ) {
 			requestMethod.apply( element );
+      $('#reveal-container').css({'height': '100%','padding': '0'});
+      $('#nav').hide("fast");
+      $('#footer').hide("fast");
 		}
 
 	}
+
+  function showPage() {
+    console.log('exit');
+    $('#reveal-container').css({'height': '80%','padding': '10% 0 0 0'});
+    $('#nav').show();
+    $('#footer').show();
+  }
+
+  if (document.addEventListener)
+  {
+      document.addEventListener('webkitfullscreenchange', exitHandler, false);
+      document.addEventListener('mozfullscreenchange', exitHandler, false);
+      document.addEventListener('fullscreenchange', exitHandler, false);
+      document.addEventListener('MSFullscreenChange', exitHandler, false);
+  }
+  function exitHandler()
+  {
+    console.log('fullscreenchange');
+    console.log(document.mozFullScreen);
+      if (document.fullScreenElement === null || document.webkitIsFullScreen === false || document.mozFullScreen === false || document.msFullscreenElement === null)
+      {
+        showPage();
+      }
+  }
+
+  /*function exitFullscreen() {
+  }*/
+//  $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function() {
 
 	/**
 	 * Enters the paused mode which fades everything on screen to
