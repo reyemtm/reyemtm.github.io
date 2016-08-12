@@ -12,7 +12,7 @@ style: ".reveal h1{font-size:4.9em;text-shadow:none;} .reveal h2{font-size:3.3em
 ---
 <section data-markdown data-separator="---">
 <script type="text/template">
-# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [Turf](http://turfjs.com)
+# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [Turf](http://turfjs.org)
 
 {{ page.subtitle }}
 ---
@@ -21,7 +21,7 @@ style: ".reveal h1{font-size:4.9em;text-shadow:none;} .reveal h2{font-size:3.3em
 ---
 #Maps tell a **Story**
 ---
-HUD Low to Moderate Income
+<h3>Low to Moderate Income</h3>
 <p data-height="800" data-theme-id="dark" data-slug-hash="kXzAZq" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </script>
@@ -60,7 +60,7 @@ var scale = L.control.scale().addTo(map);
 </section>
 
 <section>
-  <h3>We Forgot the <strong>Map</strong>!</h3>
+  <h3>We Forgot the <strong>Layers</strong>!</h3>
   <p data-height="800" data-theme-id="dark" data-slug-hash="VjqxWN" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </section>
@@ -75,7 +75,7 @@ var fire = L.tileLayer('https://{s}.tile.thunderforest.com/spinal-map/{z}/{x}/{y
 });
 
 var basemaps = {
-  "<strong style='color:red;'>Fire</strong>": fire,
+  '<strong style="color:red;">Fire</strong>': fire,//html allowed here
 };
 
 var layerControl = new L.control.layers(basemaps).addTo(map);
@@ -86,6 +86,10 @@ var layerControl = new L.control.layers(basemaps).addTo(map);
 <section>
 <h3>Adding Layers</h3>
 <h4>Simplification &amp; <a href="https://github.com/mbostock/topojson/wiki" target="_blank">Topojson</a> via <a href="http://www.mapshaper.org" target="_blank">Mapshaper</a></h4>
+<p>
+  Original GeoJSON: 3.7mb
+</p>
+<p class="fragment">Simplified Topojson: <strong>324kb</strong></p>
 <pre><code data-trim>
 var blockGroups = L.geoJson(null, {
   onEachFeature: function(feature, layer) {
@@ -97,7 +101,11 @@ var blockGroups = L.geoJson(null, {
 var data = omnivore.topojson('/assets/blockgroups.json', null, blockGroups);
 </code></pre>
 </section>
-
+<section>
+  <h3>Block Groups (Topojson)</h3>
+  <p data-height="800" data-theme-id="dark" data-slug-hash="pbqxAx" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
 <section>
   <h2>What about those pretty <strong>colors</strong>?</h2>
 </section>
@@ -105,9 +113,6 @@ var data = omnivore.topojson('/assets/blockgroups.json', null, blockGroups);
 <section>
   <h3>Choropleth Made Simple</h3></h3>
   <h4><a href="https://github.com/timwis/leaflet-choropleth" target="_blank">Choropleth Plugin</a></h4>
-  <p>
-    Original GeoJSON: 3.7mb vs. Simplified Topojson: 324kb
-  </p>
 <pre><code data-trim>
 var choropleth = L.choropleth(data.toGeoJSON(), {
     valueProperty: 'lowmodpct',
@@ -127,41 +132,158 @@ var choropleth = L.choropleth(data.toGeoJSON(), {
 </code></pre>
 
 </section>
-
 <section>
-  <h3>Analysis with Turf</h3>
-  <h4><a href="http://turfjs.org/docs/" target="_blank">Turf Documentation</a></h4>
+<h3>The Finished Map</h3>
+  <p data-height="800" data-theme-id="dark" data-slug-hash="kXzAZq" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </section>
-
 <section>
-  <h3>Jekyll Intro 01 - Layouts</h3>
+  <section>
+    <h3>Analysis with Turf</h3>
+    <h4><a href="http://turfjs.org/" target="_blank">Turf Documentation</a></h4>
+    <pre><code data-trim>
+data.on('ready', function() {
+  var selBridges = new L.geoJson().addTo(map);
+  blockGroups.on('click', function(e) {
+    selBridges.clearLayers();
+    var selLayer = new L.geoJson(e.layer.toGeoJSON());
+    var within = turf.within(bridges.toGeoJSON(), selLayer.toGeoJSON());
+    selBridges.addData(within);
+  })
+});
+    </code></pre>
+  </section>
+  <section>
+    <h3>Omnivore Plugin</h3>
+    <pre><code data-trim>
+var blockGroups = L.geoJson(null, {
+  onEachFeature: function(feature, layer) {
+    lmi = layer.feature.properties.lowmodpct * 100;
+    layer.bindPopup('LMI: ' + lmi + '%');
+  }
+});
+
+var data = omnivore.topojson('/assets/blockgroups.json', null, blockGroups);
+
+data.on('ready', function() {
+  //do something
+});
+    </code></pre>
+  </section>
+</section>
+<section>
+  <h3>Turf Within &amp; Collect</h3>
+  <p data-height="850" data-theme-id="dark" data-slug-hash="pbGvBd" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+<h3>Creating<br />a Jekyll <span style="text-transform:lowercase;"><strong>_site/</strong></span></h3>
+  <div style="text-transform:lowercase;">
+    <ul style="list-style-type:none;">
+      <li>_data/</li>
+      <li>_includes/</li>
+      <li>_layouts</li>
+      <li>_posts/</li>
+      <li>_config.yml</li>
+    </ul>
+  </div>
+</section>
+<section>
+  <h3>Basic Jekyll Default Layout</h3>
+  <p>_layouts/maps.html</p>
+{% raw %}
+  <pre><code data-trim>
+
+&lt;html lang=&quot;en&quot;&gt;
+  <!--The head could be located in _inclues/head.html
+  and added via {% include head.html %}-->
+  &lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot; /&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0, user-scalable=no&quot;&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/assets/leaflet.css&quot; /&gt;
+    &lt;script src=&quot;/assets/leaflet.js&quot;&gt;&lt;/script&gt;
+    {% if page.layout == 'map' %}&lt;style&gt;
+    #map {position:absolute;top:0;bottom:0;left:0;width:100%;}
+    &lt;/style&gt;{% endif %}
+  &lt;/head&gt;
+  &lt;body&gt;
+  {{ content }}
+  &lt;/body&gt;
+&lt;/html&gt;
+
+  </code></pre>
+   {% endraw %}
+</section>
+<section>
+  <h3>Jekyll Map Layout</h3>
+  <p>_layouts/maps.html</p>
+{% raw %}
+  <pre><code data-trim>
+---
+layout: default
+---
+&lt;div id='map'&gt;&lt;/div&gt;
+&lt;script&gt;
+var map = new L.Map('map');
+map.setView({{page.center}}, {{page.zoom}})//values from the post frontmatter
+
+var scale = L.control.scale().addTo(map);
+
+//Load your basemaps here
+var ortho = L.tileLayer();
+var streets = L.tileLayer();
+var topo = L.tileLayer();
+
+//Add them to the layerControl
+var basemaps = {
+  "Ortho": ortho,
+  "Streets": streets,
+  "Topo": topo
+};
+
+var layerControl = new L.control.layers(basemaps).addTo(map);
+
+//Then add a basemap based on your post frontmatter
+{{page.basemap}}.addTo(map);
+
+{{ content }}//your map post content
+&lt;/script&gt;
+  </code></pre>
+   {% endraw %}
+</section>
+<section>
+  <h3>Jekyll Map Post</h3>
+  <p>_posts/YYYY-MM-DD-my-post-title.js</p>
+  <pre><code date-trim>
+    ---
+    layout: maps
+    title: My New Map
+    center: "[41.5, -81.7]"
+    zoom: 10
+    basemap: ortho
+    ---
+    //Add code here such as layers and interaction
+  </code></pre>
 </section>
 
 <section data-markdown>
 <script type="text/template">
-  ### Thanks!
+  ## Thanks!
 
-  **Malcolm Meyer**, Transportation Planning Coordinator
+  ###**Malcolm Meyer**
+
+  Transportation Planning Coordinator
 
   [Ohio Valley Regional Development Commission](http://www.ovrdc.org)
   <br><br>
   ##### Awesome Examples
   [Bushwick Community Map](http://clhenrick.github.io/BushwickCommunityMap/#) /
   [Census Reporter](http://censusreporter.org/profiles/05000US39131-pike-county-oh/) /
-  [In Flight](http://www.theguardian.com/world/ng-interactive/2014/aviation-100-years) /
   [Into The Okavango](http://intotheokavango.org/) /
   [Jamaican Slave Revolt](http://revolt.axismaps.com/map/) /
-  [Landrover Stories](http://wellstoried.com) /
   [Second City Zoning](http://secondcityzoning.org/) /
   [Welcome to Vienna](http://www.wien.info/en/search?address=oper&geo_search=)
   <br><br>
-  ##### Resources
-  [Leaflet](http://leafletjs.com) /
-  [CartoDB](https://cartodb.com) /
-  [Mapbox](https://www.mapbox.com) /
-  [MapCentia](http://www.mapcentia.com/) /
-  [Story Maps](https://storymap.knightlab.com) /
-  [Tutorial](http://maptimeboston.github.io/leaflet-intro/) /
-  [uMap](http://umap.openstreetmap.fr/en/)
+  ###[Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [Turf](http://turfjs.org)
 </script>
 </section>
