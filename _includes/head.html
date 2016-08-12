@@ -49,23 +49,13 @@
   {% if page.map %}
   {% include map.html %}
   {% endif %}
-  {% if page.plugin1 %}
-  {% include {{ page.plugin1 }} %}
-  {% endif %}
-  {% if page.plugin2 %}
-  {% include {{ page.plugin2 }} %}
-  {% endif %}
-  {% if page.plugin3 %}
-  {% include {{ page.plugin3 }} %}
-  {% endif %}
-  {% if page.map %}
-  {% include map-style.html %}
-  {% endif %}
+  <!--additional page plugins-->
+  {% if page.plugins %}{% for plugin in page.plugins %}{% assign name = plugin %}{% include plugins.html %}{% endfor %}{% endif %}
   {% if page.layout == 'slides' %}
   <!--begin slides styles-->
   <link rel="stylesheet" href="/slides/css/reveal.css">
   <link rel="stylesheet" href="/slides/css/theme/{% if page.theme %}{{ page.theme }}.css{% else %}blood.css{% endif %}" id="theme">
-
+  <link rel="stylesheet" href="/slides/css/getbounds-reveal.css">
   <!-- Code syntax highlighting -->
   <link rel="stylesheet" href="/slides/lib/css/zenburn.css">
 
@@ -83,4 +73,10 @@
     <![endif]-->
   <!--End Slides Styles-->
   {% endif %}
+  <style>
+  {% if page.map and page.layout != 'app' %}#map {height: 700px; width:100%;border:1px solid #ddd;}
+  {% elsif page.map and page.layout == 'app' %}#map {position:absolute;top:0;left:0;width:100%;height:100%}{% endif %}
+  {% if page.style %}/*custom page styles*/
+  {{page.style}}/*end custom page styles*/{% endif %}
+  </style>
 </head>

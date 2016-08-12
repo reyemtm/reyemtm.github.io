@@ -1,43 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--script type="text/javascript">if(window.location.protocol != "https:"){var url = window.location.href.substr(5);window.location = "https:" + url;}</script-->
 {% include head.html %}
-{% if page.layout == 'slides' %}
-<!--Begin Slides Layout-->
-<style>
-  * { text-shadow: none;}
-  .reveal h1, .reveal h2. {
-    font-family: 'Montserrat' sans-serif;
-  }
-  .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-    font-family: 'Source Sans Pro' sans-serif;
-  }
-  .reveal .slides> section,
-  .reveal .slides> section> section {
-    padding: 0;
-    line-height: 1.2;
-  }
-
-  .reveal p {
-    margin: inherit;
-  }
-
-  .reveal ul {
-    line-height: 1.3;
-  }
-
-  {% if page.style %}/*custom page styles*/
-  {{page.style}}
-  /*end custom page styles*/{% endif %}
-</style>
-{% endif %}
-<body>
-
-    {% include nav.html %}
-
-    {{ content }}
-
-    {% include footer.html %}
-
-</body>
+  <body>
+      {% include nav.html %}
+      {{ content }}
+      {% include footer.html %}
+  </body>
 </html>

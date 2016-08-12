@@ -5,7 +5,7 @@ description: "Here I am Leaflet Elevation to show a the elevation cross-section 
 subtitle: "Mapping GPS Tracks"
 tags: leaflet
 map: leaflet-beta
-plugin1: elevation.html
+plugins: elevation
 header-img: c-hollow.jpg
 ---
 <!--style>

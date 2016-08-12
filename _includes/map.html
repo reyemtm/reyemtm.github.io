@@ -16,12 +16,10 @@
 <link rel="stylesheet" href="/assets/easy-print/easyPrint.css" />
 <script src="/assets/easy-print/leaflet.easyPrint.js"></script>
 <!--locate control from source -->
-<link rel="stylesheet" href="/assets/leaflet-locate-control/L.Control.Locate.min.css" />
-<script src="/assets/leaflet-locate-control/L.Control.Locate.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.52.0/L.Control.Locate.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.52.0/L.Control.Locate.min.js"></script>
 <!--Leaflet Hash via Mapbox CDN-->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
-<!--Google Custom Map -->
-<script src="https://maps.google.com/maps/api/js?v=3"></script>
 <!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <!-- leaflet ajax geojson loader -->
@@ -40,6 +38,8 @@
 <script src="/assets/leaflet-loading/Control.Loading.js"></script>
 <script src="/assets/leaflet-spin/spin.js"></script>
 <script src="/assets/leaflet-spin/leaflet.spin.js"></script>
+<!--Google Custom Map -->
+<script src="https://maps.google.com/maps/api/js?v=3"></script>
 <script src="/assets/google-tiles/google.js"></script>
 <script src="/assets/google-tiles/gglegrey.js"></script>
 <!--Mapbox fullscreen standalone js added in ovrdc-toolbar-->
@@ -52,11 +52,7 @@
 <link rel="stylesheet" href="/assets/modern-ui.css" />
 <!--End Leaflet Plugins-->
 <!--End Map CSS and JS-->
-<!--end plugins-->
-
-{% else %}
-
-{% if page.map == "leaflet" %}
+<!--end plugins-->{% else %}{% if page.map == "leaflet" %}
 <!--Leaflet-03-13-2015 -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
@@ -82,17 +78,17 @@
 <script src="{{ site.baseurl }}/map-plugins/leaflet.easyPrint.js"></script>
 <script src="{{ site.baseurl }}/map-plugins/jQuery.print.js"></script>
 <!--locate control from source -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.css" />
-<script src="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.52.0/L.Control.Locate.min.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-locatecontrol/0.52.0/L.Control.Locate.min.js"></script>
 <!--Awesome Marker Plugin -->
 <link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.css">
 <script src="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.js"></script>
 <!--Leaflet Hash via Mapbox CDN-->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <!--Google Custom Map -->
-<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=placeskey=AIzaSyCpIjH_d3jfNPSwPuyrzy2G9H_Ylb1bEd8"></script>
-<script src="{{ site.baseurl }}/map-plugins/google.js"></script>
-<script src="{{ site.baseurl }}/map-plugins/gglegrey.js"></script>
+<script src="https://maps.google.com/maps/api/js?v=3"></script>
+<script src="/assets/google-tiles/google.js"></script>
+<script src="/assets/google-tiles/gglegrey.js"></script>
 <!-- Esri Leaflet Core -->
 <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-core.js"></script>
 <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>

@@ -1993,55 +1993,25 @@
 	 * @see http://fullscreen.spec.whatwg.org/
 	 * @see https://developer.mozilla.org/en-US/docs/DOM/Using_fullscreen_mode
 	 */
-
-  //function check(num) { return num % 2;}
 	function enterFullscreen() {
+
 		var element = document.documentElement;
 
 		// Check which implementation is available
 		var requestMethod = element.requestFullscreen ||
 							element.webkitRequestFullscreen ||
 							element.webkitRequestFullScreen ||
-							element.mozRequestFullScreen ||
+              element.mozRequestFullScreen ||
 							element.msRequestFullscreen;
 
 		if( requestMethod ) {
-			requestMethod.apply( element );
-      $('#reveal-container').css({'height': '100%','padding': '0'});
+      $('#slides-container').css({'height': '100%','padding': '0'});
       $('#nav').hide("fast");
       $('#footer').hide("fast");
+			requestMethod.apply( element );
 		}
 
 	}
-
-  function showPage() {
-    console.log('exit');
-    $('#reveal-container').css({'height': '80%','padding': '10% 0 0 0'});
-    $('#nav').show();
-    $('#footer').show();
-  }
-
-  if (document.addEventListener)
-  {
-      document.addEventListener('webkitfullscreenchange', exitHandler, false);
-      document.addEventListener('mozfullscreenchange', exitHandler, false);
-      document.addEventListener('fullscreenchange', exitHandler, false);
-      document.addEventListener('MSFullscreenChange', exitHandler, false);
-  }
-  function exitHandler()
-  {
-    console.log('fullscreenchange');
-    console.log(document.mozFullScreen);
-      if (document.fullScreenElement === null || document.webkitIsFullScreen === false || document.mozFullScreen === false || document.msFullscreenElement === null)
-      {
-        showPage();
-      }
-  }
-
-  /*function exitFullscreen() {
-  }*/
-//  $(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange MSFullscreenChange', function() {
-
 	/**
 	 * Enters the paused mode which fades everything on screen to
 	 * black.
@@ -4077,7 +4047,8 @@
 				case 58: case 59: case 66: case 190: case 191: togglePause(); break;
 				// f
 				case 70: enterFullscreen(); break;
-        // a
+        //case 122: enterFullscreen(); break;
+				// a
 				case 65: if ( config.autoSlideStoppable ) toggleAutoSlide( autoSlideWasPaused ); break;
 				default:
 					triggered = false;
@@ -4093,6 +4064,7 @@
 		// ESC or O key
 		else if ( ( event.keyCode === 27 || event.keyCode === 79 ) && features.transforms3d ) {
 			if( dom.overlay ) {
+        console.log('close')
 				closeOverlay();
 			}
 			else {
