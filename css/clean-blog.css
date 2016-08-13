@@ -1,6 +1,7 @@
 .flexslider {
 	margin:0;
 	border:none;
+  	min-height; 400px;
 }
 .flex-control-nav {
     display: none;
