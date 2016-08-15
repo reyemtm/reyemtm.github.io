@@ -94,22 +94,49 @@ var layerControl = new L.control.layers(basemaps).addTo(map);
 </section>
 
 <section>
-<h3>Adding Layers</h3>
-<h4>Simplification &amp; <a href="https://github.com/mbostock/topojson/wiki" target="_blank">Topojson</a> via <a href="http://www.mapshaper.org" target="_blank">Mapshaper</a></h4>
-<p>
-  Original GeoJSON: 3.7mb
-</p>
-<p class="fragment">Simplified Topojson: <strong>324kb</strong></p>
-<pre><code data-trim>
+  <section>
+    <h3>Adding Layers</h3>
+    <h4>Simplification &amp; <a href="https://github.com/mbostock/topojson/wiki" target="_blank">Topojson</a> via <a href="http://www.mapshaper.org" target="_blank">Mapshaper</a></h4>
+    <p>
+      Original <a href="http://geojson.org/" target="ext">GeoJSON</a>: 3.7mb
+    </p>
+    <p class="fragment">Simplified Topojson: <strong>324kb</strong></p>
+    <pre><code data-trim>
 var blockGroups = L.geoJson(null, {
   onEachFeature: function(feature, layer) {
-    lmi = layer.feature.properties.lowmodpct * 100;
+    lmi = (layer.feature.properties.lowmodpct * 100).toFixed(2);
     layer.bindPopup('LMI: ' + lmi + '%');
   }
 });
-
-var data = omnivore.topojson('/assets/blockgroups.json', null, blockGroups);
-</code></pre>
+    </code></pre>
+    <p>
+      <a href="https://github.com/mapbox/leaflet-omnivore" target="ext">leaflet-omnivore</a>
+    </p>
+    <pre><code data-trim>
+    var data = omnivore.topojson('/assets/blockgroups.json', null, blockGroups);
+    </code></pre>
+  </section>
+  <section>
+    <h3>Alternative Methods</h3>
+    <h4>Topojson Support Must be Added</h4>
+    <p>
+      <a href="https://github.com/mapbox/leaflet-omnivore" target="ext">leaflet-ajax</a>
+    </p>
+    <pre><code data-trim>
+/*Load data directly but dependent on jQuery*/
+var blockGroups = new L.GeoJSON.AJAX("/assets/blockgroups.geojson");
+    </code></pre>
+    <p>
+      jQuery
+    </p>
+    <pre><code data-trim>
+/*Or just use jQuery*/
+$.getJSON("/assets/blockgroups.geojson", function(data) {
+  /*add geojson formatted data to our L.geoJson() feature*/
+  blockGroups.addData(data);
+});
+    </code></pre>
+  </section>
 </section>
 <section>
   <h3>Block Groups (Topojson)</h3>
@@ -149,7 +176,7 @@ var choropleth = L.choropleth(data.toGeoJSON(), {
 </section>
 <section>
   <section>
-    <h3>Analysis with Turf</h3>
+    <h3>Simple Analysis with Turf</h3>
     <h4><a href="http://turfjs.org/" target="_blank">Turf Documentation</a></h4>
     <pre><code data-trim>
 data.on('ready', function() {
@@ -161,6 +188,69 @@ data.on('ready', function() {
     selBridges.addData(within);
   })
 });
+    </code></pre>
+  </section>
+  <section>
+    <h3>Turf Advanced</h3>
+    <pre><code data-trim>
+var ga = turf.collect(data.toGeoJSON(), bridges.toGeoJSON(), 'garating', 'values');
+
+var noData = L.geoJson(ga, {
+  filter: function(feature, layer) {
+    if (feature.properties.values.length == 0) {
+      return true
+    }
+  },
+  style: {
+    color: 'gray',
+    weight: 1,
+    fillColor: 'gray',
+    fillOpacity: 0.6
+  },
+  onEachFeature: function(feature, layer) {
+    layer.bindPopup('<h3>No Data</h3>')
+  }
+}).addTo(map);
+
+//Filter data out to only get those features with bridges inside
+ var gaFeature = L.geoJson(ga, {
+   filter: function(feature, layer) {
+    if (feature.properties.values.length > 0) {
+      return true
+    }
+  },
+  onEachFeature: function(feature, layer) {
+     var garating = 0;
+     var v = layer.feature.properties.values;
+     for (i = 0; i < v.length; i++) {
+       garating += v[i]
+    }
+    layer.feature.properties.avgga = (garating/v.length).toFixed(2);
+    layer.feature.properties.count = (v.length).toString();
+  }
+});
+
+choropleth = new L.choropleth(gaFeature.toGeoJSON(), {
+  valueProperty: 'avgga',
+  scale: ['red', 'orange', 'white'],
+  steps: 7,
+  mode: 'q',
+  style: {
+    color: '#fff',
+    weight: 1,
+    fillOpacity: 0.6
+  },
+  onEachFeature: function(feature, layer) {
+    var p = layer.feature.properties;
+    if (p.avgga) {
+        layer.bindPopup('<h3>Avg Bridge Rating: ' + (p.avgga).toString() +
+                        '</h3>Total Bridges: ' + p.count +
+                        '<br /><em>*A Rating of 4 or below is deficient</em>');
+    } else {
+      layer.bindPopup('No Data');
+    }
+  }
+}).addTo(map);
     </code></pre>
   </section>
   <section>
