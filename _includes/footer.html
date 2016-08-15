@@ -64,12 +64,18 @@
         </div>
     </div>
 </footer>
+<div id="modals">
+{% include modals/search.html %}
+</div>
 <!--Javascript-->
-<script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script>
+<!--script src="{{ "/js/bootstrap.min.js " | prepend: site.baseurl }}"></script-->
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Custom Theme JavaScript -->
 <script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/smooth-scroll.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/jquery.bootstrap-autohidingnavbar.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/jekyll-search.js " | prepend: site.baseurl }}"></script>
 <script>$("div.navbar-fixed-top").autoHidingNavbar();</script>
 <script>
 $('#menutoggle').on('click',function(){
@@ -99,5 +105,6 @@ $(window).load(function() {
     animation: "fade"
   });
 });
+{% include js/search-init.js %}
 </script>
 {% include google-analytics.html %}

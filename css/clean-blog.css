@@ -731,6 +731,10 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #7aa482;
 }
+.modal .container {
+    max-width:100%;
+}
+/*media quieries*/
 @media only screen and (max-width: 768px) {
     .intro-header .site-heading h1, .intro-header .post-heading h1, .intro-header .page-heading h1 {
         font-size: 50px;

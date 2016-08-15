@@ -3,9 +3,9 @@ SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
   json: '/search.json',
-  searchResultTemplate: '<p><dt><a href="{url}">{title}</a></dt><dd class="text-muted">{subtitle}</dd></p>',
+  {% raw %}searchResultTemplate: '<p><dt><a href="{url}">{title}</a></dt><dd class="text-muted">{subtitle}</dd></p>',{% endraw %}
   noResultsText: 'No results found',
-  limit: 10,
+  limit: 5,
   fuzzy: false,
   exclude: ['Welcome']
 });
