@@ -1,6 +1,6 @@
 ---
 layout: slides
-title: 'Jekyll, Leaflet &amp; Turf'
+title: 'Jekyll, Leaflet &amp; TurfJS'
 subtitle: >-
   Open Source Tools for Web Mapping <br /> A Presentation to the 2016 Northeast
   Ohio GIS Symposium
@@ -16,11 +16,10 @@ tags:
   - leaflet
   - slides
 style: '.reveal h1{font-size:4.9em;text-shadow:none;} .reveal h2{font-size:3.3em;}'
-published: true
 ---
 <section data-markdown data-separator="---">
 <script type="text/template">
-# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [Turf](http://turfjs.org)
+# [Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [TurfJS](http://turfjs.org)
 
 A Presentation to the [Northeast Ohio GIS Sympoisum](http://www.neohiogis.org/)
 
@@ -118,7 +117,7 @@ var blockGroups = L.geoJson(null, {
   </section>
   <section>
     <h3>Alternative Methods</h3>
-    <h4>Topojson Support Must be Added</h4>
+    <p>(Topojson Support Must be Added)</p>
     <p>
       <a href="https://github.com/mapbox/leaflet-omnivore" target="ext">leaflet-ajax</a>
     </p>
@@ -167,16 +166,13 @@ var choropleth = L.choropleth(data.toGeoJSON(), {
     }
 }).addTo(map)
 </code></pre>
-
 </section>
 <section>
-<h3>The Finished Map</h3>
-  <p data-height="650" data-theme-id="dark" data-slug-hash="kXzAZq" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+  <p data-height="700" data-theme-id="dark" data-slug-hash="kXzAZq" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
   <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
-  <section>
-    <h3>Simple Analysis with Turf</h3>
+    <h3>Analysis with Turf - Within</h3>
     <h4><a href="http://turfjs.org/" target="_blank">Turf Documentation</a></h4>
     <pre><code data-trim>
 data.on('ready', function() {
@@ -189,91 +185,92 @@ data.on('ready', function() {
   })
 });
     </code></pre>
-  </section>
-  <section>
-    <h3>Turf Advanced</h3>
-    <pre><code data-trim>
-var ga = turf.collect(data.toGeoJSON(), bridges.toGeoJSON(), 'garating', 'values');
-
-var noData = L.geoJson(ga, {
-  filter: function(feature, layer) {
-    if (feature.properties.values.length == 0) {
-      return true
-    }
-  },
-  style: {
-    color: 'gray',
-    weight: 1,
-    fillColor: 'gray',
-    fillOpacity: 0.6
-  },
-  onEachFeature: function(feature, layer) {
-    layer.bindPopup('<h3>No Data</h3>')
-  }
-}).addTo(map);
-
-//Filter data out to only get those features with bridges inside
- var gaFeature = L.geoJson(ga, {
-   filter: function(feature, layer) {
-    if (feature.properties.values.length > 0) {
-      return true
-    }
-  },
-  onEachFeature: function(feature, layer) {
-     var garating = 0;
-     var v = layer.feature.properties.values;
-     for (i = 0; i < v.length; i++) {
-       garating += v[i]
-    }
-    layer.feature.properties.avgga = (garating/v.length).toFixed(2);
-    layer.feature.properties.count = (v.length).toString();
-  }
-});
-
-choropleth = new L.choropleth(gaFeature.toGeoJSON(), {
-  valueProperty: 'avgga',
-  scale: ['red', 'orange', 'white'],
-  steps: 7,
-  mode: 'q',
-  style: {
-    color: '#fff',
-    weight: 1,
-    fillOpacity: 0.6
-  },
-  onEachFeature: function(feature, layer) {
-    var p = layer.feature.properties;
-    if (p.avgga) {
-        layer.bindPopup('<h3>Avg Bridge Rating: ' + (p.avgga).toString() +
-                        '</h3>Total Bridges: ' + p.count +
-                        '<br /><em>*A Rating of 4 or below is deficient</em>');
-    } else {
-      layer.bindPopup('No Data');
-    }
-  }
-}).addTo(map);
-    </code></pre>
-  </section>
-  <section>
-    <h3>Omnivore Plugin</h3>
-    <pre><code data-trim>
-var blockGroups = L.geoJson(null, {
-  onEachFeature: function(feature, layer) {
-    lmi = layer.feature.properties.lowmodpct * 100;
-    layer.bindPopup('LMI: ' + lmi + '%');
-  }
-});
-
-var data = omnivore.topojson('/assets/blockgroups.json', null, blockGroups);
-
-data.on('ready', function() {
-  //do something
-});
-    </code></pre>
-  </section>
 </section>
 <section>
-  <h3>Turf Within &amp; Collect</h3>
-  <p data-height="850" data-theme-id="dark" data-slug-hash="pbGvBd" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+  <p data-height="700" data-theme-id="0" data-slug-hash="OXdZzw" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
+  <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+</section>
+<section>
+    <h3>Turf Collect</h3>
+    <pre><code data-trim>
+
+//Function to analyze data with turf.collect - note differences from turf documentation
+function analyze(poly, points, fieldA, fieldB, callback) {
+  ga = turf.collect(poly.toGeoJSON(), points.toGeoJSON(), fieldA, fieldB);
+  console.log('analyze complete');
+  callback()
+}
+
+//Analyze the data, then use the data to build the map
+analyze(data, bridges, 'garating', 'values', function() {
+  console.log('build layers')
+  console.log(ga.features[1].properties.values.length);
+  if (ga.features[1].properties.values.length <= 0) {
+    alert('Turfjs hit a snag. Please reload the page and try again.');
+  }else{
+
+  //Layer for block groups with no bridges inside
+  var noData = L.geoJson(ga, {
+    filter: function(feature, layer) {
+      if (feature.properties.values.length == 0) {
+        return true
+      }
+    },
+    style: {
+      color: 'gray',
+      weight: 1,
+      fillColor: 'gray',
+      fillOpacity: 0.6
+    },
+    onEachFeature: function(feature, layer) {
+      layer.bindPopup('<h3>No Data</h3>')
+    }
+  }).addTo(map);
+
+  //Filter data out to only get those features with bridges inside
+  var gaFeature = L.geoJson(ga, {
+    filter: function(feature, layer) {
+      if (feature.properties.values.length > 0) {
+        return true
+      }
+    },
+    onEachFeature: function(feature, layer) {
+      var garating = 0;
+      //loop through values array to get total - turf.average() may be deprecated??
+      var v = layer.feature.properties.values;
+      for (i = 0; i < v.length; i++) {
+        garating += v[i]
+      }
+      //then get the avg bridge rating
+      layer.feature.properties.avgga = (garating/v.length).toFixed(2);
+      layer.feature.properties.count = (v.length).toString();
+    }
+  });
+
+  /*Then build the choropleth layer based on the previous geojson layer.
+  This could probably be done inside value property which can take a function that
+  returns a value.*/
+  choropleth = new L.choropleth(gaFeature.toGeoJSON(), {
+    valueProperty: 'avgga',
+    scale: ['red', 'orange', 'white'],
+    steps: 7,
+    mode: 'q',
+    style: {
+      color: '#fff',
+      weight: 1,
+      fillOpacity: 0.6
+    },
+    onEachFeature: function(feature, layer) {
+      var p = layer.feature.properties;
+      layer.bindPopup('<h3>Avg Bridge Rating: ' + (p.avgga).toString() +
+                      '</h3>Total Bridges: ' + p.count +
+                      '<br /><em>*A Rating of 4 or below is deficient</em>');
+    }
+  }).addTo(map);
+    </code></pre>
+</section>
+<section>
+  <p data-height="700" data-theme-id="dark" data-slug-hash="pbGvBd" data-default-tab="result" data-user="getbounds" data-embed-version="2" class="codepen"></p>
 <script async src="//assets.codepen.io/assets/embed/ei.js"></script>
 </section>
 <section>
@@ -282,7 +279,7 @@ data.on('ready', function() {
     <ul style="list-style-type:none;">
       <li>_data/</li>
       <li>_includes/</li>
-      <li>_layouts</li>
+      <li>_layouts/</li>
       <li>_posts/</li>
       <li>_config.yml</li>
     </ul>
@@ -290,7 +287,7 @@ data.on('ready', function() {
 </section>
 <section>
   <h3>Basic Jekyll Default Layout</h3>
-  <p>_layouts/maps.html</p>
+  <p>_layouts/default.html</p>
 {% raw %}
   <pre><code data-trim>
 
@@ -368,22 +365,14 @@ var layerControl = new L.control.layers(basemaps).addTo(map);
 
 <section data-markdown>
 <script type="text/template">
-  ## Thanks!
+  ##**Thanks!**
 
-  ###**Malcolm Meyer**
+  ###Malcolm Meyer
 
   Transportation Planning Coordinator
 
   [Ohio Valley Regional Development Commission](http://www.ovrdc.org)
   <br><br>
-  ##### Awesome Examples
-  [Bushwick Community Map](http://clhenrick.github.io/BushwickCommunityMap/#) /
-  [Census Reporter](http://censusreporter.org/profiles/05000US39131-pike-county-oh/) /
-  [Into The Okavango](http://intotheokavango.org/) /
-  [Jamaican Slave Revolt](http://revolt.axismaps.com/map/) /
-  [Second City Zoning](http://secondcityzoning.org/) /
-  [Welcome to Vienna](http://www.wien.info/en/search?address=oper&geo_search=)
-  <br><br>
-  ###[Jekyll](https://jekyllrb.com), [Leaflet](http://leafletjs.com) &amp; [Turf](http://turfjs.org)
+  <p>[jekyll-leaflet-turfjs-intro](https://github.com/ovrdc/jekyll-leaflet-turfjs-intro) on GitHub</p>
 </script>
 </section>
