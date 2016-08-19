@@ -11,3 +11,7 @@
   local: true
   css: map-plugins/elevation/leaflet.elevation-0.0.4.css
   js: map-plugins/elevation/leaflet.elevation-0.0.4.src.js
+
+- name: snake
+  local: true
+  js: 
