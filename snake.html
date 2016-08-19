@@ -21,7 +21,7 @@
           opacity: 0.2
         },
       	onEachFeature: function(feature, layer) {
-        	coords.push(layer.feature.geometry.coordinates);
+        	coords.push([layer.feature.geometry.coordinates[1], layer.feature.geometry.coordinates[0]]);
         }
       }).addTo(map);
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
