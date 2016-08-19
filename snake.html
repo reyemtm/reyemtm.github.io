@@ -18,7 +18,7 @@
       var coords = [];
       var ride = new L.geoJson(null, {
       	onEachFeature: function(feature, layer) {
-        	coords.push(layer.feature.geometry.coordinates)
+        	coords.push(feature.geometry.coordinates)
         }
       });
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
