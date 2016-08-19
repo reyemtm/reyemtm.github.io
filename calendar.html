@@ -5,29 +5,15 @@
     <title></title>
     <meta name="description" content="">
     <meta name="author" content="">
+    <link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+	<script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
+    <style>#map{position:absolute;top:0;bottom:0;left:0;width:100%}</style>
   </head>
   <body>
-    <ul id="events-upcoming">upcoming...
-    </ul>
-    <ul id="events-past">past...
-    </ul>
-    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-    <script src="/js/gcalendar.min.js"></script>
+    <div id="map"></div>
     <script>
-      formatGoogleCalendar.init({
-        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/knh7g8kvbeacm5vo6t1a8pif9c@group.calendar.google.com/events?key=AIzaSyB5z6Vi0KMAuovcrlM5FGCz_27hjrwba7Y',
-        past: true,
-        upcoming: true,
-        pastTopN: 20,
-        upcomingTopN: 3,
-        itemsTagName: 'li',
-        sameDayTimes: true,
-        upcomingSelector: '#events-upcoming',
-        pastSelector: '#events-past',
-        upcomingHeading: '<h2>Upcoming events</h2>',
-        pastHeading: '<h2>Past events</h2>',
-        format: ['*date*', ': ', '*summary*', ' — ', '*description*', ' in ', '*location*']
-      }); 
+      var map = new L.map('map').setView([39, -82], 10);
+      
     </script>
   </body>
 </html>
