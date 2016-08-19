@@ -32,14 +32,14 @@
       rideData.on('ready', function() {
       	//console.log(rideData);
         //console.log(coords);
-        //var line = L.polyline(coords, {
+        /*var line = L.polyline(coords, {
           style: {
             opacity: 0.1
           }
-        }).addTo(map);
+        }).addTo(map);*/
         //console.log(line);
-        map.fitBounds(line.getBounds());
-        //map.fitBounds(rideData.getBounds());
+        //map.fitBounds(line.getBounds());
+        map.fitBounds(rideData.getBounds());
         var rides = L.polyline(coords, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
       });
