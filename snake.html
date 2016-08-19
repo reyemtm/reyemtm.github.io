@@ -39,8 +39,8 @@
         }).addTo(map);
         map.fitBounds(line.getBounds());
         //map.fitBounds(rideData.getBounds());
-        //var rides = new L.polyline(coords, {snakingSpeed: 200});
-		//rides.addTo(map).snakeIn();
+        var rides = new L.polyline(coords, {snakingSpeed: 200});
+		rides.addTo(map).snakeIn();
       });
       
       map.on('click', function(e) {
