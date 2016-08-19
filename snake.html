@@ -18,7 +18,7 @@
       var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
         subdomains: 'abcd'
-      });
+      }).addTo(map);
       var coords = [];
       var ride = new L.geoJson(null, {
       	onEachFeature: function(feature, layer) {
@@ -27,7 +27,7 @@
             coords.push([c[i][1], c[i][0]]);
           }
         }
-      }).addTo(map);
+      });
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
       rideData.on('ready', function() {
         map.fitBounds(rideData.getBounds());
