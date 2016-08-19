@@ -17,10 +17,13 @@
       var map = new L.map('map').setView([39, -82], 10);
       var coords = [];
       var ride = new L.geoJson(null, {
+        style: {
+          opacity: 0.1
+        },
       	onEachFeature: function(feature, layer) {
         	coords.push(feature.geometry.coordinates)
         }
-      });
+      }).addTo(map);
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
       rideData.on('ready', function() {
       	console.log(rideData);
