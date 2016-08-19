@@ -31,7 +31,8 @@
         var c = rideData.getLatLngs();
         console.log(c);
         var line = L.polyline(coords).addTo(map);
-        map.fitBounds(rideData.getBounds());
+        map.fitBounds(line.getBounds());
+        //map.fitBounds(rideData.getBounds());
         //var rides = new L.polyline(coords, {snakingSpeed: 200});
 		//rides.addTo(map).snakeIn();
       });
