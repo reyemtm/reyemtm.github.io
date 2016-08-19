@@ -23,7 +23,7 @@
       	onEachFeature: function(feature, layer) {
         	coords.push(feature.geometry.coordinates);
         },
-        coordsTolatLngs: 
+         
       }).addTo(map);
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
       rideData.on('ready', function() {
