@@ -14,7 +14,11 @@
   <body>
     <div id="map"></div>
     <script>
-      var map = new L.map('map').setView([39, -82], 10);
+      var map = new L.map('map', {zoomControl:false}).setView([39, -82], 10);
+      var cdbdark = L.tileLayer('https://cartodb-basemaps-{s}.global.ssl.fastly.net/dark_all/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="http://cartodb.com/attributions">CartoDB</a>',
+        subdomains: 'abcd'
+      });
       var coords = [];
       var ride = new L.geoJson(null, {
         style: {
@@ -30,22 +34,8 @@
       }).addTo(map);
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
       rideData.on('ready', function() {
-      	//console.log(rideData);
-        //console.log(coords);
-        /*var line = L.polyline(coords, {
-          style: {
-            opacity: 0.1
-          }
-        }).addTo(map);*/
-        //console.log(line);
-        //map.fitBounds(line.getBounds());
         map.fitBounds(rideData.getBounds());
-        var rides = L.polyline(coords, {opacity: 0.5,snakingSpeed: 200});
-		rides.addTo(map).snakeIn();
-      });
-      
-      map.on('click', function(e) {
-        console.log(e.latlng)
+        var rides = L.polyline(coords, {opacity: 0.5,snakingSpeed: 200}).addTo(map).snakeIn();
       });
     </script>
   </body>
