@@ -28,8 +28,8 @@
       rideData.on('ready', function() {
       	console.log(rideData);
         console.log(coords);
-        var c = rideData.getLatLngs();
-        console.log(c);
+        //var c = rideData.getLatLngs();
+        //console.log(c);
         var line = L.polyline(coords).addTo(map);
         map.fitBounds(line.getBounds());
         //map.fitBounds(rideData.getBounds());
