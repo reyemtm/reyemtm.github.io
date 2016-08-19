@@ -40,7 +40,7 @@
         //console.log(line);
         map.fitBounds(line.getBounds());
         //map.fitBounds(rideData.getBounds());
-        var rides = L.polyline(coords, {snakingSpeed: 200});
+        var rides = L.Polyline(coords, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
       });
       
