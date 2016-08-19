@@ -30,13 +30,14 @@
       }).addTo(map);
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
       rideData.on('ready', function() {
-      	console.log(rideData);
-        console.log(coords);
+      	//console.log(rideData);
+        //console.log(coords);
         var line = L.polyline(coords, {
           style: {
             opacity: 0.1
           }
         }).addTo(map);
+        console.log(line);
         map.fitBounds(line.getBounds());
         //map.fitBounds(rideData.getBounds());
         var rides = new L.polyline(coords, {snakingSpeed: 200});
