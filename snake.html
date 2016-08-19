@@ -18,7 +18,7 @@
       var ride = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx").addTo(map);
       ride.on('ready', function() {
       	map.fitBounds(ride.getBounds());
-        var rides = L.layerGroup(ride.toGeoJSON(), {snakingSpeed: 200});
+        var rides = L.layerGroup(ride, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
       });
       
