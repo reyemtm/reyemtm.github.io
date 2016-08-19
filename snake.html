@@ -25,7 +25,7 @@
       rideData.on('ready', function() {
       	console.log(rideData);
         map.fitBounds(ride.getBounds());
-        var rides = L.layerGroup(ride, {snakingSpeed: 200});
+        var rides = L.layerGroup(rideData, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
       });
       
