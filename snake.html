@@ -24,6 +24,7 @@
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx").addTo(map);
       rideData.on('ready', function() {
       	console.log(rideData);
+        console.log(coords);
         map.fitBounds(rideData.getBounds());
         var rides = L.polyline(coords, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
