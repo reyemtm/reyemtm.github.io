@@ -32,7 +32,11 @@
       rideData.on('ready', function() {
       	console.log(rideData);
         console.log(coords);
-        var line = L.polyline(coords).addTo(map);
+        var line = L.polyline(coords, {
+          style: {
+            opacity: 0.1
+          }
+        }).addTo(map);
         map.fitBounds(line.getBounds());
         //map.fitBounds(rideData.getBounds());
         //var rides = new L.polyline(coords, {snakingSpeed: 200});
