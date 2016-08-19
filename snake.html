@@ -23,7 +23,7 @@
       });
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx").addTo(map);
       rideData.on('ready', function() {
-      	console.log(ride);
+      	console.log(rideData);
         map.fitBounds(ride.getBounds());
         var rides = L.layerGroup(ride, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
