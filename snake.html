@@ -23,7 +23,7 @@
       	onEachFeature: function(feature, layer) {
           var c = layer.feature.geometry.coordinates;
           for (i=0; i < c.length; i++) {
-            coords.push([c[i].[1], c[i].[0]]);
+            coords.push([c[i][1], c[i][0]]);
           }
 
         }
