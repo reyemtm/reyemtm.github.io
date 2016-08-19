@@ -18,14 +18,14 @@
       var coords = [];
       var ride = new L.geoJson(null, {
       	onEachFeature: function(feature, layer) {
-        	coords.push()
+        	coords.push(layer.feature.geometry.coords)
         }
       });
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx").addTo(map);
       rideData.on('ready', function() {
       	console.log(rideData);
-        map.fitBounds(ride.getBounds());
-        var rides = L.layerGroup(rideData, {snakingSpeed: 200});
+        map.fitBounds(rideData.getBounds());
+        var rides = L.polyline(coords, {snakingSpeed: 200});
 		rides.addTo(map).snakeIn();
       });
       
