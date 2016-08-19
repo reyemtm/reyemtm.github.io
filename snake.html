@@ -21,13 +21,15 @@
           opacity: 0.1
         },
       	onEachFeature: function(feature, layer) {
-        	coords.push([feature.geometry.coordinates[1],feature.geometry.coordinates[0]])
+        	coords.push(feature.geometry.coordinates);
         }
       }).addTo(map);
       var rideData = omnivore.gpx("/data/gpx/MS_Ride_2014_Day_2.gpx", null, ride);
       rideData.on('ready', function() {
       	console.log(rideData);
         console.log(coords);
+        var c = rideData.getLatLngs();
+        console.log(c);
         var line = L.polyline(coords).addTo(map);
         map.fitBounds(rideData.getBounds());
         //var rides = new L.polyline(coords, {snakingSpeed: 200});
