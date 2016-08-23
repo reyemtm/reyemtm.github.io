@@ -72,10 +72,11 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <!-- Custom Theme JavaScript -->
-<script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
+<!--script src="{{ "/js/clean-blog.min.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/smooth-scroll.js " | prepend: site.baseurl }}"></script>
 <script src="{{ "/js/jquery.bootstrap-autohidingnavbar.js " | prepend: site.baseurl }}"></script>
-<script src="{{ "/js/jekyll-search.js " | prepend: site.baseurl }}"></script>
+<script src="{{ "/js/jekyll-search.js " | prepend: site.baseurl }}"></script-->
+<script src="{{ site.baseurl }}/js/getbounds-scripts.js"></script>
 <script>$("div.navbar-fixed-top").autoHidingNavbar();</script>
 <script>
 $('#menutoggle').on('click',function(){
@@ -102,7 +103,7 @@ $(document).ready(function(){
 // Can also be used with $(document).ready()
 $(window).load(function() {
   $('.flexslider').flexslider({
-    animation: "fade"
+    animation: "slide"
   });
 });
 {% include js/search-init.js %}

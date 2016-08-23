@@ -1,16 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--script type="text/javascript">if(window.location.protocol != "https:"){var url = window.location.href.substr(5);window.location = "https:" + url;}</script-->
-<head>
-{% include head.html %}
-</head>
-<body>
-{%if page.template == true %}
-{% include map-template.html %}
-{{ content }}
-</script>
-{% else %}
-{{ content }}
-{% endif %}
-</body>
+    <head>
+    {% include head.html %}
+    </head>
+    <body>
+    {%if page.template == true %}
+    {% include map-template.html %}
+    {{ content }}
+    </script>
+    {% else %}
+    {{ content }}
+    {% endif %}
+    </body>
 </html>

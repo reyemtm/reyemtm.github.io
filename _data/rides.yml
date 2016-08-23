@@ -1,0 +1,9 @@
+- name: MS Century Ride
+  slug: msride
+  file: "data/gpx/MS_Ride_2014_Day_2.gpx"
+  type: gpx
+
+- name: Bike Path South Columbus
+  slug: colbpath
+  file: "data/gpx/Afternoon_Ride.gpx"
+  type: gpx

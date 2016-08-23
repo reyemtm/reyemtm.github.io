@@ -1,51 +1,48 @@
 <!--Font Awesome CDN and Bootstrap CSS -->
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-<!--Leaflet-03-13-2015 -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-beta-2.css" />
-<script src="{{ site.baseurl }}/map-plugins/leaflet-beta-2.js"></script>
+<!--Leaflet-08-13-2016 -->
+<link rel="stylesheet" href="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.css" />
+<script src="https://npmcdn.com/leaflet@1.0.0-rc.3/dist/leaflet.js"></script>
 <!--Custom Style-->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/ovrdc-style.css" />
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/ovrdc-style.css" />
 <!--Home Button ie Default Extent-->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.defaultextent.css" />
-<script src="{{ site.baseurl }}/map-plugins/leaflet.defaultextent.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/leaflet-defaultextent/leaflet.defaultextent.css" />
+<script src="{{ site.baseurl }}/assets/leaflet-defaultextent/leaflet.defaultextent.js"></script>
 <!--Alternative zoom home plugin
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.zoomhome.css"/>
-<script src="{{ site.baseurl }}/map-plugins/leaflet.zoomhome.min.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/leaflet.zoomhome.css"/>
+<script src="{{ site.baseurl }}/assets/leaflet.zoomhome.min.js"></script>
 <!--Easy Print Plugin Does not work well -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/easyPrint.css" />
-<script src="{{ site.baseurl }}/map-plugins/leaflet.easyPrint.js"></script>
-<script src="{{ site.baseurl }}/map-plugins/jQuery.print.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/easy-print/easyPrint.css" />
+<script src="{{ site.baseurl }}/assets/easy-print/leaflet.easyPrint.js"></script>
+<script src="{{ site.baseurl }}/assets/easy-print/jQuery.print.js"></script>
 <!--locate control from source -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.css" />
-<script src="{{ site.baseurl }}/map-plugins/L.Control.Locate.min.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/leaflet-locate-control/L.Control.Locate.min.css" />
+<script src="{{ site.baseurl }}/assets/leaflet-locate-control/L.Control.Locate.min.js"></script>
 <!--Awesome Marker Plugin -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.css">
-<script src="{{ site.baseurl }}/map-plugins/leaflet.awesome-markers.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css">
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
 <!--Leaflet Hash via Mapbox CDN-->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <!--Google Custom Map -->
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?libraries=placeskey=AIzaSyCpIjH_d3jfNPSwPuyrzy2G9H_Ylb1bEd8"></script>
-<script src="{{ site.baseurl }}/map-plugins/google.js"></script>
-<script src="{{ site.baseurl }}/map-plugins/gglegrey.js"></script>
+<script src="{{ site.baseurl }}/assets/google-tiles/google.js"></script>
+<script src="{{ site.baseurl }}/assets/google-tiles/gglegrey.js"></script>
 <!-- Esri Leaflet Core -->
 <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet-core.js"></script>
 <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet/0.0.1-beta.5/esri-leaflet.js"></script>
 <!-- Esri Leaflet Geocoder -->
-<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/map-plugins/esri-geo/esri-leaflet-geocoder.css" />
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/esri-geo/esri-leaflet-geocoder.css" />
 <script src="https://cdn-geoweb.s3.amazonaws.com/esri-leaflet-geocoder/0.0.1-beta.3/esri-leaflet-geocoder.js"></script>
 <!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <!-- leaflet measure -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet.measure.css" />
-<script src="{{ site.baseurl }}/map-plugins/leaflet.measure.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/measure/leaflet.measure.css" />
+<script src="{{ site.baseurl }}/assets/measure/leaflet.measure.js"></script>
 <!-- leaflet ajax geojson loader -->
-<script src="{{ site.baseurl }}/map-plugins/leaflet.ajax.min.js"></script>
-<!-- leaflet panel layers right side panel -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-panel-layers.css" />
-<script src="{{ site.baseurl }}/map-plugins/leaflet-panel-layers.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-ajax/2.0.0/leaflet.ajax.min.js"></script>
 <!-- leaflet search -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/leaflet-search.min.css" />
-<script src="{{ site.baseurl }}/map-plugins/leaflet-search.min.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/leaflet-search/leaflet-search.min.css" />
+<script src="{{ site.baseurl }}/assets/leaflet-search/leaflet-search.min.js"></script>
 <!--marker cluster -->
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.css' rel='stylesheet' />
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-markercluster/v0.4.0/MarkerCluster.Default.css' rel='stylesheet' />
@@ -57,19 +54,19 @@
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.css' rel='stylesheet' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-label/v0.2.1/leaflet.label.js'></script>
 <!--leaflet sleep-->
-<script src="{{ site.baseurl }}/map-plugins/Leaflet.Sleep.js"></script>
+<script src="{{ site.baseurl }}/assets/leaflet-sleep/Leaflet.Sleep.js"></script>
 <!--leaflet navbar back forward and home buttons simplify adding tiled basemaps -->
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/Leaflet.NavBar.css" />
-<script src="{{ site.baseurl }}/map-plugins/Leaflet.NavBar.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/navbar/Leaflet.NavBar.css" />
+<script src="{{ site.baseurl }}/assets/navbar/Leaflet.NavBar.js"></script>
 <!--leaflet providers simplify adding tiled basemaps -->
-<script src="{{ site.baseurl }}/map-plugins/leaflet-providers.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/leaflet-providers/1.1.15/leaflet-providers.min.js"></script>
 <!--stamen tiles-->
 <script type="text/javascript" src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js?v1.3.0"></script>
-<script src="{{ site.baseurl }}/map-plugins/easy-button.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/L.Control.Sidebar.css" />
-<script src="{{ site.baseurl }}/map-plugins/L.Control.Sidebar.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/Control.FullScreen.css" />
-<script src="{{ site.baseurl }}/map-plugins/Control.FullScreen.js"></script>
-<link rel="stylesheet" href="{{ site.baseurl }}/map-plugins/Control.Loading.css" />
-<script src="{{ site.baseurl }}/map-plugins/Control.Loading.js"></script>
+<script src="{{ site.baseurl }}/assets/easy-button/easy-button.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/leaflet-sidebar/L.Control.Sidebar.css" />
+<script src="{{ site.baseurl }}/assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/fullscreen/Control.FullScreen.css" />
+<script src="{{ site.baseurl }}/assets/fullscreen/Control.FullScreen.js"></script>
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/loading/Control.Loading.css" />
+<script src="{{ site.baseurl }}/assets/loading/Control.Loading.js"></script>
 <link rel="styelsheet" href="{{ site.baseurl }}/css/lightbox.css" />

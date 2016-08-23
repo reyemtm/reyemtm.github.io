@@ -1,5 +1,5 @@
 <!-- flexslider header inspired by development seed -->
-<div class="flexslider">
+<div class="flexslider" style="min-height:492px;">
   <ul class="slides">
     <li>
 		<div class="intro-header" style="background-image: url('{{ site.baseurl }}/images/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}')">
@@ -19,7 +19,7 @@
 			<div class="site-heading">
 			  <h1>{% if post.title %}{{ post.title }}{% else %}{{ site.title }}{% endif %}</h1>
 			  <div class="subheading">{{ post.subtitle }}</div>
-			<a href="{{ post.url | prepend: site.baseurl }}"><button class="btn btn-sm" style="margin-top:20px;color:black;">Read More</button></a>			
+			<a href="{{ post.url | prepend: site.baseurl }}"><button class="btn btn-sm" style="margin-top:20px;color:black;">Read More</button></a>
 			</div>
 		  </div>
 		</div>

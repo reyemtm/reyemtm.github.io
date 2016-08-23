@@ -15,7 +15,7 @@
   <meta property="og:title" content="{{ page.title }}" />
   <meta propety="og:type" content="{% if page.layout == post or page.layout == 'slides' %}article{% else %}website{% endif %}" />
   <meta property="og:site_name" content="{{ site.title }}" />
-  <meta property="og:image" content="{{ site.baseurl }}/{% if page.layout == 'slides'and page.feature-img %}slides/images/{{ page.feature-img }}{% else %}images/{% if page.feature-img %}{{ page.feature-img }}{% else %}{{ site.header-img }}{% endif %}{% endif %}" />
+  <meta property="og:image" content="{{ site.baseurl }}/{% if page.feature-img %}{{ page.feature-img }}{% elsif page.image %}{{ page.image }}{% else %}{{ site.header-img }}{% endif %}" />
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.subtitle %}{{ page.subtitle }}{% else %}{{site.description}}{% endif %}" />
   <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
 
@@ -25,14 +25,11 @@
   <link rel="stylesheet" href="{{ "/css/bootstrap.min.css" | prepend: site.baseurl }}"-->
   <!-- Latest compiled and minified CSS -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-  <!-- Pygments Github CSS -->
-  <link rel="stylesheet" href="{{ "/css/syntax.css" | prepend: site.baseurl }}">
   <!-- Custom Fonts -->
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <!--link href='//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'-->
-  <!--link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'-->
-  <!--link href='//fonts.googleapis.com/css?family=Questrial:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'-->
-  <link href="https://fonts.googleapis.com/css?family=Cabin|Hammersmith+One|Lato:400,700,900" rel="stylesheet">
+  <!--link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Questrial:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Cabin|Hammersmith+One|Lato:400,700,900" rel="stylesheet"-->
   <link href='//fonts.googleapis.com/css?family=Montserrat:400,600,700,800' rel='stylesheet' type='text/css'>
   <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900,700,600' rel='stylesheet' type='text/css'>
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -42,11 +39,8 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   <![endif]-->
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <link rel="stylesheet" href="{{ "/css/flexslider.css" | prepend: site.baseurl }}">
-  <script src="{{ baseurl }}/js/flexslider-min.js"></script>
-  <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script-->
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="{{ "/css/clean-blog.css" | prepend: site.baseurl }}">
+  <!-- Pygments via github, flexslides, clean blog CSS -->
+  <link rel="stylesheet" href="{{ "/css/getbounds-styles.css" | prepend: site.baseurl }}">
   {% if page.map %}
   {% include map.html %}
   {% endif %}
@@ -80,4 +74,5 @@
   {% if page.style %}/*custom page styles*/
   {{page.style}}/*end custom page styles*/{% endif %}
   </style>
+  {% if page.iframe %}<script>!function(){var a=document.createElement("div"),b=document.getElementsByTagName("base")[0]||document.getElementsByTagName("script")[0];a.innerHTML="&shy;<style> iframe { visibility: hidden; } </style>",b.parentNode.insertBefore(a,b),window.onload=function(){a.parentNode.removeChild(a)}}();</script>{% endif %}
 </head>

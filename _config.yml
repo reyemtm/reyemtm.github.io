@@ -18,12 +18,20 @@ mapboxid: "pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg"
 # Build settings
 markdown:	kramdown
 highlighter: rouge
-permalink: /blog/:title
+#permalink: /blog/:title
 paginate: 10
 exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-include: ["_maps", "_pages"]
+include: ["_pages"]
 
 #plugins
 gems:
  - jekyll-sitemap
  - jekyll-paginate
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts" # previously `post` in Jekyll 2.2.
+    values:
+      permalink: /blog/:title

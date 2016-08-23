@@ -12,6 +12,10 @@ permalink: /slides/
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">
     <span class="index-img" style="background-image:url(/images/{{ post.feature-img }});"></span>
+{% elsif post.image %}
+<div class="post-preview" style="min-height:160px;">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+    <span class="index-img" style="background-image:url(/images/{{ post.image }});"></span>
 {% else %}
 <div class="post-preview" style="min-height:160px;">
     <a href="{{ post.url | prepend: site.baseurl }}">

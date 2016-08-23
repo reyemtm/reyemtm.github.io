@@ -1,17 +1,17 @@
 - name: photo-map
   local: true
   css:
-    - map-plugins/Leaflet.Photo.css
-    - map-plugins/thematic-mapping-map.css
+    - leaflet-photo/Leaflet.Photo.css
+    - leaflet-photo/thematic-mapping-map.css
   js:
-    - map-plugins/reqwest.js
-    - map-plugins/Leaflet.Photo.js
+    - leaflet-photo/reqwest.js
+    - leaflet-photo/Leaflet.Photo.js
 
 - name: elevation
   local: true
-  css: map-plugins/elevation/leaflet.elevation-0.0.4.css
-  js: map-plugins/elevation/leaflet.elevation-0.0.4.src.js
+  css: leaflet-elevation/leaflet.elevation-0.0.4.css
+  js: leaflet-elevation/leaflet.elevation-0.0.4.src.js
 
 - name: snake
   local: true
-  js: 
+  js: leaflet-snake/leaflet-snake.min.js
