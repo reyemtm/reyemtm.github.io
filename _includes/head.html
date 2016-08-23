@@ -17,6 +17,7 @@
   <meta property="og:site_name" content="{{ site.title }}" />
   <meta property="og:image" content="{{ site.baseurl }}/{% if page.feature-img %}{{ page.feature-img }}{% elsif page.image %}{{ page.image }}{% else %}{{ site.header-img }}{% endif %}" />
     <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.subtitle %}{{ page.subtitle }}{% else %}{{site.description}}{% endif %}" />
+  <link rel=”shortcut icon” href=”/favicon.ico” type=”image/x-icon” />
   <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
 
   <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
