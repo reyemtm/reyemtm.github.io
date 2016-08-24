@@ -4,10 +4,8 @@ Disallow: /virtual-resume/
 Disallow: /virtual-resume-images/
 Disallow: /sample_maps/
 Disallow: /ohio_murals/
-Disallow: /map-plugins/
 Disallow: /mail/
 Disallow: /data/
-Disallow: /js/
 Disallow: /class/
 Disallow: /fonts/
 Disallow: /img/
