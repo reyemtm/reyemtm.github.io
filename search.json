@@ -15,6 +15,5 @@
       "title"    : "{{ page.title }}",
       "subtitle"      : {% if page.subtitle %}"{{ page.subtitle }}",{% else %}"&nbsp;",{% endif %}
       "url"     : "{{ page.url }}"
-}{% endif %}{% unless forloop.last %},{% endunless %}
-    {% endfor %}
+},{% endif %}{% endfor %}{}
 ]
