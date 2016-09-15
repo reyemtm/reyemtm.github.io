@@ -5,6 +5,7 @@
     <div class="site-heading">
       <h1>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</h1>
       <div class="subheading">{{ page.subtitle }}</div>
+      {% if page.layout == 'tag' %}<div class="subheading">A Few Posts About {{ page.tag | capitalize }}</div>{% endif %}
 		</div>
   </div>
   <a class="scroll" data-speed="800" href="#content"><span class="hidden">Scroll Down</span><i class="fa fa-angle-down fa-2x" style="color:#FFF"></i></a>

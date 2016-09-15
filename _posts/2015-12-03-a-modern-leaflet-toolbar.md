@@ -2,7 +2,7 @@
 layout: post
 title: "A Modern Leaflet Toolbar"
 description: "This is my first iteration of a modern-looking UI for leaflet maps."
-subtitle: "Stlying the Leaflet Control Class to Create a Modern Looking Toolbar"
+subtitle: "Horizontal Toolbars in Leaflet"
 tags: leaflet
 feature-img: modern-ui.gif
 ---

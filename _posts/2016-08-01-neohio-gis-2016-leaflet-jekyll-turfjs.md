@@ -2,8 +2,7 @@
 layout: post
 title: 'Jekyll, Leaflet &amp; TurfJS'
 subtitle: >-
-  Open Source Tools for Web Mapping <br /> A Presentation to the 2016 Northeast
-  Ohio GIS Symposium
+  Open Source Tools for Web Mapping
 date: '2016-08-13'
 description: >-
   Using the power of open source through Jekyll, Leaflet and TurfJS for web
