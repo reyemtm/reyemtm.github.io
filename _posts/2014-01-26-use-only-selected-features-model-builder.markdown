@@ -1,9 +1,11 @@
 ---
+title: Use Only Selected Features in Model Builder
+date: 2014-01-26 21:00:00 Z
+tags:
+- esri
 layout: post
-title:  "Use Only Selected Features in Model Builder"
-date:   2014-01-26 21:00:00
-tags: esri
 ---
+
 This little trick came from GIS stack exchange. To run a model using only selected features, open your model and in the model builder window right click and select 'Model Only Tools/Calculate Value'. In the 'Expression' box type:
 <blockquote>hasSelection ("%your input layer here%")
 </blockquote>

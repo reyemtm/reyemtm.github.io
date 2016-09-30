@@ -1,11 +1,14 @@
 ---
+title: A Modern Leaflet Toolbar
+date: 2015-12-03 00:00:00 Z
+tags:
+- leaflet
 layout: post
-title: "A Modern Leaflet Toolbar"
-description: "This is my first iteration of a modern-looking UI for leaflet maps."
-subtitle: "Horizontal Toolbars in Leaflet"
-tags: leaflet
+description: This is my first iteration of a modern-looking UI for leaflet maps.
+subtitle: Horizontal Toolbars in Leaflet
 feature-img: modern-ui.gif
 ---
+
 This is my take on a more modern looking leaflet toolbar/ui. With [leaflet-search](https://github.com/stefanocudini/leaflet-search) as the base, and a few short lines of css, I have customized the .leaflet-top.leaflet-left class so that it adds tools across the top of the screen, with the sidebar toggle fixed to the left. Additional tools could be added to any of the other default leaflet positions, as those have all been left untouched. Tools could also be loaded via another button on the current toolbar, possibly an L.easyButton with a tools icon, that when clicked reveals additional tools at position: 'topright', for example.
 
 <iframe width="100%" height="450" src="//www.ovrdc.org/apps/ports.html" frameborder="0" allowfullscreen></iframe>

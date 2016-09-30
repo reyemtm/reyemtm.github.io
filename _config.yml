@@ -1,37 +1,44 @@
-# Site settings
+---
 title: getBounds
+timezone: UTC
+collections:
+  posts:
+    title: Posts
+    output: true
+  uploads:
+    title: Uploads
+    output: true
+defaults:
+- scope:
+    path: ''
+    type: posts
+  values:
+    permalink: "/blog/:title/"
 name: getBounds
 header-img: header-2.png
 email: malcolmtmeyer@gmail.com
-description: "A (Jekyll) Blog Exploring Web Maps & Cartography"
-baseurl: "https://getbounds.com"
-testurl: "https://reyemtm.github.io"
-url: "https://getbounds.com"
+description: A (Jekyll) Blog Exploring Web Maps & Cartography
+baseurl: https://getbounds.com
+testurl: https://reyemtm.github.io
+url: https://getbounds.com
 twitter_username: getbounds
-github_username:  reyemtm
+github_username: reyemtm
 google+_usename: malcolmmeyer
-facebook_username:
-linkedin_username:	malcolm-meyer/44/2a2/577
+facebook_username: 
+linkedin_username: malcolm-meyer/44/2a2/577
 author: Malcolm Meyer
-mapboxid: "pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg"
-
-# Build settings
-markdown:	kramdown
+mapboxid: pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg
+markdown: kramdown
 highlighter: rouge
-#permalink: /blog/:title
 paginate: 10
-exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
-include: ["_pages"]
-
-#plugins
+exclude:
+- less
+- node_modules
+- Gruntfile.js
+- package.json
+- README.md
+include:
+- _pages
 gems:
- - jekyll-sitemap
- - jekyll-paginate
-
-defaults:
-  -
-    scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
-    values:
-      permalink: /blog/:title/
+- jekyll-sitemap
+- jekyll-paginate

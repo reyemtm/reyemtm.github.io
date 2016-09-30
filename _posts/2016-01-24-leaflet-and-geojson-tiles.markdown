@@ -1,15 +1,17 @@
 ---
-layout: post
-title: "Leaflet & GeoJson Tiles"
-description: "Improving Leaflet performance using the geojson-vt plugin with two county parcel map examples."
-subtitle: "A County Parcel App: No GIS Server? No Problem!"
+title: Leaflet & GeoJson Tiles
+date: 2016-01-24 00:00:00 Z
 tags:
- - leaflet
- - esri
-published: true
+- leaflet
+- esri
+layout: post
+description: Improving Leaflet performance using the geojson-vt plugin with two county
+  parcel map examples.
+subtitle: 'A County Parcel App: No GIS Server? No Problem!'
 header-img: parcel-wide-2.png
 feature-img: parcel-wide.png
 ---
+
 <h2>The Client-Side County Parcel App</h2>
 
 It all started with this simple question from a county engineer: Would it be possible to create a low-cost or even free parcel viewer? Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons rendered in a map. The geojson-vt plugin expands this limit by converting the polygons into vector tiles. The resulting parcel test app is shown below.

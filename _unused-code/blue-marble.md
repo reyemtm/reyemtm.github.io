@@ -1,9 +1,10 @@
 ---
-layout:     post
-title:      "Big Blue Marble"
-subtitle:   ""
-date:       2015-06-16
+title: Big Blue Marble
+date: 2015-06-16 00:00:00 Z
+layout: post
+subtitle: ''
 ---
+
 We travel upstream in a little airstream
 anywhere that we want to go
 It's our little home away from home

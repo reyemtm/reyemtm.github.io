@@ -1,13 +1,14 @@
 ---
+title: Wilkinson Reserve Web Map
+date: 2016-03-24 00:00:00 Z
 layout: app
 map: leaflet
-title:  "Wilkinson Reserve Web Map"
-date:   "2016-03-24"
 template: true
-center: "38.90543,-80.68725"
+center: 38.90543,-80.68725
 zoom: 10
 basemap: ortho
 ---
+
 var land = omnivore.geojson('/data/land.geojson').addTo(map);
 land.on('ready', function() {
   map.fitBounds(land.getBounds());

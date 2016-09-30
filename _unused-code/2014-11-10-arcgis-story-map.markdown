@@ -1,9 +1,8 @@
 ---
-layout: post
 title: A Hosted ArcGIS Story Map
-date: '2014-11-10 19:50:43'
+date: 2014-11-10 19:50:43 Z
+layout: post
 ---
-
 
 This is an example of a hosted ArcGIS Story Map. Here is the [link.](http://gis.rustyfolk.com/murals/# "Southeast Ohio Murals")
 ---

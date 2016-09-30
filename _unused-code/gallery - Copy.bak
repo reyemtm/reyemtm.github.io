@@ -1,9 +1,10 @@
 ---
+title: Gallery
+permalink: "/gallery/"
 layout: gallery-layout
-title: "Gallery"
-description: "Print & Interactive Map Examples"
-permalink: /gallery/
+description: Print & Interactive Map Examples
 ---
+
 <div class="demo-wrapper">
   <!--// Gallery Markup: A container that the plugin is called upon, and two lists for the images (use images with same aspect ratio) //-->
   <div id="gallery-container">
