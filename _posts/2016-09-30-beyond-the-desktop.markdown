@@ -4,7 +4,7 @@ title: Beyond the Desktop
 date: 2016-09-30 11:44:00 Z
 categories:
 - slides
-description: >- A presentation given at the 2016 Ohio GIS Conference on utilizing open source tools in web mapping. We also explore the trend of tools beyond simply ArcMap and Python for GIS and web mapping.
+description: "A presentation given at the 2016 Ohio GIS Conference on utilizing open source tools in web mapping. We also explore the trend of tools beyond simply ArcMap and Python for GIS and web mapping."
 tags:
 - leaflet
 - slides
