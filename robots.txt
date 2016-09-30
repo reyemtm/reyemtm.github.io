@@ -13,6 +13,6 @@ Disallow: /less/
 Disallow: /apps/
 Disallow: /slides/
 User-agent: Twitterbot
-Disallow: *
+Disallow:
 
 Allow: /images
