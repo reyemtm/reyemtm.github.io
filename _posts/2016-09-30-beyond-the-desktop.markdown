@@ -10,4 +10,4 @@ subtitle: Open Source Experiments in Web Mapping
 image: ogrip-2016.png
 ---
 
-<iframe src="https://www.ovrdc.org/apps/presentations/ogrip-2016/index.html#/"></iframe>
+<iframe src="https://www.ovrdc.org/apps/presentations/ogrip-2016/index.html#/"  allowfullscreen width="100%" height="500" frameBorder="0"></iframe>
