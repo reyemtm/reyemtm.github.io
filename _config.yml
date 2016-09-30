@@ -14,6 +14,7 @@ defaults:
     type: posts
   values:
     permalink: "/blog/:title/"
+    layout: post
 name: getBounds
 header-img: header-2.png
 email: malcolmtmeyer@gmail.com
