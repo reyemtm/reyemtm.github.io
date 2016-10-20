@@ -1,3 +1,33 @@
+/*modal search settings*/
+#search-modal {
+  display: block;
+  background-color: rgba(0, 0, 0, 0.952941);
+  color: white;
+  padding-right: 17px;
+}
+.modal-content {
+  background-color: rgba(0,0,0,.8);
+}
+#search-container .input {
+  color: white;
+  background-color: black;
+  border-bottom: thin solid white;
+  border-left: none;
+  border-radius: 0;
+  font-size: 4rem;
+  border-top: none;
+  border-right: none;
+  padding: 2px;
+  height: 5rem;
+  box-shadow: none;
+}
+#results-container a {
+  font-size: 3rem;
+}
+#results-container .text-muted {
+  font-size: 2rem;
+}
+/*end search styles*/
 .flexslider {
   margin: 0;
   border: none;
