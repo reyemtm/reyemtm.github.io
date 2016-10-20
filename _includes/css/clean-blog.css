@@ -39,6 +39,10 @@
   font-size: 3rem;
   color: white;
 }
+#results-container a:hover,
+#results-container a:focus {
+  color: #7aa482;
+}
 #results-container .text-muted {
   font-size: 2rem;
 }
