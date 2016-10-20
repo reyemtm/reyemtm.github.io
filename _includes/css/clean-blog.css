@@ -1,4 +1,9 @@
 /*modal search settings*/
+#searchModal {
+  background-color: rgba(0, 0, 0, 0.952941);
+  color: white;
+  padding-right: 0!important;
+}
 #searchModal .modal-header {
   border: none;
 }
@@ -9,11 +14,6 @@
   color: white;
   opacity: 1;
   font-size: 5rem;
-}
-#searchModal {
-  background-color: rgba(0, 0, 0, 0.952941);
-  color: white;
-  padding-right: 17px;
 }
 .modal-content {
   background-color: rgba(0,0,0,.8);
