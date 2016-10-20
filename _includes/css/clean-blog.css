@@ -4,8 +4,8 @@
 }
 #searchModal .modal-header .close {
   position: absolute;
-  top: 5px;
-  right: 5px;
+  top: 0;
+  right: 0;
   color: white;
   opacity: 1;
   font-size: 5rem;
@@ -31,6 +31,9 @@
   padding: 2px;
   height: 5rem;
   box-shadow: none;
+}
+#seach-input {
+  margin-top: 20px 
 }
 #results-container a {
   font-size: 3rem;
