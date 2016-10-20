@@ -1,4 +1,12 @@
 /*modal search settings*/
+#searchModal .modal-header .close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: white;
+    opacity: 1;
+    font-size: 5rem;
+}
 #searchModal {
   background-color: rgba(0, 0, 0, 0.952941);
   color: white;
