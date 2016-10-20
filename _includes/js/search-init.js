@@ -11,11 +11,6 @@ SimpleJekyllSearch({
 });
 
 //attempt to autofocus search input field when opened
-/*$('#search').click(function() {
-  setTimeout(function() { document.getElementById('search-input').focus();
-  //console.log('timer');
-  }, 500);
-});*/
 $('#searchModal').on('shown.bs.modal', function () {
     $('#search-input').focus();
 }); 
