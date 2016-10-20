@@ -15,7 +15,7 @@
 .modal-content {
   background-color: rgba(0,0,0,.8);
 }
-#search-container .input {
+#search-input {
   color: white;
   background-color: black;
   border-bottom: thin solid white;
