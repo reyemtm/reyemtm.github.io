@@ -115,7 +115,7 @@
 	z-index: 1000!important;
 }
 /*Make control scroll on small phones*/
-#map { position:absolute; top:0; bottom:0; width:100%; }
+#map { position:relative; top:0; bottom:0; width:100%; }
 @media screen and (max-width: 320px) {
 	.leaflet-control-layers-list {
 		overflow: scroll;
