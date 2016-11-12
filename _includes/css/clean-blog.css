@@ -98,7 +98,7 @@ blockquote p:last-child, blockquote p {
 }
 body {
   font-family: 'Source Sans Pro', san-serif;
-  font-size: 15px;
+  font-size: 18px;
   /*color: #404040;*/
   color: 'black';
   font-weight: 400;
@@ -297,7 +297,7 @@ hr.small {
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 400;
   letter-spacing: 1px;
   color: #fff;
