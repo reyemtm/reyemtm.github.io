@@ -7,6 +7,7 @@ center: 38.90543,-80.68725
 zoom: 10
 basemap: ortho
 ---
+
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', funtion() {
   map.fitBounds(storeData.getBounds());
