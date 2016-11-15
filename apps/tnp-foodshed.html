@@ -1,0 +1,10 @@
+---
+title: TNP Foodshed
+layout: app
+---
+var map = new L.map('map', {
+  center: [39,-85],
+  zoom: 10
+});
+
+var storeData = new omnivore.geojson('/data/tnp-stores.geojson');
