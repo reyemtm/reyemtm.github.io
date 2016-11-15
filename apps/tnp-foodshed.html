@@ -20,8 +20,18 @@ function buildMap() {
         if (feature.properties.Type == "Specialty") {
           return true
         }
+      },
+    onEachFeature: function(feature,layer) {
+      var popup = "";
+      for (var k in layer.feature.properties) {
+        var v = String(layer.feature.properties[k]);
+        popup += '<b>' + k + '</b><br>' + v + '<br>' + '<hr style="margin:5px 0px;">';
       }
+      layer.bindPopup(popup)
+    }
   }).addTo(map);
+
+  
   console.log(storeData);
   map.spin(false);
 }
