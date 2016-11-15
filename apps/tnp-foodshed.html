@@ -7,4 +7,7 @@ var map = new L.map('map', {
   zoom: 10
 });
 
-var storeData = new omnivore.geojson('/data/tnp-stores.geojson');
+var storeData = new omnivore.geojson('/data/tnp/tnp-stores.geojson');
+
+var cnv = new L.geoJson(storeData.toGeoJSON(), {
+}).addTo(map);
