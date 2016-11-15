@@ -10,8 +10,17 @@ basemap: ortho
 
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', function() {
-  map.fitBounds(storeData.getBounds());
+  buildMap();
 });
 
-var cnv = new L.geoJson(storeData.toGeoJSON(), {
-}).addTo(map);
+function buildMap() {
+  map.fitBounds(storeData.getBounds());
+  var cnv = new L.geoJson(storeData.toGeoJSON(), {
+    filter: function(feature) {
+        if (feature.properties.Type == "Specialty") {
+          return true
+        }
+      }
+  }).addTo(map);
+  console.log(storeData)
+}
