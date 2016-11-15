@@ -9,7 +9,7 @@ basemap: ortho
 ---
 
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
-storeData.on('ready', funtion() {
+storeData.on('ready', function() {
   map.fitBounds(storeData.getBounds());
 });
 
