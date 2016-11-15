@@ -5,7 +5,7 @@ map: leaflet
 template: true
 center: 38.90543,-80.68725
 zoom: 10
-basemap: ortho
+basemap: osm
 ---
 
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
@@ -22,5 +22,6 @@ function buildMap() {
         }
       }
   }).addTo(map);
-  console.log(storeData)
+  console.log(storeData);
+  map.spin(false);
 }
