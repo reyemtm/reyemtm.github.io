@@ -25,7 +25,7 @@ url: https://getbounds.com
 twitter_username: getbounds
 github_username: reyemtm
 google+_usename: malcolmmeyer
-facebook_username: 
+facebook_username:
 linkedin_username: malcolm-meyer/44/2a2/577
 author: Malcolm Meyer
 mapboxid: pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg
@@ -41,5 +41,5 @@ exclude:
 include:
 - _pages
 gems:
-- jekyll-sitemap
+#- jekyll-sitemap
 - jekyll-paginate
