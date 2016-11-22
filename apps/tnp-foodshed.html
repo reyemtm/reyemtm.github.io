@@ -88,11 +88,11 @@ function buildMap() {
     var allPointsLG = L.layerGroup();
     overlaysObj["All Points"] = allPointsLG;
     //loading.removeFrom(map);
-    var control = L.control.layers(null, overlaysObj, {
-        collapsed: false,
-    }).addTo(map);
     var zoomcontrol = L.control.zoom({
         position: 'topright'
+    }).addTo(map);
+    var control = L.control.layers(null, overlaysObj, {
+        collapsed: false,
     }).addTo(map);
     var loading = L.Control.loading({
         position: 'topright'
