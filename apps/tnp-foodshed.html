@@ -20,7 +20,7 @@ var types = [];
 function buildMap() {
     map.fitBounds(storeData.getBounds());
     var myStyle = {
-        radius: 6,
+        radius: 8,
         fillOpacity: 1,
         stroke: false,
         weight: 1,
@@ -40,11 +40,11 @@ function buildMap() {
         style: function(feature) {
             switch (feature.properties.Type) {
                 case 'Specialty': return {
-                        color: "red"
+                        color: "purple"
                     };
                 case 'Convenience':
                     return {
-                        color: "yellow"
+                        color: "red"
                     };
                 case 'Grocery':
                     return {
