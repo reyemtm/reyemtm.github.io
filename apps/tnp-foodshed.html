@@ -86,11 +86,13 @@ function buildMap() {
     var allPointsLG = L.layerGroup();
     overlaysObj["All Points"] = allPointsLG;
     map.removeControl(layerControl);
-    map.removeControl(customZoom);
     var control = L.control.layers(basemaps, overlaysObj, {
         collapsed: false
     }).addTo(map);
-    map.addControl(customZoom);
+      var zoomcontrol = L.control.zoom({
+        position: 'topright'
+      }).addTo(map);
+
     // Make sure the Layers Control checkboxes are kept in sync with what is on map.
     // For some reason this control does not sync its checkboxes with the map state by itself, whereas it does with Leaflet 0.7.x?
     map.on("overlayadd overlayremove", function(event) {
