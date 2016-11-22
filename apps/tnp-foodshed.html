@@ -7,6 +7,7 @@ center: 41.2620,-80.8157
 zoom: 13
 basemap: osm
 style: ".leaflet-popup-content{font-size:smaller;}"
+loading: false
 ---
 
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
@@ -85,7 +86,7 @@ function buildMap() {
     // Create an empty LayerGroup that will be used to emulate adding / removing all stores.
     var allPointsLG = L.layerGroup();
     overlaysObj["All Points"] = allPointsLG;
-    map.removeControl(loading);
+    //loading.removeFrom(map);
     var control = L.control.layers(null, overlaysObj, {
         collapsed: false,
     }).addTo(map);
