@@ -70,7 +70,7 @@ function buildMap() {
             }
             stores[type].push(layer);
         }
-    });
+    }).addTo(map);
 
     var overlaysObj = {},
         typeName,
