@@ -36,14 +36,21 @@ function buildMap() {
             return L.circleMarker(latlng, myStyle);
         },
         style: function(feature) {
-            switch (feature.properties.type) {
-                case 'Specialty':
-                    return {
-                        color: "black"
+            switch (feature.properties.Type) {
+                case 'Specialty': return {
+                        color: "red"
                     };
                 case 'Convenience':
                     return {
-                        color: "blue"
+                        color: "yellow"
+                    };
+                case 'Grocery':
+                    return {
+                        color: "orange"
+                    };
+                case 'Supermarket':
+                    return {
+                        color: "green"
                     };
             }
         },
