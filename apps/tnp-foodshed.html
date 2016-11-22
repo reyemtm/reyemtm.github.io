@@ -85,11 +85,14 @@ function buildMap() {
     // Create an empty LayerGroup that will be used to emulate adding / removing all stores.
     var allPointsLG = L.layerGroup();
     overlaysObj["All Points"] = allPointsLG;
-
+    map.removeControl(loading);
     var control = L.control.layers(null, overlaysObj, {
         collapsed: false,
     }).addTo(map);
     var zoomcontrol = L.control.zoom({
+        position: 'topright'
+    }).addTo(map);
+    var loading = L.Control.loading({
         position: 'topright'
     }).addTo(map);
 
