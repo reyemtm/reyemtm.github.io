@@ -9,7 +9,7 @@ basemap: osm
 style: ".leaflet-popup-content{font-size:smaller;}"
 ---
 
-var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
+var storesData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', function() {
     buildMap();
 });
