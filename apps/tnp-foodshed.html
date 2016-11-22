@@ -31,7 +31,7 @@ function buildMap() {
     var stores = {},
         type;
 
-    var allPoints = L.geoJson(storesData.toGeoJSON(), {
+    var allPoints = L.geoJson(storeData.toGeoJSON(), {
         pointToLayer: function(feature, latlng) {
             return L.circleMarker(latlng, myStyle);
         },
