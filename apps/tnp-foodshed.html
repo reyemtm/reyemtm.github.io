@@ -70,7 +70,7 @@ function buildMap() {
             }
             stores[type].push(layer);
         }
-    }).addTo(map);
+    });
 
     var overlaysObj = {},
         typeName,
@@ -87,7 +87,7 @@ function buildMap() {
     // Create an empty LayerGroup that will be used to emulate adding / removing all stores.
     var allPointsLG = L.layerGroup();
     overlaysObj["All Points"] = allPointsLG;
-    //loading.removeFrom(map);
+    allPointsLG.addTo(map);
     var zoomcontrol = L.control.zoom({
         position: 'topright'
     }).addTo(map);
@@ -140,7 +140,7 @@ function buildMap() {
             }
         }
     });
-
+    
 
     console.log(storeData);
     map.spin(false);
