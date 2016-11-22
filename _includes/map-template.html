@@ -217,10 +217,10 @@
     }]
   });
   //globalsearchToggle.addTo(map);
-
+   {% if page.loading != false %}
   var loading = L.Control.loading({
     position: 'topright'
-  }).addTo(map);
+  }).addTo(map);{% endif %}
   var sidebarToggle = L.easyButton({
     states: [{
       stateName: 'open-sidebar', // name the state
