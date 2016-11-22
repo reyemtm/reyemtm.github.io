@@ -37,19 +37,19 @@ function buildMap() {
         style: function(feature) {
             switch (feature.properties.Type) {
                 case 'Specialty': return {
-                        color: "purple"
+                        fillColor: "purple"
                     };
                 case 'Convenience':
                     return {
-                        color: "red"
+                        fillColor: "red"
                     };
                 case 'Grocery':
                     return {
-                        color: "orange"
+                        fillColor: "orange"
                     };
                 case 'Supermarket':
                     return {
-                        color: "green"
+                        fillColor: "green"
                     };
             }
         },
