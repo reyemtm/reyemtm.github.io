@@ -19,11 +19,11 @@ var types = [];
 function buildMap() {                             
   map.fitBounds(storeData.getBounds());
   var cnv = new L.geoJson(storeData.toGeoJSON(), {
-    /*filter: function(feature) {
+    filter: function(feature) {
         if (feature.properties.Type == "Specialty") {
           return true
         }
-      },*/
+      },
     onEachFeature: function(feature,layer) {
       var popup = "";
       for (var k in layer.feature.properties) {
