@@ -94,9 +94,6 @@ function buildMap() {
     var control = L.control.layers(null, overlaysObj, {
         collapsed: false,
     }).addTo(map);
-    var loading = L.Control.loading({
-        position: 'topright'
-    }).addTo(map);
 
     // Make sure the Layers Control checkboxes are kept in sync with what is on map.
     // For some reason this control does not sync its checkboxes with the map state by itself, whereas it does with Leaflet 0.7.x?
