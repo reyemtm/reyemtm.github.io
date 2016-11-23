@@ -213,11 +213,13 @@ map.on('click', function() {
     map.removeLayer(polygonLayer)
   }
 });
-map.on('overlayremove', function() {
-  console.log();
-  console.log(layer.feature.properties.Type);
-
-  if (map.hasLayer(polygonLayer)) {
-    map.removeLayer(polygonLayer)
+map.on('overlayremove', function(e) {
+  console.log(e);
+  console.log(e.layer.feature.properties.Type);
+  var removeL = e.layer.feature.properties.Type;
+  if (removeL != clickedType) {
+    if (map.hasLayer(polygonLayer)) {
+      map.removeLayer(polygonLayer)
+    }
   }
 });
