@@ -29,6 +29,8 @@ storeData.on('ready', function() {
   buildMap();
 });
 
+var polygonGroup = new L.featureGroup().addTo(map);
+
 var point = [];
 
 var myStyle = {
@@ -127,8 +129,8 @@ function buildMap() {
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
-    map.addLayer(polygonLayer);
-    polygonLayer.bringToBack();
+    polygonGroup.addLayer(polygonLayer);
+    polygonGroup.bringToBack();
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
     showPolygons();
    });
