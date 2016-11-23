@@ -128,40 +128,13 @@ function buildMap() {
   stores.on('click', function(e) {
     map.spin(true);
     console.log(e);
-
-    //Add route360 isochrones
-    polygonLayer.clearLayers();
-
-    // you need to define some options for the polygon service
-    var travelOptions = r360.travelOptions();
-
-    // we want to have polygons for 5 to 30 minutes
-    //travelOptions.setTravelTimes([300, 600, 900, 1800]);
-    // we want to have polygons for whatever the user selects 
-    travelOptions.setTravelTimes(travelTimeControl.getValues());
-    console.log(travelTimeControl.getValues());
-    // and we want to go by foot
-    travelOptions.setTravelType('walk');
     var point = new L.marker([e.latlng.lat, e.latlng.lng]);
-    travelOptions.addSource(point);
-    r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
-
-        // add the returned polygons to the polygon layer
-        // and zoom the map to fit the polygons perfectly (the 'true' parameter)
-        polygonLayer.clearAndAddLayers(polygons, true);
-        map.spin(false);
-      },
-
-      //catch errors in console
-      function(status, message) {
-        console.log('error');
-      });
-    });
+    showPolygons();
+   });
 
 
   map.spin(false);
 }
-
 
 // define time steps and colors here. Always use time values of the same distance and not too much time. 
 // the maximum travel time size is 2 hours, 7200s respectivly, higher values will be blocked be the server
@@ -198,3 +171,24 @@ travelTimeControl.onSlideStop(function() {
 
 // add the newly created control to the map
 map.addControl(travelTimeControl);
+
+function showPolygons() {
+
+  // you need to define some options for the polygon service
+  // for more travel options check out the other tutorials
+  var travelOptions = r360.travelOptions();
+  // we only have one source which is the marker we just added
+  travelOptions.addSource(point);
+  // we want to have polygons for whatever the user selects 
+  travelOptions.setTravelTimes(travelTimeControl.getValues());
+  // lets go via bike
+  travelOptions.setTravelType('walk');
+
+  // call the service
+  r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
+
+    // in case there are already polygons on the map/layer clear them
+    // and fit the map to the polygon bounds ('true' parameter)
+    polygonLayer.clearAndAddLayers(polygons, true);
+  });
+}
