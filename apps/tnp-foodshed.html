@@ -128,7 +128,7 @@ function buildMap() {
 
   stores.on('click', function(e) {
     clickedType = [];
-    vat type = e.layer.feature.properties.Type;
+    var type = e.layer.feature.properties.Type;
     clickedType.push[type];
     console.log(clickedType);
     map.spin(true);
