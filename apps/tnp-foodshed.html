@@ -198,8 +198,9 @@ function showPolygons() {
     });
   }
 }
-map.on('overlayremove', function() {
+map.on('overlayremove click', function() {
   if (map.hasLayer(polygonLayer)) {
     map.removeLayer(polygonLayer)
   }
 });
+
