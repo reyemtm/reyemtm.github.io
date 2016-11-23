@@ -13,7 +13,10 @@ description: >-
 legend: >-
   This will be a legend.
 plugins: route360
-style: "div.mi-box.leaflet-traveltime-slider-container-max{height: 20px;}"
+style: "div.mi-box.leaflet-traveltime-slider-container-max{
+    height: 32px;background-color: white;
+    background-image: none;
+    border-radius: 2px;}"
 ---
 
 var stores1 = L.geoJson.ajax('/data/tnp/tnp_stores.geojson', {
