@@ -184,6 +184,7 @@ r360.config.i18n.switchLanguage();
 
 function showPolygons() {
   if (map.hasLayer(polygonLayer)) {
+    map.spin(true);
     // you need to define some options for the polygon service
     // for more travel options check out the other tutorials
     var travelOptions = r360.travelOptions();
@@ -204,7 +205,9 @@ function showPolygons() {
       // and fit the map to the polygon bounds ('true' parameter)
       polygonLayer.clearAndAddLayers(polygons, true);
       console.log("built isochrone");
-      map.spin(false);
+      setTimeout(function() {
+        map.spin(false);
+      }, 50);
     });
   }
 }
