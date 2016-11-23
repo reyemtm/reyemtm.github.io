@@ -58,7 +58,7 @@ function buildMap() {
         return L.circleMarker(latlng, myStyle);
     }
   });
-  var super = new L.geoJson(geojson, {
+  var smarket = new L.geoJson(geojson, {
     filter: function(feature) {
       if (feature.properties.Type == "Supermarket") {
         return true
@@ -72,7 +72,7 @@ function buildMap() {
   stores.addLayer(groc);
   stores.addLayer(spec);
   stores.addLayer(conv);
-  stores.addLayer(super);
+  stores.addLayer(smarket);
 
 }
 
