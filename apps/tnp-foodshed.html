@@ -220,7 +220,7 @@ map.on('overlayremove', function(e) {
     break;
   };
   console.log(removeL);
-  if (removeL != clickedType) {
+  if (removeL == clickedType) {
     if (map.hasLayer(polygonLayer)) {
       map.removeLayer(polygonLayer)
     }
