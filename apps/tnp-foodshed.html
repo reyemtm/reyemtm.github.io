@@ -54,7 +54,7 @@ function buildMap() {
       return L.circleMarker(latlng, myStyle);
     },
     style: {
-      color: "purple"
+      fillColor: "purple"
     }
   });
   var conv = new L.geoJson(geojson, {
@@ -67,7 +67,7 @@ function buildMap() {
       return L.circleMarker(latlng, myStyle);
     },
     style: {
-      color: "red"
+      fillColor: "red"
     }
   });
   var groc = new L.geoJson(geojson, {
@@ -80,7 +80,7 @@ function buildMap() {
       return L.circleMarker(latlng, myStyle);
     },
     style: {
-      color: "orange"
+      fillColor: "orange"
     }
   });
   var smarket = new L.geoJson(geojson, {
@@ -93,7 +93,7 @@ function buildMap() {
       return L.circleMarker(latlng, myStyle);
     },
     style: {
-      color: "green"
+      fillColor: "green"
     }
   });
   var stores = new L.featureGroup().addTo(map);
