@@ -51,8 +51,7 @@ var polygonLayer = r360.leafletPolygonLayer({
   strokeWidth: 5
 });
 //console.log(polygonLayer);
-var polygonGroup = new L.featureGroup();
-polygonGroup.addLayer(polygonLayer);
+
 
 //end route360 pt1
 
@@ -127,12 +126,11 @@ function buildMap() {
   }).addTo(map);
 
   stores.on('click', function(e) {
-    polygonGroup.clearLayers();
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
-    polygonGroup.addTo(map);
+    polygonLayer.addTo(map);
     showPolygons();
    });
 
@@ -179,8 +177,7 @@ map.addControl(travelTimeControl);
 r360.config.i18n.switchLanguage();
 
 function showPolygons() {
-  if (map.hasLayer(polygonGroup)) {
-    polygonLayer.clearAndAddLayers();
+  if (map.hasLayer(polygonLayer)) {
     // you need to define some options for the polygon service
     // for more travel options check out the other tutorials
     var travelOptions = r360.travelOptions();
@@ -200,15 +197,15 @@ function showPolygons() {
       // in case there are already polygons on the map/layer clear them
       // and fit the map to the polygon bounds ('true' parameter)
       polygonLayer.clearAndAddLayers(polygons, true);
-      polygonGroup.bringToBack();
+      polygonLayer.bringToBack();
       console.log("built isochrone");
       map.spin(false);
     });
   }
 }
 map.on('overlayremove click', function() {
-  if (map.hasLayer(polygonGroup)) {
-    map.removeLayer(polygonGroup)
+  if (map.hasLayer(polygonLayer)) {
+    map.removeLayer(polygonLayer)
   }
 });
 
