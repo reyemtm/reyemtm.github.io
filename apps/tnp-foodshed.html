@@ -39,13 +39,11 @@ var myStyle = {
   color: "white"
 };
 
-//Add Route360 DriveTimes
-// set the service key, this is a demo key
-// please contact us and request your own key
+//Add Route360 DriveTimes requirements
 r360.config.serviceKey = 'MTUSGBLIYJL1CFNANOXX';
 r360.config.serviceUrl = 'https://service.route360.net/na_northeast/';
 
-// No we add a layer for the reachability polygons, call the Route360°
+// No we add a layer for the reachability polygons, call the Route360
 // web service and render the resulting polygons on the map:
 // create the empty layer to add the polygons
 var polygonLayer = r360.leafletPolygonLayer({
@@ -110,17 +108,17 @@ function buildMap() {
     }
   });
   var stores = new L.featureGroup().addTo(map);
-  stores.addLayer(groc);
   stores.addLayer(spec);
   stores.addLayer(conv);
+  stores.addLayer(groc);
   stores.addLayer(smarket);
 
   //add all store types to control
   var control = L.control.layers(null, {
     "<span><i class='fa fa-circle' style='color:purple;'></i></span>&nbsp;Convenience": conv,
-    "Specialty": spec,
-    "Grocery": groc,
-    "Supermarket": smarket
+    "<span><i class='fa fa-circle' style='color:red;'></i></span>&nbsp;Specialty": spec,
+    "<span><i class='fa fa-circle' style='color:orange;'></i></span>&nbsp;Grocery": groc,
+    "<span><i class='fa fa-circle' style='color:green;'></i></span>&nbsp;Supermarket": smarket
   }, {
     collapsed: false,
   }).addTo(map);
