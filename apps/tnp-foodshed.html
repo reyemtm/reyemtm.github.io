@@ -129,6 +129,7 @@ function buildMap() {
     travelOptions.setTravelTimes([300, 600, 900, 1800]);
     // and we want to go by foot
     travelOptions.setTravelType('walk');
+    var point = new L.marker([e.latlng.lat, e.latlng.lng]);
     travelOptions.addSource(point);
     r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
 
