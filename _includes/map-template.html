@@ -20,7 +20,8 @@
       <strong>{{ page.notes }}</strong>
       <hr />
     </div>
-    <div id="mapLegend"></div>
+    <div id="mapLegend">
+    {% if page.legend %}{{ page.legend }}{% endif %}</div>
     <div id="mapLegal">
       <em>{{ page.legal }}</em>
     </div>
