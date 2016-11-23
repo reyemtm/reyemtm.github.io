@@ -14,6 +14,7 @@ plugins: route360
 var stores1 = L.geoJson.ajax('/data/tnp/tnp_stores.geojson', {
   onEachFeature: function(feature, layer) {
     console.log(layer.feature.properties.Type)
+  }
 });
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', function() {
