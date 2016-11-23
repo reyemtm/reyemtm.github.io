@@ -73,7 +73,19 @@ function buildMap() {
   stores.addLayer(spec);
   stores.addLayer(conv);
   stores.addLayer(smarket);
+  
+  var control = L.control.layers(null, {
+    {
+      "Convenience": conv,
+      "Specialty": spec,
+      "Grocery": groc,
+      "Supermarket": smarket
+    },
+    {
+      collapsed: false,
+  }).addTo(map);
 
+  map.spin(false);
 }
 
 /*function buildMap() {
