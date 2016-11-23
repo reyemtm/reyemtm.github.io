@@ -72,7 +72,7 @@ function buildMap() {
     },
     style:{color:"green"}
   });
-  var stores = new L.layerGroup().addTo(map);
+  var stores = new L.featureGroup().addTo(map);
   stores.addLayer(groc);
   stores.addLayer(spec);
   stores.addLayer(conv);
