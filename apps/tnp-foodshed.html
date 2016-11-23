@@ -31,6 +31,7 @@ storeData.on('ready', function() {
 });
 
 var point = [];
+var clickedType = [];
 
 var myStyle = {
   radius: 10,
@@ -126,6 +127,9 @@ function buildMap() {
   }).addTo(map);
 
   stores.on('click', function(e) {
+    clickedType = [];
+    clickedType.push[e.layer.feature.properties.Type];
+    console.log(clickedType);
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
