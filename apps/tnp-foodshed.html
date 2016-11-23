@@ -48,7 +48,7 @@ r360.config.serviceUrl = 'https://service.route360.net/na_northeast/';
 // create the empty layer to add the polygons
 var polygonLayer = r360.leafletPolygonLayer({
   strokeWidth: 5
-}).addTo(map);
+});
 console.log(polygonLayer);
 
 //end route360 pt1
@@ -126,6 +126,7 @@ function buildMap() {
   stores.on('click', function(e) {
     map.spin(true);
     console.log(e);
+    map.addLayer(polygonLayer);
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
     showPolygons();
    });
@@ -174,23 +175,24 @@ map.addControl(travelTimeControl);
 r360.config.i18n.switchLanguage();
 
 function showPolygons() {
-  map.spin(true);
-  // you need to define some options for the polygon service
-  // for more travel options check out the other tutorials
-  var travelOptions = r360.travelOptions();
-  // we only have one source which is the marker we just added
-  travelOptions.addSource(point);
-  // we want to have polygons for whatever the user selects 
-  travelOptions.setTravelTimes(travelTimeControl.getValues());
-  // lets go via bike
-  travelOptions.setTravelType('walk');
+  if (map.hasLayer(polygonLayer) {
+    // you need to define some options for the polygon service
+    // for more travel options check out the other tutorials
+    var travelOptions = r360.travelOptions();
+    // we only have one source which is the marker we just added
+    travelOptions.addSource(point);
+    // we want to have polygons for whatever the user selects 
+    travelOptions.setTravelTimes(travelTimeControl.getValues());
+    // lets go via bike
+    travelOptions.setTravelType('walk');
 
-  // call the service
-  r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
+    // call the service
+    r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
 
-    // in case there are already polygons on the map/layer clear them
-    // and fit the map to the polygon bounds ('true' parameter)
-    polygonLayer.clearAndAddLayers(polygons, true);
-    map.spin(false);
-  });
+      // in case there are already polygons on the map/layer clear them
+      // and fit the map to the polygon bounds ('true' parameter)
+      polygonLayer.clearAndAddLayers(polygons, true);
+      map.spin(false);
+    });
+  }
 }
