@@ -11,20 +11,36 @@ loading: false
 plugins: route360
 ---
 
-var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
+  var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', function() {
-    buildMap();
+  buildMap();
 });
 
 var types = [];
 
 var myStyle = {
-    radius: 8,
-    fillOpacity: 0.9,
-    weight: 4,
-    opacity: 0.6,
-    color: "white"
+  radius: 8,
+  fillOpacity: 0.7,
+  weight: 6,
+  opacity: 0.6,
+  color: "white"
 };
+
+//Add Route360 DriveTimes
+// set the service key, this is a demo key
+// please contact us and request your own key
+r360.config.serviceKey = 'MTUSGBLIYJL1CFNANOXX';
+r360.config.serviceUrl = 'https://service.route360.net/na_northeast/';
+
+// No we add a layer for the reachability polygons, call the Route360°
+// web service and render the resulting polygons on the map:
+// create the empty layer to add the polygons
+var polygonLayer = r360.leafletPolygonLayer({
+  strokeWidth: 5
+}).addTo(map);
+console.log(polygonLayer);
+
+//end route360 pt1
 
 function buildMap() {
   var geojson = storeData.toGeoJSON();
@@ -35,9 +51,11 @@ function buildMap() {
       }
     },
     pointToLayer: function(feature, latlng) {
-        return L.circleMarker(latlng, myStyle);
+      return L.circleMarker(latlng, myStyle);
     },
-    style: {color:"purple"}
+    style: {
+      color: "purple"
+    }
   });
   var conv = new L.geoJson(geojson, {
     filter: function(feature) {
@@ -46,9 +64,11 @@ function buildMap() {
       }
     },
     pointToLayer: function(feature, latlng) {
-        return L.circleMarker(latlng, myStyle);
+      return L.circleMarker(latlng, myStyle);
     },
-    style: {color:"red"}
+    style: {
+      color: "red"
+    }
   });
   var groc = new L.geoJson(geojson, {
     filter: function(feature) {
@@ -57,9 +77,11 @@ function buildMap() {
       }
     },
     pointToLayer: function(feature, latlng) {
-        return L.circleMarker(latlng, myStyle);
+      return L.circleMarker(latlng, myStyle);
     },
-    style:{color:"orange"}
+    style: {
+      color: "orange"
+    }
   });
   var smarket = new L.geoJson(geojson, {
     filter: function(feature) {
@@ -68,29 +90,55 @@ function buildMap() {
       }
     },
     pointToLayer: function(feature, latlng) {
-        return L.circleMarker(latlng, myStyle);
+      return L.circleMarker(latlng, myStyle);
     },
-    style:{color:"green"}
+    style: {
+      color: "green"
+    }
   });
   var stores = new L.featureGroup().addTo(map);
   stores.addLayer(groc);
   stores.addLayer(spec);
   stores.addLayer(conv);
   stores.addLayer(smarket);
-  
-  stores.on('click', function(e) {
-    console.log(e)
-  });
-  
+
+  //add all store types to control
   var control = L.control.layers(null, {
-      "Convenience": conv,
-      "Specialty": spec,
-      "Grocery": groc,
-      "Supermarket": smarket
-    },
-    {
-      collapsed: false,
+    "Convenience": conv,
+    "Specialty": spec,
+    "Grocery": groc,
+    "Supermarket": smarket
+  }, {
+    collapsed: false,
   }).addTo(map);
+
+  stores.on('click', function(e) {
+    console.log(e);
+
+    //Add route360 isochrones
+    polygonLayer.clearLayers();
+
+    // you need to define some options for the polygon service
+    var travelOptions = r360.travelOptions();
+
+    // we want to have polygons for 5 to 30 minutes
+    travelOptions.setTravelTimes([300, 600, 900, 1800]);
+    // and we want to go by foot
+    travelOptions.setTravelType('walk');
+    travelOptions.addSource(point);
+    r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
+
+        // add the returned polygons to the polygon layer
+        // and zoom the map to fit the polygons perfectly (the 'true' parameter)
+        polygonLayer.clearAndAddLayers(polygons, true);
+      },
+
+      //catch errors in console
+      function(status, message) {
+        console.log('error');
+      });
+    });
+
 
   map.spin(false);
 }
@@ -217,53 +265,5 @@ function buildMap() {
     map.spin(false);
 }
 
-//Add Route360 DriveTimes
-// set the service key, this is a demo key
-// please contact us and request your own key
-r360.config.serviceKey = 'MTUSGBLIYJL1CFNANOXX';
-r360.config.serviceUrl = 'https://service.route360.net/na_northeast/';
 
-// No we add a layer for the reachability polygons, call the Route360°
-// web service and render the resulting polygons on the map:
-// create the layer to add the polygons
-var polygonLayer = r360.leafletPolygonLayer({
-    strokeWidth: 5
-}).addTo(map);
-console.log(polygonLayer);
-
-var point = [];
-map.on('click', function(e) {
-    polygonLayer.clearLayers();
-    //console.log(e.latlng);
-    if (map.hasLayer(point)) {
-        map.removeLayer(point);
-    };
-    point = L.circleMarker([e.latlng.lat, e.latlng.lng], {
-        radius: 12,
-        fillColor: "red",
-        fillOpacity: 0.7,
-        weight: 10,
-        color: "white"
-    }).addTo(map);
-
-    // you need to define some options for the polygon service
-    // for more travel options check out the other tutorials
-    var travelOptions = r360.travelOptions();
-    // we only have one source which is the marker we just added
-    //travelOptions.addSource(marker);
-    // we want to have polygons for 5 to 30 minutes
-    travelOptions.setTravelTimes([300, 600, 900, 1200, 1500, 1800]);
-    // and we want to go by foot
-    travelOptions.setTravelType('walk');
-    travelOptions.addSource(point);
-    r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
-
-            // add the returned polygons to the polygon layer
-            // and zoom the map to fit the polygons perfectly (the 'true' parameter)
-            polygonLayer.clearAndAddLayers(polygons, true);
-        },
-        function(status, message) {
-            console.log('error');
-        });
-});
 */
