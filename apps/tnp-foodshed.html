@@ -210,6 +210,8 @@ function showPolygons() {
   }
 }
 map.on('overlayremove click', function() {
+  console.log(layer);
+  console.log(name);
   if (map.hasLayer(polygonLayer)) {
     map.removeLayer(polygonLayer)
   }
