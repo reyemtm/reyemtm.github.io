@@ -11,7 +11,7 @@ loading: false
 plugins: route360
 ---
 
-  var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
+var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', function() {
   buildMap();
 });
@@ -96,7 +96,11 @@ function buildMap() {
       fillColor: "green"
     }
   });
-  var stores = new L.featureGroup().addTo(map);
+  var stores = new L.featureGroup(null, {
+    onEachFeature: function(feature) {
+      console.log(feature.properties.Type)
+    }
+  }).addTo(map);
   stores.addLayer(groc);
   stores.addLayer(spec);
   stores.addLayer(conv);
@@ -125,7 +129,6 @@ function buildMap() {
     travelOptions.setTravelTimes([300, 600, 900, 1800]);
     // and we want to go by foot
     travelOptions.setTravelType('walk');
-    var point = new L.marker([e.latlng.lng, e.latlng.lat]);
     travelOptions.addSource(point);
     r360.PolygonService.getTravelTimePolygons(travelOptions, function(polygons) {
 
