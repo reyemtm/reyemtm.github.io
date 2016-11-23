@@ -118,6 +118,7 @@ function buildMap() {
   }).addTo(map);
 
   stores.on('click', function(e) {
+    map.spin(true);
     console.log(e);
 
     //Add route360 isochrones
@@ -137,6 +138,7 @@ function buildMap() {
         // add the returned polygons to the polygon layer
         // and zoom the map to fit the polygons perfectly (the 'true' parameter)
         polygonLayer.clearAndAddLayers(polygons, true);
+        map.spin(false);
       },
 
       //catch errors in console
