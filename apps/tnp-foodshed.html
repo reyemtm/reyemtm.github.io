@@ -214,10 +214,9 @@ map.on('click', function() {
     map.removeLayer(polygonLayer)
   }
 });
-map.on('overlayremove', function(e) {
-  console.log(e);
-  console.log(layer);
-  console.log(name);
+map.on('overlayremove', function() {
+  console.log();
+  console.log(layer.feature.properties.Type);
 
   if (map.hasLayer(polygonLayer)) {
     map.removeLayer(polygonLayer)
