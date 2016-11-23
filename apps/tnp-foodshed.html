@@ -127,7 +127,7 @@ function buildMap() {
   }).addTo(map);
 
   stores.on('click', function(e) {
-    //polygonGroup.clearLayers();
+    polygonGroup.clearLayers();
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
@@ -180,13 +180,17 @@ r360.config.i18n.switchLanguage();
 
 function showPolygons() {
   if (map.hasLayer(polygonGroup)) {
+    polygonLayer.clearAndAddLayers();
     // you need to define some options for the polygon service
     // for more travel options check out the other tutorials
     var travelOptions = r360.travelOptions();
+    
     // we only have one source which is the marker we just added
     travelOptions.addSource(point);
+    
     // we want to have polygons for whatever the user selects 
     travelOptions.setTravelTimes(travelTimeControl.getValues());
+    
     // lets go via bike
     travelOptions.setTravelType('walk');
 
@@ -196,7 +200,6 @@ function showPolygons() {
       // in case there are already polygons on the map/layer clear them
       // and fit the map to the polygon bounds ('true' parameter)
       polygonLayer.clearAndAddLayers(polygons, true);
-      //polygonGroup.addLayer(polygonLayer);
       polygonGroup.bringToBack();
       console.log("built isochrone");
       map.spin(false);
