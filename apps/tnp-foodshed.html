@@ -127,10 +127,12 @@ function buildMap() {
   }).addTo(map);
 
   stores.on('click', function(e) {
+    polygonGroup.clearLayers();
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
+    polygonGroup.addTo(map);
     showPolygons();
    });
 
@@ -177,7 +179,6 @@ map.addControl(travelTimeControl);
 r360.config.i18n.switchLanguage();
 
 function showPolygons() {
-      polygonGroup.addTo(map);
   if (map.hasLayer(polygonGroup)) {
     // you need to define some options for the polygon service
     // for more travel options check out the other tutorials
