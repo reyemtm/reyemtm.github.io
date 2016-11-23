@@ -217,7 +217,7 @@ map.on('overlayremove', function(e) {
   console.log(e);
   for (id in e.layer._layers) {
     console.log(id);
-    console.log(e.layer._layers[id])
+    console.log(e.layer._layers[id].feature.properties.Type)
   };
   console.log(name);
   var removeL = ""//e.layer._layers[0].feature.properties.Type;
