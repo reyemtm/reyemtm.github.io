@@ -31,7 +31,7 @@ storeData.on('ready', function() {
 });
 
 var point = [];
-var clickedType = [];
+var clickedType = "";
 
 var myStyle = {
   radius: 10,
@@ -129,7 +129,8 @@ function buildMap() {
   stores.on('click', function(e) {
     clickedType = [];
     var type = e.layer.feature.properties.Type;
-    clickedType.push[type];
+    clickedType = type;
+    console.log(type);
     console.log(clickedType);
     map.spin(true);
     console.log(e);
