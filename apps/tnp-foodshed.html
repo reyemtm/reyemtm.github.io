@@ -138,7 +138,8 @@ function buildMap() {
     // we want to have polygons for 5 to 30 minutes
     //travelOptions.setTravelTimes([300, 600, 900, 1800]);
     // we want to have polygons for whatever the user selects 
-    travelOptions.setTravelTimes(travelTimeControl.getValues());    
+    travelOptions.setTravelTimes(travelTimeControl.getValues());
+    console.log(travelTimeControl.getValues());
     // and we want to go by foot
     travelOptions.setTravelType('walk');
     var point = new L.marker([e.latlng.lat, e.latlng.lng]);
