@@ -131,13 +131,14 @@ function buildMap() {
     map.setView([e.latlng.lat, e.latlng.lng]);
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
     polygonLayer.addTo(map);
+    polygonLayer.clearAndAddLayers();
     showPolygons();
    });
 
   map.spin(false);
 }
 
-// define time steps and colors here. Always use time values of the same distance and not too much time. 
+// define time steps and colors here. Always use time values of the same distance and not too much time.
 // the maximum travel time size is 2 hours, 7200s respectivly, higher values will be blocked be the server
 // travel times are defined in seconds the initial values in minutes... Also the label may be altered here
 var travelTimeControl = r360.travelTimeControl({
@@ -181,13 +182,13 @@ function showPolygons() {
     // you need to define some options for the polygon service
     // for more travel options check out the other tutorials
     var travelOptions = r360.travelOptions();
-    
+
     // we only have one source which is the marker we just added
     travelOptions.addSource(point);
-    
-    // we want to have polygons for whatever the user selects 
+
+    // we want to have polygons for whatever the user selects
     travelOptions.setTravelTimes(travelTimeControl.getValues());
-    
+
     // lets go via bike
     travelOptions.setTravelType('walk');
 
@@ -207,4 +208,3 @@ map.on('overlayremove click', function() {
     map.removeLayer(polygonLayer)
   }
 });
-
