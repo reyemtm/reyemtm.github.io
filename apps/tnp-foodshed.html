@@ -128,6 +128,7 @@ function buildMap() {
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
     map.addLayer(polygonLayer);
+    polygonLayer.bringToBack();
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
     showPolygons();
    });
