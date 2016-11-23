@@ -174,7 +174,7 @@ map.addControl(travelTimeControl);
 r360.config.i18n.switchLanguage();
 
 function showPolygons() {
-
+  map.spin(true);
   // you need to define some options for the polygon service
   // for more travel options check out the other tutorials
   var travelOptions = r360.travelOptions();
@@ -191,5 +191,6 @@ function showPolygons() {
     // in case there are already polygons on the map/layer clear them
     // and fit the map to the polygon bounds ('true' parameter)
     polygonLayer.clearAndAddLayers(polygons, true);
+    map.spin(false);
   });
 }
