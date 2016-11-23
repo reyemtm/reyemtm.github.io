@@ -11,6 +11,10 @@ loading: false
 plugins: route360
 ---
 
+var stores1 = L.geoJson.ajax('/data/tnp/tnp_stores.geojson', {
+  onEachFeature: function(feature) {
+    console.log(feature.properties.Type)
+});
 var storeData = new omnivore.geojson('/data/tnp/tnp_stores.geojson');
 storeData.on('ready', function() {
   buildMap();
@@ -19,7 +23,7 @@ storeData.on('ready', function() {
 var types = [];
 
 var myStyle = {
-  radius: 10,
+  radius: 8,
   fillOpacity: 0.7,
   weight: 6,
   opacity: 0.6,
@@ -96,11 +100,7 @@ function buildMap() {
       fillColor: "green"
     }
   });
-  var stores = new L.featureGroup(null, {
-    onEachFeature: function(feature) {
-      console.log(feature.properties.Type)
-    }
-  }).addTo(map);
+  var stores = new L.featureGroup().addTo(map);
   stores.addLayer(groc);
   stores.addLayer(spec);
   stores.addLayer(conv);
