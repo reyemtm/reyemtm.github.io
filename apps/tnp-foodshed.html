@@ -129,9 +129,6 @@ function buildMap() {
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
-    polygonGroup.addTo(map);
-    polygonGroup.addLayer(polygonLayer);
-    polygonGroup.bringToBack();
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
     showPolygons();
    });
@@ -180,6 +177,7 @@ map.addControl(travelTimeControl);
 r360.config.i18n.switchLanguage();
 
 function showPolygons() {
+      polygonGroup.addTo(map);
   if (map.hasLayer(polygonGroup)) {
     // you need to define some options for the polygon service
     // for more travel options check out the other tutorials
@@ -197,8 +195,9 @@ function showPolygons() {
       // in case there are already polygons on the map/layer clear them
       // and fit the map to the polygon bounds ('true' parameter)
       polygonLayer.clearAndAddLayers(polygons, true);
-      console.log("built isochrone");
+      polygonGroup.addLayer(polygonLayer);
       polygonGroup.bringToBack();
+      console.log("built isochrone");
       map.spin(false);
     });
   }
