@@ -209,9 +209,16 @@ function showPolygons() {
     });
   }
 }
-map.on('overlayremove click', function() {
+map.on('click', function() {
+  if (map.hasLayer(polygonLayer)) {
+    map.removeLayer(polygonLayer)
+  }
+});
+map.on('overlayremove', function(e) {
+  console.log(e);
   console.log(layer);
   console.log(name);
+
   if (map.hasLayer(polygonLayer)) {
     map.removeLayer(polygonLayer)
   }
