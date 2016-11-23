@@ -29,7 +29,7 @@ storeData.on('ready', function() {
   buildMap();
 });
 
-var types = [];
+var point = [];
 
 var myStyle = {
   radius: 10,
@@ -126,7 +126,7 @@ function buildMap() {
   stores.on('click', function(e) {
     map.spin(true);
     console.log(e);
-    var point = new L.marker([e.latlng.lat, e.latlng.lng]);
+    point = new L.marker([e.latlng.lat, e.latlng.lng]);
     showPolygons();
    });
 
