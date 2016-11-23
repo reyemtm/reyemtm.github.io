@@ -126,6 +126,7 @@ function buildMap() {
   stores.on('click', function(e) {
     map.spin(true);
     console.log(e);
+    map.setView([e.latlng.lat, e.latlng.lng]);
     map.addLayer(polygonLayer);
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
     showPolygons();
