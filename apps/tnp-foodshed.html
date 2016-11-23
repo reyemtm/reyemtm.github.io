@@ -29,7 +29,7 @@ storeData.on('ready', function() {
   buildMap();
 });
 
-var polygonGroup = new L.featureGroup().addTo(map);
+var polygonGroup = new L.featureGroup();
 
 var point = [];
 
@@ -129,6 +129,7 @@ function buildMap() {
     map.spin(true);
     console.log(e);
     map.setView([e.latlng.lat, e.latlng.lng]);
+    polygonGroup.addTo(map);
     polygonGroup.addLayer(polygonLayer);
     polygonGroup.bringToBack();
     point = new L.marker([e.latlng.lat, e.latlng.lng]);
@@ -203,8 +204,8 @@ function showPolygons() {
   }
 }
 map.on('overlayremove click', function() {
-  if (map.hasLayer(polygonLayer)) {
-    map.removeLayer(polygonLayer)
+  if (map.hasLayer(polygonGroup)) {
+    map.removeLayer(polygonGroup)
   }
 });
 
