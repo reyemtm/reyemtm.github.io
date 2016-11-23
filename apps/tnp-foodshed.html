@@ -215,9 +215,9 @@ map.on('click', function() {
 });
 map.on('overlayremove', function(e) {
   console.log(e);
-  console.log(e.layer._layers);
-//  console.log(e.layer._layers[0]);
-  var removeL = e.layer._layers[0].feature.properties.Type;
+  for (name in e.layer._layers) break;
+  console.log(name);
+  var removeL = ""//e.layer._layers[0].feature.properties.Type;
   if (removeL != clickedType) {
     if (map.hasLayer(polygonLayer)) {
       map.removeLayer(polygonLayer)
