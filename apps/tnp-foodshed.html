@@ -8,9 +8,11 @@ zoom: 13
 basemap: osm
 style: ".leaflet-popup-content{font-size:smaller;}"
 loading: false
-plugins: route360
 description >-
   Part of the TNP Foodshed Project, this app visualizes walking times to food-related stores in Warren, Ohio.
+legend: >-
+  This will be a legend.
+plugins: route360
 ---
 
 var stores1 = L.geoJson.ajax('/data/tnp/tnp_stores.geojson', {
