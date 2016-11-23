@@ -160,7 +160,7 @@ var polygonLayer = r360.leafletPolygonLayer({
 console.log(polygonLayer);
 
 var point = [];
-map.on('click', function(e) {
+allpoints.on('click', function(e) {
   polygonLayer.clearLayers();
   //console.log(e.latlng);
   if (map.hasLayer(point)) {
