@@ -12,6 +12,7 @@ plugins:
 - photo-map
 map: leaflet
 header-img: header-vacay-2.jpg
+style: "<style>#map{position:relative;}</style>"
 ---
 
 <div id="map">
