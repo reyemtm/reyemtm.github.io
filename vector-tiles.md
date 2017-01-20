@@ -1,6 +1,7 @@
 ## OVRDC Workflow
 
- 1. Export from ArcMap (shapefiles or feature layers) to GeoJSON via [esri2open](https://github.com/project-open-data/esri2open).
+ 1. Export GIS data from ArcMap (shapefiles or feature layers) to GeoJSON via [esri2open](https://github.com/project-open-data/esri2open).
+ 1b. Optionally export a csv file from the attribute table of the original data with searchable values and a unique ID, and convert to json via ---- forgot the name of the tool, there are many.
  2. Transfer the GeoJSON to our Ubuntu 16.10 computer which we use for something else, and convert the GeoJSON to vector tiles via [tippecanoe](https://github.com/mapbox/tippecanoe).
  3. Copy the mbtiles file to our Digital Ocean Node-JS/Ubuntu/NGINX server.
  4. Style the data with Mapbox GL JS and serve the maps on our normal web server via static HTML, CSS and JavaScript, using Google's Material Design Light framework.
@@ -17,7 +18,7 @@ There are many videos on youtube by mapbox and others on vector tiles. I was ins
 https://github.com/ratrun/mbtiles-server (OVRDC is using a modified version)
 
 Serves vector and raster tiles from mbtiles file.
-This is what OVRDC is using on the smallest digital ocean instance 512 MB 1 core Ubuntu 16.04, NGINX, Node-JS, following Tobin Bradley's example.
+This is what OVRDC is using on the smallest digital ocean instance 512 MB/1 core Ubuntu 16.04, NGINX, Node-JS, following Tobin Bradley's example.
 
 ### Tileserver PHP, Tileserver GL, Tileserver-light
 https://github.com/klokantech/tileserver-gl (newer)
