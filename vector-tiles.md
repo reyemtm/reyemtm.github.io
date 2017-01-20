@@ -3,7 +3,7 @@
  1. Export GIS data from ArcMap (shapefiles or feature layers) to GeoJSON via [esri2open](https://github.com/project-open-data/esri2open).
  2. Optionally export a csv file from the attribute table of the original data with searchable values and a unique ID, and convert to json via ---- forgot the name of the tool, there are many.
  3. Transfer the GeoJSON to our Ubuntu 16.10 computer which we use for something else, and convert the GeoJSON to vector tiles via [tippecanoe](https://github.com/mapbox/tippecanoe).
- 4. Copy the mbtiles file to our Digital Ocean Node-JS/Ubuntu/NGINX server.
+ 4. Copy the mbtiles file to our Digital Ocean Node-JS/Ubuntu/NGINX mbtiles-server - link below.
  5. Style the data with Mapbox GL JS and serve the maps on our normal web server via static HTML, CSS and JavaScript, using Google's Material Design Light framework.
  
 I am thinking steps 3, 4 and 5 could be automated server-side by simply copying the raw shapefile onto the server, then have the server watch for new files in that directory, do the conversions and copy to the tile server data folder.
