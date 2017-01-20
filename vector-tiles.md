@@ -12,27 +12,23 @@ I am thinking steps 3, 4 and 5 could be automated server-side by simply copying 
 
 ## Info, Press, About
 
-http://www.gartrellgroup.com/vector-tiles-for-all/
+[The Gartrell Group](http://www.gartrellgroup.com/vector-tiles-for-all/)
 
 There are many videos on youtube by mapbox and others on vector tiles. I was inspired by the videos by Tobin Bradley.
 
 ## 'Servers' OVRDC has tried
 
-### mbtiles-server node-js
+### [mbtiles-server node-js](https://github.com/ratrun/mbtiles-server) (OVRDC is using a modified version)
+
 [Parcel Viewer Example](https://www.ovrdc.org/apps/mapbox-parcel-viewer.html)
-https://github.com/ratrun/mbtiles-server (OVRDC is using a modified version)
 
 Serves vector and raster tiles from mbtiles file.
 This is what OVRDC is using on the smallest digital ocean instance 512 MB/1 core Ubuntu 16.04, NGINX, Node-JS, following Tobin Bradley's example.
 
-### Tileserver PHP, Tileserver GL, Tileserver-light
+### [Tileserver PHP](https://github.com/klokantech/tileserver-php), [Tileserver GL](https://github.com/klokantech/tileserver-gl), Tileserver-light
 [Parcel Viewer Example - Built In](https://www.ovrdc.org/apps/tiles/#sci-parcels/mapboxgl)
 
 [Index Page Built In](https://www.ovrdc.org/apps/tiles)
-
-https://github.com/klokantech/tileserver-gl (newer)
-
-https://github.com/klokantech/tileserver-php (older)
 
 Serves vector and raster tiles from mbtiles.
 Tileserver GL can optionally render raster tiles from vector tiles via pre configured styles, and generate high-res static images.
@@ -44,10 +40,8 @@ Renders and serves cached and on the fly raster and vector tiles from a PostGIS 
 
 ## Other Servers I have not tried due to needing the data in a PostGIS database
 
-### Tegola
-http://tegola.io/
+### [Tegola](http://tegola.io/)
 Generates vector tiles on the fly from PostGIS, written in GO
 
-### Tilestache
-http://tilestache.org/ - Not updated in over 2 years
+### [Tilestache](http://tilestache.org/) - Not updated in over 2 years
 Serves raster tiles from mbtiles, generates raster and vector tiles on the fly from ? sources
