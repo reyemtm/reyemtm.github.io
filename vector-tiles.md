@@ -25,6 +25,14 @@ There are many videos on youtube by mapbox and others on vector tiles. I was ins
 Serves vector and raster tiles from mbtiles file.
 This is what OVRDC is using on the smallest digital ocean instance 512 MB/1 core Ubuntu 16.04, NGINX, Node-JS, following Tobin Bradley's example.
 
+#### Questions
+> What capabilities can the Node server provide? How do these align with what counties want in a map (parcel or anything else) viewer?
+> * Print Support
+> * Export as xyz format support
+> * Export attributes as CSV
+> * Static Image
+> * Others??
+
 ### [Tileserver PHP](https://github.com/klokantech/tileserver-php), [Tileserver GL](https://github.com/klokantech/tileserver-gl), Tileserver-GL-light
 [Parcel Viewer Example - Built In](https://www.ovrdc.org/apps/tiles/#sci-parcels/mapboxgl)
 
