@@ -6,7 +6,7 @@
  4. Copy the mbtiles file to our Digital Ocean Node-JS/Ubuntu/NGINX server.
  5. Style the data with Mapbox GL JS and serve the maps on our normal web server via static HTML, CSS and JavaScript, using Google's Material Design Light framework.
  
- I am thinking steps 3, 4 and 5 could be automated server-side by simply copying the raw shapefile onto the server, then have the server watch for new files in that directory, do the conversions and copy to the tile server data folder.
+I am thinking steps 3, 4 and 5 could be automated server-side by simply copying the raw shapefile onto the server, then have the server watch for new files in that directory, do the conversions and copy to the tile server data folder.
 
 ## Info, Press, About
 
