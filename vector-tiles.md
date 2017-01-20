@@ -1,4 +1,6 @@
-## OVRDC Workflow
+# Vector Tiles at OVRDC
+
+## OVRDC ArcMap to Vector Tile Workflow
 
  1. Export GIS data from ArcMap (shapefiles or feature layers) to GeoJSON via [esri2open](https://github.com/project-open-data/esri2open).
  2. Optionally export a csv file from the attribute table of the original data with searchable values and a unique ID, and convert to json via ---- forgot the name of the tool, there are many.
