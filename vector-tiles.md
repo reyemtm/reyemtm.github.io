@@ -17,19 +17,22 @@ There are many videos on youtube by mapbox and others on vector tiles. I was ins
 ## 'Servers' OVRDC has tried
 
 ### mbtiles-server node-js
+[Parcel Viewer Example](https://www.ovrdc.org/apps/mapbox-parcel-viewer.html)
 https://github.com/ratrun/mbtiles-server (OVRDC is using a modified version)
 
 Serves vector and raster tiles from mbtiles file.
 This is what OVRDC is using on the smallest digital ocean instance 512 MB/1 core Ubuntu 16.04, NGINX, Node-JS, following Tobin Bradley's example.
 
 ### Tileserver PHP, Tileserver GL, Tileserver-light
+[Parcel Viewer Example - Built In](https://www.ovrdc.org/apps/tiles/#sci-parcels/mapboxgl)
+[Index Page Built In](https://www.ovrdc.org/apps/tiles)
 https://github.com/klokantech/tileserver-gl (newer)
 https://github.com/klokantech/tileserver-php (older)
 
 Serves vector and raster tiles from mbtiles.
 Tileserver GL can optionally render raster tiles from vector tiles via pre configured styles, and generate high-res static images.
 
-OVRDC has the php version installed on our web server at https://www.ovrdc.org/apps/tiles, the performance of vector tile unpacking from the mbtiles file is not very good - try the open layers viewer.
+OVRDC has the php version installed on our web server at the link above, the performance of vector tile unpacking from the mbtiles file is not very good - try the open layers viewer. I'm not sure if this is due to poor cpu performance, limited memory, or what. It is running on a shared Cent OS Apache server, maybe 512 MB memory, not sure of the cpu.
 
 ## Other Servers I havent tried
 
