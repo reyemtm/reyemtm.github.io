@@ -6,7 +6,7 @@
  4. Copy the mbtiles file to our Digital Ocean Node-JS/Ubuntu/NGINX mbtiles-server - link below.
  5. Style the data with Mapbox GL JS and serve the maps on our normal web server via static HTML, CSS and JavaScript, using Google's Material Design Light framework.
  
-I am thinking steps 3, 4 and 5 could be automated server-side by simply copying the raw shapefile onto the server, then have the server watch for new files in that directory, do the conversions and copy to the tile server data folder.
+I am thinking steps 3, 4 and 5 could be automated server-side by simply copying the raw shapefile onto the server, then have the server watch for new files in that directory, do the conversions and copy/overwrite the mbtiles file to the server data folder. The eventual layer name is the same as the file name. The server could also copy/overwrite the geojson to an 'available downloads' folder so that users could have access to the raw data if they want and if the client wants. Vector tiles are a lossy version of the geography.
 
 ## Info, Press, About
 
