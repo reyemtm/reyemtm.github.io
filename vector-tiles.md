@@ -1,3 +1,10 @@
+## OVRDC Workflow
+
+ 1. Export from ArcMap (shapefiles or feature layers) to GeoJSON via [esri2open](https://github.com/project-open-data/esri2open).
+ 2. Transfer the GeoJSON to our Ubuntu 16.10 computer which we use for something else, and convert the GeoJSON to vector tiles via [tippecanoe](https://github.com/mapbox/tippecanoe).
+ 3. Copy the mbtiles file to our Digital Ocean Node-JS/Ubuntu/NGINX server.
+ 4. Style the data with Mapbox GL JS and serve the maps on our normal web server via static HTML, CSS and JavaScript, using Google's Material Design Light framework.
+
 ## Info, Press, About
 
 http://www.gartrellgroup.com/vector-tiles-for-all/
