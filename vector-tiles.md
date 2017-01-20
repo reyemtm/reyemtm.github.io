@@ -35,9 +35,12 @@ https://github.com/klokantech/tileserver-php (older)
 Serves vector and raster tiles from mbtiles.
 Tileserver GL can optionally render raster tiles from vector tiles via pre configured styles, and generate high-res static images.
 
-OVRDC has the php version installed on our web server at the link above, the performance of vector tile unpacking from the mbtiles file is not very good - try the open layers viewer. I'm not sure if this is due to poor cpu performance, limited memory, or what. It is running on a shared Cent OS Apache server, maybe 512 MB memory, not sure of the cpu.
+OVRDC has the php version installed on our web server at the link above, the performance of vector tile unpacking from the mbtiles file is not very good - try the open layers viewer. The images are on the server as raw folders and files, not mbtiles. I'm not sure if the poor vector tile performance is die to the cpu, limited memory, or a problem with the php implementation. It is running on a shared Cent OS Apache server, maybe 512 MB memory, not sure of the cpu.
 
-## Other Servers I havent tried
+### GeoServer - OVRDC has tried this on a very limited basis
+Renders and serves cached and on the fly raster and vector tiles from a PostGIS database, shapefiles and other sources. Vector tiles are only possible with a proprietary Boundless plugin, or a german open source plugin. Suggested server specs - 6 GB ram, maybe dual but probably quad core processor. 
+
+## Other Servers I have not tried due to needing the data in a PostGIS database
 
 ### Tegola
 http://tegola.io/
