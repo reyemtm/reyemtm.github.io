@@ -25,7 +25,7 @@ There are many videos on youtube by mapbox and others on vector tiles. I was ins
 Serves vector and raster tiles from mbtiles file.
 This is what OVRDC is using on the smallest digital ocean instance 512 MB/1 core Ubuntu 16.04, NGINX, Node-JS, following Tobin Bradley's example.
 
-### [Tileserver PHP](https://github.com/klokantech/tileserver-php), [Tileserver GL](https://github.com/klokantech/tileserver-gl), Tileserver-light
+### [Tileserver PHP](https://github.com/klokantech/tileserver-php), [Tileserver GL](https://github.com/klokantech/tileserver-gl), Tileserver-GL-light
 [Parcel Viewer Example - Built In](https://www.ovrdc.org/apps/tiles/#sci-parcels/mapboxgl)
 
 [Index Page Built In](https://www.ovrdc.org/apps/tiles)
@@ -33,10 +33,10 @@ This is what OVRDC is using on the smallest digital ocean instance 512 MB/1 core
 Serves vector and raster tiles from mbtiles.
 Tileserver GL can optionally render raster tiles from vector tiles via pre configured styles, and generate high-res static images.
 
-OVRDC has the php version installed on our web server at the link above, the performance of vector tile unpacking from the mbtiles file is not very good - try the open layers viewer. The images are on the server as raw folders and files, not mbtiles. I'm not sure if the poor vector tile performance is die to the cpu, limited memory, or a problem with the php implementation. It is running on a shared Cent OS Apache server, maybe 512 MB memory, not sure of the cpu.
+OVRDC has the php version installed on our web server at the link above, the performance of vector tile unpacking from the mbtiles file is not very good - try the open layers viewer. The images are on the server as raw folders and files, not mbtiles. I'm not sure if the poor vector tile performance is due to the cpu, limited memory, or a problem with the php implementation. It is running on a shared Cent OS Apache server, maybe 512 MB memory, not sure of the cpu.
 
 ### GeoServer - OVRDC has tried this on a very limited basis
-Renders and serves cached and on the fly raster and vector tiles from a PostGIS database, shapefiles and other sources. Vector tiles are only possible with a proprietary Boundless plugin, or a german open source plugin. Suggested server specs - 6 GB ram, maybe dual but probably quad core processor. 
+Renders and serves cached or on the fly raster and vector tiles from a PostGIS database, shapefiles and other sources. Vector tiles are only possible with a proprietary Boundless plugin, or a german open source plugin. Suggested server specs - 6 GB ram, maybe dual but probably quad core processor. 
 
 ## Other Servers I have not tried due to needing the data in a PostGIS database
 
