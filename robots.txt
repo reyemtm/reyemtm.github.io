@@ -15,5 +15,6 @@ Disallow: /img/
 Disallow: /less/
 Disallow: /apps/
 Disallow: /slides/
+Disallow: /open-data-portal/
 
 Allow: /images
