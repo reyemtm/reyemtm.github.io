@@ -5,6 +5,8 @@ This site is powered by Jekyll, hosted on GitHub and cached by [Cloudflare](http
 
 ### Licenses
 
+This Site - [CC BY-SA](https://creativecommons.org/licenses/by-sa/4.0/)
+
 [Bulma CSS](http://bulma.io/) - MIT
 
 [Bulma Hero Theme](https://dansup.github.io/bulma-templates/) - MIT
