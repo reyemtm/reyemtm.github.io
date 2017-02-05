@@ -5,7 +5,6 @@ tags:
 - esri
 layout: post
 ---
-
 <div style="position:relative;height:0;padding-bottom:56.21%"><iframe src="https://www.youtube.com/embed/mfWts1JnHVw?controls=0&autoplay=1&loop=1&playlist=mfWts1JnHVw&showinfo=0&rel=0" style="position:absolute;width:100%;height:100%;left:0" width="641" height="360" frameborder="0" allowfullscreen></iframe></div>
 <br><br>
 This video shows the growth of urban infrastructure from 1850 (blue) through to the present (red).

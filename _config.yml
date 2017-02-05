@@ -91,7 +91,7 @@ mini_magick:
     compressed:
       source: images/project-img/original
       destination: images/project-img/compressed
-      quality: "80"
+      quality: "60"
 #mini_magick:
 #  4x3:
 #    source: post-img/original

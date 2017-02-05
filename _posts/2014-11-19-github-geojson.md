@@ -5,7 +5,6 @@ tags:
 - leaflet
 layout: post
 ---
-
 GitHub will host and preview your geojson files! [Geomusings](http://blog.geomusings.com/2013/06/18/geojson-on-github-now-what/) gives a good explanation of some pros and cons. Here is an example of a geojson stored on GitHub, then shared. GitHub takes care of the rendering via [Mapbox](https://www.mapbox.com).
 
 <script src="https://embed.github.com/view/geojson/reyemtm/geojson/master/metro-trails-2012.geojson?width=1140px"></script>

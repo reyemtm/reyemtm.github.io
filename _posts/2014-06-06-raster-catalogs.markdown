@@ -5,7 +5,6 @@ tags:
 - esri
 layout: post
 ---
-
 Here I explain how to create a raster catalog in order to have a mosaic of a set of images. This way you can always add or change the images instead of just creating a static mosaic. I also find it much easier than dealing with the other ways of creating mosaic catalogs, etc.
 
 ### Steps

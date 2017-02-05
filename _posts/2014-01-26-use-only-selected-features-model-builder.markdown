@@ -5,7 +5,6 @@ tags:
 - esri
 layout: post
 ---
-
 This little trick came from GIS stack exchange. To run a model using only selected features, open your model and in the model builder window right click and select 'Model Only Tools/Calculate Value'. In the 'Expression' box type:
 <blockquote>hasSelection ("%your input layer here%")
 </blockquote>

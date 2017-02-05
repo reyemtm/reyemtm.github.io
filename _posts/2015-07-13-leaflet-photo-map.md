@@ -13,7 +13,6 @@ plugins:
 map: leaflet
 header-img: header-vacay-2.jpg
 ---
-
 <div id="map">
 </div>
 <script>
