@@ -1,15 +1,9 @@
 ---
 layout: default
 ---
-
-<!--page-->
-{% if page.homepage == true %}
-{% include header.html %}
-{% else %}
-{% include header.html %}
-{% endif %}
-<!-- Main Content -->
-<div id="content" class="container">
-	{{ content }}
+<!--layout: page.html-->
+<div class="section">
+  <div class="container">
+    {{content}}
+  </div>
 </div>
-<!--end page-->

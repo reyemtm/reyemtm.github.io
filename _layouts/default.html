@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-{% include head.html %}
-  <body>
-      {% include nav.html %}
-      {{ content }}
-      {% include footer.html %}
-  </body>
+<html>
+<!--layout: default.html-->
+{% include structure/head.html %}
+<body>
+{% include structure/header.html %}
+<div id="content">
+{{content}}
+</div>
+{% include structure/footer.html %}
+</body>
 </html>

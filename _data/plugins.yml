@@ -1,3 +1,6 @@
+- name: jquery
+  js: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
+
 - name: photo-map
   local: true
   css:
@@ -15,7 +18,7 @@
 - name: snake
   local: true
   js: leaflet-snake/leaflet-snake.min.js
-  
+
 - name: route360
   js:
     - https://developers.route360.net/vendors/r360/r360-core-src.js
@@ -39,20 +42,20 @@
 
 - name: geocoder
   local: true
-  js: assets/cssjs/Control.Geocoder.js
+  js: apps-plugins/cssjs/Control.Geocoder.js
 
 - name: mapzen-routing
   local: true
-  js: assets/cssjs/lrm-mapzen-master/dist/lrm-mapzen.min.js
-  css: assets/cssjs/lrm-mapzen-master/dist/lrm-mapzen.css
+  js: apps-plugins/cssjs/lrm-mapzen-master/dist/lrm-mapzen.min.js
+  css: apps-plugins/cssjs/lrm-mapzen-master/dist/lrm-mapzen.css
 
 - name: activelayers
   local: true
-  js: assets/cssjs/leaflet-active-layers/leaflet.active-layers.min.js
+  js: apps-plugins/cssjs/leaflet-active-layers/leaflet.active-layers.min.js
 
 - name: chroma
   local: true
-  js: assets/cssjs/chroma/chroma.min.js
+  js: apps-plugins/cssjs/chroma/chroma.min.js
 
 - name: csv
   js: https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.1.2/papaparse.min.js
@@ -60,30 +63,30 @@
 - name: draw
   local: true
   js:
-    - "assets/cssjs/geojson.js"
-    - "assets/cssjs/tabletop.js"
-    - "assets/cssjs/leaflet-draw/leaflet.draw-src.js"
-  css: "assets/cssjs/leaflet-draw/leaflet.draw.css"
+    - "apps-plugins/cssjs/geojson.js"
+    - "apps-plugins/cssjs/tabletop.js"
+    - "apps-plugins/cssjs/leaflet-draw/leaflet.draw-src.js"
+  css: "apps-plugins/cssjs/leaflet-draw/leaflet.draw.css"
 
 - name: choropleth
   local: true
-  js: assets/cssjs/leaflet-choropleth/choropleth.js
-  css: assets/cssjs/leaflet-choropleth/choropleth-legend.css
+  js: apps-plugins/cssjs/leaflet-choropleth/choropleth.js
+  css: apps-plugins/cssjs/leaflet-choropleth/choropleth-legend.css
 
 - name: mapkey
   local: true
-  js: assets/cssjs/leaflet-mapkey-icon/dist/L.Icon.Mapkey.js
-  css: assets/cssjs/leaflet-mapkey-icon/dist/MapkeyIcons.css
+  js: apps-plugins/cssjs/leaflet-mapkey-icon/dist/L.Icon.Mapkey.js
+  css: apps-plugins/cssjs/leaflet-mapkey-icon/dist/MapkeyIcons.css
 
 - name: geojson
   local: true
-  js: assets/cssjs/geojson.js
+  js: apps-plugins/cssjs/geojson.js
 
 - name: almostover
   local: true
   js:
-    - assets/cssjs/leaflet.geometryutil.js
-    - assets/cssjs/leaflet.almostover.js
+    - apps-plugins/cssjs/leaflet.geometryutil.js
+    - apps-plugins/cssjs/leaflet.almostover.js
 
 - name: fuse
   js: https://cdnjs.cloudflare.com/ajax/libs/fuse.js/2.2.0/fuse.min.js
@@ -92,21 +95,21 @@
 
 - name: geojson-list
   local: true
-  js: assets/cssjs/geojson-list/leaflet-geojson-selector.min.js
-  css: assets/cssjs/geojson-list/leaflet-geojson-selector.min.css
+  js: apps-plugins/cssjs/geojson-list/leaflet-geojson-selector.min.js
+  css: apps-plugins/cssjs/geojson-list/leaflet-geojson-selector.min.css
 
 - name: pip
   js: https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.1.0/leaflet-pip.min.js
 
 - name: pip2
   local: true
-  js: assets/cssjs/leaflet-pip/leaflet-pip.min.js
+  js: apps-plugins/cssjs/leaflet-pip/leaflet-pip.min.js
 
 - name: vector-tiles
   local: true
   js:
-    - assets/cssjs/geojson-tiles/L.CanvasTiles.js
-    - assets/cssjs/geojson-tiles/geojson-vt-dev.js
+    - apps-plugins/cssjs/geojson-tiles/L.CanvasTiles.js
+    - apps-plugins/cssjs/geojson-tiles/geojson-vt-dev.js
 
 - name: turf
   local: false
@@ -114,15 +117,15 @@
 
 - name: chart
   local: true
-  js: assets/cssjs/chartjs/chart.js
+  js: apps-plugins/cssjs/chartjs/chart.js
 
 - name:	mb-vector-tiles
   local: true
-  js: assets/cssjs/leaflet-mapbox-vector-tiles/Leaflet.MapboxVectorTile.min.js
+  js: apps-plugins/cssjs/leaflet-mapbox-vector-tiles/Leaflet.MapboxVectorTile.min.js
 
 - name:	vector-grid
   local: true
-  js: assets/cssjs/leaflet-vector-grid/Leaflet.VectorGrid.bundled.js
+  js: apps-plugins/cssjs/leaflet-vector-grid/Leaflet.VectorGrid.bundled.js
 
 - name: mapbox-gl
   js: https://api.mapbox.com/mapbox-gl-js/v0.19.1/mapbox-gl.js
@@ -130,11 +133,10 @@
 
 - name: leaflet-mapbox-gl
   local: true
-  js: 'assets/cssjs/leaflet-mapbox-gl/leaflet-mapbox-gl.js'
+  js: 'apps-plugins/cssjs/leaflet-mapbox-gl/leaflet-mapbox-gl.js'
 
 - name: distance-markers
   local: true
   js:
-    - assets/cssjs/leaflet.geometryutil.js
-    - assets/cssjs/leaflet-distance-marker.js
-
+    - apps-plugins/cssjs/leaflet.geometryutil.js
+    - apps-plugins/cssjs/leaflet-distance-marker.js

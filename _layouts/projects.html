@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<!--layout: projects.html-->
+<div class="section">
+    <div class="container fadein4">
+      <div class="columns">
+        <div class="column is-5">
+          <div class="title is-2">{{page.name}}</div>
+          <p class="title is-3 has-text-muted">{{page.caption}}</p>
+          <hr>
+          {{page.about | markdownify}}
+          <br>
+          <div>
+            {%if page.demo%}<a class="button is-info is-outlined is-inverted is-medium" href="{{page.demo}}" target="_blank">Demo</a>&nbsp;&nbsp;{%endif%}
+            {%if page.code%}<a class="button is-info is-outlined is-inverted is-medium" href="{{page.code}}" target="_blank">Code</a>{%endif%}
+          </div>
+        </div>
+        <div class="column is-7">
+          {%if page.images%}
+          <div id="slider">
+            {% for image in page.images %}
+            <img src="{{site.baseurl}}/images/project-img/compressed/{{image}}" alt="image">
+            {%endfor%}
+          </div>
+          <!--a class="is-prev"><i class="fa fa-arrow"></i></a>
+          <a class="is-next"><i class="fa fa-arrow" style="float:right;width:50px;height:50px;"></i></a-->
+          {%elsif page.img %}
+          <div class="image is-4by4">
+            <img class="portfolio-img" src="{{site.baseurl}}/images/project-img/square/{{page.img}}">
+          </div>
+          {%endif%}
+        </div>
+      </div>
+      <hr>
+      {% include loops/related-projects.html%}
+    </div>
+  </div>

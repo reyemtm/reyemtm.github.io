@@ -1,3 +1,6 @@
+---
+layout: null
+---
 <!DOCTYPE html>
 <html lang="en">
 <meta charset="utf-8" />
@@ -15,13 +18,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.css" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.5/leaflet.js"></script>
 <!--leaflet sleep updated Jan 2016 -->
-<script src="https://getbounds.com/assets/leaflet-sleep/Leaflet.Sleep.js"></script>
+<script src="{{site.baseurl}}/apps-plugins/leaflet-sleep/Leaflet.Sleep.js"></script>
 <!--Home Button ie Default Extent-->
-<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-defaultextent/leaflet.defaultextent.css" />
-<script src="https://getbounds.com/assets/leaflet-defaultextent/leaflet.defaultextent.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/apps-plugins/leaflet-defaultextent/leaflet.defaultextent.css" />
+<script src="{{site.baseurl}}/apps-plugins/leaflet-defaultextent/leaflet.defaultextent.js"></script>
 <!--locate control from source -->
-<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-locate-control/L.Control.Locate.min.css" />
-<script src="https://getbounds.com/assets/leaflet-locate-control/L.Control.Locate.min.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/apps-plugins/leaflet-locate-control/L.Control.Locate.min.css" />
+<script src="{{site.baseurl}}/apps-plugins/leaflet-locate-control/L.Control.Locate.min.js"></script>
 <!--Leaflet Hash via Mapbox CDN-->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-hash/v0.2.1/leaflet-hash.js'></script>
 <!--Google Custom Map -->
@@ -29,32 +32,32 @@
 <!-- Leaflet Omnivore Plugin GeoJson KML Etc -->
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-omnivore/v0.2.0/leaflet-omnivore.min.js'></script>
 <!-- leaflet search -->
-<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-search/leaflet-search.min.css" />
-<script src="https://getbounds.com/assets/leaflet-search/leaflet-search.src.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/apps-plugins/leaflet-search/leaflet-search.min.css" />
+<script src="{{site.baseurl}}/apps-plugins/leaflet-search/leaflet-search.src.js"></script>
 <!--minimap-->
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.css' rel='stylesheet' />
 <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-minimap/v1.0.0/Control.MiniMap.js'></script>
 <!-- Leaflet Easy button Updated Dec 2015-->
-<link rel="stylesheet" href="https://getbounds.com/assets/easy-button/easy-button.css" />
-<script src="https://getbounds.com/assets/easy-button/easy-button.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/apps-plugins/easy-button/easy-button.css" />
+<script src="{{site.baseurl}}/apps-plugins/easy-button/easy-button.js"></script>
 <!--Leaflet sidebar v1 aka menu -->
-<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-sidebar/L.Control.Sidebar.css" />
-<script src="https://getbounds.com/assets/leaflet-sidebar/L.Control.Sidebar.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/apps-plugins/leaflet-sidebar/L.Control.Sidebar.css" />
+<script src="{{site.baseurl}}/apps-plugins/leaflet-sidebar/L.Control.Sidebar.js"></script>
 <!-- leaflet loading and leaflet-spin works with leaflet ajax and map tiles -->
-<link rel="stylesheet" href="https://getbounds.com/assets/leaflet-loading/Control.Loading.css" />
-<script src="https://getbounds.com/assets/leaflet-loading/Control.Loading.js"></script>
-<script src="https://getbounds.com/assets/leaflet-spin/spin.js"></script>
-<script src="https://getbounds.com/assets/leaflet-spin/leaflet.spin.js"></script>
-<script src="https://getbounds.com/assets/google-tiles/google.js"></script>
-<script src="https://getbounds.com/assets/google-tiles/gglegrey.js"></script>
+<link rel="stylesheet" href="{{site.baseurl}}/apps-plugins/leaflet-loading/Control.Loading.css" />
+<script src="{{site.baseurl}}/apps-plugins/leaflet-loading/Control.Loading.js"></script>
+<script src="{{site.baseurl}}/apps-plugins/leaflet-spin/spin.js"></script>
+<script src="{{site.baseurl}}/apps-plugins/leaflet-spin/leaflet.spin.js"></script>
+<script src="{{site.baseurl}}/apps-plugins/google-tiles/google.js"></script>
+<script src="{{site.baseurl}}/apps-plugins/google-tiles/gglegrey.js"></script>
 <!--Mapbox fullscreen standalone js added in ovrdc-toolbar-->
 <link href='https://api.tiles.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v0.0.4/leaflet.fullscreen.css' rel='stylesheet' />
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 <!--OVRDC Custom Styles-->
-<link rel="stylesheet" href="/assets/ovrdc-style.css" />
-<link rel="stylesheet" href="/assets/modern-ui.css" />
-<script src="https://getbounds.com/assets/geojson-tiles/geojson-vt-dev.js"></script>
-<script src="https://getbounds.com/assets/geojson-tiles/L.CanvasTiles.js"></script>
+<link rel="stylesheet" href="/apps-plugins/ovrdc-style.css" />
+<link rel="stylesheet" href="/apps-plugins/modern-ui.css" />
+<script src="{{site.baseurl}}/apps-plugins/geojson-tiles/geojson-vt-dev.js"></script>
+<script src="{{site.baseurl}}/apps-plugins/geojson-tiles/L.CanvasTiles.js"></script>
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-pip/v0.1.0/leaflet-pip.min.js'></script>
 <style>*{font-family: "Open Sans", sans-serif;}
 .leaflet-container{
@@ -161,11 +164,11 @@ var ortho = L.tileLayer('https://api.tiles.mapbox.com/v4/mapbox.streets-satellit
 });
 
 var basemaps = {
-  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/osm-streets.png'></div> Streets": osm,
-  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/mapbox-ortho.png'></div> Satellite": ortho,
-  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/esri-topo.png'></div> Topography": esritopo,
-  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/cdb-light.png'></div> Grayscale": cdblight,
-  "<div class='layers-control-img'><img src='/assets/images/layer-control-images/cdb-dark.png'></div> Dark Matter": cdbdark
+  "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/osm-streets.png'></div> Streets": osm,
+  "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/mapbox-ortho.png'></div> Satellite": ortho,
+  "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/esri-topo.png'></div> Topography": esritopo,
+  "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/cdb-light.png'></div> Grayscale": cdblight,
+  "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/cdb-dark.png'></div> Dark Matter": cdbdark
 };
 var layerControl = L.control.layers(basemaps, null, {position: 'topright', autoZIndex: true}).addTo(map);
 var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false });

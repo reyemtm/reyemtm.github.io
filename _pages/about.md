@@ -1,17 +1,18 @@
 ---
-title: Malcolm Meyer
+title: About
 permalink: "/about/"
 layout: page
-subtitle: Cartographer & Data Analyst
+subtitle: A (Jekyll) Blog on GIS & Data visualization
 ---
+## Malcolm Meyer
 
-I have a passion for web-based data visualization and analysis. Formally, I am a graduate of the Ohio University International Studies Program, with a BA in Sociology and Urban Planning from The College of Wooster. I also love [music](http://malcolmmeyer.tumblr.com) and gardening. I spend my days analyzing transportation data for the [Ohio Valley Regional Development Commission](http://www.ovrdc.org).
+I have a passion for web-based data visualization and analysis. Formally, I am a graduate of the Ohio University International Studies Program, with a BA in Sociology and Urban Planning from The College of Wooster. I also love [music](http://malcolmmeyer.tumblr.com) and gardening. I spend my days analyzing transportation data for the [Ohio Valley Regional Development Commission](http://www.ovrdc.org). You can see the OVRDC map gallery built with Jekyll, Bootstrap 4 and JQuery [here](http://www.ovrdc.org/gis/maps).
 
 <pre><code><strong>getBounds()</strong> Returns the LatLngBounds of the current map view, path or polyline</code></pre>
 
 ***
 
-## Recommended Leaflet Plugins
+## Awesome Leaflet Plugins
 
  - [GeoTagged Photos](https://github.com/turban/Leaflet.Photo)
  - [Hash/Coordinates in URL](https://github.com/mlevans/leaflet-hash)
@@ -25,11 +26,4 @@ I have a passion for web-based data visualization and analysis. Formally, I am a
 
 
 ***
-
-## About this Site
-This site is powered by Jekyll and hosted on GitHub. It is based on the [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) theme from Start Bootstrap.
-
-***
-
-## Comments
-There are no comments on this site. If you want to contact me or share a post, you can use your social media of choice.
+{% include about.md %}

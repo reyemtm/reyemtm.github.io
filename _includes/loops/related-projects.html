@@ -1,0 +1,25 @@
+<div>
+<style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
+{% assign n_projects = 0 %}
+{% for project in site.projects %}
+    {%if project.id == page.id %}{% continue %}{% endif %}
+    {% for this_tag in page.tags %}
+        {% if project.tags contains this_tag%}
+            {% if n_projects == 0 %}
+            <h3 style="letter-spacing:6px;text-align:center;margin:0;font-weight:500;">Related Projects</h3>
+            <hr>
+            <div class="columns">
+              {% endif %}
+              <div class="column portfolio-box-lg">
+                  <div class="portfolio-sm">
+                    {% include loops/project-loop.html %}
+                  </div>
+              </div>
+              {% assign n_projects = n_projects | plus: 1 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {%if n_projects > 1 %}<hr style="margin-top:10px;"></div>{% break %}{% endif %}
+{% endfor %}
+{% if n_projects > 0 %}{% endif %}
+</div>

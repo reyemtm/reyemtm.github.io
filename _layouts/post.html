@@ -1,59 +1,27 @@
 ---
 layout: default
 ---
-
-<!-- Post Header -->
-{% include post-header.html %}
-<!-- Post Content -->
-<article id="content">
-    <div class="container">
-	{{ content }}
-	<div class="share-page">
-		<!--<div class="g-plusone" data-size="small(none)" data-width="150" style="display:inline;"></div>-->
-		<!--<div class="share" style="font-style:italic;">Share this article:</div>-->
-	  	<script src="https://apis.google.com/js/platform.js" async defer></script>
-	  	<g:plusone></g:plusone>
-	  	<a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}&via={{ site.twitter_username }}&related={{ site.twitter_username }}" rel="nofollow" target="_blank" title="Share on Twitter">
-		<span class="fa-stack fa-lg">
-		        <i class="fa fa-circle fa-stack-2x"></i>
-		        <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
-		</span>
-		</a>
-		<a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" rel="nofollow" target="_blank" title="Share on Facebook">
-	        <span class="fa-stack fa-lg">
-		        <i class="fa fa-circle fa-stack-2x"></i>
-		        <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
-		</span>
-		</a>
-	</div>
-        <hr>
-        {% include related-posts.html %}
-         <!---script src="https://apis.google.com/js/plusone.js"></script>
-        <div style="margin-top:30px">
-          <div class="g-comments"
-              data-href="{{site.url}}{{page.url}}"
-              data-width="642"
-              data-first_party_property="BLOGGER"
-              data-view_type="FILTERED_POSTMOD">
-          </div>
-        </div>
-        <hr>
-        <!--Disqus>
-        <div id="disqus_thread"></div>
-	<script type="text/javascript">
-	    /* * * CONFIGURATION VARIABLES * * */
-	    var disqus_shortname = 'getbounds';
-	    var disqus_url = '{{ site.url}}{{ page.url }}';
-
-	    /* * * DON'T EDIT BELOW THIS LINE * * */
-	    (function() {
-	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-	        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-	    })();
-	</script
-	<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript--->
-		{% include pager.html %}
-    </div>
-</article>
-<!--end post-->
+<!--layout: post.html-->
+<div id="post-content" class="content section">
+  <div class="container">
+    {% if page.tags contains "slides" and page.presentation %}
+    <iframe src="{{page.presentation}}" allowfullscreen width="100%" height="500" frameBorder="0"></iframe>
+    <div>
+      <a class="button is-info is-outlined is-inverted is-small is-pulled-right" href="{{page.presentation}}" target="_blank"><i class="fa fa-external-link-square" aria-hidden="true"></i>&nbsp;View Full Screen
+      </a>
+    </div>{%endif%}
+    <br>
+    {{content}}
+    <hr>
+    {% include loops/related-posts.html %}
+    {% include loops/pager.html %}
+  </div>
+</div>
+<script>
+if(document.getElementsByTagName('iframe').length>0) {
+  console.log('removing animations on iframe sections')
+  setTimeout(function() {
+    document.getElementById('post-content').className = 'content  section';
+  }, 2000);
+}
+</script>

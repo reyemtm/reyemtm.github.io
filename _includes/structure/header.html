@@ -1,0 +1,23 @@
+{% include structure/nav.html %}
+<section id="top" class="hero is-dark {% if page.permalink == "/index.html" %}is-large{% else %}is-medium{% endif %} header-img" {% if page.iframe %}{%else%}{%include loops/hero-image.html %}{%endif%}>
+  {% if page.iframe %}
+  <iframe class="header-iframe" width="100%" height="424" frameborder="0" allowTransparency="true" scrolling="no" src="{{ page.iframe }}"></iframe>
+  {% endif %}
+  <div class="hero-body fadeUp fadein2">
+    <div class="container has-text-centered">
+      <h1 class="title is-1">
+        {{page.title}}
+      </h1>
+      <div class="subtitle is-4">
+        <span class="">{{page.subtitle}}</span>
+      </div>
+        <a scroll href="#content">
+          <span class="icon bounce">
+            <i class="fa fa-angle-double-down fadein4{% if page.subtitle %}{% else %}{%endif %}"></i>
+          </span>
+        </a>
+      </p>
+    </div>
+    <div id="blog"></div>
+  </div>
+</section>

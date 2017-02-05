@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--layout: app.html-->
     <head>
-    {% include head.html %}
+    {% include structure/head.html %}
     </head>
     <body>
     {%if page.template == true %}
-    {% include map-template.html %}
+    {% include maps/map-template.html %}
     {{ content }}
     </script>
     {% else %}

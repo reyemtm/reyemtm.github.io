@@ -1,0 +1,51 @@
+<div class="hero-head">
+  <header class="nav has-shadow">
+    <div class="container">
+      <div class="nav-left logo">
+        <a class="nav-item" href="/">
+          getBounds
+        <span class="nav-item subtitle">&nbsp;|&nbsp;malcolm meyer</span>
+      </a>
+      </div>
+      <div class="nav-toggle is-dark">
+        <span></span>
+      <span></span>
+      <span></span>
+    </div>
+      <div class="nav-right nav-menu is-dark">
+        <a class="nav-item" href="/about">
+          About
+        </a>{% if page.permalink == "/index.html" %}
+        <a scroll class="nav-item" href="#content">
+          Blog
+        </a>
+        <a scroll class="nav-item" href="#projects">
+          Projects
+        </a>{% else %}
+        <a class="nav-item" href="/blog">
+          Blog
+        </a>
+        <a class="nav-item" href="/#projects2">
+          Projects
+        </a>{% endif %}
+        <a class="nav-item" href="/slides">
+          Slides
+        </a>
+        <a id="contact" class="nav-item" href="#footer" scroll>
+          Contact
+        </a>
+        <!--span class="nav-item">
+          <a class="button is-info is-outlined is-inverted">
+            <span class="icon">
+              <i class="fa fa-github"></i>
+            </span>
+        <span>Download</span>
+        </a>
+      </span-->
+      </div>
+      <a  id="search" class="nav-item">
+        <i class="fa fa-search fa-sm"></i>
+      </a>
+    </div>
+  </header>
+</div>

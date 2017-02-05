@@ -1,0 +1,30 @@
+---
+title: Tags
+subtitle: Blog Posts and Presentations Sorted by Tag and Date
+permalink: /tags/
+header-img: pattern_12.jpg
+---
+{% capture tags %}
+  {% for tag in site.tags %}
+    {{ tag[0] }}
+  {% endfor %}
+{% endcapture %}
+{% assign sortedtags = tags | split:' ' | sort %}
+
+{% for tag in sortedtags %}
+<div class="container">
+  <div class="columns">
+    <div id="{{tag}}"></div>
+    <div class="column is-8 is-offset-2 tag-blocks fadein2">
+      <div class="section main">
+        <h2 class="title is-4"><strong>{{ tag | upcase }}</strong></h2>
+        <hr>
+        <ul>{% for post in site.tags[tag] %}
+        <li style=""><a class="title is-5" href="{{ post.url }}">{{ post.title }}</a><br /><small>{{ post.date  | date: "%B %-d, %Y" }}</small><br /><br /></li>
+        {% endfor %}</ul>
+      </div>
+    </div>
+    <div class="column is-2"></div>
+  </div>
+</div>
+{% endfor %}

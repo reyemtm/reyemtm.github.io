@@ -1,5 +1,5 @@
 ---
-title: 'From the Desktop to the Cloud: GIS Cloud and Rasters'
+title: 'Desktop to the Cloud: GIS Cloud and Rasters'
 date: 2014-01-31 21:00:00 Z
 tags:
 - esri

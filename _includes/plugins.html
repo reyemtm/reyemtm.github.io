@@ -1,6 +1,0 @@
-{% for plugin in site.data.plugins %}{% if plugin.name == name %}<!-- {{ plugin.name }} -->{% endif %}{% if plugin.name == name and plugin.local != true %}{% if plugin.css %}{% for css in plugin.css %}
-<link rel="stylesheet" href="{{ css }}" />{% endfor %}{% endif %}{% for js in plugin.js %}
-<script src="{{ js }}"></script>{% endfor %}
-{% elsif plugin.name == name %}{% if plugin.css %}{% for css in plugin.css %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/{{ css }}" />{% endfor %}{% endif %}{% for js in plugin.js %}
-<script src="{{ site.baseurl }}/assets/{{ js }}"></script>{% endfor %}{% endif %}{% endfor %}

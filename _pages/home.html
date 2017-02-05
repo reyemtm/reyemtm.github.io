@@ -1,0 +1,109 @@
+---
+layout: default
+title: Malcolm Meyer
+subtitle: Cartographer & Data Analyst
+permalink: /index.html
+header-img: pattern_00.jpg
+date: 2017-01-21
+css: "#viewArchive{display:none;}#evenMore{display:none;}"
+---
+  <div class="hero-cta">
+    <nav class="level">
+      <div class="level-item has-text-centered">
+        <p class="title is-2 fadein6">Recent Posts & Talks</p>
+      </div>
+    </nav>
+  </div>
+  <!--cards-->
+  <div class="section main cards">
+    <div id="posts" class="container">
+      <div class="columns is-multiline">
+        {% for post in site.posts limit: 6 %}
+          {% include loops/post-loop-cards.html %}
+        {%endfor%}
+      </div>
+    </div>
+    <div class="container">
+      <div class="has-text-centered fadein6">
+        <div id="viewMore">
+          <a id="more" class="button is-info is-outlined is-inverted is-medium" href="#"  style="margin-top: 40px;">
+            <span>View More Posts</span>
+          </a>
+          <p><a href="/blog">Blog Archive</a></p>
+        </div>
+        <div id="viewArchive">
+          <a id="archive" class="button is-info is-outlined is-inverted is-medium" href="/blog"  style="margin-top: 40px;">
+            <span>Blog Archive</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div id="projects2"></div>
+  </div>
+  <div id="projects" class="hero-cta">
+    <nav class="level fadein5">
+      <div class="level-item has-text-centered">
+        <p class="title is-2">Projects</p>
+      </div>
+    </nav>
+  </div>
+
+  <div class="section main">
+    <div class="container fadein5">
+      <div class="columns popup-gallery">
+        <div class="column is-half is-pulled-left">
+          {% for project in site.projects limit: 1 %}
+            {% include loops/project-loop.html %}
+          {% endfor %}
+        </div>
+        <div class="column portfolio-box-sm">
+          {% for project in site.projects limit: 2 offset: 1%}
+            <div class="portfolio-sm">
+              {% include loops/project-loop.html %}
+            </div>
+          {% endfor %}
+        </div>
+        <div class="column portfolio-box-sm">
+          {% for project in site.projects limit: 2 offset: 3%}
+            <div class="portfolio-sm">
+              {% include loops/project-loop.html %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+    <!--div class="container">
+      <div class="has-text-centered fadein6">
+        <a class="button is-info is-outlined is-inverted is-medium" href="/portfolio"  style="margin-top: 40px;">
+        <span>See Full Portfolio</span>
+        </a>
+      </div>
+    </div>
+  </div-->
+  <!--end portfolio-->
+  <div id="modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content portfolio-img">
+      <p id="modal-img" class="image is-4by3">
+      </p>
+    </div>
+    <button id="modal-close" class="modal-close"></button>
+  </div>
+  <script>
+  var count = 0;
+  var more = document.getElementById('more');
+  more.addEventListener('click', function(event) {
+    console.log('click');
+    var posts = document.getElementById('posts');
+    if (count == 1) {
+      posts.insertAdjacentHTML('beforeend', '<div class="columns">{% for post in site.posts limit: 3 offset: 12%}{% include loops/post-loop-min.html %}{%endfor%}</div><div class="columns">{% for post in site.posts limit: 3 offset:15 %}{% include loops/post-loop-min.html %}{%endfor%}</div>');
+      document.getElementById('viewMore').style.display = "none";
+      document.getElementById('viewArchive').style.display = "block";
+    }
+    if (count == 0) {
+      posts.insertAdjacentHTML('beforeend', '<div class="columns">{% for post in site.posts limit: 3 offset: 6%}{% include loops/post-loop-min.html %}{%endfor%}</div><div class="columns">{% for post in site.posts limit: 3 offset: 9 %}{% include loops/post-loop-min.html %}{%endfor%}</div>');
+      count = 1;
+    }
+    event.preventDefault();
+  });
+  </script>

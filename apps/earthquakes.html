@@ -5,8 +5,8 @@ layout: app
 map: leaflet
 style: "#map {position:absolute;top:0;left:0;width:100%;height:100%}"
 template: true
-center: 38.90543,-80.68725
-zoom: 10
+center: 26.59,-120.15
+zoom: 3
 basemap: dark
 ---
 
@@ -14,10 +14,18 @@ basemap: dark
 var quakes = new L.geoJson(null, {
   pointToLayer: function(feature, latlng) {
     return L.circleMarker(latlng, {radius: 5})
+  },
+  onEachFeature: function(feature, layer) {
+/*    for (var key in layer.feature.properties) {
+      var value = String(layer.feature.properties[key]);
+      popup += '<b>' + key + '</b><br>' + value + '<br>' + '<hr style="margin:5px 0px;">';
+    }*/
+    layer.bindPopup(layer.feature.properties.title);
   }
 }).addTo(map);
-  
+
 $.getJSON('http://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2014-01-01&endtime=2014-01-02', function(data) {
   console.log(data);
-  quakes.addData(data)
+  quakes.addData(data.features);
+  map.spin(false);
 });

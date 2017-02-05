@@ -8,8 +8,8 @@ layout: post
 description: Improving Leaflet performance using the geojson-vt plugin with two county
   parcel map examples.
 subtitle: 'A County Parcel App: No GIS Server? No Problem!'
-header-img: parcel-wide-2.png
-feature-img: parcel-wide.png
+header-img: parcel-wide-2.jpg
+feature-img: parcel-wide.jpg
 ---
 
 <h2>The Client-Side County Parcel App</h2>
@@ -21,7 +21,7 @@ It all started with this simple question from a county engineer: Would it be pos
 Yearly hosting costs for apps such as this can run in the thousands if not tens of thousands, so having a free alternative could be of great economic benefit to many counties across the country. With the average parcel count per county in the US right around 50k (see [Core Logic](http://www.corelogic.com/products/parcelpoint.aspx)) and the upper limit of client-side rendering between 25k and 40k features, it follows that at least a third if not half of US counties could share their parcels with the public via client-side web apps such as this one.
 
 <iframe id="map" src="" name="map" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none;"></iframe>
-<div id="openMap" style="cursor:default;background-image:url('/images/parcel-wide-2-red.png');height:350px;width:100%;text-align:center;">
+<div id="openMap" style="cursor:default;background-image:url('/images/post-img/original/parcel-wide-2-red.jpg');height:350px;width:100%;text-align:center;">
 	<a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map" class="inverse-txt"><h2 style="padding-top:160px;">Click Here to Open the Parcel Map</h2></a>
 </div>
 
@@ -35,8 +35,8 @@ The bulk of the code for creation of this app comes from [Sumbera](http://bl.ock
 
     var tileOptions = {
       maxZoom: 22,  
-      tolerance: 7, 
-      extent: 4096, 
+      tolerance: 7,
+      extent: 4096,
       buffer: 64,   
       debug: 0,      
       indexMaxZoom: 0,       
@@ -52,8 +52,8 @@ The one issue with the geojson tiles is that they are not interactive, so I used
 To test the limits of this method I tested the app with another county parcel layer, this time with over 70k features. The app would load fine on desktops, but would performance was not ideal on mobile devices and sometimes crashed the mobile browser. To get around this I broke apart the county by township and city boundaries (using model builder in Esri's ArcMap), allowing the user to switch between these areas via the sidebar. When the user switches to another area, the entire map gets redrawn with the map.destroy() function. One drawback is that the search and point in polygon only work on one area of the county at a time. To load the full county open the sidebar, scroll to the bottom and click 'Fairfield County'.
 
 <iframe id="cityMap" name="cityMap" src="" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none;"></iframe>
-<div id="openCity" style="cursor:default;background-image:url('/images/parcel-wide.png');height:350px;width:100%;text-align:center;">
-	<a href="/apps/county-parcel-test-map.html" target="cityMap" class="inverse-txt"><h2 style="padding-top:160px;">Click Here to Open the Fairfield County Map</h2></a>
+<div id="openCity" style="cursor:default;background-image:url('/images/post-img/original/parcel-wide-2.jpg');height:350px;width:100%;text-align:center;">
+	<a href="/apps/county-parcel-test-map.html" target="cityMap" class="inverse-txt"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Fairfield County Map</h2></a>
 </div>
 
 
@@ -63,7 +63,7 @@ The map below uses a series of square grids to test the limits of geojson tiles.
 
 <!--iframe id="gridMap" name="grid" src="" allowfullscreen width="100%" height="350px" style="border:0;display:none;"></iframe>
 <div id="openGrid" style="cursor:default;background-color:black;height:350px;width:100%;text-align:center;">
-	<a href="/apps/geojson-tile-grids.html" target="grid"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Grid Map</h2></a>
+	<h2 style="padding-top:160px;"><a href="/apps/geojson-tile-grids.html" target="grid">Click Here to Open the Grid Map</a></h2>
 </div-->
 
 <script>

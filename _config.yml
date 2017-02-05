@@ -1,45 +1,103 @@
----
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+timezone: America/New_York
+# related posts
 title: getBounds
-timezone: UTC
-collections:
-  posts:
-    title: Posts
-    output: true
-  uploads:
-    title: Uploads
-    output: true
-defaults:
-- scope:
-    path: ''
-    type: posts
-  values:
-    permalink: "/blog/:title/"
-    layout: post
 name: getBounds
-header-img: header-2.png
-email: malcolmtmeyer@gmail.com
-description: A (Jekyll) Blog Exploring Web Maps & Cartography
+author: Malcolm Meyer
+description: >
+  A (Jekyll) blog xxploring web maps and cartography. I explore the use of desktop and web-based GIS software including ArcMap, QGIS, Leaflet JS, Mapbox GL JS and other products.
 baseurl: https://getbounds.com
-testurl: https://reyemtm.github.io
 url: https://getbounds.com
 twitter_username: getbounds
-github_username: reyemtm
-google+_usename: malcolmmeyer
-facebook_username:
+github_username:  reyemtm
 linkedin_username: malcolm-meyer/44/2a2/577
-author: Malcolm Meyer
-mapboxid: pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg
+
+#theme settings these could be done in sass file
+main-color: "#26867e"
+main-light: rgba(245, 247, 250, 0.8)
+white1: ""#f5f7fa"
+white2: "#F0F0F0"
+
+# Build settings
 markdown: kramdown
 highlighter: rouge
-paginate: 10
-exclude:
-- less
-- node_modules
-- Gruntfile.js
-- package.json
-- README.md
-include:
-- _pages
+
+#theme: minima
 gems:
-#- jekyll-sitemap
-- jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+permalink: "/:categories/:title/"
+include: ["_pages"]
+exclude:
+  - Gemfile
+  - Gemfile.lock
+sass:
+    sass_dir: _bulma-sass
+    style: compressed
+
+#Collections - projects
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/index.html
+
+# Defaults
+defaults:
+  - scope:
+      path: "_pages" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "" # an empty string here means all files in the project
+      type: "posts"
+    values:
+      layout: "post"
+      categories: blog
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: projects
+
+gems: [jekyll-minimagick]
+mini_magick:
+    4x3:
+      source: images/project-img/original
+      destination: images/project-img/4x3
+      resize: "1200x900"
+    landscape:
+      source: images/project-img/original
+      destination: images/project-img/landscape
+      resize: "1024x512"
+    square:
+      source: images/project-img/original
+      destination: images/project-img/square
+      resize: "800x800"
+    compressed:
+      source: images/project-img/original
+      destination: images/project-img/compressed
+      quality: "80"
+#mini_magick:
+#  4x3:
+#    source: post-img/original
+#    destination: post-img/small
+#    commands:
+#      - thumbnail: "800x600^"
+#      - crop: "800x600-0x0"
+#      - format: "jpg"
+#      - quality: "80"

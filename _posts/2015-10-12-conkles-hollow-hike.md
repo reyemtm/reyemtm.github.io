@@ -27,7 +27,7 @@ header-img: c-hollow.jpg
   font-weight:600;
 }
 </style-->
-<div id="map">
+<div id="map" style="position:relative;">
 </div>
 <script src="https://www.ovrdc.org/apps/assets/cssjs/leaflet.geometryutil.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>

@@ -1,0 +1,48 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+  <title>Hero - Free Bulma template</title>
+  {% if jekyll.environment != test %}{%include structure/opengraph.html %}{%endif%}
+  {% if page.layout != "app" %}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
+  <link href="https://fonts.googleapis.com/css?family=Catamaran|Nunito+Sans" rel="stylesheet">
+  {% if page.layout == "post" or page.layout == "app" %}<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>{%endif%}
+  {%if page.layout == "app"%}<!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">{%endif%}
+  <!--/*other fonts - Muli, Hind, Oxygen, Noto Sans, Raleway*/-->
+  {% if page.permalink == "/index.html"  or page.permalink == "/portfolio/" %}<!--link rel="stylesheet" type="text/css" href="/css/magnific-popup.css" />
+  <script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.magnific-popup.min.js"></script-->{% endif %}
+  {% if page.map %}{% include maps/map.html %}{% endif %}
+  <!--additional page plugins-->
+  {% if page.plugins %}{% for plugin in page.plugins %}{% assign name = plugin %}{% include loops/plugins.html %}{% endfor %}{% endif %}
+  {% if page.layout == 'slides' %}
+  <!--begin slides styles-->
+  <link rel="stylesheet" href="/slides/css/reveal.css">
+  <link rel="stylesheet" href="/slides/css/theme/{% if page.theme %}{{ page.theme }}.css{% else %}blood.css{% endif %}" id="theme">
+  <link rel="stylesheet" href="/slides/css/getbounds-reveal.css">
+  <!-- Code syntax highlighting -->
+  <link rel="stylesheet" href="/slides/lib/css/zenburn.css">
+  <!-- Printing and PDF exports -->
+  <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? '/slides/css/print/pdf.css' : '/slides/css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+  </script>
+  <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+  <!--End Slides Styles-->
+  {% endif %}
+  <style>
+  {% if page.map and page.layout == 'post' %}#map {height: 700px; width:100%;border:1px solid #ddd;position:relative;}
+  {% elsif page.map and page.layout == 'app' %}#map {position:absolute;top:0;left:0;width:100%;height:100%}{% endif %}
+  {% if page.style or page.css %}/*custom page styles*/
+  {{page.style}}{{page.css}}/*end custom page styles*/{% endif %}
+  </style>
+  {% if page.iframe %}<script>!function(){var a=document.createElement("div"),b=document.getElementsByTagName("base")[0]||document.getElementsByTagName("script")[0];a.innerHTML="&shy;<style> iframe { visibility: hidden; } </style>",b.parentNode.insertBefore(a,b),window.onload=function(){a.parentNode.removeChild(a)}}();</script>{% endif %}
+  {%if jekyll.environment != test %}{%include google-analytics.html%}{%endif%}
+</head>

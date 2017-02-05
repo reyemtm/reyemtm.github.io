@@ -1,0 +1,21 @@
+<div class="portfolio-box">
+  <figure id="portfolio1" class="image is-4by3">
+    <img src="/images/project-img/original/{{project.img}}" alt="{{project.name}}">
+  </figure>
+  <div class="portfolio-box-caption">
+    <div class="portfolio-box-caption-content">
+      <div class="project-category text-faded title is-4">
+          {{project.name}}
+      </div>
+      <div class="project-name title is-5">
+          {{project.caption}}
+      </div>
+      <div class="has-text-centered">
+        <a class="button is-info is-outlined is-inverted is-medium" href="{{site.url}}{{project.url | strip 'index.html'}}">
+        <span>View Project</span>
+        </a>
+      </div>
+      <!--{% for tag in project.tags %}<span class="tag">{{tag}}</span>{%endfor%}-->
+    </div>
+  </div>
+</div>

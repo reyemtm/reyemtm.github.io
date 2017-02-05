@@ -1,0 +1,46 @@
+<div class="containter related">
+<style>.fa-ul {margin-left:0}.fa-li {left:0}</style>
+{% assign n_posts = 0 %}
+{% for post in site.posts %}
+    {%if post.id == page.id %}{% continue %}{% endif %}
+    {% for this_tag in page.tags %}
+        {% if post.tags contains this_tag%}
+            {% if n_posts == 0 %}
+            <h3 style="letter-spacing:6px;text-align:center;margin:0;font-weight:500;">Related Posts</h3>
+            <hr>
+            <div class="columns cards">
+              {% endif %}
+              <!--begin post-loop.html -->
+                <div class="column is-4 is-pulled-left">
+                  <div class="card fadein7">
+                    <div class="card-image">
+                      <a href="{{post.url}}">
+                        <figure class="image is-16by9" {% if post.feature-img != null or post.header-img != null or post.image != null %}style="background-image:url({%if post.feature-img%}/images/post-img/landscape/{{post.feature-img}}{%elsif post.image%}/images/post-img/landscape/{{post.image}}{%elsif post.header-img%}/images/post-img/landscape/{{post.header-img}}{% elsif post.image == null or post.feature == null or post.header-img == null %}/images/post-img/landscape/pattern_00.jpg{%endif%})"{%endif%}>
+                        </figure>
+                      </a>
+                    </div>
+                    <div class="card-content">
+                      <div class="media">
+                        <div class="media-content">
+                          <p><a class="title is-4" href="{{post.url}}">{{post.title}}</a></p>
+                            <span class="subtitle">
+                              <a class="content" href="{{post.url}}">
+                                <div class="bulma-hero--subtitle">
+                                  {{ post.subtitle | strip_html | truncatewords:10}}<br>
+                                <!--small></small-->
+                                </div></a>
+                                {% for tag in post.tags %}<a href="/tags/#{{tag}}" class="tag">{{tag}}</a>{%endfor%}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            {% assign n_posts = n_posts | plus: 1 %}
+            {% break %}
+        {% endif %}
+    {% endfor %}
+    {%if n_posts > 2 %}</div>{% break %}{% endif %}
+{% endfor %}
+{% if n_posts > 0 %}{% endif %}
+</div>
+<hr style="margin-top:10px;">
