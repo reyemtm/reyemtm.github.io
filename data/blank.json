@@ -1,0 +1,17 @@
+{
+	"version": 8,
+	"name": "blank",
+	"sources": {
+		"openmaptiles": {
+			"type": "vector",
+			"url": "https://www.ovrdc.org/apps/assets/mapboxgl/openmaptiles/tile-source.json"
+		}
+	},
+	"layers": [{
+		"id": "background",
+		"type": "background",
+		"paint": {
+			"background-color": "#f8f4f0"
+		}
+	}]
+}
