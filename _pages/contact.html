@@ -2,3 +2,44 @@
 permalink: /contact/
 title: Contact
 ---
+<div>
+  <div class="card">
+    <header class="card-head">
+      <p class="card-title">Contact Form</p>
+      <button id="contactClose" class="delete"></button>
+    </header>
+    <section class="card-body">
+      <form action="https://formspree.io/malcolmtmeyer@gmail.com" method="POST">
+        <label class="label">Name</label>
+        <p class="control">
+          <input class="input" type="text" placeholder="Name">
+        </p>
+        <label class="label">Email</label>
+        <p class="control has-icon has-icon-right">
+          <input class="input" type="text" placeholder="Email" value="" name="email">
+        </p>
+        <label class="label">Subject</label>
+        <p class="control">
+          <input class="input" type="text" placeholder="Subject" name="_subject">
+        </p>
+        <label class="label">Message</label>
+        <p class="control">
+          <textarea class="textarea" placeholder="Message" name="message"></textarea>
+        </p>
+        <input type="text" name="_gotcha" style="display:none" />
+        <p class="control">
+          <button class="button is-info is-outlined is-inverted" value="send">Submit</button>
+          <span class="is-pulled-right">
+            <a class="icon is-medium" href="https://github.com/reyemtm" taget="_blank"><i class="fa fa-github"></i></a>
+            <a class="icon is-medium" href="https://www.linkedin.com/in/malcolm-meyer-5772a244"><i class="fa fa-linkedin fa-2x"></i>
+            </a>
+            <a class="icon is-medium	" href="https://twitter.com/getbounds"><i class="fa fa-twitter fa-2x"></i>
+            </a>
+          </span>
+        </p>
+      </form>
+    </section>
+    <!--footer class="modal-card-foot">
+    </footer-->
+  </div>
+</div>
