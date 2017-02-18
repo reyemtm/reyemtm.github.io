@@ -109,10 +109,10 @@ var contact = document.getElementById('contact');
 var contactModal = document.getElementById('contactModal');
 var contactClose = document.getElementById('contactClose');
 var searchClose = document.getElementById('searchClose');
-contact.addEventListener('click', function() {
+/*contact.addEventListener('click', function() {
   contactModal.className = "modal is-active fadein0";
   event.preventDefault();
-})
+})*/
 search.addEventListener('click', function() {
   console.log('click');
   searchModal.className = "modal is-active fadein0";
@@ -123,10 +123,10 @@ search.addEventListener('click', function() {
 searchClose.addEventListener('click', function(e) {
   this.parentElement.className = 'modal';
 });
-contactClose.addEventListener('click', function(e) {
+/*contactClose.addEventListener('click', function(e) {
   this.parentElement.parentElement.parentElement.className = 'modal';
   e.preventDefault();
-});
+});*/
 smoothScroll.init({
   selector: '[scroll]', // Selector for links (must be a class, ID, data attribute, or element tag)
   selectorHeader: null, // Selector for fixed headers (must be a valid CSS selector) [optional]
