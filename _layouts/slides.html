@@ -20,21 +20,21 @@ layout: app
 /*$(document).on('webkitfullscreenchange mozfullscreenchange fullscreenchange msfullscreenchange', function(e) {
 console.log('fullscreenchange');
 if (document.fullscreenElement || document.mozFullScreenElement || document.webkitFullscreenElement || document.msFullscreenElement ) {
-  //$('#slides-container').css({'height': '100%','padding': '0'});
-  //$('#nav').hide("fast");
-  //$('#footer').hide("fast");
+  $('#slides-container').css({'height': '100%','padding': '0'});
+  $('#nav').hide("fast");
+  $('#footer').hide("fast");
   console.log('in fullscreen');
 } else {
-  //$('#slides-container').css({'height': '80%','padding': '10% 0 0 0'});
-  //$('#nav').show();
-  //$('#footer').show();
+  $('#slides-container').css({'height': '80%','padding': '10% 0 0 0'});
+  $('#nav').show();
+  $('#footer').show();
   console.log('NOT in fullscreen');
 }
 });*/
 </script>
 <script>
-// Full list of configuration options available at:
-// https://github.com/hakimel/reveal.js#configuration
+/* Full list of configuration options available at:
+ https://github.com/hakimel/reveal.js#configuration*/
 Reveal.initialize({
   controls: true,
   progress: true,
@@ -43,9 +43,9 @@ Reveal.initialize({
   {% if page.parallax %}
   parallaxBackgroundImage: '{{ page.parallax }}',
   {% endif %}
-  transition: '{% if page.transition %}{{ page.transition }}{% else %}slide{%endif %}', // none/fade/slide/convex/concave/zoom
+  transition: '{% if page.transition %}{{ page.transition }}{% else %}slide{%endif %}',
 
-  // Optional reveal.js plugins
+/*   Optional reveal.js plugins*/
   dependencies: [{
     src: '/slides/lib/js/classList.js',
     condition: function() {

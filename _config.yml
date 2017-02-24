@@ -74,20 +74,28 @@ defaults:
     values:
       layout: projects
 
-gems: [jekyll-minimagick]
-mini_magick:
+#gems: [jekyll-retinamagick]
+retinamagick:
     4x3:
       source: images/project-img/original
       destination: images/project-img/4x3
       resize: "1200x900"
+      quality: "60"
     landscape:
       source: images/project-img/original
       destination: images/project-img/landscape
       resize: "1024x512"
+      quality: "60"
+    lanscape-small:
+      source: images/project-img/original
+      destination: images/project-img/landscape-small
+      resize: "600x300"
+      quality: "60"
     square:
       source: images/project-img/original
       destination: images/project-img/square
       resize: "800x800"
+      quality: "60"
     compressed:
       source: images/project-img/original
       destination: images/project-img/compressed

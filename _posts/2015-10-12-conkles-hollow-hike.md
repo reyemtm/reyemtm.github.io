@@ -32,14 +32,14 @@ header-img: c-hollow.jpg
 <script src="https://www.ovrdc.org/apps/assets/cssjs/leaflet.geometryutil.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8"></script>
 <script>
-//map
+/*map*/
 	var map = L.map('map', {
 		maxZoom: 16,
 		sleep: true
 	});
 	map.setView([39.4570,-82.5778], 16);
 	var hash = L.hash(map);
-//tiles
+/*tiles*/
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 		attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 		}).addTo(map);
@@ -63,7 +63,7 @@ header-img: c-hollow.jpg
 	                      'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
 	                      'CartoDB</a>'
   	});
-//data
+/*data*/
 	var el = L.control.elevation({
 		position: 'bottomleft',
 		theme: 'green-theme',
@@ -83,7 +83,7 @@ header-img: c-hollow.jpg
 	  ride.addTo(map);
 	  map.fitBounds(ride.getBounds());
 	});
-//controls
+/*controls*/
 	var baseMaps = {
 		"OpenStreetMap": osm,
 		"Contrast": toner,
@@ -94,4 +94,4 @@ header-img: c-hollow.jpg
 	L.control.layers(baseMaps, null).addTo(map);
 </script>
 
-This is a map of a hike using the Leaflet elevation plugin. I added a green theme.
+This is a map of a hike using the Leaflet elevation plugin. I added a green theme. This map is in development.

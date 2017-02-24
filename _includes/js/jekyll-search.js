@@ -2,7 +2,7 @@
 'use strict'
 module.exports = {
   load: load
-}
+};
 
 function load(location,callback){
   var xhr
@@ -285,7 +285,7 @@ function compile(data){
     }
   }
 
-  // for backwards compatibility
+  /* for backwards compatibility*/
   window.SimpleJekyllSearch.init = window.SimpleJekyllSearch
 
 

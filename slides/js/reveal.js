@@ -4064,7 +4064,7 @@
 		// ESC or O key
 		else if ( ( event.keyCode === 27 || event.keyCode === 79 ) && features.transforms3d ) {
 			if( dom.overlay ) {
-        console.log('close')
+        console.log('close');
 				closeOverlay();
 			}
 			else {

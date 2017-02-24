@@ -198,7 +198,7 @@ function analyze(poly, points, fieldA, fieldB, callback) {
 
 //Analyze the data, then use the data to build the map
 analyze(data, bridges, 'garating', 'values', function() {
-  console.log('build layers')
+  console.log('build layers');
   console.log(ga.features[1].properties.values.length);
   if (ga.features[1].properties.values.length <= 0) {
     alert('Turfjs hit a snag. Please reload the page and try again.');

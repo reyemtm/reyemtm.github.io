@@ -1,4 +1,4 @@
-## About this Site
+### About this Site
 This site is powered by Jekyll, hosted on GitHub and cached by [Cloudflare](https://www.cloudflare.com/). It was adapted from the [Bulma Hero Theme](https://dansup.github.io/bulma-templates/). The first generation of this blog was based on the [Clean Blog](https://github.com/BlackrockDigital/startbootstrap-clean-blog-jekyll) theme from Start Bootstrap. In 2017 I switched from Bootstrap to Bulma CSS for something new, and to utilize a lighter CSS framework.
 
 ***

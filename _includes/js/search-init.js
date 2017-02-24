@@ -1,4 +1,4 @@
-//initiate search function
+/*initiate search function*/
 SimpleJekyllSearch({
   searchInput: document.getElementById('searchInput'),
   resultsContainer: document.getElementById('searchResults'),
@@ -10,7 +10,7 @@ SimpleJekyllSearch({
   exclude: ['Welcome']
 });
 
-//attempt to autofocus search input field when opened
+/*attempt to autofocus search input field when opened*/
 /*var searchModal = document.getElementById('searchModal');
 searchModal.addEventListener('')*/
 /*document.getElementById("searchModal").focus();

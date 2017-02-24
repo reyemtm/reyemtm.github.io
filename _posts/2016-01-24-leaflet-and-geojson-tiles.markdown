@@ -12,6 +12,7 @@ header-img: parcel-wide-2.jpg
 feature-img: parcel-wide.jpg
 ---
 ## The Client-Side County Parcel App
+*Update 2017-02-23 I have recently been experimenting with the Leaflet Vector Grid plugin for Leaflet 1.0, as the method described here will not work with the newest version of Leaflet. You can view an example of this experiment [here](https://www.ovrdc.org/apps/vector-grid.html).*
 
 It all started with this simple question from a county engineer: Would it be possible to create a low-cost or even free parcel viewer? Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons rendered in a map. The geojson-vt plugin expands this limit by converting the polygons into vector tiles. The resulting parcel test app is shown below.
 
@@ -21,7 +22,7 @@ Yearly hosting costs for apps such as this can run in the thousands if not tens 
 
 <iframe id="map" src="" name="map" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none;"></iframe>
 <div id="openMap" style="cursor:default;background-image:url('/images/post-img/original/parcel-wide-2-red.jpg');height:350px;width:100%;text-align:center;">
-	<a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map" class="inverse-txt"><h2 style="padding-top:160px;">Click Here to Open the Parcel Map</h2></a>
+	<a href="https://www.ovrdc.org/apps/geojson-tiles.html" target="map" class="inverse-txt"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Parcel Map</h2></a>
 </div>
 
 <h2>Simplification & TopoJson</h2>
@@ -52,13 +53,13 @@ To test the limits of this method I tested the app with another county parcel la
 
 <iframe id="cityMap" name="cityMap" src="" allowfullscreen width="100%" height="350px" style="border:1px lightgray solid;display:none;"></iframe>
 <div id="openCity" style="cursor:default;background-image:url('/images/post-img/original/parcel-wide-2.jpg');height:350px;width:100%;text-align:center;">
-	<a href="/apps/county-parcel-test-map.html" target="cityMap" class="inverse-txt"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Fairfield County Map</h2></a>
+	<a href="/apps/county-parcel-test-map/" target="cityMap" class="inverse-txt"><h2 style="padding-top:160px;color:whitesmoke;">Click Here to Open the Fairfield County Map</h2></a>
 </div>
 
 
 <h2>Crashing the Browser</h2>
 
-The map below uses a series of square grids to test the limits of geojson tiles. On most devices the browser will crash when trying to load the 58k feature grid, though it does load on my enterprise desktop. Click on the grids in the sidebar to find out what your devices and browser can handle! <a href="/apps/geojson-tile-grids.html" target="_blank">Click here to open the Grid Map (opens in a new window).</a>
+The map below uses a series of square grids to test the limits of geojson tiles. On most devices the browser will crash when trying to load the 58k feature grid, though it does load on my enterprise desktop. Click on the grids in the sidebar to find out what your devices and browser can handle! <a href="/apps/geojson-tile-grids/" target="_blank">Click here to open the Grid Map (opens in a new window).</a>
 
 <!--iframe id="gridMap" name="grid" src="" allowfullscreen width="100%" height="350px" style="border:0;display:none;"></iframe>
 <div id="openGrid" style="cursor:default;background-color:black;height:350px;width:100%;text-align:center;">
