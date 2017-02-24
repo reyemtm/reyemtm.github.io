@@ -81,11 +81,9 @@ setTimeout(function() {
 setTimeout(function() {
 	$(".blank").html('<h2 class="animate-flicker" style="text-align:center;margin-top:50px;">Ok, maybe this is fuitile.</h2>');
 }, 20000);
-//variables to keep across maps
 var reloaded = false;
 var search, tilename;
 var highlightOptions = {fill:'deepskyblue',color:'deepskyblue'};
-//choose tile on load
 if (L.Browser.mobile) {
 	tilename = 'fairfieldCounty.json';
 console.log(tilename);
@@ -105,23 +103,19 @@ if (tilename == 'fairfieldCounty.json') {
 					 tilename = 'lancaster.json';
 			 }
 		};
-//alert('make map fired');
 console.log('make map fired');
 
 var map = L.map('map', {
 	zoomControl: false,
 	maxZoom: 20,
 	minZoom: 10,
-  //	touchZoom: false,
   zoomAnimationThreshold: 3,
 	center: [39.7147,-82.6052],
 	zoom: 14,
   scrollWheelZoom:false,
 });
 map.spin(true);
-//var hash = L.hash(map);
-//alert(tilename);//--//
-//--tools
+
 var gpsLocate = L.control.locate({follow: true, locateOptions: {enableHighAccuracy: true}}).addTo(map);
 var homeExtent = L.control.defaultExtent({}).addTo(map);
 var fullScreen = L.control.fullscreen({}).addTo(map);
@@ -175,12 +169,12 @@ var sidebar = L.control.sidebar('sidebar', { autoPan: false, closeButton: false 
 sidebar.addTo(map);
 var sidebarToggle = L.easyButton({
       states: [{
-              stateName: 'open-sidebar',   // name the state
-              icon:      'fa-bars fa-lg',          // and define it's properties
-              title:     'Show Sidebar', // like it's title
-              onClick: function(btn, map) {  // and it's callback
+              stateName: 'open-sidebar',
+              icon:      'fa-bars fa-lg',
+              title:     'Show Sidebar',
+              onClick: function(btn, map) {
                   sidebar.show();
-                  btn.state('close-sidebar'); // change state on click!
+                  btn.state('close-sidebar');
               }
           }, {
               stateName: 'close-sidebar',
@@ -223,23 +217,18 @@ console.log(fullurl);
 var tileData = omnivore.topojson(fullurl, null, ffParcels);
 
 tileData.on('ready', function() {
-	//alert('parcel data ready');
 	console.log('parcel data ready');
 	if (reloaded != false) {
 		map.fitBounds(ffParcels.getBounds());
 	}
 	$(".blank").fadeOut();
 	map.spin(false);
-//update map on township click - first remake sidebar div destroyed in map.remove
 	var maptext = '<div id="sidebar"><div style="text-align:center;"> <hr> <h4>Filter by Township of City</h4> <hr><button id="lancaster" type="button" class="twpselect btn btn-default btn-sm btn-block">City of Lancaster</button> <button id="amanda" type="button" class="twpselect btn btn-default btn-sm btn-block">Amanda Township</button> <button id="berne" type="button" class="twpselect btn btn-default btn-sm btn-block">Berne Township</button> <button id="bloom" type="button" class="twpselect btn btn-default btn-sm btn-block">Bloom Township</button> <button id="clearcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Clearcreek Township</button> <button id="greenfield" type="button" class="twpselect btn btn-default btn-sm btn-block">Greenfield Township</button> <button id="hocking" type="button" class="twpselect btn btn-default btn-sm btn-block">Hocking Township</button> <button id="liberty" type="button" class="twpselect btn btn-default btn-sm btn-block">Liberty Township</button> <button id="madison" type="button" class="twpselect btn btn-default btn-sm btn-block">Madison Township</button> <button id="pleasant" type="button" class="twpselect btn btn-default btn-sm btn-block">Pleasant Township</button> <button id="richland" type="button" class="twpselect btn btn-default btn-sm btn-block">Richland Township</button> <button id="rushcreek" type="button" class="twpselect btn btn-default btn-sm btn-block">Rush Creek Township</button> <button id="violet" type="button" class="twpselect btn btn-default btn-sm btn-block">Violet Township</button> <button id="walnut" type="button" class="twpselect btn btn-default btn-sm btn-block">Walnut Township</button><button id="fairfieldCounty" type="button" class="btn btn-default btn-sm btn-block">Fairfield County</button></div><hr> <h6>Pinch & zoom disabled. Use zoom controls.</h6> </div></div> ';
-//twp select function
 	$(".twpselect").on('click', function(e){
 		var twp = $(this).attr('id') + '.json';
-		//alert(tilename);
 		console.log(tilename);
 		if (tilename != twp) {
 			tilename = twp;
-			//alert(tilename);
 			console.log(tilename);
 			map.remove();
 		}
@@ -247,21 +236,16 @@ tileData.on('ready', function() {
   $("#fairfieldCounty").on('click', function(e){
     window.location = "{{site.baseurl}}/apps/fairfield-county-map.html";
   });
-//remake map after map.remove is fired
 	map.on('unload', function() {
-		//alert('map destroyed');
 		console.log('map destroyed');
 		$('.blank').css('opacity', '0.5');
 		$('.blank').html('<div>&nbsp</div>');
-		//alert(tilename);
 		console.log(tilename);
 		setTimeout(function() {
-			//alert('creating new map');
 			$("#parcelmap").append(maptext);
 			makeMap();
 		}, 500);
 	});
-//start search
 	search = new L.Control.Search({
 		layer: ffParcels,
 		propertyName: 'index',
@@ -276,13 +260,10 @@ tileData.on('ready', function() {
 		map.fire('click', {latlng:e.latlng});
 	  	search.collapse();
 	  });
-//end search
-//----------
-//start geojson-vt map tiles
+
 	var layerData;
 	var highlight;
 	var data = tileData.toGeoJSON();
-//interaction on the underlying polygon represented by the tiles - they draw better
 	map.on('click', function(e) {
 	if (highlight){
 		map.removeLayer(highlight)
@@ -310,16 +291,15 @@ tileData.on('ready', function() {
 		}
 	});
 	var tileOptions = {
-	            maxZoom: 20,  // max zoom to preserve detail on
-	            tolerance: 3, // simplification tolerance (higher means simpler)
-	            extent: 4096,  // 4096 tile extent (both width and height)
-	            buffer: 64,   // default 64 tile buffer on each side
-	            debug: 0,      // logging level (0 to disable, 1 or 2)
-	            indexMaxZoom: 0,        // 0 max zoom in the initial tile index
-	            indexMaxPoints: 100000, // 100000 max number of points per tile in the index
+	            maxZoom: 20,
+	            tolerance: 3,
+	            extent: 4096,
+	            buffer: 64,
+	            debug: 0,
+	            indexMaxZoom: 0,
+	            indexMaxPoints: 100000,
 	        };
 	var tileIndex = geojsonvt(data, tileOptions);
-//take json output from geojson-vt and draw it with the now depricated (in leaflet-beta) L.canvasTiles and code from here - http://blog.sumbera.com/2015/05/31/geojson-vt-on-leaflet/
 	var tileLayer = L.canvasTiles().params({ debug: false, padding: 5 }).drawing(drawingOnCanvas)
 	var pad = 0;
 	tileLayer.addTo(map);
@@ -329,7 +309,6 @@ tileData.on('ready', function() {
 	            params.tilePoint.z = params.zoom;
 	            var ctx = params.canvas.getContext('2d');
 	            ctx.globalCompositeOperation = 'source-over';
-	            //console.log('getting tile z' + params.tilePoint.z + '-' + params.tilePoint.x + '-' + params.tilePoint.y);
 	            var tile = tileIndex.getTile(params.tilePoint.z, params.tilePoint.x, params.tilePoint.y);
 	            if (!tile) {
 	                console.log('tile empty');
@@ -362,13 +341,12 @@ tileData.on('ready', function() {
 	                ctx.stroke();
 	            }
 	        };
-//end geojson-vt map tiles
 
-});//end tile data on ready function
+});
 
 }//end makeMap function
 
-//make map on document ready
+
 $(document).ready(function() {
 	if (reloaded == false) {
 		console.log('document ready');

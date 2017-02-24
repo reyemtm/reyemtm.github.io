@@ -10,7 +10,7 @@ zoom: 3
 basemap: dark
 ---
 
-//var quakes = L.geoJson.ajax('//earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson').addTo(map);
+/*var quakes = L.geoJson.ajax('//earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson').addTo(map);*/
 var quakes = new L.geoJson(null, {
   pointToLayer: function(feature, latlng) {
     return L.circleMarker(latlng, {radius: 5})

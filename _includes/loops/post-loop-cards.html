@@ -1,8 +1,8 @@
 <div class="column is-4 is-pulled-left">
-  <div class="card fadein6">
+  <div class="card fadein3">
     <div class="card-image">
       <a href="{{post.url}}">
-        <figure class="image is-16by9" {% if post.feature-img != null or post.header-img != null or post.image != null %}style="background-image:url({%if post.feature-img%}/images/post-img/landscape-small/{{post.feature-img}}{%elsif post.image%}/images/post-img/landscape-small/{{post.image}}{%elsif post.header-img%}/images/post-img/landscape-small/{{post.header-img}}{% elsif post.image == null or post.feature == null or post.header-img == null %}/images/post-img/landscape-small/pattern_00.jpg{%endif%})"{%endif%}>
+        <figure class="image is-16by9" {% if post.feature-img != null or post.header-img != null or post.image != null %}style="background-image:url({%if post.feature-img%}/images/compressed/{{post.feature-img}}{%elsif post.image%}/images/compressed/{{post.image}}{%elsif post.header-img%}/images/compressed/{{post.header-img}}{% elsif post.image == null or post.feature == null or post.header-img == null %}/images/compressed/pattern_00.jpg{%endif%})"{%endif%}>
         </figure>
       </a>
     </div>

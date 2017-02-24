@@ -16,15 +16,15 @@ header-img: header-vacay-2.jpg
 <div id="map">
 </div>
 <script>
-//map
+/*map*/
 	var map = L.map('map', {
 		maxZoom: 8,
 		sleep: true,
-		//defaultExtentControl: true
+		/*defaultExtentControl: true*/
 	});
 	map.setView([45.446,-100.928], 4);
 	var hash = L.hash(map);
-//tiles
+/*tiles*/
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 		attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 		});
@@ -43,7 +43,7 @@ header-img: header-vacay-2.jpg
 	                      'CC-BY-SA</a>. Tiles &copy; <a href="http://cartodb.com/attributions">' +
 	                      'CartoDB</a>'
   	}).addTo(map);
-//controls
+/*controls*/
 	var baseMaps = {
 		"Contrast": toner,
 		"Comic": comic,
@@ -53,7 +53,7 @@ header-img: header-vacay-2.jpg
 
 	var lyrs = new L.control.layers(baseMaps).addTo(map);
 
-//photo layer
+/*photo layer*/
 	var photoLayer = L.photo.cluster({spiderfyDistanceMultiplier: 2}).on('click', function (evt) {
 	var photo = evt.layer.photo,
         template = '<img src="{url}"/><p>{caption}</p>';
@@ -95,9 +95,9 @@ header-img: header-vacay-2.jpg
 		}
 
 			photoLayer.add(photos).addTo(map);
-			//map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
-			//map.setView([41.55012, -87.81197], 15);
-			//has to be added after center and zoom are set
+/*			map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
+			map.setView([41.55012, -87.81197], 15);
+			has to be added after center and zoom are set*/
 			L.control.navbar().addTo(map);
 
 		}

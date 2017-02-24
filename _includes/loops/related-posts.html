@@ -11,31 +11,8 @@
             <div class="columns cards">
               {% endif %}
               <!--begin post-loop.html -->
-                <div class="column is-4 is-pulled-left">
-                  <div class="card fadein7">
-                    <div class="card-image">
-                      <a href="{{post.url}}">
-                        <figure class="image is-16by9" {% if post.feature-img != null or post.header-img != null or post.image != null %}style="background-image:url({%if post.feature-img%}/images/post-img/landscape-small/{{post.feature-img}}{%elsif post.image%}/images/post-img/landscape-small/{{post.image}}{%elsif post.header-img%}/images/post-img/landscape-small/{{post.header-img}}{% elsif post.image == null or post.feature == null or post.header-img == null %}/images/post-img/landscape-small/pattern_00.jpg{%endif%})"{%endif%}>
-                        </figure>
-                      </a>
-                    </div>
-                    <div class="card-content">
-                      <div class="media">
-                        <div class="media-content">
-                          <p><a class="title is-4" href="{{post.url}}">{{post.title}}</a></p>
-                            <span class="subtitle">
-                              <a class="content" href="{{post.url}}">
-                                <div class="bulma-hero--subtitle">
-                                  {{ post.subtitle | strip_html | truncatewords:10}}<br>
-                                <!--small></small-->
-                                </div></a>
-                                {% for tag in post.tags %}<a href="/tags/#{{tag}}" class="tag">{{tag}}</a>{%endfor%}</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-            {% assign n_posts = n_posts | plus: 1 %}
+              {% include loops/post-loop-cards.html %}
+              {% assign n_posts = n_posts | plus: 1 %}
             {% break %}
         {% endif %}
     {% endfor %}

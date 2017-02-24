@@ -31,7 +31,7 @@ d3.json("https://www.ovrdc.org/apps/assets/data/d3test/fairfieldParcelsMin.json"
   map.on("viewreset", reset);
   reset();
 
-  // Reposition the SVG to cover the features.
+  /* Reposition the SVG to cover the features.*/
   function reset() {
     var bounds = path.bounds(collection),
         topLeft = bounds[0],
@@ -47,7 +47,7 @@ d3.json("https://www.ovrdc.org/apps/assets/data/d3test/fairfieldParcelsMin.json"
     feature.attr("d", path);
   }
 
-  // Use Leaflet to implement a D3 geometric transformation.
+  /* Use Leaflet to implement a D3 geometric transformation.*/
   function projectPoint(x, y) {
     var point = map.latLngToLayerPoint(new L.LatLng(y, x));
     this.stream.point(point.x, point.y);

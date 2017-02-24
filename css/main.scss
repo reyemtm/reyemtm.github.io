@@ -207,7 +207,7 @@
 @media (min-width: 769px) and (max-width: 1200px) {
   .portfolio-box-sm .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
   .portfolio-box-sm .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
-    padding: 8px;
+    padding: 5px;
     margin-bottom: 0;
   }
   .portfolio-box-sm .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
@@ -216,9 +216,18 @@
   .portfolio-box-sm .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
     font-size: 12px;
   }
-  .portfolio-sm .portfolio-box .tag {
+/*  .portfolio-sm .portfolio-box .tag {
     font-size: 0.7rem;
     margin-top: 10px;
+  }*/
+}
+@media screen and (min-width: 769px) {
+  .portfolio-sm .button.is-medium {
+    font-size: 12px;
+    height: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 5px;
   }
 }
 @media (max-width: 768px) {
@@ -227,6 +236,17 @@
   }
   .popup-gallery .column {
     padding: 0 10px;
+  }
+}
+@media (max-width:480px) {
+  .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category {
+    font-size: 1.5rem
+  }
+  .portfolio-box .button.is-medium {
+      font-size: 12px;
+      height: 30px;
+      padding-left: 10px;
+      padding-right: 10px;
   }
 }
 /*end portfolio box styles*/
@@ -467,14 +487,6 @@ a.tag:hover, a.tag:active {
     height: 360px;
   }
 }*/
-@media screen and (min-width: 769px) {
-  .portfolio-sm .button.is-medium {
-    font-size: 12px;
-    height: 30px;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
 @media screen and (max-width: 768px) {
   h1, .title.is-1 {
     font-size: 40px;
