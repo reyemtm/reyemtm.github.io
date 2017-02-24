@@ -23,7 +23,7 @@
   <meta name="twitter:description" content="{% if page.description %}{{ page.description }}{% elsif page.subtitle %}{{ page.subtitle }}{% else %}{{site.description}}{% endif %}">
   <meta name="twitter:domain" content="getBounds.com" />
   <!-- Twitter summary card with large image must be at least 280x150px -->
-  <meta name="twitter:image:src" content="{{ site.baseurl }}/{% if page.feature-img %}{{ page.feature-img }}{% elsif page.image %}{{ page.image }}{% else %}{{ site.header-img }}{% endif %}">
+  <meta name="twitter:image:src" content="{{ site.baseurl }}/{% if page.feature-img %}images/post-img/landscape/{{ page.feature-img }}{% elsif page.image %}images/post-img/original/{{ page.image }}{% else %}{{ site.header-img }}{% endif %}">
 
   <!-- Open Graph data -->
   <meta property="og:title" content="{{ page.title }}" />
