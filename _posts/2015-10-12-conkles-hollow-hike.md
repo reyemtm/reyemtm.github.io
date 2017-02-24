@@ -4,7 +4,7 @@ date: 2015-10-12 00:00:00 Z
 tags:
 - leaflet
 layout: post
-description: Here I am Leaflet Elevation to show a the elevation cross-section of
+description: Using the Leaflet Elevation plugin to show a the elevation cross-section of
   a GPS track recorded with MyTracks at Conkle's Hollow Nature Preserve in the Hocking
   Hills region of Ohio.
 subtitle: Mapping GPS Tracks
