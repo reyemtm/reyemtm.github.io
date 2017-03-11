@@ -32,9 +32,6 @@
     link.href = window.location.search.match(/print-pdf/gi) ? '/slides/css/print/pdf.css' : '/slides/css/print/paper.css';
     document.getElementsByTagName('head')[0].appendChild(link);
   </script>
-  <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
   <!--End Slides Styles-->
   {% endif %}
   <style>
@@ -45,4 +42,7 @@
   </style>
   {% if page.iframe %}<script>!function(){var a=document.createElement("div"),b=document.getElementsByTagName("base")[0]||document.getElementsByTagName("script")[0];a.innerHTML="&shy;<style> iframe { visibility: hidden; } </style>",b.parentNode.insertBefore(a,b),window.onload=function(){a.parentNode.removeChild(a)}}();</script>{% endif %}
   {%if jekyll.environment != test %}{%include google-analytics.html%}{%endif%}
+  <!--[if lt IE 9]>
+  <script src="{{site.baseurl}}/slides/lib/js/html5shiv.js"></script>
+  <![endif]-->
 </head>
