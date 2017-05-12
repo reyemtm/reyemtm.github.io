@@ -1,3 +1,8 @@
+- name: awesome-markers
+  js: https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js
+  css: https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css
+- name: firebase
+  js: https://www.gstatic.com/firebasejs/3.7.3/firebase.js
 - name: jquery
   js: https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js
 

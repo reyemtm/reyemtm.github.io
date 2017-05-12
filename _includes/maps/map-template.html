@@ -74,10 +74,6 @@
     maxZoom: 20,
     maxNativeZoom: 18,
   });
-  var thundertransport = L.tileLayer('https://{s}.tile.thunderforest.com/transport/{z}/{x}/{y}.png', {
-    attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>, &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 19,
-  });
 
   var esritopo = L.tileLayer('//server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
     attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community',
@@ -96,12 +92,10 @@
   var topo = esritopo;
   var light = cdblight;
   var dark = cdbdark;
-  var transit = thundertransport;
   var basemaps = {
     "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/osm-streets.png'></div> Streets": osm,
     "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/mapbox-ortho.png'></div> Satellite": ortho,
     "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/esri-topo.png'></div> Topography": esritopo,
-    "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/transit.png'></div> Transit": transit,
     "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/cdb-light.png'></div> Grayscale": cdblight,
     "<div class='layers-control-img'><img src='/apps-plugins/images/layer-control-images/cdb-dark.png'></div> Dark Matter": cdbdark,
   };
