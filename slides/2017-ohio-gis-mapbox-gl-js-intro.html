@@ -3,6 +3,7 @@ layout: slides
 theme: white
 style: >-
   .reveal .section .img {border: none;}
+  .red {color: "firebrick"}
 transition: fade
 ---
 <section data-markdown data-separator="---">
@@ -15,10 +16,10 @@ Mapbox GL JS
 ![mapbox-gl](https://getbounds.com/images/original/mapbox-3d-map-01.png)
 ---
 ## Pieces of a Web Map
- - Data
- - JavaScript
- - Map JavaScript API<!--data
- - CSS Framework
+ - Data<!-- .element: class="fragment" -->
+ - JavaScript<!-- .element: class="fragment" -->
+ - CSS Framework<!-- .element: class="fragment" -->
+ - Map JavaScript API<!-- .element: class="fragment" -->
 ---
 ##Location
 ##**Information** <!-- .element: class="fragment" -->
@@ -38,7 +39,7 @@ Transportation Planning Coordinator
 </script>
 </section>
 <script>
-  Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
+Reveal.addEventListener( 'fragmentshown', function( event ) {
+	event.fragment.class = 'red';
 } );
 </script>
