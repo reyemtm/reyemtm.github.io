@@ -2,24 +2,23 @@
 layout: slides
 theme: white
 style: >-
-  .reveal section img {border: none;}
+  .reveal section img {border: none;box-shadow:none;}
   .red {color: "firebrick"}
+
 transition: fade
 ---
 <section data-markdown data-separator="---">
 <script type="text/template">
 ![image of slide intro](/slides/img/2017_ohio_gis_title_page.png)
 ---
-Mapbox GL JS
----
-### Mapbox GL JS Data Driven Styling & Extrusion
+### [Live Example](https://www.ovrdc.org/apps/block-group-explorer.html)
 ![mapbox-gl](https://getbounds.com/images/original/mapbox-3d-map-01.png)
 ---
 ## Pieces of a Web Map
- - #### Data<!-- .element: class="fragment" -->
- - #### JavaScript<!-- .element: class="fragment" -->
- - #### CSS Framework<!-- .element: class="fragment" -->
- - #### Map JavaScript API<!-- .element: class="fragment" --> <-- <!-- .element: class="fragment" -->
+ - ### Data<!-- .element: class="fragment" -->
+ - ### JavaScript<!-- .element: class="fragment" -->
+ - ### CSS Framework<!-- .element: class="fragment" -->
+ - ### Map JavaScript API<!-- .element: class="red" -->
 ---
 ##Location
 ##**Information** <!-- .element: class="fragment" -->
@@ -39,7 +38,5 @@ Transportation Planning Coordinator
 </script>
 </section>
 <script>
-Reveal.addEventListener( 'fragmentshown', function( event ) {
-	event.fragment.class = 'red';
-} );
+
 </script>
