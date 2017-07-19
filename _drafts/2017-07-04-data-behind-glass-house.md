@@ -1,5 +1,4 @@
 ---
-draft:true
 ---
 Med income cgart/map
 zipcide overdose map/chart

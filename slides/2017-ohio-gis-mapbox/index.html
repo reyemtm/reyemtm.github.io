@@ -1,0 +1,143 @@
+---
+layout: slides
+theme: white
+style: >-
+  .reveal section img {border: none;box-shadow:none;}
+
+  .red {color: firebrick!important;}
+
+  .reveal h1 {
+    color: firebrick;
+  }
+
+  .reveal h1, .reveal h2, .reveal h3 {
+    font-family: 'Catamaran', sans-serif;
+  }
+
+  .reveal p {
+      font-family: 'Nunito Sans', sans-serif;
+  }
+  .reveal pre code {
+    max-height: 650px;
+    font-size: 0.6rem;
+  }
+transition: fade
+---
+<section data-markdown data-separator="---">
+<script type="text/template">
+![image of slide intro](title-page.png)
+---
+![mapbox-gl](https://getbounds.com/images/original/mapbox-3d-map-01.png)
+[https://www.ovrdc.org/apps/block-group-explorer.html](https://www.ovrdc.org/apps/block-group-explorer.html)
+---
+<h1 class="red">Web Map Essentials</h1>
+ ## Raw Data <!-- .element: class="fragment" -->
+ ## Data Hosting<!-- .element: class="fragment" -->
+ ## CSS Framework<!-- .element: class="fragment" -->
+ ## JavaScript<!-- .element: class="fragment" -->
+ ## Map JavaScript API<!-- .element: class="fragment" -->
+---
+# What is [Mapbox](https://www.napbox.com/)
+
+> APIs for maps, geocoding, driving directions, and more
+---
+<h1 class="red">Mapbox Studio</h1>
+ ### Mapbox Basemap Styles
+ ### Vector Tile & Data Hosting
+ ### GUI for Customizing Styles
+---
+![](studio-1.png)
+---
+![](studio-2.png)
+---
+![](studio-3.png)
+---
+```
+{
+    "version": 8,
+    "name": "2017 Ohio GIS Conf Sample",
+    "metadata": {
+        "mapbox:autocomposite": true,
+        "mapbox:type": "template"
+    },
+    "center": [
+        -82.2934381310398,
+        38.839090741456374
+    ],
+    "zoom": 12.211347733342276,
+    "bearing": 0,
+    "pitch": 0,
+    "sources": {
+        "composite": {
+            "url": "mapbox://************",
+            "type": "vector"
+        }
+    },
+    "sprite": "mapbox://sprites/reyemtm/******************",
+    "glyphs": "mapbox://fonts/reyemtm/{fontstack}/{range}.pbf",
+    "layers": [
+        {
+            "id": "background",
+            "type": "background",
+            "paint": {
+                "background-color": "rgba(0,0,0,0)"
+            }
+        },
+        {
+            "id": "gallia-parcels-2uhlpq",
+            "type": "fill",
+            "source": "composite",
+            "source-layer": "gallia-parcels-2uhlpq",
+            "minzoom": 11,
+            "layout": {
+                "visibility": "visible"
+            },
+            "paint": {
+                "fill-color": "hsl(0, 0%, 100%)",
+                "fill-outline-color": "hsl(206, 100%, 50%)"
+            }
+        }
+    ],
+    "created": "2016-10-24T18:56:42.515Z",
+    "id": "*******************",
+    "modified": "2017-07-19T14:46:59.398Z",
+    "owner": "reyemtm",
+    "visibility": "private",
+    "draft": false
+}
+```
+---
+<h1 class="red">Compatibility</h1>
+Mapbox serves out raster and vector tiles, and also has the option of serving out a static image.
+![](logos.png)
+---
+<h1 class="red">Mapbox GL JS</h1>
+ ## JSON Config Files
+ ## Data-Driven Styling
+ ## Polygon Extrusion
+ ## Query Features
+---
+# What is Mapbox
+---
+# What is Mapbox
+---
+# What is Mapbox
+---
+# What is Mapbox
+---
+
+## Thanks!
+
+### Malcolm Meyer
+
+Transportation Planning Coordinator
+
+[Ohio Valley Regional Development Commission](http://www.ovrdc.org)
+<br><br>
+[GitHub Examples](https://ovrdc.github.io/gis-tutorials/)
+
+</script>
+</section>
+<script>
+
+</script>
