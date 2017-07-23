@@ -1,0 +1,36 @@
+- name: Open Parcel Viewer
+  img:  parcel-wide-ii.jpg
+  caption:  Open Source County Parcel Viewer using Leaflet
+  about: >-
+    A simple static html, javascript and jquery parcel web map, capable of rendering up to 50k polygons on desktop and mobile. The app uses Leaflet as the mapping api and Jekyll to build the static pages. Color, initial map center/zoom and the search field are defined in the yaml front matter, with minimal to zero extra coding needed. The polygons should be in topojson format.
+  code: https://github.com/ovrdc/parcel-viewer
+  url: https://ovrdc.github.io/parcel-viewer
+  tags: [leaflet, bootstrap]
+
+- name: Leaflet Store Locator
+  img:  parcel-wide.jpg
+  caption:  Store Locator Map for Shagbark
+  about: A store locator based on the Mapbox (need link) example, ported to pure Leaflet with custom icons and a simple jquery filter. Developed in partnership with Nick Kroncke and Shagbarck.
+  url: http://shagbarkmap.surge.sh/
+  tags: [leaflet, bootstrap, jquery]
+
+- name: OVRDC Map Gallery
+  img:  parcel-wide.jpg
+  caption:  Web Map Gallery with Filter by Tags
+  about:
+  url: http://www.ovrdc.org/maps
+  tags: [jekyll, bootstrap, jquery]
+
+- name: Leaflet Store Locator
+  img:  parcel-wide.jpg
+  caption:  Store Locator Map for Shagbark
+  about: A store locator based on the Mapbox (need link) example, ported to pure Leaflet with custom icons and a simple jquery filter. Developed in partnership with Nick Kroncke and Shagbarck.
+  url: http://shagbarkmap.surge.sh/
+  tags: [leaflet, bootstrap, jquery]
+
+- name: OVRDC Map Gallery
+  img:  parcel-wide.jpg
+  caption:  Web Map Gallery with Filter by Tags
+  about:
+  url: http://www.ovrdc.org/maps
+  tags: [jekyll, bootstrap, jquery]

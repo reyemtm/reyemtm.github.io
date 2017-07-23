@@ -38,7 +38,7 @@ markdown: kramdown
 highlighter: rouge
 
 #theme: minima
-gems:
+plugins:
   - jekyll-feed
   - jekyll-sitemap
 permalink: "/:categories/:title/"
@@ -75,32 +75,36 @@ defaults:
     values:
       layout: projects
 
-#gems: [jekyll-retinamagick]
+plugins: [jekyll-retinamagick]
+#used locally then I manually move the images to their respective folders since I serve this on github but useful for other sites
 retinamagick:
-    4x3:
-      source: images/project-img/original
-      destination: images/project-img/4x3
-      resize: "1200x900"
-      quality: "60"
-    landscape:
-      source: images/project-img/original
-      destination: images/project-img/landscape
-      resize: "1024x512"
-      quality: "60"
-    lanscape-small:
-      source: images/project-img/original
-      destination: images/project-img/landscape-small
-      resize: "600x300"
-      quality: "60"
-    square:
+    post-img-compressed:
+      source: images/post-img/original
+      destination: images/compressed
+      resize: "640x480"
+      quality: "70"
+    post-img-header:
+      source: images/post-img/original
+      destination: images/post-img/header
+      scale: "640x360"
+      crop: "640x360+0+0"
+      quality: "70"
+    project-img-4x3:
       source: images/project-img/original
       destination: images/project-img/square
-      resize: "800x800"
-      quality: "60"
-    compressed:
+      scale: "800x600"
+      crop: "800x600+0+0"
+      quality: "70"
+    projet-img-compressed:
       source: images/project-img/original
       destination: images/project-img/compressed
-      quality: "60"
+      scale: "640x480"
+      crop: "640x480+0+0"
+    post-img-compressed-loop:
+      source: images/project-img/original
+      destination: images/compressed
+      resize: "640x480"
+      quality: "70"
 #mini_magick:
 #  4x3:
 #    source: post-img/original

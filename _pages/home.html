@@ -52,19 +52,20 @@ css: "#viewArchive{display:none;}#evenMore{display:none;}"
     <div class="container fadein2">
       <div class="columns popup-gallery">
         <div class="column is-half is-pulled-left">
-          {% for project in site.projects limit: 1 %}
+          {% assign projects = site.projects | where: "featured", "true" %}
+          {% for project in projects limit: 1 %}
             {% include loops/project-loop.html %}
           {% endfor %}
         </div>
         <div class="column portfolio-box-sm">
-          {% for project in site.projects limit: 2 offset: 1%}
+          {% for project in projects limit: 2 offset: 1%}
             <div class="portfolio-sm">
               {% include loops/project-loop.html %}
             </div>
           {% endfor %}
         </div>
         <div class="column portfolio-box-sm">
-          {% for project in site.projects limit: 2 offset: 3%}
+          {% for project in projects limit: 2 offset: 3%}
             <div class="portfolio-sm">
               {% include loops/project-loop.html %}
             </div>
