@@ -12,6 +12,8 @@ header-img: parcel-wide-2.jpg
 feature-img: parcel-wide.jpg
 ---
 ## The Client-Side County Parcel App
+*Update 2017-08-01 This app has seen two more iterations. These each utilize an mbtiles-server to host the vector tiles, but still using client-side search for the data. The updated examples can be viewed here - a [Leaflet/Bootstrap Version](https://www.ovrdc.org/apps/vector-grid-pbf.html#13/38.7580/-82.9717) and a [Mapbox/Material Design Lite Version](https://www.ovrdc.org/apps/mapbox-parcel-viewer.html).
+
 *Update 2017-02-23 I have recently been experimenting with the Leaflet Vector Grid plugin for Leaflet 1.0, as the method described here will not work with the newest version of Leaflet. You can view an example of this experiment [here](http://www.ovrdc.org/apps/vector-grid.html).*
 
 It all started with this simple question from a county engineer: Would it be possible to create a low-cost or even free parcel viewer? Having successfully rendered a few thousand parcels with leaflet and geojson I thought this might be possible. However, running client-side apps has its drawbacks, including fairly meager limits on the number of polygons rendered in a map. The geojson-vt plugin expands this limit by converting the polygons into vector tiles. The resulting parcel test app is shown below.
