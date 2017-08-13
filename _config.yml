@@ -19,7 +19,7 @@ title: getBounds
 name: getBounds
 author: Malcolm Meyer
 description: >
-  A (Jekyll) blog xxploring web maps and cartography. I explore the use of desktop and web-based GIS software including ArcMap, QGIS, Leaflet JS, Mapbox GL JS and other products.
+  A (Jekyll) blog exploring web maps and cartography. I explore the use of desktop and web-based GIS software including ArcMap, QGIS, Leaflet JS, Mapbox GL JS and other products.
 baseurl: https://getbounds.com
 url: https://getbounds.com
 header-img: header-new-compressed.png
