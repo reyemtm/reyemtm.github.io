@@ -27,7 +27,7 @@ transition: fade
 <script type="text/template">
 ![image of slide intro](title-page.png)
 ---
-![mapbox-gl](https://getbounds.com/images/original/mapbox-3d-map-01.png)
+![mapbox-gl](mapbox-3d-map-01.png)
 [https://www.ovrdc.org/apps/block-group-explorer.html](https://www.ovrdc.org/apps/block-group-explorer.html)
 ---
 <h1 class="red">Web Map Essentials</h1>
@@ -37,14 +37,37 @@ transition: fade
  ## JavaScript<!-- .element: class="fragment" -->
  ## Map JavaScript API<!-- .element: class="fragment" -->
 ---
-# What is [Mapbox](https://www.napbox.com/)
+# What is [Mapbox](https://www.mapbox.com/products)
 
-> APIs for maps, geocoding, driving directions, and more
+> "APIs for maps, geocoding, driving directions, and more"
 ---
 <h1 class="red">Mapbox Studio</h1>
- ### Mapbox Basemap Styles
- ### Vector Tile & Data Hosting
- ### GUI for Customizing Styles
+### Mapbox OSM & Ortho Basemaps
+![mapbox-basemaps](mapbox-basemaps.png)
+### GUI for Customizing Styles
+### Data Hosting with Vector & Raster Tile Endpoints
+---
+<h2 class="red"> What are [Vector Tiles](https://www.mapbox.com/vector-tiles/specification/)?</h2>
+
+"Vector tiles...are packets of geographic data, packaged into pre-defined roughly-square shaped 'tiles' for transfer over the web." ~ [Wikipedia](https://en.wikipedia.org/wiki/Vector_tiles)
+<br><br>
+Vector are a <em>representation</em> of geographic features at a specific zoom level - lines and polygons may be simplified, and points may be ommitted. They can be rendered and styled on-the-fly by the client/browser or by the server.
+---
+<h2 class="red">Raster vs Vector</h2>
+AGOL Raster Basemap
+
+**70 Requests, 1100kb**
+<br><br>
+OpenStreetMap Raster
+
+**45 Requests, 749kb**
+<br><br>
+Vector Tile Basemap
+
+**20 requests, 759kb**
+
+<span class="red">This includes feature data!!</span><!-- .element: class="fragment" -->
+
 ---
 ![](studio-1.png)
 ---
@@ -108,7 +131,7 @@ transition: fade
 ```
 ---
 <h1 class="red">Compatibility</h1>
-Mapbox serves out raster and vector tiles, and also has the option of serving out a static image.
+Mapbox serves out raster and vector tiles, and also has the option of serving out a static image. There are also several open source tile server alternatives with similar functionality.
 ![](logos.png)
 ---
 <h1 class="red">Mapbox GL JS</h1>
