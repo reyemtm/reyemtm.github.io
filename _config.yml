@@ -55,7 +55,6 @@ collections:
   projects:
     output: true
     permalink: /projects/:name/index.html
-
 # Defaults
 defaults:
   - scope:

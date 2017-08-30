@@ -40,6 +40,9 @@ Reveal.initialize({
   progress: true,
   history: true,
   center: true,
+  {%if page.auto == true %}
+  autoSlide: {% if page.autoTime %}{{page.autoTime}}{% else%}5000{% endif %},
+  {% endif %}
   {% if page.parallax %}
   parallaxBackgroundImage: '{{ page.parallax }}',
   {% endif %}
