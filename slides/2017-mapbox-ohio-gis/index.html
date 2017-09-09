@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+  <title>big</title>
+  <link href='../big-assets/big.css' rel='stylesheet' type='text/css' />
+  <link href='../big-assets/highlight.css' rel='stylesheet' type='text/css' />
+  <link href='../big-assets/custom.css' rel='stylesheet' type='text/css' />
+  <style>
+    .new-shiny { background: #aaaaaa; }
+  </style>
+  <script src='../big-assets/big.js'></script>
+  <script src='../big-assets/highlight.js'></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</head>
+<body class='light'>
+  <div><p><img src="img/title-page.jpg" alt="image of slide intro"></p>
+</div>
+<div><h1 id="what">What</h1>
+<h1 id="why">Why</h1>
+<h1 id="how">How</h1>
+</div>
+<div><h1 id="tools">Tools</h1>
+<h1 id="examples">Examples</h1>
+</div>
+<div><h1 id="what">What</h1>
+<h1 id="are-vector-tiles-https-www-mapbox-com-vector-tiles-specification-">Are <a href="https://www.mapbox.com/vector-tiles/specification/">Vector Tiles</a>?</h1>
+</div>
+<div><p>Vector Tiles are a <em>representation</em> of geographic features and their underlying data for a <em>specific zoom level</em> and bounding box, typically served as <em>.pbf</em> files. Lines and polygons may be <em>simplified</em>, and points may be omitted. - <em>Adapted from <a href="https://en.wikipedia.org/wiki/Vector_tiles">Wikipedia</a></em></p>
+</div>
+<div><h2 id="-mapbox-vector-tiles-mvt-https-www-mapbox-com-vector-tiles-specification-"><a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox Vector Tiles (MVT)</a></h2>
+<p>MVT is slowly becoming an industry standard.</p>
+<p><img src="img/logos2.jpg" alt=""></p>
+</div>
+<div><h1 id="why-br-vector-tiles">Why<br>Vector Tiles</h1>
+<p>Dynamically Change Styles</p>
+<p>Access to Attribute Data</p>
+<p>Vector Tiles are Shiny and NEW!!</p>
+</div>
+<div><h1 id="performance">Performance</h1>
+<p><a href="https://www.arcgis.com/home/webmap/viewer.html?useExisting=1">AGOL Raster Basemap</a></p>
+<p><strong>70 Requests, 1100kb</strong>
+<br><br>
+<a href="http://www.openstreetmap.org/#map=8/38.987/-82.722">OpenStreetMap Raster</a></p>
+<p><strong>45 Requests, 749kb</strong>
+<br><br>
+<a href="https://www.ovrdc.org/apps/travel-times.html#8/38.604/-81.639">Vector Tile Basemap</a></p>
+<p><strong>20 requests, 759kb</strong></p>
+<p><em>This includes feature data!!</em></p>
+</div>
+<div><h1 id="how">How</h1>
+<p>Raw Data <span style="color:firebrick;">--&gt;</span> GeoJSON <span style="color:#0889d1;">--&gt;</span> Vector Tiles <span style="color:#0889d1;">--&gt;</span> Tileserver <span style="color:#0889d1;">--&gt;</span> JavaScript API <span style="color:firebrick;">--&gt;</span> Browser</p>
+</div>
+<div><h1 id="tools">Tools</h1>
+<p><a href="https://openmaptiles.com/">OpenMapTiles</a>/QGIS/ArcMap</p>
+<p><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>/<a href="https://github.com/project-open-data/esri2open">esri2open</a></p>
+<p><a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a></p>
+<p><a href="https://github.com/ovrdc/tileserver">NodeJS &amp; Nginx</a></p>
+<p><a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a></p>
+</div>
+<div><h1 id="-examples-https-ovrdc-github-io-gis-tutorials-mapbox-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox">Examples</a></h1>
+<h3 id="access-to-the-underlying-data">Access to the underlying Data</h3>
+<h3 id="dynamic-data-driven-styling">Dynamic &amp; Data Driven Styling</h3>
+<h3 id="polygon-extrusion-2-5d-or-3d-">Polygon Extrusion (2.5D or 3D)</h3>
+<h3 id="mapbox-plugins-swipe-map">Mapbox Plugins - Swipe Map</h3>
+</div>
+<div><h1 id="slide-sources">Slide Sources</h1>
+<p><a href="https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile">https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile</a>
+<a href="http://scottsfarley.com/cartography/coding/2017/02/11/DC-Mapbox-Plugin.html">http://scottsfarley.com/cartography/coding/2017/02/11/DC-Mapbox-Plugin.html</a>
+<a href="https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64">https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64</a>
+<a href="https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3">https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3</a>
+<a href="https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291">https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291</a></p>
+</div>
+<div><h2 id="thanks-">Thanks!</h2>
+<h3 id="malcolm-meyer">Malcolm Meyer</h3>
+<p>Transportation Planning Coordinator</p>
+<p><a href="http://www.ovrdc.org">Ohio Valley Regional Development Commission</a></p>
+</div>
+</body>
+</html>

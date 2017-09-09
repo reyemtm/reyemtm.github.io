@@ -1,0 +1,35 @@
+/*@import url('https://fonts.googleapis.com/css?family=Cabin|Montserrat|Open+Sans');*/
+@font-face {
+  font-family: 'Cabin';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/slides/big-assets/fonts/Cabin-Regular.woff') format('woff'),
+    url('/slides/big-assets/fonts/Cabin-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    url('/slides/big-assets/fonts/Montserrat-Regular.woff') format('woff'),
+    url('/slides/big-assets/fonts/Montserrat-Regular.woff2') format('woff2');
+}
+h1, h2 {
+  font-family: "Montserrat";
+  color: firebrick
+}
+body, p, h3, h4, h5, h6 {
+  font-family: 'Cabin', sans-serif;
+}
+  div.fake-center.slide img {
+    margin:100px;
+  }
+.center-image {
+  background-position: top center;
+}
+/*    width: 1400px;
+    margin: 130px 0 0 0;
+    width: 125%;
+    margin: 15%;
+}*/
