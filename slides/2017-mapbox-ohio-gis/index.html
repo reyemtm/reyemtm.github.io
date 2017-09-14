@@ -15,55 +15,84 @@
   <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body class='light'>
-  <div><p><img src="img/title-page.jpg" alt="image of slide intro"></p>
+  <div><p><img src="img/title-2.jpg" alt=""></p>
+</div>
+<div><h1 id="intro">Intro</h1>
+<h2 id="-ovrdc-http-www-ovrdc-org-"><a href="http://www.ovrdc.org">OVRDC</a></h2>
+<p>www.ovrdc.org</p>
+<h2 id="-ovrdc-web-map-examples-https-ovrdc-github-io-gis-tutorials-"><a href="https://ovrdc.github.io/gis-tutorials/">OVRDC Web Map Examples</a></h2>
+<p>ovrdc.github.io/gis-tutorials</p>
+<h2 id="-this-presentation-https-getbounds-com-slides-2017-mapbox-ohio-gis-"><a href="https://getbounds.com/slides/2017-mapbox-ohio-gis">This Presentation</a></h2>
+<p>getbounds.com/slides/2017-mapbox-ohio-gis</p>
 </div>
 <div><h1 id="what">What</h1>
 <h1 id="why">Why</h1>
 <h1 id="how">How</h1>
 </div>
-<div><h1 id="tools">Tools</h1>
-<h1 id="examples">Examples</h1>
-</div>
 <div><h1 id="what">What</h1>
 <h1 id="are-vector-tiles-https-www-mapbox-com-vector-tiles-specification-">Are <a href="https://www.mapbox.com/vector-tiles/specification/">Vector Tiles</a>?</h1>
 </div>
-<div><p>Vector Tiles are a <em>representation</em> of geographic features and their underlying data for a <em>specific zoom level</em> and bounding box, typically served as <em>.pbf</em> files. Lines and polygons may be <em>simplified</em>, and points may be omitted. - <em>Adapted from <a href="https://en.wikipedia.org/wiki/Vector_tiles">Wikipedia</a></em></p>
+<div><p>Vector Tiles are a <em>representation</em> of geographic features and their underlying data for a <em>specific zoom level</em> and bounding box. Lines and polygons may be <em>simplified</em>, and points may be omitted. - <em>Adapted from <a href="https://en.wikipedia.org/wiki/Vector_tiles">Wikipedia</a></em></p>
 </div>
 <div><h2 id="-mapbox-vector-tiles-mvt-https-www-mapbox-com-vector-tiles-specification-"><a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox Vector Tiles (MVT)</a></h2>
 <p>MVT is slowly becoming an industry standard.</p>
 <p><img src="img/logos2.jpg" alt=""></p>
 </div>
-<div><h1 id="why-br-vector-tiles">Why<br>Vector Tiles</h1>
-<p>Dynamically Change Styles</p>
-<p>Access to Attribute Data</p>
-<p>Vector Tiles are Shiny and NEW!!</p>
+<div><h1 id="why-br-use-vector-tiles-https-developmentseed-org-blog-2017-08-09-mapbox-query-data-">Why<br>Use <a href="https://developmentseed.org/blog/2017/08/09/mapbox-query-data/">Vector Tiles</a>?</h1>
+</div>
+<div><h1 id="easily-dynamically-change-styles">Easily &amp; Dynamically Change Styles</h1>
+</div>
+<div><p><img src="img/studio-1.jpg" alt=""></p>
+</div>
+<div><p><img src="img/studio-2.jpg" alt=""></p>
+</div>
+<div><h1 id="access-to-underlying-vector-attribute-data">Access to Underlying Vector &amp; Attribute Data</h1>
+</div>
+<div><iframe src="mapbox.html" width="1440" height="900" frameborder=no></iframe>
 </div>
 <div><h1 id="performance">Performance</h1>
 <p><a href="https://www.arcgis.com/home/webmap/viewer.html?useExisting=1">AGOL Raster Basemap</a></p>
-<p><strong>70 Requests, 1100kb</strong>
+<p><strong>~70 Image Requests, 1100kb</strong>
 <br><br>
 <a href="http://www.openstreetmap.org/#map=8/38.987/-82.722">OpenStreetMap Raster</a></p>
-<p><strong>45 Requests, 749kb</strong>
+<p><strong>~45 Image Requests, 749kb</strong>
 <br><br>
 <a href="https://www.ovrdc.org/apps/travel-times.html#8/38.604/-81.639">Vector Tile Basemap</a></p>
-<p><strong>20 requests, 759kb</strong></p>
+<p><strong>~20 Vector Tile requests, 759kb</strong></p>
 <p><em>This includes feature data!!</em></p>
 </div>
 <div><h1 id="how">How</h1>
-<p>Raw Data <span style="color:firebrick;">--&gt;</span> GeoJSON <span style="color:#0889d1;">--&gt;</span> Vector Tiles <span style="color:#0889d1;">--&gt;</span> Tileserver <span style="color:#0889d1;">--&gt;</span> JavaScript API <span style="color:firebrick;">--&gt;</span> Browser</p>
+<p>Raw Data <span style="color:firebrick;">--&gt;</span> GeoJSON <span style="color:#0889d1;">--&gt;</span> Vector Tiles <span style="color:#0889d1;">--&gt;</span> (Tileserver) <span style="color:#0889d1;">--&gt;</span> JavaScript API <span style="color:firebrick;">--&gt;</span> Browser</p>
 </div>
 <div><h1 id="tools">Tools</h1>
 <p><a href="https://openmaptiles.com/">OpenMapTiles</a>/QGIS/ArcMap</p>
-<p><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>/<a href="https://github.com/project-open-data/esri2open">esri2open</a></p>
+<p><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>/<a href="https://github.com/project-open-data/esri2open">esri2open</a>/<a href="http://mapshaper.org">mapshaper</a></p>
+<p><a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet</a>/Mapbox/OpenLayers</p>
 <p><a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a></p>
 <p><a href="https://github.com/ovrdc/tileserver">NodeJS &amp; Nginx</a></p>
 <p><a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a></p>
 </div>
-<div><h1 id="-examples-https-ovrdc-github-io-gis-tutorials-mapbox-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox">Examples</a></h1>
-<h3 id="access-to-the-underlying-data">Access to the underlying Data</h3>
-<h3 id="dynamic-data-driven-styling">Dynamic &amp; Data Driven Styling</h3>
-<h3 id="polygon-extrusion-2-5d-or-3d-">Polygon Extrusion (2.5D or 3D)</h3>
-<h3 id="mapbox-plugins-swipe-map">Mapbox Plugins - Swipe Map</h3>
+<div><h1 id="building-the-br-mapbox-gl-js-https-www-mapbox-com-mapbox-gl-js-api-map">Building the<br><a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a> Map</h1>
+</div>
+<div><h2 id="sources">Sources</h2>
+<h3 id="geojson-vector-tiles-raster-tiles-images-videos">GeoJSON, Vector Tiles, Raster Tiles, Images, Videos</h3>
+</div>
+<div><h2 id="layers">Layers</h2>
+<h3 id="points-lines-polygons-3d-polygons-rasters">Points, Lines, Polygons, 3D Polygons, Rasters</h3>
+</div>
+<div><h2 id="properties">Properties</h2>
+<h3 id="bearing-pitch-light-sprites-glyphs-transition">Bearing, Pitch, Light, Sprites, Glyphs, Transition</h3>
+</div>
+<div><h2 id="-example-1-basic-https-ovrdc-github-io-gis-tutorials-mapbox-01-basic-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/01-basic-map/">Example 1 - Basic</a></h2>
+<h2 id="-example-2-swipe-map-https-ovrdc-github-io-gis-tutorials-mapbox-swipe-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/swipe-map/">Example 2 - Swipe Map</a></h2>
+<h2 id="-example-3-filter-https-www-ovrdc-org-apps-accident-explorer-html-"><a href="https://www.ovrdc.org/apps/accident-explorer.html">Example 3 - Filter</a></h2>
+<h2 id="-example-4-extrusion-https-www-ovrdc-org-apps-block-group-explorer-html-"><a href="https://www.ovrdc.org/apps/block-group-explorer.html">Example 4 - Extrusion</a></h2>
+<h2 id="-example-5-tileserver-https-tileserver-ovrdc-org-"><a href="https://tileserver.ovrdc.org">Example 5 - Tileserver</a></h2>
+</div>
+<div><h2 id="thanks-">Thanks!</h2>
+<h3 id="malcolm-meyer">Malcolm Meyer</h3>
+<p>Transportation Planning Coordinator</p>
+<p><a href="http://www.ovrdc.org">Ohio Valley Regional Development Commission</a></p>
 </div>
 <div><h1 id="slide-sources">Slide Sources</h1>
 <p><a href="https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile">https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile</a>
@@ -71,11 +100,27 @@
 <a href="https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64">https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64</a>
 <a href="https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3">https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3</a>
 <a href="https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291">https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291</a></p>
-</div>
-<div><h2 id="thanks-">Thanks!</h2>
-<h3 id="malcolm-meyer">Malcolm Meyer</h3>
-<p>Transportation Planning Coordinator</p>
-<p><a href="http://www.ovrdc.org">Ohio Valley Regional Development Commission</a></p>
+<script>
+var b = {
+  "500":"url('img/title-big.jpg')",
+  "11":"url('img/streets.jpg')",
+  "20":"url(img/parcels-02-inverse.jpg)"
+};
+window.addEventListener('hashchange', function() {
+  changeBackground();
+}, false);
+window.onload = changeBackground();
+function changeBackground() {
+  var query = (window.location.href).split("#");
+  var q = query[1];
+  console.log(q);
+  if (b[q]) {
+    document.body.style.background = b[q]//"url('img/title-big.jpg')";
+  }else{
+    document.body.style.background = "url('img/sample2.jpg')";
+  }
+}
+</script>
 </div>
 </body>
 </html>
