@@ -1,126 +1,211 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset='utf-8'>
-  <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
-  <title>big</title>
-  <link href='../big-assets/big.css' rel='stylesheet' type='text/css' />
-  <link href='../big-assets/highlight.css' rel='stylesheet' type='text/css' />
-  <link href='../big-assets/custom.css' rel='stylesheet' type='text/css' />
-  <style>
-    .new-shiny { background: #aaaaaa; }
-  </style>
-  <script src='../big-assets/big.js'></script>
-  <script src='../big-assets/highlight.js'></script>
-  <script>hljs.initHighlightingOnLoad();</script>
-</head>
-<body class='light'>
-  <div><p><img src="img/title-2.jpg" alt=""></p>
-</div>
-<div><h1 id="intro">Intro</h1>
-<h2 id="-ovrdc-http-www-ovrdc-org-"><a href="http://www.ovrdc.org">OVRDC</a></h2>
-<p>www.ovrdc.org</p>
-<h2 id="-ovrdc-web-map-examples-https-ovrdc-github-io-gis-tutorials-"><a href="https://ovrdc.github.io/gis-tutorials/">OVRDC Web Map Examples</a></h2>
-<p>ovrdc.github.io/gis-tutorials</p>
-<h2 id="-this-presentation-https-getbounds-com-slides-2017-mapbox-ohio-gis-"><a href="https://getbounds.com/slides/2017-mapbox-ohio-gis">This Presentation</a></h2>
-<p>getbounds.com/slides/2017-mapbox-ohio-gis</p>
-</div>
-<div><h1 id="what">What</h1>
-<h1 id="why">Why</h1>
-<h1 id="how">How</h1>
-</div>
-<div><h1 id="what">What</h1>
-<h1 id="are-vector-tiles-https-www-mapbox-com-vector-tiles-specification-">Are <a href="https://www.mapbox.com/vector-tiles/specification/">Vector Tiles</a>?</h1>
-</div>
-<div><p>Vector Tiles are a <em>representation</em> of geographic features and their underlying data for a <em>specific zoom level</em> and bounding box. Lines and polygons may be <em>simplified</em>, and points may be omitted. - <em>Adapted from <a href="https://en.wikipedia.org/wiki/Vector_tiles">Wikipedia</a></em></p>
-</div>
-<div><h2 id="-mapbox-vector-tiles-mvt-https-www-mapbox-com-vector-tiles-specification-"><a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox Vector Tiles (MVT)</a></h2>
-<p>MVT is slowly becoming an industry standard.</p>
-<p><img src="img/logos2.jpg" alt=""></p>
-</div>
-<div><h1 id="why-br-use-vector-tiles-https-developmentseed-org-blog-2017-08-09-mapbox-query-data-">Why<br>Use <a href="https://developmentseed.org/blog/2017/08/09/mapbox-query-data/">Vector Tiles</a>?</h1>
-</div>
-<div><h1 id="easily-dynamically-change-styles">Easily &amp; Dynamically Change Styles</h1>
-</div>
-<div><p><img src="img/studio-1.jpg" alt=""></p>
-</div>
-<div><p><img src="img/studio-2.jpg" alt=""></p>
-</div>
-<div><h1 id="access-to-underlying-vector-attribute-data">Access to Underlying Vector &amp; Attribute Data</h1>
-</div>
-<div><iframe src="mapbox.html" width="1000" height="600" frameborder=no></iframe>
-</div>
-<div><h1 id="performance">Performance</h1>
-<p><a href="https://www.arcgis.com/home/webmap/viewer.html?useExisting=1">AGOL Raster Basemap</a></p>
-<p><strong>~70 Image Requests, 1100kb</strong>
-<br><br>
-<a href="http://www.openstreetmap.org/#map=8/38.987/-82.722">OpenStreetMap Raster</a></p>
-<p><strong>~45 Image Requests, 749kb</strong>
-<br><br>
-<a href="https://www.ovrdc.org/apps/travel-times.html#8/38.604/-81.639">Vector Tile Basemap</a></p>
-<p><strong>~20 Vector Tile requests, 759kb</strong></p>
-<p><em>This includes feature data!!</em></p>
-</div>
-<div><h1 id="how">How</h1>
-<p>Raw Data <span style="color:firebrick;">--&gt;</span> GeoJSON <span style="color:#0889d1;">--&gt;</span> Vector Tiles <span style="color:#0889d1;">--&gt;</span> (Tileserver) <span style="color:#0889d1;">--&gt;</span> JavaScript API <span style="color:firebrick;">--&gt;</span> Browser</p>
-</div>
-<div><h1 id="tools">Tools</h1>
-<p><a href="https://openmaptiles.com/">OpenMapTiles</a>/QGIS/ArcMap</p>
-<p><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>/<a href="https://github.com/project-open-data/esri2open">esri2open</a>/<a href="http://mapshaper.org">mapshaper</a></p>
-<p><a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet</a>/Mapbox/OpenLayers</p>
-<p><a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a></p>
-<p><a href="https://github.com/ovrdc/tileserver">NodeJS &amp; Nginx</a></p>
-<p><a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a></p>
-</div>
-<div><h1 id="building-the-br-mapbox-gl-js-https-www-mapbox-com-mapbox-gl-js-api-map">Building the<br><a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox GL JS</a> Map</h1>
-</div>
-<div><h2 id="sources">Sources</h2>
-<h3 id="geojson-vector-tiles-raster-tiles-images-videos">GeoJSON, Vector Tiles, Raster Tiles, Images, Videos</h3>
-</div>
-<div><h2 id="layers">Layers</h2>
-<h3 id="points-lines-polygons-3d-polygons-rasters">Points, Lines, Polygons, 3D Polygons, Rasters</h3>
-</div>
-<div><h2 id="properties">Properties</h2>
-<h3 id="bearing-pitch-light-sprites-glyphs-transition">Bearing, Pitch, Light, Sprites, Glyphs, Transition</h3>
-</div>
-<div><h2 id="-example-1-basic-https-ovrdc-github-io-gis-tutorials-mapbox-01-basic-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/01-basic-map/">Example 1 - Basic</a></h2>
-<h2 id="-example-2-swipe-map-https-ovrdc-github-io-gis-tutorials-mapbox-swipe-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/swipe-map/">Example 2 - Swipe Map</a></h2>
-<h2 id="-example-3-filter-https-www-ovrdc-org-apps-accident-explorer-html-"><a href="https://www.ovrdc.org/apps/accident-explorer.html">Example 3 - Filter</a></h2>
-<h2 id="-example-4-extrusion-https-www-ovrdc-org-apps-block-group-explorer-html-"><a href="https://www.ovrdc.org/apps/block-group-explorer.html">Example 4 - Extrusion</a></h2>
-<h2 id="-example-5-tileserver-https-tileserver-ovrdc-org-"><a href="https://tileserver.ovrdc.org">Example 5 - Tileserver</a></h2>
-</div>
-<div><h2 id="thanks-">Thanks!</h2>
-<h3 id="malcolm-meyer">Malcolm Meyer</h3>
-<p>Transportation Planning Coordinator</p>
-<p><a href="http://www.ovrdc.org">Ohio Valley Regional Development Commission</a></p>
-</div>
-<div><h1 id="slide-sources">Slide Sources</h1>
-<p><a href="https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile">https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile</a>
-<a href="http://scottsfarley.com/cartography/coding/2017/02/11/DC-Mapbox-Plugin.html">http://scottsfarley.com/cartography/coding/2017/02/11/DC-Mapbox-Plugin.html</a>
-<a href="https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64">https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64</a>
-<a href="https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3">https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3</a>
-<a href="https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291">https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291</a></p>
-<script>
-var b = {
-  "500":"url('img/title-big.jpg')",
-  "11":"url('img/streets.jpg')",
-  "20":"url(img/parcels-02-inverse.jpg)"
-};
-window.addEventListener('hashchange', function() {
-  changeBackground();
-}, false);
-window.onload = changeBackground();
-function changeBackground() {
-  var query = (window.location.href).split("#");
-  var q = query[1];
-  console.log(q);
-  if (b[q]) {
-    document.body.style.background = b[q]//"url('img/title-big.jpg')";
-  }else{
-    document.body.style.background = "url('img/sample2.jpg')";
+---
+layout: slides
+theme: white
+style: >-
+  * { text-shadow: none;}
+  .reveal h1 {
+    font-size: 3.5em;
   }
-}
+  .reveal h2 {
+    font-size: 2.25em;
+  }
+  .reveal em {
+    color: firebrick;
+  }
+  .reveal a {
+    /*background: rgba(42, 118, 221, 0.05);*/
+  }
+  .fa-fw {
+    line-height: 43px;
+  }
+  @font-face {
+    font-family: 'Cabin';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url('/slides/big-assets/fonts/Cabin-Regular.woff') format('woff'),
+      url('/slides/big-assets/fonts/Cabin-Regular.woff2') format('woff2');
+  }
+  @font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src:
+      url('/slides/big-assets/fonts/Montserrat-Regular.woff') format('woff'),
+      url('/slides/big-assets/fonts/Montserrat-Regular.woff2') format('woff2');
+  }
+  h1, h2 {
+    font-family: "Montserrat";
+    color: firebrick!important
+  }
+  body, p, h3, h4, h5, h6 {
+    font-family: 'Cabin', sans-serif;
+  }
+transition: fade
+---
+<section>
+  <img src="img/title-page.jpg" />
+</section>
+<section>
+  <h2 id="-ovrdc-http-www-ovrdc-org-"><a href="http://www.ovrdc.org">OVRDC</a></h2>
+  <p>www.ovrdc.org</p>
+  <h2 id="-ovrdc-web-map-examples-https-ovrdc-github-io-gis-tutorials-"><a href="https://ovrdc.github.io/gis-tutorials/">Map Examples</a></h2>
+  <p>ovrdc.github.io/gis-tutorials</p>
+  <h2 id="-this-presentation-https-getbounds-com-slides-2017-mapbox-ohio-gis-"><a href="https://getbounds.com/slides/2017-mapbox-ohio-gis">This Presentation</a></h2>
+  <p>www.ovrdc.org/gis/presentations</p>
+</section>
+<section>
+  <h1 id="what">What</h1>
+  <h1 id="why">Why</h1>
+  <h1 id="how">How</h1>
+</section>
+<section>
+  <h1 id="what">What</h1>
+  <h1 id="are-vector-tiles-https-www-mapbox-com-vector-tiles-specification-">Are <a href="https://www.mapbox.com/vector-tiles/specification/">Vector Tiles</a>?</h1>
+</section>
+<section>
+  <p style="font-size:48px;">Vector Tiles are a <em>representation (serialized data)</em> of geographic features and their underlying data for a <em>specific zoom level</em> and bounding box. Lines and polygons may be <em>simplified</em> and points may be omitted. ~ <em>Adapted from <a href="https://en.wikipedia.org/wiki/Vector_tiles">Wikipedia</a> & <a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox</a></em></p>
+</section>
+<section>
+  <h2>Web Map Tiles</h2>
+  <img  styl="width:80%;" src="img/map-tiles-leaflet.jpg" />
+  <em>img source: <a href="http://leafletjs.com/examples/zoom-levels/">leafletjs.com/examples/zoom-levels</a></em>
+</section>
+<section>
+  <h2 id="-mapbox-vector-tiles-mvt-https-www-mapbox-com-vector-tiles-specification-"><a href="https://www.mapbox.com/vector-tiles/specification/">Mapbox Vector Tiles (MVT)</a></h2>
+  <p>MVT is slowly becoming an industry standard.</p>
+  <p><img src="img/logos2.jpg" alt=""></p>
+</section>
+<section>
+  <h1 id="why-br-use-vector-tiles-https-developmentseed-org-blog-2017-08-09-mapbox-query-data-">Why<br>Use <a href="https://developmentseed.org/blog/2017/08/09/mapbox-query-data/">Vector Tiles</a>?</h1>
+</section>
+<section>
+  <h1 id="access-to-underlying-vector-attribute-data">Access to Vector &amp; Attribute Data</h1>
+</section>
+<section>
+  <iframe data-src="mapbox.html" width="1000" height="600" frameborder=no></iframe>
+</section>
+<section>
+  <h1 id="easily-dynamically-change-styles">Easily Change Styles On the Fly</h1>
+</section>
+<section>
+  <iframe data-src="mapbox.html" width="1000" height="600" frameborder=no></iframe>
+</section>
+<section>
+  <h2 id="performance">Performance</h1>
+  <p><a href="https://www.arcgis.com/home/webmap/viewer.html?useExisting=1">AGOL Raster Basemap</a></p>
+  <p><strong>~70 Image Requests, 1100kb</strong>
+    <br><br>
+    <a href="http://www.openstreetmap.org/#map=8/38.987/-82.722">OpenStreetMap Raster</a></p>
+  <p><strong>~45 Image Requests, 749kb</strong>
+    <br><br>
+    <a href="https://www.ovrdc.org/apps/travel-times.html#8/38.604/-81.639">Vector Tile Basemap</a></p>
+  <p><strong>~20 Vector Tile requests, 759kb</strong></p>
+  <p><em>This includes feature data!!</em></p>
+</section>
+<section>
+  <h1 id="how">How</h1>
+  <h3>
+    <span class="fragment" data-fragment-index="0">Raw Data</span>
+    <span class="fragment"  data-fragment-index="1" style="color:firebrick;">--&gt;</span><span class="fragment"  data-fragment-index="1">&nbsp;GeoJSON</span>
+    <span class="fragment" style="color:gray;" data-fragment-index="2"><br />--&gt;</span><span class="fragment" style="color:gray;"data-fragment-index="2">&nbsp;Vector Tiles</span>
+    <span class="fragment" style="color:gray;" data-fragment-index="2">--&gt;</span><span class="fragment" style="color:gray;" data-fragment-index="2">&nbsp;Server</span>
+    <span class="fragment" style="color:firebrick;" data-fragment-index="4"><br />--&gt;</span><span class="fragment"  data-fragment-index="4">&nbsp;JavaScript API</span>
+    <span class="fragment" style="color:firebrick;" data-fragment-index="5">--&gt;</span><span class="fragment"  data-fragment-index="5">&nbsp;Browser</span>
+  </h3>
+  <em class="fragment" data-fragment-index="6">or just use Mapbox and Mapbox Studio</em>
+</section>
+<section>
+  <h2><a href="https://www.mapbox.com/studio">Mapbox Studio</a></h2>
+  <img src="img/studio-1.jpg" alt="">
+</section>
+<section>
+  <h2><a href="https://www.mapbox.com/studio">Mapbox Studio</a></h2>
+  <img src="img/studio-2.jpg" alt="">
+</section>
+<section>
+  <h1 id="building-the-br-mapbox-gl-js-https-www-mapbox-com-mapbox-gl-js-api-map">Coding from Scratch</h1>
+</section>
+<section>
+  <h1 id="tools">Tools</h1>
+  <h3>Atom/Notepad ++</he>
+  <h3><a href="https://openmaptiles.com/">OpenMapTiles</a>/QGIS/ArcMap</h3>
+  <h3><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>/<a href="https://github.com/project-open-data/esri2open">esri2open</a>/<a href="http://mapshaper.org">mapshaper</a></h3>
+  <h3><a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a></h3>
+  <h3><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04">NodeJS &amp; Nginx</a></h3>
+  <h3><a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet</a>/<a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox</a>/OpenLayers</h3>
+</section>
+<section>
+  <h1 id="sources">Sources</h1>
+  <h2 id="geojson-vector-tiles-raster-tiles-images-videos" style="color:black!important;">GeoJSON, Vector Tiles, Raster Tiles, Images, Videos</h2>
+</section>
+<section>
+  <h1 id="layers">Layers</h1>
+  <h2 id="points-lines-polygons-3d-polygons-rasters" style="color:black!important;">Points, Lines, Polygons, 3D Polygons, Rasters</h2>
+</section>
+<section>
+  <h1 id="properties">Properties</h2>
+  <h2 id="bearing-pitch-light-sprites-glyphs-transition" style="color:black!important;">Bearing, Pitch, Light, Sprites, Glyphs, Transition</h2>
+</section>
+<section>
+  <h3 id="-example-1-basic-https-ovrdc-github-io-gis-tutorials-mapbox-01-basic-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/01-basic-map/" target="_blank">Example 1 - Basic</a></h3>
+  <img src="img/example-1.jpg"></img>
+</section>
+<section>
+  <h3 id="-example-2-swipe-map-https-ovrdc-github-io-gis-tutorials-mapbox-swipe-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/swipe-map/" target="_blank">Example 2 - Swipe Map</a></h3>
+  <img src="img/example-2.jpg"></img>
+</section>
+<section>
+  <h3 id="-example-3-filter-https-www-ovrdc-org-apps-accident-explorer-html-"><a href="https://www.ovrdc.org/apps/accident-explorer.html" target="_blank">Example 3 - Filter</a></h3>
+  <img src="img/example-3.jpg"></img>
+</section>
+<section>
+  <h3 id="-example-4-extrusion-https-www-ovrdc-org-apps-block-group-explorer-html-"><a href="https://www.ovrdc.org/apps/block-group-explorer.html" target="_blank">Example 4 - Extrusion</a></h3>
+  <img src="img/example-4.jpg"></img>
+</section>
+<section>
+  <h3 id="-example-5-tileserver-https-tileserver-ovrdc-org-"><a href="https://www.ovrdc.org/apps/mapbox-parcel-viewer.html" target="_blank">Example 5 - Parcel Viewer</a></h3>
+  <img src="img/example-5.jpg"></img>
+</section>
+<section>
+  <h2 id="thanks-">Thanks!</h2>
+  <h3 id="malcolm-meyer">Malcolm Meyer</h3>
+  <p>Transportation Planning Coordinator</p>
+  <p><a href="http://www.ovrdc.org">Ohio Valley Regional Development Commission</a></p>
+  <br>
+  <p style="color:firebrick;">Contact</p>
+  <div class="list-group">
+    <a class="list-group-item" href="mailto:mmeyer@ovrdc.org"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i>&nbsp;mmeyer@ovrdc.org</a><br>
+    <a class="list-group-item" href=href="https://www.twitter.com/getbounds" target="_blank"><i class="fa fa-twitter fa-fw" aria-hidden="true"></i>&nbsp;@getbounds</a>
+  </div>
+</section>
+<section>
+  <h3 id="slide-sources">Slide Sources</h1>
+  <p><a href="https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile">https://stackoverflow.com/questions/36426428/mapbox-gl-js-3d-elevation-profile</a>
+    <a href="http://scottsfarley.com/cartography/coding/2017/02/11/DC-Mapbox-Plugin.html">http://scottsfarley.com/cartography/coding/2017/02/11/DC-Mapbox-Plugin.html</a>
+    <a href="https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64">https://blog.mapbox.com/shading-and-lighting-3d-features-in-mapbox-gl-js-e544695cd64</a>
+    <a href="https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3">https://blog.mapbox.com/introducing-data-driven-styling-in-mapbox-gl-js-f273121143c3</a>
+    <a href="https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291">https://blog.mapbox.com/dive-into-large-datasets-with-3d-shapes-in-mapbox-gl-c89023ef291</a></p>
+</section>
+<script>
+  var b = {
+    "500": "url('img/title-big.jpg')",
+    "12": "url('img/streets.jpg')",
+    "26": "url(img/lancaster.jpg)"
+  };
+  window.addEventListener('hashchange', function() {
+    changeBackground();
+  }, false);
+  window.onload = changeBackground();
+
+  function changeBackground() {
+    var query = (window.location.href).split("#/");
+    var q = query[1];
+    console.log(q);
+    if (b[q]) {
+      document.body.style.background = b[q] //"url('img/title-big.jpg')";
+    } else {
+      document.body.style.background = "url('img/sample2.jpg')";
+    }
+  }
 </script>
-</div>
-</body>
-</html>
