@@ -91,9 +91,6 @@ transition: fade
   <h1 id="access-to-underlying-vector-attribute-data">Access to Attribute Data</h1>
 </section>
 <section>
-  <iframe data-src="mapbox.html" width="1000" height="600" frameborder=no></iframe>
-</section>
-<section>
   <h2 id="performance">Performance</h1>
   <p><a href="https://www.arcgis.com/home/webmap/viewer.html?useExisting=1">AGOL Raster Basemap</a></p>
   <p><strong>~70 Image Requests, 1100kb</strong>
@@ -104,6 +101,9 @@ transition: fade
     <a href="https://www.ovrdc.org/apps/travel-times.html#8/38.604/-81.639">Vector Tile Basemap</a></p>
   <p><strong>~20 Vector Tile requests, 759kb</strong></p>
   <p><em>This includes feature data!!</em></p>
+</section>
+<section>
+  <iframe data-src="mapbox.html" width="1000" height="600" frameborder=no></iframe>
 </section>
 <section>
   <h1 id="how">How</h1>
@@ -126,16 +126,19 @@ transition: fade
   <img src="img/studio-2.jpg" alt="">
 </section>
 <section>
-  <h1 id="building-the-br-mapbox-gl-js-https-www-mapbox-com-mapbox-gl-js-api-map">Coding from Scratch</h1>
+  <h1 id="building-the-br-mapbox-gl-js-https-www-mapbox-com-mapbox-gl-js-api-map">Coding the Map from Scratch</h1>
 </section>
 <section>
   <h1 id="tools">Tools</h1>
-  <h3>Atom/Notepad ++</he>
-  <h3><a href="https://openmaptiles.com/">OpenMapTiles</a>/QGIS/ArcMap</h3>
-  <h3><a href="http://www.gdal.org/ogr2ogr.html">ogr2ogr</a>/<a href="https://github.com/project-open-data/esri2open">esri2open</a>/<a href="http://mapshaper.org">mapshaper</a></h3>
-  <h3><a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a></h3>
-  <h3><a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04">NodeJS &amp; Nginx</a></h3>
-  <h3><a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet</a>/<a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox</a>/OpenLayers</h3>
+  <h3><a href="https://atom.io/" target="_blank">Atom</a>/<a href="https://notepad-plus-plus.org/" target="_blank">Notepad++</a></h3>
+  <h3><a href="https://openmaptiles.com/">OpenMapTiles</a> - Basemap Tiles</h3>
+  <h3><a href="https://github.com/project-open-data/esri2open">esri2open</a>/<a href="http://mapshaper.org">mapshaper</a> - GeoJSON</h3>
+  <h3><a href="https://github.com/mapbox/tippecanoe">Tippecanoe</a> - Vector Tiles</h3>
+  <h3><a href="http://www.gartrellgroup.com/vector-tiles-for-all/" target="_blank">Node JS</a> &amp; <a href="https://www.digitalocean.com/community/tutorials/how-to-set-up-a-node-js-application-for-production-on-ubuntu-16-04">Nginx</a> - Tile Server</h3>
+  <h3><a href="https://github.com/Leaflet/Leaflet.VectorGrid">Leaflet</a>/<a href="https://www.mapbox.com/mapbox-gl-js/api/">Mapbox</a>/<a href="https://openlayers.org/en/latest/examples/mapbox-vector-tiles.html" target="_blank">OpenLayers</a></h3>
+</section>
+<section>
+  <h1><a href="https://www.mapbox.com/mapbox-gl-js/style-spec/" target="_blank">Mapbox</a> Web Map Building Blocks</h1>
 </section>
 <section>
   <h1 id="sources">Sources</h1>
@@ -143,31 +146,31 @@ transition: fade
 </section>
 <section>
   <h1 id="layers">Layers</h1>
-  <h2 id="points-lines-polygons-3d-polygons-rasters" style="color:black!important;">Points, Lines, Polygons, 3D Polygons, Rasters</h2>
+  <h2 id="points-lines-polygons-3d-polygons-rasters" style="color:black!important;">Background, Line, Circle, Fill, Fill-Extrusion, Symbol</h2>
 </section>
 <section>
   <h1 id="properties">Properties</h2>
   <h2 id="bearing-pitch-light-sprites-glyphs-transition" style="color:black!important;">Bearing, Pitch, Light, Sprites, Glyphs, Transition</h2>
 </section>
 <section>
-  <h3 id="-example-1-basic-https-ovrdc-github-io-gis-tutorials-mapbox-01-basic-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/01-basic-map/" target="_blank">Example 1 - Basic</a></h3>
-  <img src="img/example-1.jpg"></img>
+  <h3 id="-example-1-basic-https-ovrdc-github-io-gis-tutorials-mapbox-01-basic-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/03-query-features/#4/39.94/-95.52" target="_blank">Example 1 - Basic</h3>
+  <img class="maps" src="img/example-1.jpg"></img></a>
 </section>
 <section>
-  <h3 id="-example-2-swipe-map-https-ovrdc-github-io-gis-tutorials-mapbox-swipe-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/swipe-map/" target="_blank">Example 2 - Swipe Map</a></h3>
-  <img src="img/example-2.jpg"></img>
+  <h3 id="-example-2-swipe-map-https-ovrdc-github-io-gis-tutorials-mapbox-swipe-map-"><a href="https://ovrdc.github.io/gis-tutorials/mapbox/swipe-map/" target="_blank">Example 2 - Swipe Map</h3>
+  <img class="maps" src="img/example-2.jpg"></img></a>
 </section>
 <section>
-  <h3 id="-example-3-filter-https-www-ovrdc-org-apps-accident-explorer-html-"><a href="https://www.ovrdc.org/apps/accident-explorer.html" target="_blank">Example 3 - Filter</a></h3>
-  <img src="img/example-3.jpg"></img>
+  <h3 id="-example-3-filter-https-www-ovrdc-org-apps-accident-explorer-html-"><a href="https://www.ovrdc.org/apps/accident-explorer.html" target="_blank">Example 3 - Filter</h3>
+  <img class="maps" src="img/example-3.jpg"></img></a>
 </section>
 <section>
-  <h3 id="-example-4-extrusion-https-www-ovrdc-org-apps-block-group-explorer-html-"><a href="https://www.ovrdc.org/apps/block-group-explorer.html" target="_blank">Example 4 - Extrusion</a></h3>
-  <img src="img/example-4.jpg"></img>
+  <h3 id="-example-4-extrusion-https-www-ovrdc-org-apps-block-group-explorer-html-"><a href="https://www.ovrdc.org/apps/block-group-explorer.html" target="_blank">Example 4 - Extrusion</h3>
+  <img class="maps" src="img/example-4.jpg"></img></a>
 </section>
 <section>
-  <h3 id="-example-5-tileserver-https-tileserver-ovrdc-org-"><a href="https://www.ovrdc.org/apps/mapbox-parcel-viewer.html" target="_blank">Example 5 - Parcel Viewer</a></h3>
-  <img src="img/example-5.jpg"></img>
+  <h3 id="-example-5-tileserver-https-tileserver-ovrdc-org-"><a href="https://www.ovrdc.org/apps/mapbox-parcel-viewer.html" target="_blank">Example 5 - Parcel Viewer</h3>
+  <img class="maps" src="img/example-5.jpg"></img></a>
 </section>
 <section>
   <h2 id="thanks-">Thanks!</h2>
@@ -192,8 +195,8 @@ transition: fade
 <script>
   var b = {
     "500": "url('img/title-big.jpg')",
-    "12": "url('img/streets.jpg')",
-    "26": "url(img/lancaster.jpg)"
+    "11": "url('img/streets.jpg')",
+    "27": "url(img/lancaster.jpg)"
   };
   window.addEventListener('hashchange', function() {
     changeBackground();
@@ -209,5 +212,18 @@ transition: fade
     } else {
       document.body.style.background = "url('img/sample2.jpg')";
     }
+  }
+
+  /*show interactive maps when clicked*/
+  var maps = document.getElementsByClassName('maps');
+  console.log(maps);
+  for (var i = 0; i < maps.length; i++) {
+      maps[i].addEventListener('click', function(event) {
+        event.preventDefault();
+        var link = this.parentElement.getAttribute("href");
+        this.style.display = "none";
+        this.parentElement.innerHTML += '<iframe src="' + link + '"  width="1000" height="550" frameborder=no></iframe>';
+        return false;
+      }, false);
   }
 </script>
