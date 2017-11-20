@@ -3,7 +3,7 @@
   {% if page.iframe %}
   <iframe class="header-iframe" width="100%" height="424" frameborder="0" allowTransparency="true" scrolling="no" src="{{ page.iframe }}"></iframe>
   {% endif %}
-  <div class="hero-body fadeUp fadein1">
+  <div class="hero-body {% if page.homepage == true%}{% else%} small {%endif%}fadeUp fadein1">
     <div class="container has-text-centered">
       <h1 class="title is-1">
         {{page.title}}
@@ -11,6 +11,9 @@
       <div class="subtitle is-4">
         <span class="">{{page.subtitle}}</span>
       </div>
+      {% assign title = page.title | split:' ' %}
+      {% assign pagetags = page.tags %}
+      <div>{% if page.layout != "projects" %}{% for tag in pagetags %}<a href="/tags/#{{tag}}">{{tag}}{% if forloop.last%}{%else%}{%endif%}</a>&nbsp;{%endfor%}{% endif %}</div>
         <a scroll href="#content">
           <span class="icon bounce">
             <i class="fa fa-angle-double-down fadein3{% if page.subtitle %}{% else %}{%endif %}"></i>

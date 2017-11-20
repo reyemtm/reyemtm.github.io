@@ -11,8 +11,6 @@ subtitle: 'A County Parcel App: No GIS Server? No Problem!'
 header-img: parcel-wide-2.jpg
 feature-img: parcel-wide.jpg
 ---
-## The Client-Side County Parcel App
-
 *Update 2017-08-01 This app has seen two more iterations. These each utilize an mbtiles-server to host the vector tiles, but still use client-side search for the data. The updated examples can be viewed here - a [Leaflet/Bootstrap Version](https://www.ovrdc.org/apps/vector-grid-pbf.html#13/38.7580/-82.9717) and a [Mapbox/Material Design Lite Version](https://www.ovrdc.org/apps/mapbox-parcel-viewer.html).*
 
 *Update 2017-02-23 I have recently been experimenting with the Leaflet Vector Grid plugin for Leaflet 1.0, as the method described here will not work with the newest version of Leaflet. You can view an example of this experiment [here](http://www.ovrdc.org/apps/vector-grid.html).*

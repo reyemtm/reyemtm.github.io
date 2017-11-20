@@ -5,22 +5,19 @@ permalink: /tags/
 header-img: pattern_12.jpg
 ---
 {% capture tags %}
-  {% for tag in site.tags %}
-    {{ tag[0] }}
-  {% endfor %}
+  {% for tag in site.tags %}{% if forloop.first%}_{%endif%}{{ tag[0] }}_{% endfor %}
 {% endcapture %}
-{% assign sortedtags = tags | split:' ' | sort %}
-
-{% for tag in sortedtags %}
+{% assign sortedtags = tags | split:'_' | sort %}
+{% for tag in sortedtags offset:2%}
 <div class="container">
+  <div id="{{tag}}" style="height:40px;">&nbsp;</div>   
   <div class="columns">
-    <div id="{{tag}}"></div>
     <div class="column is-8 is-offset-2 tag-blocks fadein2">
       <div class="section main">
         <h2 class="title is-4"><strong>{{ tag | upcase }}</strong></h2>
         <hr>
         <ul>{% for post in site.tags[tag] %}
-        <li style=""><a class="title is-5" href="{{ post.url }}">{{ post.title }}</a><br /><small>{{ post.date  | date: "%B %-d, %Y" }}</small><br /><br /></li>
+        <li style=""><a class="title is-5" href="{{ post.url }}">{{ post.title }}</a><br /><small>{{ post.date  | date: "%B %-d, %Y" }}</small><br /></li>
         {% endfor %}</ul>
       </div>
     </div>

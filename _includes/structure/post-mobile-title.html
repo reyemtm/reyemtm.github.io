@@ -1,0 +1,18 @@
+
+{% comment %}
+capture word from title and tags for twitter share link{% endcomment %}
+<div class="post-mobile-title">
+    <h1 class="title-is-1">{{page.title}}</h1>
+    {% if page.subtitle%}<h4 class="title-is-4">{{page.subtitle}}</h4>{%endif%}
+    {% assign title = page.title | split:' ' %}
+    {% assign pagetags = page.tags %}
+    <span>{% for tag in pagetags %}<a href="/tags/#{{tag}}" class="button tag">{{tag}}</a>{%endfor%}</span>
+    <span class="is-pulled-right">
+        <a class="icon is-medium" href="http://www.facebook.com/sharer.php?u={{site.baseurl}}{{page.url}}" target="_blank">
+        <i class="fa fa-facebook-square fa-2x"></i>
+        </a>
+        <a class="icon is-medium" href="https://twitter.com/share?url=https://getbounds.com{{page.url}}&amp;text={% for word in title %}{{ word | replace: '&','and' }}{% if forloop.last%}{%else%}-{%endif%}{% endfor %}&amp;hashtags={{site.title}}{% for tag in pagetags %},{{tag}}{%endfor%}&amp;via={{site.twitter_username}}" target="_blank">
+            <i class="fa fa-twitter-square fa-2x"></i>
+        </a>
+    </span>
+</div>
