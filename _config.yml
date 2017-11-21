@@ -113,3 +113,18 @@ retinamagick:
 #      - crop: "800x600-0x0"
 #      - format: "jpg"
 #      - quality: "80"
+
+prose:
+  metadata:
+    _posts:
+      - name: "User"
+        field:
+          element: "hidden"
+          value: CURRENT_USER
+      - name: "title"
+        field:
+          element: "text"
+          label: "title"
+  users:
+    - login: "reyemtm"
+      user: "Malcolm"
