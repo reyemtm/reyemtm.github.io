@@ -1,10 +1,11 @@
 ---
 published: false
-title: Mapping with Mapbox GL
+title: Mapping wth Vector Tiles (Part I) 
 date: 2018-01-01
 description: "Maps using vector tiles only load data in the current viewport. This article demonstrates one method of loading and searching attributes from a GeoJSON outside the current viewport. This is a follow up to the open parcel viewer."
 tags:
   - mapbox-gl
+  - vector-tiles
 subtitle: "Query Features Outside the Current Viewport"
 image: mapbox-gl.jpg
 ---
