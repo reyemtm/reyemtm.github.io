@@ -1,5 +1,5 @@
 publish_mode: editorial_workflow
-media_folder: "netlify/images" # Netlify image files will be stored here, to keep separate
+media_folder: "images/post-img/original" # Netlify image files will be stored here, to keep separate
 backend:
   name: github
   repo: reyemtm/reyemtm.github.io
@@ -14,5 +14,6 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Subtitle",name:"subtitle",widget:"string"}
       - {label: "Featured Image", name: "featured-img", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
