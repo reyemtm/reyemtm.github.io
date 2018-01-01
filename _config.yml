@@ -74,7 +74,7 @@ defaults:
     values:
       layout: projects
 
-plugins: [jekyll-retinamagick]
+#plugins: [jekyll-retinamagick] now in _plugins folder
 #used locally then I manually move the images to their respective folders since I serve this on github but useful for other sites
 retinamagick:
     post-img-compressed:
