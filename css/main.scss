@@ -60,6 +60,10 @@
   .hero-body {
     display: none!important;
   }
+  .hero-body.home {
+    padding: 80px 20px 20px;
+    display: block!important;
+  }
   .header-iframe {
     height: 294px;
   }
@@ -420,6 +424,14 @@ a.tag:active,
 }
 .container {
   padding: 10px 2px;
+}
+.subtitle .tag.alt{
+  margin-top: 10px;
+  color: #333;
+  background: rgba(255, 255, 255, 0.2);
+}
+.subtitle a .tag {
+
 }
 .box .tag, .card .tag {
   margin: 10px 5px 5px 0;

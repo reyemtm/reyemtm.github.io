@@ -3,13 +3,11 @@ published: false
 title: Mapping wth Vector Tiles (Part I) 
 date: 2018-01-01
 description: "Maps using vector tiles only load data in the current viewport. This article demonstrates one method of loading and searching attributes from a GeoJSON outside the current viewport. This is a follow up to the open parcel viewer."
-tags:
-  - mapbox-gl
-  - vector-tiles
+tags: ["mapbox", "vector tiles"]
 subtitle: "Query Features Outside the Current Viewport"
-image: mapbox-gl.jpg
+feature-img: mgl-parcels-01.png
 ---
-The goal of my original post on [client-side web mapping](https://getbounds.com/blog/leaflet-and-geojson-tiles/) for large datasets was to create an inexpensive, robust county-wide parcel viewer web application. The base functionality would include the ability to both identify and search the parcel data. The result of this effort was the [Open Parcel Viewer](https://github.com/ovrdc/parcel-viewer). The project consists of a Leaflet map and [https://github.com/Leaflet/Leaflet.VectorGrid](Leaflet.VectorGrid) to cut GeoJSON into vector-tiles on-the-fly. The app is performant, but the drawback is that a very large file is loaded into the browser. This method works well for small datasets, but breaksdown when the size and complexity of the data exceeds device or network capabilities. For example, load time for a typical 70k polygon county parcel map on mobile might exceed 30 seconds. 
+The goal of my original post on [client-side web mapping](https://getbounds.com/blog/leaflet-and-geojson-tiles/) for large datasets was to create an inexpensive, robust county-wide parcel viewer web application. The base functionality would include the ability to both identify and search the parcel data. The result of this effort was the [Open Parcel Viewer](https://github.com/ovrdc/parcel-viewer). The project consists of a Leaflet map and [Leaflet.VectorGrid](https://github.com/Leaflet/Leaflet.VectorGrid) to cut GeoJSON into vector-tiles on-the-fly. The app is performant, but the drawback is that a very large file is loaded into the browser. This method works well for small datasets, but breaksdown when the size and complexity of the data exceeds device or network capabilities. For example, load time for a typical 70k polygon county parcel map on mobile might exceed 30 seconds. 
 
 To get around this dilema, one option is to create the vector tiles first, then serve these tiles out via static pbf or mvt files (see [geojson2mvt](https://www.npmjs.com/package/geojson2mvt)), via a simple [mbtiles server](https://github.com/ovrdc/tileserver), or even host the data directly on [Mapbox](https://www.mapbox.com). These tiles can then be viewed with virtually any web mapping library.
 
