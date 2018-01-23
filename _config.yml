@@ -42,7 +42,7 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 permalink: "/:categories/:title/"
-include: ["_pages"]
+include: ["_pages","_headers"]
 exclude:
   - Gemfile
   - Gemfile.lock
