@@ -6,7 +6,7 @@
 
   <!-- Place this data between the <head> tags of your website -->
   <meta name="description" content="{% if page.description %}{{ page.description }}{% elsif page.subtitle %}{{ page.subtitle }}{% else %}{{site.description}}{% endif %}">
-  <meta name="author" content="Malcolm Meyer">
+  <meta name="author" content="{{site.author}}">
 
   <!--social og data-->
 
@@ -32,6 +32,6 @@
   <meta property="og:image" content="{{ site.baseurl }}{% if page.feature-img %}/images/compressed/{{ page.feature-img }}{% elsif page.image %}/images/compressed/{{ page.image }}{% elsif page.header-img %}/images/compressed/{{ page.header-img }}{% elsif site.header-img %}/images/compressed/{{ site.header-img }}{% endif %}" />
   <meta property="og:description" content="{% if page.description %}{{ page.description }}{% elsif page.subtitle %}{{ page.subtitle }}{% else %}{{site.description}}{% endif %}" />
   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
-  <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}/" />
+  <link property="og:url" content="{{ site.baseurl }}{{ page.url | remove:'index.html' }}" />
   <meta property="article:tag" content="{% for tag in page.tags%}{{page.tag}}{%endfor%}" />
   {% if page.date %}<meta property="article:published_time" content="{{page.date}}" />{%endif%}

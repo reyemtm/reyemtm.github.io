@@ -1,0 +1,77 @@
+- title: Interactive Web Visualizations
+  images:
+    - web-visual-2.jpg
+    - web-block-groups-3d.jpg
+    - web-pcr-roads-leaflet.jpg
+    - web-ohio-roads.jpg
+    - web-license-tax.jpg
+    - web-tableau-bridges.jpg
+    - web-swipe-map.jpg
+  links:
+    - name: Vehicle Crash Explorer/Pedestrain Crash Explorer
+      url:  https://www.ovrdc.org/apps/accident-explorer.html
+    - name: Block Group Explorer
+      url: https://www.ovrdc.org/apps/block-group-explorer.html
+    - name: OVRDC Road Conditions
+      url: https://www.ovrdc.org/apps/rtpo-county-pcr.html
+    - name: Our Roads
+      url:  https://www.ovrdc.org/apps/2017/our-roads/
+    - name: Ohio Permissive License Tax Map
+      url: https://www.ovrdc.org/apps/2017/license-plate-tax-leaflet/
+    - name: OVRDC Bridge Ratings by County
+      url: https://www.ovrdc.org/2015/08/14/the-state-of-our-bridges
+    - name: US Overdose Epidemic 1999 vs 2015
+      url: https://ovrdc.github.io/gis-tutorials/mapbox/swipe-map/
+  description: >-
+    I am experienced in various visualization libraries, as well as ArcGIS Online and Tableau. For development, I primarily utilize JavaScript, Jekyll and NodeJS. Here are a few examples of web maps I created over the past five years. These maps utilize Mapbox GL JS, Leaflet JS, Material Design Light, Bootstrap and Tableau. The Vehicle Crash Explorer won the Savvy Web Application Award at the national 2017 GIS-T Conference. The Block Group Explorer won the <a href="http://ogrip.oit.ohio.gov/events/2017OhioGISConferenceMapGallery.aspx" class="link" target="_blank">Digital Map Award</a> at the 2017 Ohio GIS Conference.
+
+- title: Print Designs & Maps
+  images:
+    - print-bridge-to-bridge-qr.jpg
+    - print-safety-snapshot.jpg
+    - print-field-check.jpg
+    - print-oaxaca.jpg
+  links:
+    - name: Shawnee Bridge to Bridge Map
+      url: https://www.sohiotrails.org/trails/scioto-county-shawnee-bridge-to-bridge-route#12/38.7802/-83.2623
+  description: >-
+    In addition to web developemnt, I have several years of experience in print design, including the production of charts, maps, presentations and reports. I won the 2017 Ohio GIS Conference <a href="http://ogrip.oit.ohio.gov/events/2017OhioGISConferenceMapGallery.aspx" class="link" target="_blank">Best Small Format Map Award</a> for the Scioto County Bridge to Bridge Trail (pictured right). I primarily utilize MS Office, ArcMap and QGIS for print publications. I also have limited experience with Photoshop, InDesign and Illustrator.
+
+- title: Data Models & Scripts
+  description: >-
+    Starting primarily in web development, my knowledge of coding and command-line tools has expanded from vanilla JavaScript to include NodeJS and several GIS-realted commmand-line tools including ogr2ogr, gdal2tiles, tippecanoe, mapshaper and rsync. In my GIS desktop workflow I often also utilize ArcMap's Model Builder to perform repetitive tasks.
+  images:
+    -
+    - code-assign-streets.jpg
+    - code-resume.jpg
+    - code-assign-id.jpg
+  links:
+    - name: Static Vector Tile Generator
+      url: https://www.npmjs.com/package/vtile
+    - name: Open Parcel Viewer
+      url: https://github.com/ovrdc/parcel-viewer
+    - name: OVRDC NodeJS Vector Tile Server
+      url: https://github.com/ovrdc/tileserver
+    - name: OVRDC Web GIS Tutorials
+      url: https://github.com/ovrdc/gis-tutorials
+  code: >-
+
+    var mvtoptions = {
+        rootDir: layerDirectory,
+        bbox: [bounds[1], bounds[0], bounds[3], bounds[2]], //[south,west,north,east]
+        zoom: {
+            min: opts.z,
+            max: opts.Z,
+        },
+        layerName: opts.l
+    };
+    console.log(mvtoptions)
+
+    if (!opts.w) {
+        console.log(opts.w);
+        console.log('not writing tiles, script complete');
+    }else{
+        geojson2mvt(geojson, mvtoptions);
+        var tiled = Date.now();
+        console.log("tiles done at " + ((tiled - boundstime)/1000) + ' seconds');
+    }
