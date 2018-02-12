@@ -287,7 +287,7 @@ h4 {
 /*a {
   color: #26867e;
 }*/
-a.tag:hover, 
+a.tag:hover,
 a.tag:active,
 .content a.tag:hover,
 .content a.tag:focus {
@@ -448,6 +448,9 @@ a.tag:active,
 }
 .cards {
   overflow-x: hidden;
+}
+.cards .card:hover {
+  box-shadow: 0 0 30px 6px rgba(31,51,73,.25)!important
 }
 .cards a.title:hover, .cards a.title:active,
 .cards a.content:hover, .cards a.content:active {
