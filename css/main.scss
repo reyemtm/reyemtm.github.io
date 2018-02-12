@@ -9,6 +9,9 @@
 @import "grid/_all";
 @import "layout/_all";
 
+html, body {
+  background-color: white;
+}
 /*original hero theme*/
 .is-outlined {
   background-color: transparent;
@@ -26,7 +29,7 @@
   color: #95A5A6;
 }
 .section.main {
-  background-color: #F0F0F0;
+  background-color: #f5f5f5;
 }
 .icon-block {
   font-size: 5em;
@@ -53,6 +56,9 @@
   opacity: 0.8;
 }
 @media screen and (max-width: 768px) {
+  .pager .button {
+    font-size: 12px;
+  }
   .post-mobile-title {
     display: block;
     padding: 12px 0;
@@ -106,6 +112,7 @@
   #search {
     position: absolute;
     right: 32px;
+    height:50px;
   }
 }
 #searchInput {
@@ -143,6 +150,42 @@
 .card-image figure {
   background-image:url(/images/post-img/header/pattern_00.jpg);
 }
+/*cards */
+.cards {
+  overflow-x: hidden;
+}
+.cards .card:hover {
+  box-shadow: 0 0 30px 3px lightgray !important
+}
+.cards a.title:hover, .cards a.title:active,
+.cards a.content:hover, .cards a.content:active {
+  color: #26867e;
+}
+.cards .card figure {
+  background-size: cover;
+}
+.card {
+  width: auto;
+  z-index: 1;
+  height: 420px;
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow fadeIn;
+}
+.card-content .title+.subtitle {
+  margin-top: -10px;
+}
+.card-image {
+  overflow: hidden;
+}
+.bulma-hero--subtitle {
+  height:auto;
+  padding-bottom: 10px;
+}
+.portfolio-img {
+  overflow: hidden;
+  border: solid thin lightgray;
+}
 /* portfolio box from creative botstrap */
 .portfolio-box {
   position: relative;
@@ -175,12 +218,12 @@
 }
 .portfolio-box .tag {
   opacity: 0.9;
-  color:#f0f0f0;
+  color:#f5f5f5;
   background-color:rgba(0,0,0,0.5);
   margin-right:10px;
 }
 .portfolio-box .title {
-  color: #f0f0f0;
+  color: #f5f5f5;
 }
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-category,
 .portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
@@ -203,7 +246,7 @@
   transition: all .5s;
 }
 .portfolio-box:hover figure,
-.cards .card figure:hover {
+.cards .card:hover figure{
   -ms-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -webkit-transform: scale(1.1);
@@ -264,10 +307,10 @@
   }
 }
 /*end portfolio box styles*/
-p {
+/*p {
   padding-top: 10px;
   padding-bottom: 10px;
-}
+}*/
 iframe {
   margin: 10px 0;
   border: solid thin lightgray;
@@ -291,8 +334,9 @@ a.tag:hover,
 a.tag:active,
 .content a.tag:hover,
 .content a.tag:focus {
-  background-color: #26867e;
-  color: #f5f7fa;
+  background-color: #26867e!important;
+  color: #f5f7fa!important;
+  border-bottom: none;
 }
 .button.tag {
   border:none;
@@ -309,7 +353,7 @@ a.tag:active,
 .content a:not(.button) {
   border-bottom: none;
 }
-.content a:not(.button):hover {
+.content a:not(.button .tag):hover{
   color:#69707a!important;
 }
 .content a:not(.button):visited {
@@ -387,28 +431,27 @@ a.tag:active,
   font-size: 0.9em;
 }
 .nav {
-  height: 40px;
-  min-height: 40px;
+  height: 50px;
+  min-height: 50px;
 }
 .nav > .container {
-  height: 40px;
-  min-height: 40px;
+  height: 50px;
+  min-height: 50px;
   padding: 0;
   box-sizing: border-box;
 }
 .hamburger, .nav-toggle {
-  height: 36px;
+  height: 50px;
   width: 36px;
   position: absolute;
   right: 0;
-  top: 2px;
   z-index: 4;
 }
 .hero.is-dark .nav-menu {
   background-color: transparent;
 }
 .nav-menu {
-  top: 40px;
+  top: 50px;
 }
 /*.nav-item {
   font-size: 16px;
@@ -446,40 +489,7 @@ a.tag:active,
   width: 192px;
   height: 192px;
 }
-.cards {
-  overflow-x: hidden;
-}
-.cards .card:hover {
-  box-shadow: 0 0 30px 6px rgba(31,51,73,.25)!important
-}
-.cards a.title:hover, .cards a.title:active,
-.cards a.content:hover, .cards a.content:active {
-  color: #26867e;
-}
-.cards .card figure {
-  background-size: cover;
-}
-.card {
-  width: auto;
-  z-index: 1;
-  height: 420px;
-  border-radius: 3px;
-  overflow: hidden;
-}
-.card-content .title+.subtitle {
-  margin-top: -10px;
-}
-.card-image {
-  overflow: hidden;
-}
-.bulma-hero--subtitle {
-  height:auto;
-  padding-bottom: 10px;
-}
-.portfolio-img {
-  overflow: hidden;
-  border: solid thin lightgray;
-}
+
 .footer {
   padding: 70px 20px 20px;
 }
@@ -516,7 +526,7 @@ a.tag:active,
 }
 .gutter {
   padding:5px;
-  background-color: #F0F0F0;
+  background-color: #f5f5f5;
   font-size: 16px;
 }
 /*@media screen and (max-width: 1179px) {
@@ -580,7 +590,9 @@ a.tag:active,
     padding-right:  10px
   }
 }
-
+.highlighter-rouge {
+  margin-bottom: 20px;  
+}
 /*************/
 /*animations*/
 /*************/

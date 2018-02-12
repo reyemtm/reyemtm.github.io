@@ -1,5 +1,8 @@
-<div class="pager">{% if page.previous.url %}
-  <a class="button is-info is-outlined is-inverted is-medium is-pulled-left" href="{{ page.previous.url }}" data-balloon="{{page.previous.title}}" data-balloon-pos="up">&larr; Previous Post</a>
-{% endif %}{% if page.next.url %}
-  <a class="button is-info is-outlined is-inverted is-medium is-pulled-right" data-balloon="{{page.next.title}}" data-baloon-pos="up" href="{{ page.next.url }}">Next Post &rarr;</a>
-{% endif %}</div>
+<div class="pager">
+  {% if page.previous.url %}
+  <a class="button is-info is-outlined is-inverted is-medium is-pulled-left" href="{{ page.previous.url }}" data-balloon="{{page.previous.title}}" data-balloon-pos="up">&larr; {{page.previous.title | truncate: 40 }} </a>
+  {% endif %}
+  {% if page.next.url %}
+  <a class="button is-info is-outlined is-inverted is-medium is-pulled-right" data-balloon="{{page.next.title}}" data-baloon-pos="up" href="{{ page.next.url }}">{{page.next.title | truncate: 40}} &rarr;</a>
+  {% endif %}
+</div>

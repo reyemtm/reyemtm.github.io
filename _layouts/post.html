@@ -16,10 +16,15 @@ layout: default
     {{content}}
     </div>
     <hr>
-    {% include loops/related-posts.html %}
     {% include loops/pager.html %}
   </div>
 </div>
+<div class="section main">
+  <div class="container">
+    {% include loops/related-posts.html %}
+  </div>
+</div>
+
 <script>
 if(document.getElementsByTagName('iframe').length>0) {
   console.log('removing animations on iframe sections');
