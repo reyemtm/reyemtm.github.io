@@ -18,5 +18,5 @@ collections:
       - {label: "Description",name:"description",widget:"string"}
       - {label: "Netlify Image", name: "netlify-img", widget: "image"}
       - {label: "Featured Image", name: "feature-img", widget: "string"}
-      - {label: "Tags", name: "tags", "widget: "string"}
+      - {label: "Tags", name: "tags", "widget": "string"}
       - {label: "Body", name: "body", widget: "markdown"}
