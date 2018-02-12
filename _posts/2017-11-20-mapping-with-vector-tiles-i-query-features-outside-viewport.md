@@ -1,6 +1,6 @@
 ---
 User: Malcolm
-published: false
+published: true
 title: Mapping with Vector Tiles (Part I)
 subtitle: Query Features Outside the Viewport
 date: '2018-02-12 T00:00:00.000Z'
