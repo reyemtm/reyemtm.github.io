@@ -14,8 +14,9 @@ collections:
       - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Subtitle",name:"subtitle",widget:"string"}
+      - {label: "Subtitle", name:"subtitle", widget:"string"}
       - {label: "Description",name:"description",widget:"string"}
       - {label: "Netlify Image", name: "netlify-img", widget: "image"}
       - {label: "Featured Image", name: "feature-img", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Tags", name: "tags", "widget: "string"}
