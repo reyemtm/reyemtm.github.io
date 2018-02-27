@@ -39,7 +39,7 @@
 
 - title: Data Models & Scripts
   description: >-
-    Starting primarily in web development, my knowledge of coding and command-line tools has expanded from vanilla JavaScript to include NodeJS and several GIS-realted command-line tools including ogr2ogr, gdal2tiles, tippecanoe, mapshaper and rsync. In my GIS desktop workflow I often also utilize ArcMap's Model Builder to perform repetitive tasks.
+    Starting primarily in web development, my knowledge of coding and command-line tools has expanded from vanilla JavaScript to include NodeJS and several GIS-related tools including ogr2ogr, gdal2tiles, tippecanoe, mapshaper and rsync. In my GIS desktop workflow I often also utilize ArcMap's Model Builder to perform repetitive tasks.
   images:
     -
     - code-assign-streets.jpg
