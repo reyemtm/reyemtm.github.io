@@ -26,4 +26,16 @@ I have a passion for web-based data visualization and analysis. Formally, I am a
 
 
 ***
+
+### Data Visualization Tools Shortlist
+
+ - Datawrapper
+ - Census Reporter
+ - DataUSA
+ - Tableau
+ - Mapbox
+ - Leaflet
+ - d3
+ 
+***
 {% include about.md %}
