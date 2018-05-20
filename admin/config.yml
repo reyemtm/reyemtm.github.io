@@ -12,15 +12,15 @@ collections:
     slug: "{{year}}-{{title}}"
     fields: 
       - {label: "Layout", name:"layout",widget:"hidden",default:"slides"}
-      - {label: "Theme", name:"theme",widget:"select",default:"white",options:["white","blood","night"]}
+      - {label: "Theme", name:"theme",widget:"select",options:["white","blood","night"]}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Subtitle", name:"subtitle", widget:"string"}
       - {label: "Description",name:"description",widget:"string"}
       - {label: "Netlify Image", name: "netlify-img", widget: "image"}
       - {label: "Featured Image", name: "feature-img", widget: "string"}
-      - {label: "Tags", name: "tags", "widget": "list"}
-      - {label: "Template",name:"template",widget:"boolean",default:false}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Template", name:"template", widget:"boolean", default:false}
       - {label: "Body", name: "body", widget: "markdown"}
   - name: "blog" # Used in routes
     label: "Blog" # Used in the UI
