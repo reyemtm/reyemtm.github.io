@@ -6,7 +6,7 @@ feature-img: mgl-parcels-01.png
 tags:
   - gdal
   - raster tiles
-undefined: Creating Raster Image Tiles in QGIS
+undefined: Creating Static Raster Tiles in QIGS
 ---
 ## A New Post
 
