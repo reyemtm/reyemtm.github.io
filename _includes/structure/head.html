@@ -3,6 +3,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>{{page.title}}</title>
+  <script>
+    if (window.location.origin != "https://getbounds.com") {
+      window.location.href = "https://getbounds.com" + window.location.pathname
+    }
+  </script>
   {% if jekyll.environment != test %}{%include structure/opengraph.html %}{%endif%}
   {% if page.layout != "app" %}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
   <link href="https://fonts.googleapis.com/css?family=Catamaran|Nunito+Sans" rel="stylesheet">
