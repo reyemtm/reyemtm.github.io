@@ -7,22 +7,6 @@ css: >-
   html {
     overflow: hidden;
   }
-  @font-face {
-    font-family: 'Istok';
-    font-style: normal;
-    font-weight: 400;
-    src:
-      local('Istok Web'),
-      url('/css/istok/Istok-Regular.ttf') format('truetype');
-  }
-  @font-face {
-    font-family: 'Istok';
-    font-style: bold;
-    font-weight: 700;
-    src: 
-      local('Istok Web'),
-      url('/css/istok/Istok-Bold.ttf') format('truetype');
-  }
   .display-content {
     display: contents;
   }
@@ -139,6 +123,7 @@ css: >-
   }
   .jump-mode div.slide {
       width: inherit;
+      overflow: hidden;
   }
 header: >-
   <link rel="stylesheet" href="/css/montserrat/Montserrat.css" />
