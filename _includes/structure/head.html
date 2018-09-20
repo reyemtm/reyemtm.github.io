@@ -10,8 +10,8 @@
       window.location.href = "https://www.getbounds.com" + window.location.pathname
     }
   </script>
-  {%include structure/opengraph.html %}
   {%endif%}
+  {%include structure/opengraph.html %}
   {% if page.layout == "cartodb" or page.layout == "compress" or page.layout == "default" or page.layout == "page" or page.layout == "post" or page.layout == "projects"%}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
   <link href="https://fonts.googleapis.com/css?family=Catamaran|Nunito+Sans" rel="stylesheet">
   {% if page.layout == "post" or page.layout == "app" %}<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>{%endif%}
