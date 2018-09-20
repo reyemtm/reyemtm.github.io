@@ -3,12 +3,14 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>{{page.title}}</title>
+  {% if jekyll.environment == "production" %}
   <script>
     if (window.location.origin != "https://www.getbounds.com") {
       window.location.href = "https://www.getbounds.com" + window.location.pathname
     }
   </script>
-  {% if jekyll.environment != test %}{%include structure/opengraph.html %}{%endif%}
+  {%include structure/opengraph.html %}
+  {%endif%}
   {% if page.layout != "app" %}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
   <link href="https://fonts.googleapis.com/css?family=Catamaran|Nunito+Sans" rel="stylesheet">
   {% if page.layout == "post" or page.layout == "app" %}<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>{%endif%}
@@ -39,6 +41,10 @@
   </script>
   <!--End Slides Styles-->
   {% endif %}
+  <!-- custom header includes -->
+  {% if page.header %}
+  {{page.header}}
+  {% endif %}
   <style>
   {% if page.map and page.layout == 'post' %}#map {height: 700px; width:100%;border:1px solid #ddd;position:relative;}
   {% elsif page.map and page.layout == 'app' %}#map {position:absolute;top:0;left:0;width:100%;height:100%}{% endif %}
@@ -46,7 +52,14 @@
   {{page.style}}{{page.css}}/*end custom page styles*/{% endif %}
   </style>
   {% if page.iframe %}<script>!function(){var a=document.createElement("div"),b=document.getElementsByTagName("base")[0]||document.getElementsByTagName("script")[0];a.innerHTML="&shy;<style> iframe { visibility: hidden; } </style>",b.parentNode.insertBefore(a,b),window.onload=function(){a.parentNode.removeChild(a)}}();</script>{% endif %}
-  {%if jekyll.environment != test %}{%include google-analytics.html%}{%endif%}
+  {%if jekyll.environment == "production" %}{%include google-analytics.html%}{%endif%}
+  {% if page.layout == 'big' %}
+  <link href='{{site.baseurl}}/slides/big-assets/big.css' rel='stylesheet' type='text/css' />
+  <link href='{{site.baseurl}}/slides/big-assets/highlight.css' rel='stylesheet' type='text/css' />
+  <style>
+    .new-shiny { background: #aaaaaa; }
+  </style>
+  {% endif %}
   <!--[if lt IE 9]>
   <script src="{{site.baseurl}}/slides/lib/js/html5shiv.js"></script>
   <![endif]-->

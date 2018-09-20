@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+  {% include structure/head.html %}
+<body class='{% if page.theme %}{{page.theme}}{% else %}light{% endif %}'>
+  <script src='{{site.baseurl}}/slides/big-assets/big.js'></script>
+  <script src='{{site.baseurl}}/slides/big-assets/highlight.js'></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  {{content | markdownify}}
+</body>
+</html>
