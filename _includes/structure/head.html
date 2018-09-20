@@ -11,7 +11,7 @@
   </script>
   {%include structure/opengraph.html %}
   {%endif%}
-  {% if page.layout != "app" %}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
+  {% if page.layout != "app" or page.layout != "big" %}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
   <link href="https://fonts.googleapis.com/css?family=Catamaran|Nunito+Sans" rel="stylesheet">
   {% if page.layout == "post" or page.layout == "app" %}<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>{%endif%}
   {%if page.layout == "app"%}<!-- Latest compiled and minified CSS -->
