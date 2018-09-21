@@ -17,3 +17,4 @@ Disallow: /apps/
 Disallow: /slides/
 
 Allow: /images
+Allow: /assets/images
