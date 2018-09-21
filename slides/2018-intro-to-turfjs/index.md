@@ -350,6 +350,11 @@ hexgrid.features.map(function(grid) {
 
 </div>
 
+<div>
+  Turf Collect
+  <pre><code>var newGrid = turf.collect(clippedGrid, crashes, "count", "total")</code></pre>
+</div>
+
 <div class="display-content">
   <div id="map" class="map">
     <div id="buttons" class="buttons"></div>
