@@ -200,11 +200,11 @@ Source Software
 <div markdown="1">
 # Include in your HTML
 <br>
-``https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js``
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js</code></pre>
 <br><br>
 # Install via NodeJS  
 <br>
-``npm install @turf/turf --OR-- npm install @turf/bbox``
+<pre><code>npm install @turf/turf --OR-- npm install @turf/bbox</code></pre>
 </div>
 
 <div>
@@ -228,8 +228,6 @@ A Few Examples
 </div>
 
 <div>
-  <pre>turf.booleanWithin(point, points)</pre>
-  <code>turf.booleanWithin(point, points)</code>
   <pre><code>turf.booleanWithin(point, points)</code></pre>
 </div>
 
@@ -257,11 +255,11 @@ var point = turf.point([x,y]);
 <div class="emoji">😢😭😿</div>
 
 <div>
-  Local Authoritative Open Data
+  Local <strong>Authoritative</strong> Open Data
 </div>
 
 <div>
-  <code>GeoJSON.filter()</code>
+  <code>Array.filter()</code>
   <pre>turf.nearest(point, points)</pre>
 </div>
 
@@ -294,7 +292,13 @@ Loading...
 Advanced Analysis in <strong>TurfJS</strong>
 </div>
 <div markdown="1">
-Hexgrids ```turf.hexGrid()```<br>Intersect<br>Collect<br>Centroids<br>Bounds<br>
+Hexgrids
+<pre><code>turf.hexGrid(bbox, size, opts)</code></pre>
+Intersect
+<pre><code>turf.intersect(a,b)</code></pre>
+Collect
+<pre><code>turf.collect(poly, points, 'field', 'name')</code></pre>
+<pre><code>
 </div>
 
 <div class="emoji">🐨😴💤</div>
@@ -302,13 +306,13 @@ Hexgrids ```turf.hexGrid()```<br>Intersect<br>Collect<br>Centroids<br>Bounds<br>
 <div>
 <h1>Turf Hexgrids</h1>
 <pre><code>
-var boundingBox = [-82.5, 39.7, -81.5, 40.18];
-var cellSize = 1;
+var bbox = [-82.5, 39.7, -81.5, 40.18];
+var size = 1;
 var options = {
   units: 'miles'
 };
 
-var hexgrid = turf.hexGrid(boundingBox, cellSize, options)
+var hexgrid = turf.hexGrid(bbox, size, options)
 </code></pre>
 </div>
 <div markdown="1">
@@ -319,11 +323,11 @@ Intersect & Area
  * calculate the area in sq miles */
 
 var clippedGrid = { "type":"FeatureCollection", "features":[] }
+
 hexgrid.features.map(function(grid) {
   var toFt = 0.00000386102159
   var intersect = turf.intersect(grid, muskingum);
   if (intersect) {
-    intersect.properties.area = ((turf.area(intersect))*toFt).toFixed(2);
     clippedGrid.features.push(intersect);
   }
 });
@@ -337,15 +341,15 @@ Turf in <strong>Node JS</strong>
 <div>
 Find the Nearest National Park 🏕️<br>45MB GeoJSON National Park Boundary File
 </div>
-<div markdown="1">
-```turf.explode()```
 
-```turf.nearestPoint()```
+<div>
+<pre><code>turf.explode(polygon)</code></pre>
+
+<pre><code>turf.nearestPoint(point, points)</code></pre>
 </div>
+
 <div>
 <pre><code>
-/* explode polygon into points
- * return the nearest polygon vertex */
 function findNearestPolygon(point, polygon) {
   var vertices = turf.explode(polygon)
   return turf.nearestPoint(point, vertices)
@@ -355,7 +359,6 @@ function findNearestPolygon(point, polygon) {
 
 <div>
 Find the Nearest Polygon
-  <div id="nearestPolyResult">&nbsp;</div>
   <form class="input-group">
     <div class="input-group">
       <input class="form-input" name="lng" type="text" id="lng" placeholder="Longitude" value="-82">
@@ -367,7 +370,11 @@ Find the Nearest Polygon
   </form>
 </div>
 
-<div>
+<div id="nearestPolyResult">
+Loading...
+</div>
+
+<!--div>
 Turf Center
 <pre><code>
 var center = {
@@ -381,7 +388,7 @@ hexgrid.features.map(function (feature) {
   center.features.push(turf.centerOfMass(feature));
 });
 </code></pre>
-</div>
+</div-->
 
 <div class="display-content">
   <div id="map" class="map">
