@@ -228,9 +228,15 @@ A Few Examples
 </div>
 
 <div>
+  <pre>turf.booleanWithin(point, points)</pre>
+  <code>turf.booleanWithin(point, points)</code>
+  <pre><code>turf.booleanWithin(point, points)</code></pre>
+</div>
+
+<div>
 <h1>Find My County</h1>
-<pre><code>/* Turf Within */
-var inCounty = "";
+<pre><code>var inCounty = "";
+
 counties.features.map(function(county) {
 var point = turf.point([x,y]);
   if (turf.booleanWithin(point, county) {
