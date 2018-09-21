@@ -300,6 +300,8 @@ Loading...
 Advanced Analysis in <strong>TurfJS</strong>
 </div>
 
+<div class="emoji">🐨😴💤</div>
+
 <div>
 Visualizing <strong>Crashes</strong> in Muskingum County (>7k)
 </div>
@@ -312,8 +314,6 @@ Intersect
 Collect
 <pre><code>turf.collect(p, pts, field, name)</code></pre>
 </div>
-
-<div class="emoji">🐨😴💤</div>
 
 <div>
 <h1>Turf Hexgrids</h1>
