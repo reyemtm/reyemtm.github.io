@@ -113,6 +113,7 @@ function buildApp() {
   createButton("Reset", reset, "buttons");
 
   function collect() {
+    reset()
     if (!getLayers(map, "within")) {
       var l = ((clippedGrid.features).length) - 1;
       console.log(l)
