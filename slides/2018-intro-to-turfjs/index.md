@@ -232,7 +232,8 @@ A Few Examples
 <pre><code>/* Turf Within */
 var inCounty = "";
 counties.features.map(function(county) {
-  if (turf.booleanWithin(turf.point([x,y]), county) {
+var point = turf.point([x,y]);
+  if (turf.booleanWithin(point, county) {
     inCounty = county.properties.NAME;
   }
 });
@@ -248,6 +249,15 @@ counties.features.map(function(county) {
 <div class="emoji">🤩😵🧐</div>
 
 <div class="emoji">😢😭😿</div>
+
+<div>
+  Local Authoritative Open Data
+</div>
+
+<div>
+  <code>GeoJSON.filter()</code>
+  <pre>turf.nearest(point, points)</pre>
+</div>
 
 <div markdown="1">
 # Nearest Playground
