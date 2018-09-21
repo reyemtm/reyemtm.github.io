@@ -302,7 +302,7 @@ Advanced Analysis in <strong>TurfJS</strong>
 </div>
 
 <div>
-Visualizing Crashes in Muskingum County (>7k)
+Visualizing <strong>Crashes</strong> in Muskingum County (>7k)
 </div>
 
 <div>
@@ -329,7 +329,7 @@ var hexgrid = turf.hexGrid(bbox, size, options)
 </code></pre>
 </div>
 <div markdown="1">
-Intersect & Area
+Turf Intersect 
 <pre><code>
 /* loop through each grid
  * add the intersecting areas to the clippedGrid
