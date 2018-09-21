@@ -157,15 +157,16 @@ JavaScript functions that speak <strong>GeoJSON</strong>
 <div><strong>What</strong> is GeoJSON?</div>
 
 <div>
-<pre><code javascript>
-/** GeoJSON is a single JSON file containing one or more features */
+<pre><code>
+/** GeoJSON is a single JSON file 
+ *  containing one or more features */
 {
   "type": "FeatureCollection",
   "features": [
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point", /* LineString, Polygon, MultiPolygon, etc. */
+        "type": "Point",
         "coordinates": [-82, 39] /*WGS 84*/
       },
       "properties": {
@@ -228,18 +229,19 @@ A Few Examples
 </div>
 
 <div>
+  Turf Within
   <pre><code>turf.booleanWithin(point, points)</code></pre>
 </div>
 
 <div>
 <h1>Find My County</h1>
 <pre><code>
-var inCounty = "";
+var result = "";
 counties.features.map(function(county) {
-var point = turf.point([x,y]);
-  if (turf.booleanWithin(point, county) {
-    inCounty = county.properties.NAME;
-  }
+  var point = turf.point([x,y]);
+    if (turf.booleanWithin(point, county) {
+      result = county.properties.NAME;
+    }
 });
 </code></pre>
 <div class="input-group">
@@ -255,6 +257,10 @@ var point = turf.point([x,y]);
 <div class="emoji">😢😭😿</div>
 
 <div>
+  Practical Applications
+</div>
+
+<div>
   Local <strong>Authoritative</strong> Open Data
 </div>
 
@@ -267,11 +273,11 @@ var point = turf.point([x,y]);
 <div markdown="1">
 # Find the Closest Playground
 <pre><code>
-  var data = amenities.features.filter(function(a) {
-    return a.properties.TYPE === 'Playground' 
-  })
-  var playgrounds = turf.featureCollection(data);
-  var result = turf.nearestPoint(point, playgrounds)
+var data = amenities.features.filter(function(a) {
+  return a.properties.TYPE === 'Playground' 
+})
+var playgrounds = turf.featureCollection(data);
+var result = turf.nearestPoint(point, playgrounds)
 </code></pre>
 
 <div class="input-group">
@@ -289,6 +295,10 @@ Loading...
 
 <div markdown="1">
 Advanced Analysis in <strong>TurfJS</strong>
+</div>
+
+<div>
+Crashes in Muskingum County
 </div>
 
 <div>
