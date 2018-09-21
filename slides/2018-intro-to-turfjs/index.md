@@ -233,8 +233,8 @@ A Few Examples
 
 <div>
 <h1>Find My County</h1>
-<pre><code>var inCounty = "";
-
+<pre><code>
+var inCounty = "";
 counties.features.map(function(county) {
 var point = turf.point([x,y]);
   if (turf.booleanWithin(point, county) {
