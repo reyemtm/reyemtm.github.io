@@ -170,6 +170,7 @@ function buildApp() {
   }
 
   function clipGrid() {
+    reset()
     if (hexgrid.features.length > 0 && clippedGrid.features.length === 0) {
       console.log(true)
       hexgrid.features.map(function (feature) {
@@ -216,8 +217,8 @@ function buildApp() {
 
   function createHexgrid() {
     hexgrid = {};
-    // var bbox = [-82.5, 39.7, -81.5, 40.18];
-    var bbox = turf.bbox(muskingum);
+    var bbox = [-82.5, 39.7, -81.5, 40.18];
+//     var bbox = turf.bbox(muskingum);
     var cellSize = 1;
     var options = {
       units: 'miles'
