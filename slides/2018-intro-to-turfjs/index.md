@@ -237,7 +237,7 @@ A Few Examples
 </div>
 
 <div>
-<h1>Find My County</h1>
+<h1>Where am I?</h1>
 <pre><code>
 var result = "";
 counties.features.map(function(county) {
