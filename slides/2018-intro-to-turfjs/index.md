@@ -162,8 +162,7 @@ JavaScript functions that speak <strong>GeoJSON</strong>
 
 <div>
 <pre><code>
-/** GeoJSON is a single JSON file 
- *  containing one or more features */
+/** GeoJSON is a single JSON file containing one or more features */
 {
   "type": "FeatureCollection",
   "features": [
