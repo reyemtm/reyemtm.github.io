@@ -105,10 +105,10 @@ function buildApp() {
   }
 
   createButton("Create Hex Grid", createHexgrid, "buttons")
-  createButton("Center of Mass", getCenter, "buttons")
-  createButton("Create Labels", createLabels, "buttons");
   createButton("Clip Grid", clipGrid, "buttons")
   createButton("Collect", collect, "buttons");
+  createButton("Center of Mass", getCenter, "buttons")
+  createButton("Create Labels", createLabels, "buttons");
   createButton("Bounds", bounds, "buttons");
   createButton("Reset", reset, "buttons");
 
