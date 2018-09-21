@@ -118,6 +118,8 @@ css: >-
   .mapboxgl-map .mapboxgl-popup .mapboxgl-popup-content {
     font-size: 1rem;
     padding: 1rem;
+    max-width: 300px;
+    word-break: break-all;
   }
   .img {
     width:90%;margin:0 auto;
