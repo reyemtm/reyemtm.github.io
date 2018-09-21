@@ -340,6 +340,7 @@ hexgrid.features.map(function(grid) {
   var toFt = 0.00000386102159
   var intersect = turf.intersect(grid, muskingum);
   if (intersect) {
+    intersect.properties.area = (turf.area(intersect)) * toFt;
     clippedGrid.features.push(intersect);
   }
 });
