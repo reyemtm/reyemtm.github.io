@@ -290,14 +290,14 @@ Loading...
 <div markdown="1">
 Advanced Analysis in <strong>TurfJS</strong>
 </div>
-<div markdown="1">
+
+<div>
 Hexgrids
 <pre><code>turf.hexGrid(bbox, size, opts)</code></pre>
 Intersect
 <pre><code>turf.intersect(a,b)</code></pre>
 Collect
 <pre><code>turf.collect(poly, points, 'field', 'name')</code></pre>
-<pre><code>
 </div>
 
 <div class="emoji">🐨😴💤</div>
