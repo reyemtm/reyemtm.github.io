@@ -49,6 +49,10 @@ css: >-
     padding: 10px;
     border: solid thin lightgray;
   }
+  pre code {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .buttons {
     background: black;
     width:100%;
@@ -230,7 +234,7 @@ A Few Examples
 
 <div>
   Turf Within
-  <pre><code>turf.booleanWithin(point, points)</code></pre>
+  <pre><code>turf.booleanWithin(point, polygon)</code></pre>
 </div>
 
 <div>
@@ -298,7 +302,7 @@ Advanced Analysis in <strong>TurfJS</strong>
 </div>
 
 <div>
-Crashes in Muskingum County
+Visualizing Crashes in Muskingum County (>7k)
 </div>
 
 <div>
