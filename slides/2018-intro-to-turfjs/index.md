@@ -265,15 +265,13 @@ var point = turf.point([x,y]);
 </div>
 
 <div markdown="1">
-# Find the Nearest Playground
+# Find the Closest Playground
 <pre><code>
-  /* filter out just playgrounds from an amenities point layer */
   var data = amenities.features.filter(function(a) {
     return a.properties.TYPE === 'Playground' 
   })
   var playgrounds = turf.featureCollection(data);
-  /* get the nearest playground to a given point */
-  var nearestPlayground = turf.nearestPoint(getLocation(), playgrounds)
+  var result = turf.nearestPoint(point, playgrounds)
 </code></pre>
 
 <div class="input-group">
