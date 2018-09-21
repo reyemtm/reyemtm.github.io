@@ -297,7 +297,7 @@ Hexgrids
 Intersect
 <pre><code>turf.intersect(a,b)</code></pre>
 Collect
-<pre><code>turf.collect(poly, points, 'field', 'name')</code></pre>
+<pre><code>turf.collect(p, pts, field, name)</code></pre>
 </div>
 
 <div class="emoji">🐨😴💤</div>
