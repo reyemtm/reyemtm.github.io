@@ -347,6 +347,12 @@ hexgrid.features.map(function(grid) {
 
 </div>
 
+<div class="display-content">
+  <div id="map" class="map">
+    <div id="buttons" class="buttons"></div>
+  </div>
+</div>
+
 <div markdown="1">
 Turf in <strong>Node JS</strong>
 </div>
@@ -401,12 +407,6 @@ hexgrid.features.map(function (feature) {
 });
 </code></pre>
 </div-->
-
-<div class="display-content">
-  <div id="map" class="map">
-    <div id="buttons" class="buttons"></div>
-  </div>
-</div>
 
 <div markdown="1">
 Support [TurfJS](https://opencollective.com/turf)
