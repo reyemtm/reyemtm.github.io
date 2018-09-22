@@ -49,6 +49,10 @@ css: >-
     padding: 10px;
     border: solid thin lightgray;
   }
+  pre code {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
   .buttons {
     background: black;
     width:100%;
@@ -114,6 +118,8 @@ css: >-
   .mapboxgl-map .mapboxgl-popup .mapboxgl-popup-content {
     font-size: 1rem;
     padding: 1rem;
+    max-width: 300px;
+    word-break: break-all;
   }
   .img {
     width:90%;margin:0 auto;
@@ -157,7 +163,7 @@ JavaScript functions that speak <strong>GeoJSON</strong>
 <div><strong>What</strong> is GeoJSON?</div>
 
 <div>
-<pre><code javascript>
+<pre><code>
 /** GeoJSON is a single JSON file containing one or more features */
 {
   "type": "FeatureCollection",
@@ -165,7 +171,7 @@ JavaScript functions that speak <strong>GeoJSON</strong>
     {
       "type": "Feature",
       "geometry": {
-        "type": "Point", /* LineString, Polygon, MultiPolygon, etc. */
+        "type": "Point",
         "coordinates": [-82, 39] /*WGS 84*/
       },
       "properties": {
@@ -200,11 +206,11 @@ Source Software
 <div markdown="1">
 # Include in your HTML
 <br>
-``https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js``
+<pre><code>https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js</code></pre>
 <br><br>
 # Install via NodeJS  
 <br>
-``npm install @turf/turf --OR-- npm install @turf/bbox``
+<pre><code>npm install @turf/turf --OR-- npm install @turf/bbox</code></pre>
 </div>
 
 <div>
@@ -228,13 +234,19 @@ A Few Examples
 </div>
 
 <div>
-<h1>Find My County</h1>
-<pre><code>/* Turf Within */
-var inCounty = "";
+  Turf Within
+  <pre><code>turf.booleanWithin(point, polygon)</code></pre>
+</div>
+
+<div>
+<h1>Where am I?</h1>
+<pre><code>
+var result = "";
 counties.features.map(function(county) {
-  if (turf.booleanWithin(turf.point([x,y]), county) {
-    inCounty = county.properties.NAME;
-  }
+  var point = turf.point([x,y]);
+    if (turf.booleanWithin(point, county) {
+      result = county.properties.NAME;
+    }
 });
 </code></pre>
 <div class="input-group">
@@ -249,16 +261,28 @@ counties.features.map(function(county) {
 
 <div class="emoji">😢😭😿</div>
 
+<div>
+  Practical Applications
+</div>
+
+<div>
+  Local <strong>Authoritative</strong> Open Data
+</div>
+
+<div>
+  Turf Nearest
+  <pre><code>Array.filter()</code></pre>
+  <pre><code>turf.nearestPoint(point, points)</code></pre>
+</div>
+
 <div markdown="1">
-# Nearest Playground
+# Find the Closest Playground
 <pre><code>
-  /* filter out just playgrounds from an amenities point layer */
-  var data = amenities.features.filter(function(a) {
-    return a.properties.TYPE === 'Playground' 
-  })
-  var playgrounds = turf.featureCollection(data);
-  /* get the nearest playground to a given point */
-  var nearestPlayground = turf.nearestPoint(getLocation(), playgrounds)
+var data = amenities.features.filter(function(a) {
+  return a.properties.TYPE === 'Playground' 
+})
+var playgrounds = turf.featureCollection(data);
+var result = turf.nearestPoint(point, playgrounds)
 </code></pre>
 
 <div class="input-group">
@@ -277,42 +301,64 @@ Loading...
 <div markdown="1">
 Advanced Analysis in <strong>TurfJS</strong>
 </div>
-<div markdown="1">
-Hexgrids ```turf.hexGrid()```<br>Intersect<br>Collect<br>Centroids<br>Bounds<br>
-</div>
 
 <div class="emoji">🐨😴💤</div>
 
 <div>
+Visualizing <strong>Crashes</strong> in Muskingum County (>7k)
+</div>
+
+<div>
+Hexgrids
+<pre><code>turf.hexGrid(bbox, size, opts)</code></pre>
+Intersect
+<pre><code>turf.intersect(a,b)</code></pre>
+Collect
+<pre><code>turf.collect(p, pts, field, name)</code></pre>
+</div>
+
+<div>
 <h1>Turf Hexgrids</h1>
 <pre><code>
-var boundingBox = [-82.5, 39.7, -81.5, 40.18];
-var cellSize = 1;
+var bbox = [-82.5, 39.7, -81.5, 40.18];
+var size = 1;
 var options = {
   units: 'miles'
 };
 
-var hexgrid = turf.hexGrid(boundingBox, cellSize, options)
+var hexgrid = turf.hexGrid(bbox, size, options)
 </code></pre>
 </div>
 <div markdown="1">
-Intersect & Area
+Turf Intersect 
 <pre><code>
 /* loop through each grid
  * add the intersecting areas to the clippedGrid
  * calculate the area in sq miles */
 
 var clippedGrid = { "type":"FeatureCollection", "features":[] }
+
 hexgrid.features.map(function(grid) {
   var toFt = 0.00000386102159
   var intersect = turf.intersect(grid, muskingum);
   if (intersect) {
-    intersect.properties.area = ((turf.area(intersect))*toFt).toFixed(2);
+    intersect.properties.area = (turf.area(intersect)) * toFt;
     clippedGrid.features.push(intersect);
   }
 });
 </code></pre>
 
+</div>
+
+<div>
+  Turf Collect
+  <pre><code>var newGrid = turf.collect(clippedGrid, crashes, "count", "total")</code></pre>
+</div>
+
+<div class="display-content">
+  <div id="map" class="map">
+    <div id="buttons" class="buttons"></div>
+  </div>
 </div>
 
 <div markdown="1">
@@ -321,15 +367,15 @@ Turf in <strong>Node JS</strong>
 <div>
 Find the Nearest National Park 🏕️<br>45MB GeoJSON National Park Boundary File
 </div>
-<div markdown="1">
-```turf.explode()```
 
-```turf.nearestPoint()```
+<div>
+<pre><code>turf.explode(polygon)</code></pre>
+
+<pre><code>turf.nearestPoint(point, points)</code></pre>
 </div>
+
 <div>
 <pre><code>
-/* explode polygon into points
- * return the nearest polygon vertex */
 function findNearestPolygon(point, polygon) {
   var vertices = turf.explode(polygon)
   return turf.nearestPoint(point, vertices)
@@ -339,7 +385,6 @@ function findNearestPolygon(point, polygon) {
 
 <div>
 Find the Nearest Polygon
-  <div id="nearestPolyResult">&nbsp;</div>
   <form class="input-group">
     <div class="input-group">
       <input class="form-input" name="lng" type="text" id="lng" placeholder="Longitude" value="-82">
@@ -351,7 +396,11 @@ Find the Nearest Polygon
   </form>
 </div>
 
-<div>
+<div id="nearestPolyResult">
+Loading...
+</div>
+
+<!--div>
 Turf Center
 <pre><code>
 var center = {
@@ -365,13 +414,7 @@ hexgrid.features.map(function (feature) {
   center.features.push(turf.centerOfMass(feature));
 });
 </code></pre>
-</div>
-
-<div class="display-content">
-  <div id="map" class="map">
-    <div id="buttons" class="buttons"></div>
-  </div>
-</div>
+</div-->
 
 <div markdown="1">
 Support [TurfJS](https://opencollective.com/turf)
