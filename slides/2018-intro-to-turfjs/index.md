@@ -67,6 +67,7 @@ css: >-
   }
   .buttons button {
     float: left;
+    font-size: 1.2rem;
   }
   .buttons > button:last-child {
     float: right;
@@ -281,7 +282,9 @@ counties.features.map(function(county) {
 var data = amenities.features.filter(function(a) {
   return a.properties.TYPE === 'Playground' 
 })
+
 var playgrounds = turf.featureCollection(data);
+
 var result = turf.nearestPoint(point, playgrounds)
 </code></pre>
 
@@ -352,7 +355,7 @@ hexgrid.features.map(function(grid) {
 
 <div>
   Turf Collect
-  <pre><code>var newGrid = turf.collect(clippedGrid, crashes, "count", "total")</code></pre>
+  <pre><code>turf.collect(clippedGrid, crashes, "count", "total")</code></pre>
 </div>
 
 <div class="display-content">
@@ -365,27 +368,19 @@ hexgrid.features.map(function(grid) {
 Turf in <strong>Node JS</strong>
 </div>
 <div>
-Find the Nearest National Park 🏕️<br>45MB GeoJSON National Park Boundary File
+Find the Nearest 🏕️ National Park</div>
+<div>45MB GeoJSON Park Boundary File
 </div>
 
 <div>
-<pre><code>turf.explode(polygon)</code></pre>
+<pre><code>var points = turf.explode(polygon)</code></pre>
 
 <pre><code>turf.nearestPoint(point, points)</code></pre>
 </div>
 
 <div>
-<pre><code>
-function findNearestPolygon(point, polygon) {
-  var vertices = turf.explode(polygon)
-  return turf.nearestPoint(point, vertices)
-}
-</code></pre>
-</div>
-
-<div>
-Find the Nearest Polygon
-  <form class="input-group">
+Query NodeJS
+<form class="input-group">
     <div class="input-group">
       <input class="form-input" name="lng" type="text" id="lng" placeholder="Longitude" value="-82">
     </div>

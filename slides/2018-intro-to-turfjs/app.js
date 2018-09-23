@@ -116,20 +116,21 @@ function buildApp() {
     reset()
     if (!getLayers(map, "within")) {
       var l = ((clippedGrid.features).length) - 1;
-      console.log(l)
+      console.log(l);
       var within = turf.collect(clippedGrid, crashes, "count", "crashvalues");
       var counts = [];
       var checkTurf = setInterval(function () {
         if (within && within.features[l]) {
-          clearTimeout(checkTurf)
+          clearTimeout(checkTurf);
           within.features.map(function (f) {
             f.properties.count = (f.properties.crashvalues).length;
-            counts.push((f.properties.crashvalues).length)
+            counts.push((f.properties.crashvalues).length);
+            delete f.properties.crashvalues;
           });
           var limits = chroma.limits(counts, 'k', 5)
-          console.log(limits)
-          console.log(chroma.scale('OrRd').colors(limits.length))
-          var scale = chroma.scale('PuRd').colors(limits.length)
+          console.log(limits);
+          // var scale = chroma.scale('PuRd').colors(limits.length)
+          var scale = chroma.scale('OrRd').colors(limits.length);
           map.addLayer({
             id: "within",
             type: "fill",
@@ -503,7 +504,7 @@ function buildMap() {
     var lng = e.target.parentElement[0].value;
     var url = 'http://127.0.0.1:3000/query/?lng=' + lng + '&lat=' + lat;
     getJSON(url, function (json) {
-      result.innerHTML = '<strong>' + json.properties.PARKNAME + '</strong><br>Turf Benchmark: ' + json.properties.secToFindPoint + ' seconds'
+      result.innerHTML = '<strong>' + json.properties.PARKNAME + '</strong> (' + json.properties.secToFindPoint + ' sec)'
     })
   })
 
