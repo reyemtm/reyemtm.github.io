@@ -188,8 +188,8 @@ JavaScript functions that speak <strong>GeoJSON</strong>
 GeoJSON is <strong>Everywhere</strong>
 </div>
 
-<div>
-Geocoder APIs | ArcGIS Feature to JSON | USGS Earthquake Feed | DATA.GOV (1,600+ Datasets) | AGOL Query Response & Exports | geojson.xyz (Natural Earth Data+) | Native Support in QGIS (Editing)
+<div markdown="1">
+<em>ArcGIS Feature to JSON</em> [USGS Earthquake Feed](https://earthquake.usgs.gov/fdsnws/event/1/)<strong> DATA.GOV (1,600+ Datasets)</strong> <em>AGOL Query Response & Exports</em> [geojson.xyz (Natural Earth Data+)](http://geojson.xyz) <strong>Native Support in</strong> [QGIS](https://www.qgis.org/en/site/)
 </div>
 
 <div class="img">
@@ -258,9 +258,9 @@ counties.features.map(function(county) {
 
 <div id="formResult">Click the Submit button on the previous page</div>
 
-<div class="emoji">🤩😵🧐</div>
+<div class="emoji">🤯😵🧐</div>
 
-<div class="emoji">😢😭😿</div>
+<div class="emoji">🤨😭😕</div>
 
 <div>
   Practical Applications
@@ -412,6 +412,11 @@ hexgrid.features.map(function (feature) {
 </div-->
 
 <div markdown="1">
+No Coding
+[Dropchop](http://dropchop.io/)
+</div>
+
+<div markdown="1">
 Support [TurfJS](https://opencollective.com/turf)
 </div>
 
@@ -421,10 +426,3 @@ Malcolm Meyer
 [@getbounds](https://twitter.com/getbounds)
 </div>
 <script src="app.js"></script>
-<script>
-
-function changeHTMLOverflow() {
-  return null
-}
-
-</script>

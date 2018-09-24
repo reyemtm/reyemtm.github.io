@@ -575,6 +575,18 @@ function getLayers(m, l) {
 
 window.onhashchange = function () {
   map.resize();
+  var div = document.body
+  var hash = window.location.hash;
+  var opt = {
+    margin:       0,
+    filename:     hash + '.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    // html2canvas:  { scale: -1 },
+    jsPDF:        { unit: 'in', format: 'tabloid', orientation: 'landscape' }
+  };
+  
+  // New Promise-based usage:
+  // html2pdf().from(div).set(opt).save();
   // window.fitText(document.getElementsByClassName('content'), 2.4)
   // window.fitText(document.getElementsByClassName('present'), 1.8)
   // window.fitText(document.getElementsByClassName('big'),0)
