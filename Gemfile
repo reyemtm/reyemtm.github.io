@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-#ruby version for netlify testing
+#ruby version for netlify
 ruby '2.2.3'
 
 #ruby version for laptop bash

@@ -351,7 +351,7 @@ function buildMap() {
           data: counties
         }
       },
-      "glyphs": "https://www.getbounds.com/slides/2018-intro-to-turfjs/{fontstack}/{range}.pbf",
+      "glyphs": "http://127.0.0.1:4000/slides/2018-intro-to-turfjs/{fontstack}/{range}.pbf",
       layers: [{
           id: "background",
           "type": "background",
@@ -492,12 +492,11 @@ function buildMap() {
     r.innerHTML = '<strong>' + playground.properties.PARK + ' (' + Math.round((playground.properties.distanceToPoint * 0.621371) * 100) / 100 + ' mi)</strong>';
   }
 
-  var nearestPolySubmit = document.getElementById('nearestPolySubmit');
+  /*var nearestPolySubmit = document.getElementById('nearestPolySubmit');
 
   nearestPolySubmit.addEventListener('click', function (e) {
     e.preventDefault();
     var loading = document.getElementById('findthenearestpolygon');
-    // var span = loading.querySelector('div');
     var result = document.getElementById('nearestPolyResult');
     result.innerHTML = "Loading...";
     var lat = e.target.parentElement[1].value;
@@ -506,7 +505,7 @@ function buildMap() {
     getJSON(url, function (json) {
       result.innerHTML = '<strong>' + json.properties.PARKNAME + '</strong> (' + json.properties.secToFindPoint + ' sec)'
     })
-  })
+  })*/
 
   appUtils(map)
 }

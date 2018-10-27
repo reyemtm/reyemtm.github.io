@@ -3,6 +3,8 @@ title: Turf JS
 subtitle: Geospatial Analysis for the Browser, Desktop & Server
 layout: big
 theme: light
+date: 2018-09-25
+tags: slides
 css: >-
   html {
     overflow: hidden;
@@ -392,7 +394,7 @@ Query NodeJS
 </div>
 
 <div id="nearestPolyResult">
-Loading...
+No Node JS Server Running! Tested Benchmark ~ 2 seconds
 </div>
 
 <!--div>

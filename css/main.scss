@@ -151,11 +151,25 @@ html, body {
   background-image:url(/images/post-img/header/pattern_00.jpg);
 }
 /*cards */
+.title.is-4 {
+  font-size: 2.2rem;
+  line-height: 1.1;
+}
 .cards {
   overflow-x: hidden;
 }
+.cards .card {
+  -webkit-transition: all 0.35s;
+  -moz-transition: all 0.35s;
+  transition: all 0.35s;
+}
 .cards .card:hover {
-  box-shadow: 0 0 30px 3px lightgray !important
+  // box-shadow: 0 0 30px 3px lightgray !important;
+  -ms-transform: scale(1.05);
+  -moz-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  -o-transform: scale(1.05);
+  transform: scale(1.05);
 }
 .cards a.title:hover, .cards a.title:active,
 .cards a.content:hover, .cards a.content:active {
@@ -168,9 +182,14 @@ html, body {
   width: auto;
   z-index: 1;
   height: 420px;
-  border-radius: 3px;
+  border-radius: 2px;
   overflow: hidden;
   transition: box-shadow fadeIn;
+}
+@media screen and (min-width: 1400px) {
+  .card {
+    height: 460px;
+  }
 }
 .card-content .title+.subtitle {
   margin-top: -10px;
@@ -190,7 +209,7 @@ html, body {
 .portfolio-box {
   position: relative;
   display: block;
-  max-width: 650px;
+  max-width: 800px;
   margin: 14px auto;
   overflow: hidden;
 }
@@ -221,6 +240,7 @@ html, body {
   color:#f5f5f5;
   background-color:rgba(0,0,0,0.5);
   margin-right:10px;
+  border-radius: 2px;
 }
 .portfolio-box .title {
   color: #f5f5f5;
@@ -344,7 +364,7 @@ a.tag:active,
 }
 .button.tag {
   border:none;
-  border-radius: 12px;
+  border-radius: 2px;
   margin-top:7px;
   margin-right:10px;
 }
@@ -472,13 +492,13 @@ a.tag:active,
 .container {
   padding: 10px 2px;
 }
+.subtitle .tag {
+  border-radius: 2px;
+}
 .subtitle .tag.alt{
   margin-top: 10px;
   color: #333;
   background: rgba(255, 255, 255, 0.2);
-}
-.subtitle a .tag {
-
 }
 .box .tag, .card .tag {
   margin: 10px 5px 5px 0;
@@ -533,12 +553,7 @@ a.tag:active,
   background-color: #f5f5f5;
   font-size: 16px;
 }
-/*@media screen and (max-width: 1179px) {
-  .card {
-    height: 360px;
-  }
-}*/
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
   h1, .title.is-1 {
     font-size: 40px;
   }
@@ -557,10 +572,16 @@ a.tag:active,
     min-height: 400px;
   }
   .card {
-    height: 360px;
+    height: 420px;
+  }
+  .title.is-4 {
+    font-size: 2rem;
+  }
+  .subtitle {
+    font-size: 1.4rem;
   }
   .subtitle.is-4 {
-    font-size: 18px;
+    font-size: 20px;
   }
   .nav-right.nav-menu.is-dark.is-active {
     /*background-color: rgba(33, 31, 22, 0.8);*/
@@ -577,6 +598,12 @@ a.tag:active,
   }
   .card {
     height: auto;
+  }
+  .title.is-4 {
+    font-size: 3rem;
+  }
+  .subtitle {
+    font-size: 1.8rem;
   }
 }
 @media screen and (max-width: 320px) {
@@ -604,6 +631,10 @@ a.tag:active,
   animation: floatUp 500ms both;
   animation-delay: 0.8s;
 }
+.slideDown {
+  animation: slideDown 500ms both;
+  animation-delay: 0.4s;
+}
 .fadeNav {
   animation: fadeNav 100ms both;
   animation-delay: 0.1s;
@@ -613,7 +644,7 @@ a.tag:active,
   animation-delay: 0s;
 }
 .fadein1 {
-  animation: fadeIn 500ms both;
+  animation: slideDown 500ms both;
   animation-delay: 0.2s;
 }
 .fadein2 {
@@ -624,26 +655,26 @@ a.tag:active,
   animation: fadeIn 500ms both;
   animation-delay: 0.6s;
 }
-.fadein4 {
-  animation: fadeIn 500ms both;
-  animation-delay: 0.8s;
-}
-.fadein5 {
-  animation: fadeIn 500ms both;
-  animation-delay: 1.0s;
-}
-.fadein6 {
-  animation: fadeIn 500ms both;
-  animation-delay: 1.2s;
-}
-.fadein7 {
-  animation: fadeIn 500ms both;
-  animation-delay: 1.4s;
-}
-.fadein9 {
-  animation: fadeIn 500ms both;
-  animation-delay: 1.6s;
-}
+// .fadein4 {
+//   animation: fadeIn 500ms both;
+//   animation-delay: 0.8s;
+// }
+// .fadein5 {
+//   animation: fadeIn 500ms both;
+//   animation-delay: 1.0s;
+// }
+// .fadein6 {
+//   animation: fadeIn 500ms both;
+//   animation-delay: 1.2s;
+// }
+// .fadein7 {
+//   animation: fadeIn 500ms both;
+//   animation-delay: 1.4s;
+// }
+// .fadein9 {
+//   animation: fadeIn 500ms both;
+//   animation-delay: 1.6s;
+// }
 .fadeout {
   animation: fadeOut 500ms both;
   animation-delay: 1s;
@@ -652,6 +683,7 @@ a.tag:active,
   animation: fadeOut 500ms both;
   animation-delay: 0.3s;
 }
+
 @keyframes floatUp {
   0% {
     /*box-shadow: 0 0 0 rgba(10, 10, 10, 0), 0 0 0 rgba(10, 10, 10, 0), 0 0 0 rgba(10, 10, 10, 0);*/
@@ -773,4 +805,11 @@ a.tag:active,
  60% {transform: translateY(-10px);}
  80% {transform: translateY(-8px);}
 }
+@media screen and (min-width: 980px) and (max-width:8000px) {
+  .container {
+    margin: 0 auto;
+    max-width: 1600px;
+  }
+}
+
 {%include css/font-awesome.min.css%}

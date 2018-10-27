@@ -1,0 +1,150 @@
+---
+layout: default
+title: Malcolm Meyer
+subtitle: Cartographer & Data Analyst
+permalink: /test1
+header-img: columbus2.jpg
+css: >-
+  .hero .hero-body.small {
+    display: block !important;
+  }
+  #posts {
+    min-height: 860px;
+  }
+---
+<div class="section main cards">
+  <div id="posts" class="container">
+    <div class="columns is-multiline">
+        <div id="main"></div>      
+    </div>
+  </div>
+  <div class="container">
+    <div class="has-text-centered">
+      <a class="button is-info is-outlined is-inverted is-medium" href="/blog"  style="margin-top: 40px;">
+        <span>Archive</span>
+      </a>
+    </div>
+  </div>
+  <div id="projects2"></div>
+</div>
+<div id="projects" class="hero-cta">
+  <nav class="level">
+    <div class="level-item has-text-centered">
+      <p class="title is-2">Projects</p>
+    </div>
+  </nav>
+</div>
+<div class="section main">
+  <div class="container">
+    <div class="columns popup-gallery">
+      <div class="column is-half is-pulled-left">
+        {% assign projects = site.projects | where: "featured", "true" %}
+        {% for project in projects limit: 1 %}
+          {% include loops/project-loop.html %}
+        {% endfor %}
+      </div>
+      <div class="column portfolio-box-sm">
+        {% for project in projects limit: 2 offset: 1%}
+          <div class="portfolio-sm">
+            {% include loops/project-loop.html %}
+          </div>
+        {% endfor %}
+      </div>
+      <div class="column portfolio-box-sm">
+        {% for project in projects limit: 2 offset: 3%}
+          <div class="portfolio-sm">
+            {% include loops/project-loop.html %}
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+<div id="modal" class="modal">
+  <div class="modal-background"></div>
+  <div class="modal-content portfolio-img">
+    <p id="modal-img" class="image is-4by3">
+    </p>
+  </div>
+  <button id="modal-close" class="modal-close"></button>
+</div>
+<script>
+  function getJSON(url, callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open("GET", url, true);
+    xhr.onload = function (e) {
+      if (xhr.readyState === 4) {
+        if (xhr.status === 200) {
+          var res = xhr.responseText;
+          callback(JSON.parse(res));
+        } else {
+          console.error(xhr.statusText);
+        }
+      }
+    };
+    xhr.onerror = function (e) {
+      console.error(xhr.statusText);
+    };
+    xhr.send(null);
+  }
+  
+  getJSON('/postsAndPages.json', function (posts) {
+    var main = document.getElementById("main");
+
+    posts = posts.filter(function(p) {
+      return p.type != null
+    });
+
+    posts.sort(function(a,b) {
+      var a = new Date(a.date.month + " " + Number(a.date.day) + " " + Number(a.date.year));
+      var b = new Date(b.date.month + " " + Number(b.date.day) + " " + Number(b.date.year));
+      
+      return a>b ? -1 : a<b ? 1 : 0
+    });
+
+
+
+    posts.map(function (p,i) {
+      if (p.title && i < 6) {
+        var date = new Date(p.date.month + " " + Number(p.date.day) + " " + Number(p.date.year));
+        var subtitle = !p.subtitle ? "&nbsp" : p.subtitle;
+        if (p.tags) {
+          var tags = p.tags;
+        }
+        var tagSection = "";
+        if (tags && tags != null){
+          console.log(tags);
+          tags.split(/\s*,\s*/).forEach(function(t) {
+            console.log(t);
+            tagSection += '<a href="/tags/#'+ t + '" class="tag">' + t + '</a>' 
+          });
+          console.log(tagSection);
+        }
+        main.innerHTML += 
+        `<div class="column is-4 is-pulled-left">
+          <div class="card">
+            <a href="${p.url}">
+            <div class="card-image">
+              <figure class="image is-16by9" style="background-image:url(/images/compressed/${p.image}"></figure>
+            </div>
+            </a>
+            <div class="card-content">
+              <div class="media">
+                <div class="media-content">
+                  <a class="title is-4" href="${p.url}"><p>${p.title}</p>
+                  <span class="subtitle">
+                  <div class="bulma-hero--subtitle">
+                    ${subtitle}<br>
+                  </div>
+                  </a>
+                  ${tagSection}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>`;
+      }
+    });
+  });
+</script>

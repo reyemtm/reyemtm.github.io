@@ -1,43 +1,43 @@
 <footer id="footer" class="footer hero is-dark header-img" {% include loops/hero-image.html %}>
-  <div class="container fadeUp fadein5">
+  <div class="container fadeUp _fadein5">
     <div class="has-text-centered">
       <h5 class="title is-dark is-5"><a href="/" style="color:white!important;text-decoration:underline;">getBounds</a> | malcolm meyer</h5>
       <p>
         <a class="icon is-medium" href="https://github.com/reyemtm" taget="_blank"><i class="fa fa-github"></i></a>
-        <a class="icon is-medium" href="https://www.linkedin.com/in/malcolm-meyer-5772a244"><i class="fa fa-linkedin fa-2x"></i>
+        <a class="icon is-medium" href="https://www.linkedin.com/in/malcolm-meyer-5772a244" target="_blank"><i class="fa fa-linkedin fa-2x"></i>
         </a>
-        <a class="icon is-medium	" href="https://twitter.com/getbounds"><i class="fa fa-twitter fa-2x"></i>
+        <a class="icon is-medium	" href="https://twitter.com/getbounds" target="_blank"><i class="fa fa-twitter fa-2x"></i>
         </a>
       </p>
-      <p class="has-text-centered fadein5">
+      <p class="has-text-centered _fadein5">
         <a scroll href="#">return to top</a>
       </p>
     </div>
   </div>
   <div>
-    <nav class="nav fadein5">
+    <nav class="nav _fadein5">
       <div class="container">
         <!--div class="nav-center is-mobile">
           <a class="nav-item" href="/about">about</a>
-          <!--a class="nav-item" href="/blog">blog</a>
+          <a class="nav-item" href="/blog">blog</a>
           <a class="nav-item" href="#portfolio">portfolio</a>
           <a class="nav-item" href="slides">slides</a>
-          <!--a class="nav-item" href="/contact">contact</a>
+          <a class="nav-item" href="/contact">contact</a>
         </div-->
       </div>
     </nav>
   </div>
 </footer>
-<div class="gutter fadein7">
+<div class="gutter _fadein7">
   <nav class="level">
     <!--p>
       <a href="http://bulma.io" target="_blank">Bulma</a> (<a href="http://opensource.org/licenses/mit-license.php">MIT</a>) by <a href="http://jgthms.com">Jeremy Thomas</a>. <a href="https://dansup.github.io/bulma-templates/templates/hero.html" target="_blank">Hero</a> template by <a href="https://github.com/dansup" target="_blank">@dansup</a>.
     </p-->
     <p class="is-pulled-left">
-      Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA</a>.
+      Content licensed <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA</a>.
     </p>
     <p class="is-pulled-right">
-      Powerwed by <a class="icon" href="https://github.com/" target="_blank"><i class="fa fa-github"></i></a>
+      Hosted by Netlify <a class="icon" href="https://netlify.com/" target="_blank"><img title="Netlify" src="/assets/icons/netlify-small.svg" alt-text="netlify-logo"></a>
     </p>
   </nav>
 </div>
@@ -50,48 +50,6 @@
     <div id="searchResults"></div>
   </div>
   <button id="searchClose" class="modal-close"></button>
-</div>
-<div id="contactModal" class="modal">
-  <div class="modal-background"></div>
-  <div class="modal-card">
-    <header class="modal-card-head">
-      <p class="modal-card-title">Contact Form</p>
-      <button id="contactClose" class="delete"></button>
-    </header>
-    <section class="modal-card-body">
-      <!--form action="https://formspree.io/malcolmtmeyer@gmail.com" method="POST">
-        <label class="label">Name</label>
-        <p class="control">
-          <input class="input" type="text" placeholder="Name">
-        </p>
-        <label class="label">Email</label>
-        <p class="control has-icon has-icon-right">
-          <input class="input" type="text" placeholder="Email" value="" name="email">
-        </p>
-        <label class="label">Subject</label>
-        <p class="control">
-          <input class="input" type="text" placeholder="Subject" name="_subject">
-        </p>
-        <label class="label">Message</label>
-        <p class="control">
-          <textarea class="textarea" placeholder="Message" name="message"></textarea>
-        </p>
-        <input type="text" name="_gotcha" style="display:none" />
-        <p class="control">
-          <button class="button is-info is-outlined is-inverted" value="send">Submit</button>
-          <span class="is-pulled-right">
-            <a class="icon is-medium" href="https://github.com/reyemtm" taget="_blank"><i class="fa fa-github"></i></a>
-            <a class="icon is-medium" href="https://www.linkedin.com/in/malcolm-meyer-5772a244"><i class="fa fa-linkedin fa-2x"></i>
-            </a>
-            <a class="icon is-medium	" href="https://twitter.com/getbounds"><i class="fa fa-twitter fa-2x"></i>
-            </a>
-          </span>
-        </p>
-      </form-->
-    </section>
-    <!--footer class="modal-card-foot">
-    </footer-->
-  </div>
 </div>
 {% if page.layout == "post" %}<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/balloon-css/0.2.4/balloon.min.css">{%endif%}
 {% if page.images %}
@@ -108,19 +66,18 @@
 <script>
 var search = document.getElementById('search');
 var searchModal = document.getElementById('searchModal');
-var contact = document.getElementById('contact');
-var contactModal = document.getElementById('contactModal');
-var contactClose = document.getElementById('contactClose');
 var searchClose = document.getElementById('searchClose');
 search.addEventListener('click', function() {
-  console.log('click');
-  searchModal.className = "modal is-active fadein0";
+  searchModal.classList.add("modal");
+  searchModal.classList.add("is-active");
+  searchModal.classList.add("fadein0");
   {% include js/jekyll-search.min.js %}
   /**/
   {% include js/search-init.js %}
 });
 searchClose.addEventListener('click', function(e) {
-  this.parentElement.className = 'modal';
+  var open = this.parentElement;
+  open.classList.remove('is-active');
 });
 smoothScroll.init({
   selector: '[scroll]', /* Selector for links (must be a class, ID, data attribute, or element tag)*/

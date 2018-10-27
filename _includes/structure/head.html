@@ -3,6 +3,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
   <title>{{page.title}}</title>
+  {% if page.presentation %}
+  <link rel="canonical" href="{{site.baseurl}}{{page.presentation}}" />
+  {% endif %}
   <!--{{jekyll.environment}}-->
   {% if jekyll.environment == "production" %}
   <script>
