@@ -175,7 +175,7 @@ code {
 }
 /*cards */
 .title.is-4 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
   line-height: 1.1;
 }
 .cards {
@@ -204,15 +204,10 @@ code {
 .card {
   width: auto;
   z-index: 1;
-  height: 440px;;
+  height: auto;
   border-radius: 2px;
   overflow: hidden;
   transition: fadeIn;
-}
-@media screen and (min-width: 1400px) {
-  .card {
-    height: 460px;
-  }
 }
 .card-content .title+.subtitle {
   margin-top: -10px;
@@ -527,9 +522,6 @@ a.tag:active,
 .box .image {
   margin-right: 20px;
 }
-.box {
-/*  min-height: 232px;*/
-}
 .box .image.is-128x128 {
   width: 192px;
   height: 192px;
@@ -593,10 +585,7 @@ a.tag:active,
     min-height: 400px;
   }
   .card {
-    height: 440px;;
-  }
-  .title.is-4 {
-    font-size: 1.8rem;
+    height: auto;;
   }
   .subtitle {
     font-size: 1.4rem;
@@ -621,10 +610,10 @@ a.tag:active,
     height: auto;
   }
   .title.is-4 {
-    font-size: 3rem;
+    font-size: 2.1rem;
   }
   .subtitle {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 320px) {
@@ -830,6 +819,11 @@ a.tag:active,
   .container.home, .container.blog, .container.slides {
     margin: 0 auto;
     max-width: 1600px;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .column.is-4 {
+    width: 25%;
   }
 }
 {%include css/font-awesome.min.css%}
