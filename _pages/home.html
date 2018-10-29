@@ -20,7 +20,7 @@ homepage: true
   <div class="section main cards">
     <div id="posts" class="container home">
       <div class="columns is-multiline">
-        {% for post in site.posts limit: 6 %}
+        {% for post in site.posts limit: 12 %}
           {% include loops/post-loop-cards.html %}
         {%endfor%}
       </div>
