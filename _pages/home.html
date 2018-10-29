@@ -18,14 +18,14 @@ homepage: true
   </div-->
   <!--post loop cards-->
   <div class="section main cards">
-    <div id="posts" class="container">
+    <div id="posts" class="container home">
       <div class="columns is-multiline">
         {% for post in site.posts limit: 6 %}
           {% include loops/post-loop-cards.html %}
         {%endfor%}
       </div>
     </div>
-    <div class="container">
+    <div class="container home">
       <div class="has-text-centered fadein4">
         <div id="viewMore">
           <a id="more" class="button is-info is-outlined is-inverted is-medium" href="#"  style="margin-top: 40px;">
@@ -51,7 +51,7 @@ homepage: true
   </div>
 
   <div class="section main">
-    <div class="container fadein2">
+    <div class="container home fadein2">
       <div class="columns popup-gallery">
         <div class="column is-half is-pulled-left">
           {% assign projects = site.projects | where: "featured", "true" %}

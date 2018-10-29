@@ -1,0 +1,1002 @@
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0001.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:16:53 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+Tag 0xEA1C (main) = � 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:56:54 
+DateTimeOriginal (exif) = 2015:07:16 21:56:54 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 5b0e0ab67857458ca893e61a36001f6b 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1603 
+Tag 0xEA1C (exif) = � 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:1:8.46 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 114:2:39.66 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215654-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:prefix0="MSImagingV1" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:CreatorTool="Microsoft Photo Gallery 16.4.3508.205" xmp:ModifyDate="2015-07-16T22:16:53-04:00 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0002.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:17:06 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:56:55 
+DateTimeOriginal (exif) = 2015:07:16 21:56:56 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = d3afab1d9b26cfeefb72b68b2f032396 
+PixelXDimension (exif) = 1533 
+PixelYDimension (exif) = 2048 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:5.08 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:54:50.43 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215656-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:17:06-04:00" exif:DateTimeOriginal="2015-07-16T21:56:56-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0003.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:17:13 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:56:57 
+DateTimeOriginal (exif) = 2015:07:16 21:56:57 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 243c4aa6290a579196f20589c732c353 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1524 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:5.08 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:54:50.43 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215657-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:17:13-04:00" exif:DateTimeOriginal="2015-07-16T21:56:57-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0004.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:17:32 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+Tag 0xEA1C (main) = � 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:56:58 
+DateTimeOriginal (exif) = 2015:07:16 21:56:58 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = b8b82dc97ef64e27815bb0da860eb59a 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1604 
+Tag 0xEA1C (exif) = � 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:1:8.46 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 114:2:39.66 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215658-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:prefix0="MSImagingV1" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:CreatorTool="Microsoft Photo Gallery 16.4.3508.205" xmp:ModifyDate="2015-07-16T22:17:32-04:00 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0005.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:20:56 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:00 
+DateTimeOriginal (exif) = 2015:07:16 21:57:00 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 23b021fd1879d6a7febae89ba78dfe4f 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1663 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 47:34:3.61 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 111:7:27.34 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215700-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:20:56-04:00" exif:DateTimeOriginal="2015-07-16T21:57:00-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0006.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:21:11 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:01 
+DateTimeOriginal (exif) = 2015:07:16 21:57:01 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = d32cf85c18d644295ed1b2da4c8eb98b 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1530 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:52:44.76 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 103:27:32.65 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215701-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:21:11-04:00" exif:DateTimeOriginal="2015-07-16T21:57:01-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0007.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:22:35 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:02 
+DateTimeOriginal (exif) = 2015:07:16 21:57:02 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = d11741c6a867c0aa1617176011325db0 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1494 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 46:59:6.40 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 111:12:23.20 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215702-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:22:35-04:00" exif:DateTimeOriginal="2015-07-16T21:57:02-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0008.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:22:51 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:03 
+DateTimeOriginal (exif) = 2015:07:16 21:57:04 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 1fe1d16da270c94fed5dcc305f7b3e9d 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1627 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:5.08 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:54:50.43 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215704-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:22:51-04:00" exif:DateTimeOriginal="2015-07-16T21:57:04-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0009.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:22:58 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:04 
+DateTimeOriginal (exif) = 2015:07:16 21:57:05 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 3444edfd56bf9b092f5f264f7e719898 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1627 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:5.08 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:54:50.43 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215705-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:22:58-04:00" exif:DateTimeOriginal="2015-07-16T21:57:05-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0010.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:23:03 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+Tag 0xEA1C (main) = � 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:05 
+DateTimeOriginal (exif) = 2015:07:16 21:57:06 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 5f9086b373dd44e49c071185bc6e9155 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1540 
+Tag 0xEA1C (exif) = � 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:5.08 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:54:50.43 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215706-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:prefix0="MSImagingV1" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:CreatorTool="Microsoft Photo Gallery 16.4.3508.205" xmp:ModifyDate="2015-07-16T22:23:03-04:00 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0011.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:23:09 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:06 
+DateTimeOriginal (exif) = 2015:07:16 21:57:07 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 72bdead6a0f67b14eac160b1f942341d 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1503 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 44:25:40.67 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 110:35:18.44 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215707-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:23:09-04:00" exif:DateTimeOriginal="2015-07-16T21:57:07-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0012.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:23:38 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:07 
+DateTimeOriginal (exif) = 2015:07:16 21:57:07 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 30837e1da5ac992dc58722a456fc2313 
+PixelXDimension (exif) = 1623 
+PixelYDimension (exif) = 2048 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:5.08 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:54:50.43 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215707-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:23:38-04:00" exif:DateTimeOriginal="2015-07-16T21:57:07-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0013.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:23:58 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:08 
+DateTimeOriginal (exif) = 2015:07:16 21:57:08 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 2d7f3cb50dc8f35a5467288241a2a636 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1623 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 44:21:21.76 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 110:47:46.77 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215708-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:23:58-04:00" exif:DateTimeOriginal="2015-07-16T21:57:08-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0014.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:28:59 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:09 
+DateTimeOriginal (exif) = 2015:07:16 21:57:09 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 2fad54b53a20f40a74ba10aad35e586d 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1529 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 44:43:12.22 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 110:28:47.96 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215709-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:28:59-04:00" exif:DateTimeOriginal="2015-07-16T21:57:09-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0015.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:29:10 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+Tag 0xEA1C (main) = � 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:10 
+DateTimeOriginal (exif) = 2015:07:16 21:57:10 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 4bf951f274da40b88135bceb04138c9a 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1495 
+Tag 0xEA1C (exif) = � 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 44:43:11.66 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 110:28:47.30 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215710-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:prefix0="MSImagingV1" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:CreatorTool="Microsoft Photo Gallery 16.4.3508.205" xmp:ModifyDate="2015-07-16T22:29:10-04:00 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0016.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:29:42 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:11 
+DateTimeOriginal (exif) = 2015:07:16 21:57:11 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 37cbff665728021f5fa5fb42cc913d63 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1624 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 44:25:40.67 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 110:35:18.44 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215711-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:29:42-04:00" exif:DateTimeOriginal="2015-07-16T21:57:11-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0017.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:30:55 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+CustomRendered (exif) = Custom process 
+DateTimeDigitized (exif) = 2015:07:16 21:57:12 
+DateTimeOriginal (exif) = 2015:07:16 21:57:13 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = acd2c56ca0f8d4cbc6f9f0d3e4316e49 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1623 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:28:0.03 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 89:43:46.42 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215713-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:30:55-04:00" exif:DateTimeOriginal="2015-07-16T21:57:13-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0018.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:31:03 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:13 
+DateTimeOriginal (exif) = 2015:07:16 21:57:14 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = a08592faa0c7ffd09dc9b81e57f54feb 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1613 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:28:0.03 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 89:43:46.42 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215714-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:31:03-04:00" exif:DateTimeOriginal="2015-07-16T21:57:14-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0019.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:31:04 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:15 
+DateTimeOriginal (exif) = 2015:07:16 21:57:15 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = e30531f76fef17f5c5f0656b62e8806b 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1494 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:28:0.03 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 89:43:46.42 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215715-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:31:04-04:00" exif:DateTimeOriginal="2015-07-16T21:57:15-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0020.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:31:27 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:16 
+DateTimeOriginal (exif) = 2015:07:16 21:57:16 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = da9099578d7cabb2ff7568c0bcff4db3 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1618 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:28:0.03 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 89:43:46.42 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215716-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:31:27-04:00" exif:DateTimeOriginal="2015-07-16T21:57:16-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0021.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:31:28 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+Tag 0xEA1C (main) = � 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:17 
+DateTimeOriginal (exif) = 2015:07:16 21:57:18 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 4e1c239b32e646f4805d6b8f8b07724d 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1616 
+Tag 0xEA1C (exif) = � 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:59:0.00 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 103:45:0.00 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215718-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:prefix0="MSImagingV1" xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:CreatorTool="Microsoft Photo Gallery 16.4.3508.205" xmp:ModifyDate="2015-07-16T22:31:28-04:00 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0022.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:31:29 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:18 
+DateTimeOriginal (exif) = 2015:07:16 21:57:19 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 1b60123660f1550c6fc2d14071175e3c 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1497 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:59:0.00 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 103:45:0.00 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215719-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:31:29-04:00" exif:DateTimeOriginal="2015-07-16T21:57:19-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0023.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:33:48 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:20 
+DateTimeOriginal (exif) = 2015:07:16 21:57:21 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 13c620722238ec4566e63a9e4bd37fc4 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1618 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:44:58.65 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 101:56:31.67 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215721-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:33:48-04:00" exif:DateTimeOriginal="2015-07-16T21:57:21-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0024.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:33:54 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:22 
+DateTimeOriginal (exif) = 2015:07:16 21:57:22 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = b3b9e76b88afdeb5965f5293dc89ea6d 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1529 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 43:44:58.65 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 101:56:31.67 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215722-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:33:54-04:00" exif:DateTimeOriginal="2015-07-16T21:57:22-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0026.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:38:49 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:39 
+DateTimeOriginal (exif) = 2015:07:16 21:57:40 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 3e8df500e5173d76683c0c59f260406a 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1586 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:21.71 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:57:59.78 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215740-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:38:49-04:00" exif:DateTimeOriginal="2015-07-16T21:57:40-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0027.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:39:26 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:41 
+DateTimeOriginal (exif) = 2015:07:16 21:57:41 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = d637d88dc978c202f35032d7d5f216b5 
+PixelXDimension (exif) = 1508 
+PixelYDimension (exif) = 2048 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:20.97 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:57:58.79 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215741-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:39:26-04:00" exif:DateTimeOriginal="2015-07-16T21:57:41-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0028.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:39:38 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:44 
+DateTimeOriginal (exif) = 2015:07:16 21:57:45 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 1618a769d684fa51a0c800d32906961b 
+PixelXDimension (exif) = 1510 
+PixelYDimension (exif) = 2048 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:19.76 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:57:59.40 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215745-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:39:38-04:00" exif:DateTimeOriginal="2015-07-16T21:57:45-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\vacation-1985_0029.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:39:44 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:16 21:57:47 
+DateTimeOriginal (exif) = 2015:07:16 21:57:47 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = fdfb321857025f9a0eb8ab995be533e4 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1623 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 49:5:20.57 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 113:58:0.63 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150716 
+TimeCreated (iptc) = 215747-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:39:44-04:00" exif:DateTimeOriginal="2015-07-16T21:57:47-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\windy-city-camp-85.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 23:02:02 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+CustomRendered (exif) = Custom process 
+DateTimeDigitized (exif) = 2015:07:14 08:02:49 
+DateTimeOriginal (exif) = 2015:07:14 08:02:50 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = f139076af7fad0cadbb2fa1f460f891a 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1623 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 41:33:1.18 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 87:48:43.85 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150714 
+TimeCreated (iptc) = 080250-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T23:02:02-04:00" exif:DateTimeOriginal="2015-07-14T08:02:50-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 
+
+--------------------- C:\Users\malco\Desktop\Trip out West\windy-city-camp-85_0001.jpg ---------
+Artist (main) = Picasa 
+DateTime (main) = 2015:07:16 22:16:37 
+Make (main) = Canon 
+Model (main) = MP495 series 
+ResolutionUnit (main) = inches 
+Software (main) = MP Navigator EX 4.0 
+XResolution (main) = 600 
+YCbCrPositioning (main) = Center of pixel array 
+YResolution (main) = 600 
+ColorSpace (exif) = sRGB 
+ComponentsConfiguration (exif) = YCbCr 
+DateTimeDigitized (exif) = 2015:07:13 18:28:47 
+DateTimeOriginal (exif) = 2015:07:13 18:28:48 
+ExifVersion (exif) = 0221 
+FileSrc (exif) = Unknown (2) 
+FlashPixVersion (exif) = 0100 
+ImageUniqueID (exif) = 3579f7cfb9ba7835ebd56e371f1c0a74 
+PixelXDimension (exif) = 2048 
+PixelYDimension (exif) = 1618 
+WhiteBalance (exif) = Auto white balance 
+GPSAltitudeRef (gps) = 0 
+GPSLatitude (gps) = 41:33:0.73 
+GPSLatitudeRef (gps) = N 
+GPSLongitude (gps) = 87:48:43.54 
+GPSLongitudeRef (gps) = W 
+GPSVersionID (gps) = 2 2 0 0 
+ApplicationRecordVersion (iptc) = 4 
+By-line (iptc) = Picasa 
+DateCreated (iptc) = 20150713 
+TimeCreated (iptc) = 182848-0400 
+XMLPacket = <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?> <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="XMP Core 5.1.2"> <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"> <rdf:Description rdf:about="" xmlns:xmp="http://ns.adobe.com/xap/1.0/" xmlns:exif="http://ns.adobe.com/exif/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmp:ModifyDate="2015-07-16T22:16:37-04:00" exif:DateTimeOriginal="2015-07-13T18:28:48-04:00"> <dc:creator> <rdf:Seq> <rdf:li>Picasa</rdf:li> </rdf:Seq> </dc:creator> </rdf 

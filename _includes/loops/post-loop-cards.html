@@ -15,8 +15,16 @@
                 {%if post.subtitle %}<div class="bulma-hero--subtitle">
                   {{ post.subtitle | strip_html | truncatewords:10}}<br>
                 <!--small></small-->
-              </div>{%endif%}</a>
-                {% for tag in post.tags %}<a href="/tags/#{{tag}}" class="tag">{{tag}}</a>{%endfor%}</span>
+              </div>{%endif%}</a></span>
+              <div class="post-date">
+                  {% if post.posted-date %}
+                  <time datetime="{{ post.posted-date | date_to_xmlschema }}">{{ post.posted-date | date: '%B %d, %Y' }}</time>
+                  &nbsp;(Updated <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }})</time>
+                  {% else %}<time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+                  {% endif %}
+              </div>
+              {% if page.homepage == true %}<span><a class="tag {% if post.presentation %}slides" href="/slides">presentation{% else%}post" href="/blog">blog{% endif %}</a></span>{% endif %}
+              <span>{% for tag in post.tags %}<a href="/tags/#{{tag}}" class="tag">{{tag}}</a>{%endfor%}</span>
         </div>
       </div>
     </div>

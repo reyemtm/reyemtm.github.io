@@ -4,10 +4,8 @@ subtitle: Recent Presentations & Talks
 permalink: /slides/
 header-img: pattern_11.jpg
 ---
-<div class="container">
-  <div class="columns is-multiline cards">
-      {% for post in site.posts %}{% if post.tag == 'slides' or post.tags contains 'slides' %}
-          {% include loops/post-loop-cards.html %}
-      {%endif%}{%endfor%}
-  </div>
+<div class="columns is-multiline">
+    {% for post in site.posts %}{% if post.tag == 'slides' or post.tags contains 'slides' %}
+        {% include loops/post-loop-cards.html %}
+    {%endif%}{%endfor%}
 </div>

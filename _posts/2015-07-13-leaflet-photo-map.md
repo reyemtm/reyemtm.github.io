@@ -1,6 +1,7 @@
 ---
 title: Leaflet Photo Map
-date: 2015-07-13 00:00:00 Z
+date: 2018-10-28
+posted-date: 2015-07-13 00:00:00 Z
 tags:
 - leaflet
 layout: post
@@ -12,28 +13,34 @@ plugins:
 - photo-map
 map: leaflet
 header-img: header-vacay-2.jpg
+header: >-
+  <script src="https://cdn.jsdelivr.net/npm/exif-js"></script>
+css: >-
+  #map{height: 580px;margin-bottom:2rem;}
+  .leaflet-touch .leaflet-control-layers, .leaflet-touch .leaflet-bar {
+    border: 2px solid rgba(0,0,0,0.2);
+  }  
 ---
+**Update October, 2018** This map originally used Google's Picasa Web API, but this will [soon be shut down](https://developers.google.com/picasa-web/). Instead of migrating to another Google service, I simply extracted the EXIF data from the photos ([using this tool](http://www.br-software.com/extracter.html)). The resulting csv was converted to json, which worked as a drop-in replacement for former Picasa feed.
+
 <div id="map">
 </div>
 <script>
+
 /*map*/
 	var map = L.map('map', {
 		maxZoom: 8,
 		sleep: true,
+    fullscreenControl: true
 		/*defaultExtentControl: true*/
 	});
 	map.setView([45.446,-100.928], 4);
+  /*5/46.408/-100.811*/
 	var hash = L.hash(map);
 /*tiles*/
 	var esritopo = L.tileLayer('http://server.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer/tile/{z}/{y}/{x}', {
 		attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ, TomTom, Intermap, iPC, USGS, FAO, NPS, NRCAN, GeoBase, Kadaster NL, Ordnance Survey, Esri Japan, METI, Esri China (Hong Kong), and the GIS User Community'
 		});
-	var comic = L.tileLayer('http://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}', {
-		attribution: 'Imagery from <a href="http://mapbox.com/about/maps/">MapBox</a> &mdash; Map data &copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-		subdomains: 'abcd',
-		id: 'reyemtm.mnijk2mp',
-		accessToken: 'pk.eyJ1IjoicmV5ZW10bSIsImEiOiJCTHUxSVZ3In0.Q-qbg_jG0JcT6bfBeiwXQg'
-	});
 
 	var toner = new L.StamenTileLayer("toner");
 
@@ -46,7 +53,6 @@ header-img: header-vacay-2.jpg
 /*controls*/
 	var baseMaps = {
 		"Contrast": toner,
-		"Comic": comic,
 		"Topo": esritopo,
 		"Light": cdb
 	};
@@ -73,39 +79,29 @@ header-img: header-vacay-2.jpg
 	});
 
 	reqwest({
-		url:'https://picasaweb.google.com/data/feed/api/user/103469053044045468318/albumid/6171132855421740513?alt=json-in-script&imgmax=1600',
-		type: 'jsonp',
+		url:'/assets/img/trip-out-west/gps.json',
+		type: 'json',
 		success: function (data) {
 			var photos = [];
-			data = data.feed.entry;
-
+      var url = '/assets/img/trip-out-west/';
 			for (var i = 0; i < data.length; i++) {
 			var photo = data[i];
-			if (photo['georss$where']) {
-				var pos = photo['georss$where']['gml$Point']['gml$pos']['$t'].split(' ');
 				photos.push({
-					lat: pos[0],
-					lng: pos[1],
-					url: photo['media$group']['media$content'][0].url,
-					caption: photo['media$group']['media$description']['$t'],
-					thumbnail: photo['media$group']['media$thumbnail'][0].url,
-					video: (photo['media$group']['media$content'][1] ? photo['media$group']['media$content'][1].url : null)
+					lat: data[i].lat,
+					lng: data[i].lng,
+					url: url + data[i].image,
+					caption: data[i].title,
+					thumbnail: url + data[i].image
 				});
-			};
 		}
-
-			photoLayer.add(photos).addTo(map);
-/*			map.fitBounds(photoLayer.getBounds(), {padding: [50,50]});
-			map.setView([41.55012, -87.81197], 15);
-			has to be added after center and zoom are set*/
 			L.control.navbar().addTo(map);
-
+			photoLayer.add(photos).addTo(map);
 		}
 	});
 
 </script>
 
-This is an example of the Leaflet.Photo plugin, based almost entirely on Bjørn Sandvik's post [here](http://blog.thematicmapping.org/2014/08/showing-geotagged-photos-on-leaflet-map.html). I did add a tweak that adjusts the photo when opened to a percentage of the size of the map div, but other than that I followed his example and the result is really cool. These are photos long since forgotten, of a trip my family took out west back in 1985. Most of the pictures were taken with a Kodak Disc 4000, or a similar model. Sod houses, the Lower Falls, Mount Rushmore, buffalo...it's all here.
+This is an example of the [Leaflet.Photo](https://github.com/turban/Leaflet.Photo) plugin, based almost entirely on Bjørn Sandvik's post [here](http://blog.thematicmapping.org/2014/08/showing-geotagged-photos-on-leaflet-map.html). I did add a tweak that adjusts the photo when opened to a percentage of the size of the map div, but other than that I followed his example and the result is really cool. These are photos long since forgotten, of a trip my family took out west back in 1985. Most of the pictures were taken with a Kodak Disc 4000, or a similar model. Sod houses, the Lower Falls, Mount Rushmore, buffalo...it's all here.
 
 
 <!--https://picasaweb.google.com/data/feed/base/user/103469053044045468318/albumid/6170973282606682673?alt=rss&kind=photo&hl=en_US-->

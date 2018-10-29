@@ -12,6 +12,19 @@
 html, body {
   background-color: white;
 }
+body {
+  font-size: 22px;
+  line-height: 34px;
+}
+code {
+  font-size: 20px;
+}
+.post-date {
+  font-size: 14px;
+  opacity: 0.8;
+  font-style: italic;
+  line-height:1;
+}
 /*original hero theme*/
 .is-outlined {
   background-color: transparent;
@@ -86,6 +99,16 @@ html, body {
 }
 .pager {
   padding-top:30px;
+}
+.tag {
+  font-size: 14px;
+  border-radius: 2px;
+}
+.tag.post {
+  background: rgba(38,134,126,0.2);
+}
+.tag.slides {
+  background: rgba(134, 38, 46, 0.2);
 }
 .tag-blocks {
   box-shadow: 0 2px 3px rgba(10,10,10,0.1), 0 0 0 1px rgba(10,10,10,0.1);
@@ -164,12 +187,12 @@ html, body {
   transition: all 0.35s;
 }
 .cards .card:hover {
-  // box-shadow: 0 0 30px 3px lightgray !important;
-  -ms-transform: scale(1.05);
-  -moz-transform: scale(1.05);
-  -webkit-transform: scale(1.05);
-  -o-transform: scale(1.05);
-  transform: scale(1.05);
+  box-shadow: 0 0 30px 1px lightgray, 0 0 0 1px rgba(10,10,10,0.1) !important;
+  // -ms-transform: scale(1.05);
+  // -moz-transform: scale(1.05);
+  // -webkit-transform: scale(1.05);
+  // -o-transform: scale(1.05);
+  // transform: scale(1.05);
 }
 .cards a.title:hover, .cards a.title:active,
 .cards a.content:hover, .cards a.content:active {
@@ -181,10 +204,10 @@ html, body {
 .card {
   width: auto;
   z-index: 1;
-  height: 420px;
+  height: 440px;;
   border-radius: 2px;
   overflow: hidden;
-  transition: box-shadow fadeIn;
+  transition: fadeIn;
 }
 @media screen and (min-width: 1400px) {
   .card {
@@ -373,6 +396,7 @@ a.tag:active,
 }
 .title, h1, h2, h3, h4, h5 {
   font-family: "Nunito Sans", "Segoe UI", "Helvetica", sans-serif;
+  margin-bottom: 1rem;
 }
 .content a:not(.button) {
   border-bottom: none;
@@ -414,7 +438,7 @@ a.tag:active,
 .hero-head {
   position: fixed;
   width:100%;
-  z-index:3;
+  z-index:1300;
 }
 .hero.is-dark .logo a.nav-item,
 .hero.is-dark .logo .nav-item a:not(.button) {
@@ -491,9 +515,6 @@ a.tag:active,
 }
 .container {
   padding: 10px 2px;
-}
-.subtitle .tag {
-  border-radius: 2px;
 }
 .subtitle .tag.alt{
   margin-top: 10px;
@@ -572,10 +593,10 @@ a.tag:active,
     min-height: 400px;
   }
   .card {
-    height: 420px;
+    height: 440px;;
   }
   .title.is-4 {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
   .subtitle {
     font-size: 1.4rem;
@@ -805,11 +826,10 @@ a.tag:active,
  60% {transform: translateY(-10px);}
  80% {transform: translateY(-8px);}
 }
-@media screen and (min-width: 980px) and (max-width:8000px) {
-  .container {
+@media screen and (min-width: 980px) {
+  .container.home, .container.blog, .container.slides {
     margin: 0 auto;
     max-width: 1600px;
   }
 }
-
 {%include css/font-awesome.min.css%}
