@@ -7,12 +7,20 @@ tags:
   - blog
 undefined: A Quick Comparison of Four Vector Tile Servers
 ---
-Local governments across the globe face many common 
+A Quick Look at Four Vector Tile Servers
 
-## Access
+All tests were perfomed on a Digital Ocean Droplet runing Ubuntu 18.10 4GB Ram 2vcpus
 
-## Authenticity
+tests using ``loadtest`` - results will vary depending on your internet connection
 
-## Control
+Geoserver 2.15
+Java
 
-## Mapping is Fun!
+Tegola
+Written in Go
+
+T-Rex
+Rust
+
+Simple NodeJS Server
+JavaScript
