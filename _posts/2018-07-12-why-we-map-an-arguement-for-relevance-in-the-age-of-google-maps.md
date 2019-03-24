@@ -1,15 +1,11 @@
 ---
-User: Malcolm
-published: false
-title: Why We Map
-subtitle: An Argument for Relevance in the Age of Google (Maps)
+title: Serving Vector Tiles
 date: '2018-07-12 T00:00:00.000Z'
-description: >-
-  An Argument for Relevance in the Age of Google (Maps)
+netlify-img: /images/post-img/original/mgl-parcels-01.png
+feature-img: mgl-parcels-01.png
 tags:
   - blog
-feature-img: mgl-parcels-01.png
-netlify-img: /images/post-img/original/mgl-parcels-01.png
+undefined: A Quick Comparison of Four Vector Tile Servers
 ---
 Local governments across the globe face many common 
 
