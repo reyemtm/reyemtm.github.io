@@ -33,7 +33,14 @@ http://134.209.222.109/vector-tiles/parcels/12/1114/1553.pbf 118KB file
 
 https://gis.coz.org/assets/map-data/vector-tiles/TaxParcels_Mapbox_InCity_wgs84/14/4458/6206.mvt - 102KB file
 
-Static Tiles
+http://134.209.222.109/vector-tiles/parcels/14/4458/6206.pbf
+
+Static Raw MVT Tiles on Netlify
+
+TR - 4,13, 13 
+RPS - 0, 1, 1
+ML - 7883, 9585, 9068
+LR - 9706, 9972, 9068
 
 Geoserver
 Total Requests - 247, 223, 225
