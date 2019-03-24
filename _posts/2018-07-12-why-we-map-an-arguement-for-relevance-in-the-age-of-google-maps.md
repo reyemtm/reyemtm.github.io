@@ -27,6 +27,10 @@ The performance benchmark I am using is simply the static tiles hosted on Netlif
 
 http://157.230.226.113:8080/geoserver/gwc/service/tms/1.0.0/coz:impervious@EPSG%3A900913@pbf/15/8919/20357.pbf 100KB file
 
+http://134.209.222.109/vector-tiles/parcels/12/1114/1550.pbf 100KB file
+
+http://134.209.222.109/vector-tiles/parcels/12/1114/1553.pbf 118KB file
+
 Static Tiles
 
 Geoserver
@@ -38,7 +42,14 @@ Longest Request - 9214, 7657, 7284
 Tegola
 T-Rex
 NodeJS
+
 NodeJS/NGINX Cache
+TR - 218, 192
+RPS - 22
+ML - 3894
+LR - 8506
+
+---
 
 Geoserver 2.15
 Java
