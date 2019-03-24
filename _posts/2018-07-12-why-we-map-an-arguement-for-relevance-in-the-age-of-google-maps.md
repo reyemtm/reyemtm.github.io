@@ -23,10 +23,18 @@ This may be related to the rendering engine and not the tile server there are si
 
 ## Server Performance
 
-The performance benchmark I am using is simply the static tiles hosted on Netlify. This is a fairly high bar since these tiles already exist, but all the servers have the ability to cache vector tiles, so if everything is setup correctly, the test should pull tiles form the cache. I tested the servers using `loadtest`.
+The performance benchmark I am using is simply the static tiles hosted on Netlify. This is a fairly high bar since these tiles already exist, but all the servers have the ability to cache vector tiles, so if everything is setup correctly, the test should pull tiles form the cache. I tested the servers using `loadtest -c 100 -t 10`.
+
+http://157.230.226.113:8080/geoserver/gwc/service/tms/1.0.0/coz:impervious@EPSG%3A900913@pbf/15/8919/20357.pbf 100KB file
 
 Static Tiles
+
 Geoserver
+Total Requests - 247, 223, 225
+RPS - 25, 22, 22
+Mean Latency - 3304, 3523, 3542
+Longest Request - 9214, 7657, 7284
+
 Tegola
 T-Rex
 NodeJS
