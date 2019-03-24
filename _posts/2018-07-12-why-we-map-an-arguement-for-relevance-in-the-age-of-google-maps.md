@@ -7,11 +7,30 @@ tags:
   - blog
 undefined: A Quick Comparison of Four Vector Tile Servers
 ---
-Many of the web map projects I work on involve rendering vector tiles in the client using Mapbox GL JS. Currently I utilize a variety of methods for serving tiles, from hosting the data on Mapbox to cutting and hosting static tiles along-side the web application to simply hosting the raw geojson file and letting Mapxbox GL JS do the work. Although this combination of methods has worked for most of my needs up until this point, I decided it was time to explore the landscape of vector-tile servers and test out their capabilities as compared to the methods mentioned above. What follows is not a rigorous study or benchmark, but simply the result of me experience in deploying four different servers. I explore the ease of getting them up and running, their effectiveness at cutting tiles, the  
+Many of the web map projects I work on involve rendering vector tiles in the client using Mapbox GL JS. Currently I utilize a variety of methods for serving tiles, from hosting the data on Mapbox to cutting and hosting static tiles along-side the web application to simply hosting the raw geojson file and letting Mapxbox GL JS do the work. Although this combination of methods has worked for most of my needs up until this point, I decided it was time to explore the landscape of vector-tile servers and test out their capabilities as compared to the methods mentioned above. What follows is not a rigorous study or benchmark, but simply the result of me experience in deploying four different servers. I explore the ease of getting them up and running, their effectiveness at cutting tiles, and the 
+
+## Hosting Setup
 
 All tests were perfomed on a Digital Ocean Droplet runing Ubuntu 18.10 4GB Ram 2vcpus
 
-tests using ``loadtest`` - results will vary depending on your internet connection
+## Vector Tile Serving
+
+In general, all the servers proved to cut and serve vector tiles, however the tiles cut using Geoserver did result in some rendering errors using Mapbox GL JS. 
+
+insert photo of error. 
+
+This may be related to the rendering engine and not the tile server there are similar artifacts present when using the NodeJS server (or even geojson-vt natively in gljs).
+
+## Server Performance
+
+The performance benchmark I am using is simply the static tiles hosted on Netlify. This is a fairly high bar since these tiles already exist, but all the servers have the ability to cache vector tiles, so if everything is setup correctly, the test should pull tiles form the cache. I tested the servers using `loadtest`.
+
+Static Tiles
+Geoserver
+Tegola
+T-Rex
+NodeJS
+NodeJS/NGINX Cache
 
 Geoserver 2.15
 Java
@@ -22,5 +41,9 @@ Written in Go
 T-Rex
 Rust
 
+Caching the tiles is very slow
+
 Simple NodeJS Server
 JavaScript
+
+Superfast tile creation, partially because the data is indexed by geojson-vt when the script is first loaded. Moving this indexing until the first request slows the initial tile creation down significantly.
