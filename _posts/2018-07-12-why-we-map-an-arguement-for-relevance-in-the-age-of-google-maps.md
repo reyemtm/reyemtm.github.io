@@ -43,7 +43,7 @@ Tegola
 T-Rex
 NodeJS
 
-NodeJS/NGINX Cache
+NodeJS/NGINX Cache - woops these were on small do droplet
 TR - 218, 192
 RPS - 22
 ML - 3894
