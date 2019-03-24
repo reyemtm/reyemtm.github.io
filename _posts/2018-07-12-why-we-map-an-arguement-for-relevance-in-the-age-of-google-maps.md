@@ -35,30 +35,26 @@ https://gis.coz.org/assets/map-data/vector-tiles/TaxParcels_Mapbox_InCity_wgs84/
 
 http://134.209.222.109/vector-tiles/parcels/14/4458/6206.pbf
 
-Static Raw MVT Tiles on Netlify
+* Static Raw MVT Tiles on Netlify
+  * TR - 4,13, 13 
+  * RPS - 0, 1, 1
+  * ML - 7883, 9585, 9068
+  * LR - 9706, 9972, 9068
+* Geoserver
+  * Total Requests - 247, 223, 225
+  * RPS - 25, 22, 22
+  * Mean Latency - 3304, 3523, 3542
+  * Longest Request - 9214, 7657, 7284
+* Tegola
+  T-Rex
+  NodeJS
+* NodeJS/NGINX Cache - woops these were on small do droplet
+  * TR - 218, 192
+  * RPS - 22
+  * ML - 3894
+  * LR - 8506
 
-TR - 4,13, 13 
-RPS - 0, 1, 1
-ML - 7883, 9585, 9068
-LR - 9706, 9972, 9068
-
-Geoserver
-Total Requests - 247, 223, 225
-RPS - 25, 22, 22
-Mean Latency - 3304, 3523, 3542
-Longest Request - 9214, 7657, 7284
-
-Tegola
-T-Rex
-NodeJS
-
-NodeJS/NGINX Cache - woops these were on small do droplet
-TR - 218, 192
-RPS - 22
-ML - 3894
-LR - 8506
-
----
+- - -
 
 Geoserver 2.15
 Java
