@@ -31,6 +31,8 @@ http://134.209.222.109/vector-tiles/parcels/12/1114/1550.pbf 100KB file
 
 http://134.209.222.109/vector-tiles/parcels/12/1114/1553.pbf 118KB file
 
+https://gis.coz.org/assets/map-data/vector-tiles/TaxParcels_Mapbox_InCity_wgs84/14/4458/6206.mvt - 102KB file
+
 Static Tiles
 
 Geoserver
