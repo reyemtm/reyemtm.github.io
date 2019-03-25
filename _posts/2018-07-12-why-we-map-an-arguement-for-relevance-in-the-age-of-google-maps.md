@@ -1,6 +1,6 @@
 ---
 title: Serving Vector Tiles
-date: '2018-07-12 T00:00:00.000Z'
+date: '2019-03-25T20:00:00-04:00'
 netlify-img: /images/post-img/original/parcel-wide.jpg
 feature-img: parcel-wide.jpg
 tags:
