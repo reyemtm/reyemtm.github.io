@@ -87,13 +87,11 @@ Superfast tile creation, partially because the data is indexed by geojson-vt whe
 
 ### Benefits
 
-* No tile artifacts like in t_rex or geojson-vt
-* Can read from postgis database
+* Data Sources: PostgreSQL database or Geopackage
 
 ### Issues
 
-* Cannot convert from EPSG:3735 to EPSG:3857 (NAD 83 Ohio SP South to Web Mercator)
-  		- This will mean making a duplicate copy of the data in another projection unless I can query the data out into Web Mercator
+* Data must be in WGS84 or Web Mercator
 * On-the-Fly tile creation is slow compared to t_rex and geojson-vt but it does have a caching option
 
 ## geojson-vt NodeJS Server
