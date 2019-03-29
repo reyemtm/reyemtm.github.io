@@ -5,17 +5,25 @@ netlify-img: /images/post-img/original/parcel-wide.jpg
 feature-img: parcel-wide.jpg
 tags:
   - blog
-undefined: Serving Vector Tiles
+undefined: a
 ---
-Many of the web map projects I work on involve rendering vector tiles in the client using Mapbox GL JS. Currently I utilize a variety of methods for serving tiles, from hosting the data on Mapbox to cutting and hosting static tiles along-side the web application to simply hosting the raw geojson file and letting Mapxbox GL JS do the work. Although this combination of methods has worked for most of my needs up until this point, I decided it was time to explore the landscape of vector-tile servers and test out their capabilities as compared to the methods mentioned above. What follows is not a rigorous study or benchmark, but simply the result of me experience in deploying four different servers. I explore the ease of getting them up and running, their effectiveness at cutting tiles, and the 
+there are a variety of vector tile servers in the wild. So why I go about creating a new one? I decided to try several options for serving out our maps through vector tiles. I tried t dash Rex, t e o g o l a, geoserver with the vector tile plugin and then a simple node script I found online. The pros and cons of each are found below. TL DR is that well some of the other servers have more maintainers or have more options oh, the node server proved to be the fastest at generating tiles oh, so fast that it could be loaded without needing to cache tiles first. My setup is as follows, start the no tileserver every night which bulls views from bye post GIS database, brings them into node as geojson0vt and build a tile index. The node server is proxy with n g i n x and the responses are cashed as well. This is done using the built-in cash to n g i n x. This way the node server only has to create a tile one time. The cash is set to time out at 3 hours. Because the node server relies on json. Parse it is not suitable for large data, however I believe it could be built with our bus to stream data into a spatial index then query the index for the tiles to be created. This shirt server is only been in production for a short time but it means no longer do I have to export files ask geojson0vt convert them to wgs84 then push them to mapbox were cut my own tiles. The conversion is done automatically through the hostess database views and the tiles are cut with denote script.
 
-## Hosting Setup
+Many of the web map projects I work on involve rendering vector tiles in the client using Mapbox GL JS. Currently I utilize a variety of methods for serving tiles, from hosting the data on Mapbox to cutting and hosting static tiles along-side the web application to simply hosting the raw geojson file and letting Mapxbox GL JS do the work. Although this combination of methods has worked for most of my needs up until this point, I decided it was time to explore the landscape of vector-tile servers and test out their capabilities as compared to the methods mentioned above. What follows is not a rigorous study or benchmark, but simply the result of me experience in deploying four different servers. I explore the ease of getting them up and running, their effectiveness at cutting tiles, and my overall thoughts on their performance. 
 
-All tests were perfomed on a Digital Ocean Droplet runing Ubuntu 18.10 4GB Ram 2vcpus
+## Servers Tested
+
+Tegola
+
+t_rex
+
+Custom Node Tile Server
+
+Geoserver
 
 ## Vector Tile Serving
 
-In general, all the servers proved to cut and serve vector tiles, however the tiles cut using Geoserver did result in some rendering errors using Mapbox GL JS. 
+I managed to get all the servers to cut and serve vector tiles. 
 
 insert photo of error. 
 
@@ -49,7 +57,6 @@ http://134.209.222.109/vector-tiles/parcels/14/4458/6206.pbf
 * T-Rex
   * Good and simple documentation
   * NGINX Reverse Proxy sample config file
-
 * NodeJS/NGINX Cache - woops these were on small do droplet
   * TR - 218, 192
   * RPS - 22
@@ -73,3 +80,52 @@ Simple NodeJS Server
 JavaScript
 
 Superfast tile creation, partially because the data is indexed by geojson-vt when the script is first loaded. Moving this indexing until the first request slows the initial tile creation down significantly.
+
+## Tegola
+
+`./tegola cache seed --bounds -84,38,-81,42 --max-zoom 18`
+
+### Benefits
+
+* No tile artifacts like in t_rex or geojson-vt
+* Can read from postgis database
+
+### Issues
+
+* Cannot convert from EPSG:3735 to EPSG:3857 (NAD 83 Ohio SP South to Web Mercator)
+  		- This will mean making a duplicate copy of the data in another projection unless I can query the data out into Web Mercator
+* On-the-Fly tile creation is slow compared to t_rex and geojson-vt but it does have a caching option
+
+## geojson-vt NodeJS Server
+
+#### Benefits
+
+* Easy to understand the code
+* Simple
+* Fast
+
+#### Issues
+
+* Tile rendering issues
+
+## t_rex
+
+#### Issues
+
+* PostgreSQL as a datasource not working
+* Tile rendering issues
+* Slower than the Node Server
+
+## Geoserver
+
+#### Benefits
+
+* OGC Compliant server with WMS, WFS, WFS-T, raster tiles, vector tiles and and raw data files
+* WMS searching for layer search
+* Has it's own caching system
+* Can use a variety of data sources from PostGIS to shapefiles and more
+
+#### Issues
+
+* Resource heavy
+* Complicated setup and configuration
