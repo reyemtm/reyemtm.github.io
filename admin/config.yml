@@ -22,6 +22,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Template", name:"template", widget:"boolean", default:false}
       - {label: "Body", name: "body", widget: "markdown"}
+      
   - name: "blog" # Used in routes
     label: "Blog" # Used in the UI
     folder: "_posts/" # The path to the folder where the documents are stored
