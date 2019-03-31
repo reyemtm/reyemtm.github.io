@@ -1,11 +1,12 @@
 ---
 title: Serving Vector Tiles
 date: '2019-03-25T20:00:00-04:00'
+subtitle: a
+description: a
 netlify-img: /images/post-img/original/parcel-wide.jpg
 feature-img: parcel-wide.jpg
 tags:
   - blog
-undefined: a
 ---
 there are a variety of vector tile servers in the wild. So why I go about creating a new one? I decided to try several options for serving out our maps through vector tiles. I tried t dash Rex, t e o g o l a, geoserver with the vector tile plugin and then a simple node script I found online. The pros and cons of each are found below. TL DR is that well some of the other servers have more maintainers or have more options oh, the node server proved to be the fastest at generating tiles oh, so fast that it could be loaded without needing to cache tiles first. My setup is as follows, start the no tileserver every night which bulls views from bye post GIS database, brings them into node as geojson0vt and build a tile index. The node server is proxy with n g i n x and the responses are cashed as well. This is done using the built-in cash to n g i n x. This way the node server only has to create a tile one time. The cash is set to time out at 3 hours. Because the node server relies on json. Parse it is not suitable for large data, however I believe it could be built with our bus to stream data into a spatial index then query the index for the tiles to be created. This shirt server is only been in production for a short time but it means no longer do I have to export files ask geojson0vt convert them to wgs84 then push them to mapbox were cut my own tiles. The conversion is done automatically through the hostess database views and the tiles are cut with denote script.
 
