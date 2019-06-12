@@ -36,4 +36,5 @@ function getIntersectingLines(point, features) {
 This worked, however it only returns the **first** intersecting lines, and it returns the lines in both directions. What I really want is to return all the network features, and be able to choose either upstream features or downstream features. Building this out turned out to be not that difficult. To switch between upstream and downstream network traces I simply used either the first of last coordinate pair of the initial connected line(s). This data is used to then seed the rest of the network. The result can be found below. Here I am only using the upstream trace. I plan on building this out as a Mapbox GL JS control eventually.
 
 <iframe src="https://bl.ocks.org/reyemtm/raw/315fac1958ba3b9fdbbe2353a53f0995/#17/39.915321/-82.005697 width="100%" height="400px">
+<em>To trace the upstream network simply click on a point.</em>
 
