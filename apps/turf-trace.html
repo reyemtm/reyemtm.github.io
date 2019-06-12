@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Trace Network</title>
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.js'></script>
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.51.0/mapbox-gl.css' rel='stylesheet' />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Turf.js/5.1.5/turf.min.js"></script>
+  <style>
+    #map {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="map"></div>
+  <script>
+    var lines, points;
+
+    var networkFeatures = {
+      type: "FeatureCollection",
+      features: []
+    }
+
+    var clear = {
+      type: "FeatureCollection",
+      features: []
+    }
+
+    var map = new mapboxgl.Map({
+      container: 'map',
+      hash: true,
+      style: {
+        "version": 8,
+        "name": "blank",
+        "sources": {
+          "none": {
+            "type": "vector",
+            "url": ""
+          }
+        },
+        "layers": [{
+          "id": "background",
+          "type": "background",
+          "paint": {
+            "background-color": "#1d1f20"
+          }
+        }]
+      },
+      center: [-82.005697,39.915321],
+      zoom: 17,
+      debug: 1
+    });
+    // map.addControl(new mapboxgl.NavigationControl());
+    // map.addControl(new mapboxgl.FullscreenControl());
+
+    map.on('load', function () {
+      buildMap();
+    });
+
+
+    function buildMap() {
+
+      fetch('lines.geojson')
+      .then(res => { return res.json()} )
+      .then(data => {
+        data.features.map(function(f, i) {
+          f.properties.mapid = i
+        })
+        lines = data;
+
+        addLayer(map, 'lines', 'line', lines, 'gray', 4);
+        addLayer(map, "networkFeatures", "line", networkFeatures, "violet", 5);
+
+        console.log('line data loaded and ready')
+      });
+
+      fetch('points.geojson')
+      .then(res => { return res.json() })
+      .then(data => {
+        data.features.map(function(f, i) {
+          f.properties.mapid = i
+        })
+        points = data;
+        addLayer(map, 'points', 'circle', points, 'white', 6);
+        console.log('point data loaded and ready')
+      })
+    }
+
+    map.on('click', function() {
+      map.getSource("networkFeatures").setData(clear)
+    })
+
+    map.on('click', 'points', function (data) {
+      networkBuildOnMap(map, data, "upstream")
+    });
+
+    function addLayer(m, name, type, data, color, size) {
+      var paint = (type === 'line') ? {
+        'line-color': color,
+        'line-width': size
+      } : {
+        'circle-color': color,
+        'circle-radius': size
+      };
+      m.addLayer({
+        id: name,
+        type: type,
+        source: {
+          type: "geojson",
+          data: data
+        },
+        paint: paint
+      });
+      m.on('mouseenter', name, function () {
+        map.getCanvas().style.cursor = 'pointer';
+      });
+      m.on('mouseleave', name, function () {
+        map.getCanvas().style.cursor = '';
+      });
+    }
+
+    function networkBuildOnMap(m, point, direction) {
+      networkFeatures.feautres = [];
+      var tempFeatures = networkLines(points.features[point.features[0].properties.mapid], lines, direction)
+      networkFeatures.features = tempFeatures.features;
+      m.getSource("networkFeatures").setData(networkFeatures);
+      networkBuild(networkFeatures, lines, direction)
+    }
+
+    function networkLines(point, features, string) {
+      var direction = string;
+      var intersected = false;
+      var point = point;
+      var pointBuffer = turf.buffer(point, 2, {units: 'feet'});
+
+      var tempNetworkFeatures = {
+        type: "FeatureCollection",
+        features: []
+      };
+      
+      var exploded = {};
+
+      features.features.map(function(f) {
+        if (turf.booleanPointOnLine(point, f)) {
+          exploded = turf.explode(f);
+          var d = (direction === "upstream") ? 0 : exploded.features.length - 1;
+          if (!(turf.booleanPointInPolygon(exploded.features[d], pointBuffer))) {
+            tempNetworkFeatures.features.push(f)
+            intersected = true
+          }
+        }
+      })
+
+      return tempNetworkFeatures
+    }
+
+    function networkBuild(inLines, masterLines, string) {
+      var direction = string;
+    
+      // GET ALL UPSTREAM POINTS
+      var networkPoints = [];
+
+      inLines.features.map(function(f) {
+        var inLinesDirection = (direction === "upstream") ? 0 : f.geometry.coordinates.length - 1;
+        networkPoints.push(f.geometry.coordinates[inLinesDirection])
+      })
+
+      var nextNetworkFeatures = {
+        type: "FeatureCollection",
+        features: []
+      };
+
+      // GET UPSTREAM LINES FROM THESE POINTS
+      for (p = 0; p < networkPoints.length; p++) {
+        var tempPoint = turf.point(networkPoints[p]);
+        var tempFeatures = networkLines(tempPoint, masterLines, direction)
+        tempFeatures.features.map(f => {
+          nextNetworkFeatures.features.push(f);
+          networkFeatures.features.push(f)
+        })
+      }
+
+      map.getSource("networkFeatures").setData(networkFeatures)
+
+      if (nextNetworkFeatures.features.length > 0) {
+        networkBuild(nextNetworkFeatures, masterLines, direction)
+      }
+
+    }
+
+function getIntersectingLines(point, features) {
+  var point = point;
+  var intersectingFeatures = {
+    type: "FeatureCollection",
+    features: []
+  };
+  features.features.map(function(f) {
+    if (turf.booleanPointOnLine(point, f)) {
+      intersectingFeatures.features.push(f)
+    }
+  });
+
+  return intersectingFeatures
+}
+    
+  </script>
+</body>
+
+</html>
