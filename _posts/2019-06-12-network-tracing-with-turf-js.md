@@ -16,7 +16,7 @@ In my initial efforts to perform upstream and downstream network traces I attemp
 
 In the first iteration I was simply focused on getting all the intersecting lines of the origin point.
 
-```
+```javascript
 function getIntersectingLines(point, features) {
   var point = point;
   var intersectingFeatures = {
