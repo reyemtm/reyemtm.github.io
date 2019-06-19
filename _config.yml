@@ -22,7 +22,7 @@ description: >
   A (Jekyll) blog exploring web maps and cartography. I explore the use of desktop and web-based GIS software including ArcMap, QGIS, Leaflet JS, Mapbox GL JS and other products.
 description-web-resume: >-
   A portfolio of work by Malcolm Meyer including web development projects, print designs and code examples.
-baseurl: https://getbounds.com
+baseurl: https://www.getbounds.com
 url: /
 header-img: header.png
 twitter_username: getbounds
@@ -41,7 +41,7 @@ highlighter: rouge
 
 #theme: minima
 plugins:
-  - jekyll-feed
+#  - jekyll-feed
   - jekyll-sitemap
 permalink: "/:categories/:title/"
 include: ["_pages","_headers"]
