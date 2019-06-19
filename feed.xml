@@ -24,15 +24,15 @@
 				{% if post.excerpt %}
 					<description>{{ post.excerpt | xml_escape }}</description>
 				{% else %}
-					<description>{{ post.content | xml_escape }}</description>
+					<description>{{ post.content | truncate: 100 | xml_escape }}</description>
 				{% endif %}
 				<pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
-				<link>{{ site.baseurl }}{{ post.slug }}</link>
-				<guid isPermaLink="true">{{ site.baseurl }}/{{ post.slug }}</guid>
+				<link>{{ site.baseurl }}{{ post.url }}</link>
+				<guid isPermaLink="true">{{ site.baseurl }}/{{ post.url }}</guid>
           <image>
             <title></title>
             <url>{{ site.baseurl }}{%if post.feature-img%}/images/compressed/{{post.feature-img}}{%elsif post.image%}/images/compressed/{{post.image}}{%elsif post.header-img%}/images/compressed/{{post.header-img}}{% elsif post.image == null or post.feature == null or post.header-img == null %}/images/compressed/pattern_00.jpg{%endif%}</url>
-            <link>{{ site.baseurl }}/{{ post.slug }}</link>
+            <link>{{ site.baseurl }}/{{ post.url }}</link>
           </image>
 			</item>
 		{% endfor %}
