@@ -23,7 +23,7 @@ description: >
 description-web-resume: >-
   A portfolio of work by Malcolm Meyer including web development projects, print designs and code examples.
 baseurl: https://getbounds.com
-url: https://getbounds.com
+url: /
 header-img: header.png
 twitter_username: getbounds
 github_username:  reyemtm
