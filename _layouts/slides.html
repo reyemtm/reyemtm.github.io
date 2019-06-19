@@ -71,11 +71,12 @@ Reveal.initialize({
   }, {
     src: '/slides/plugin/highlight/highlight.js',
     async: true,
-    condition: function() {
-      return !!document.querySelector('pre code');
-    },
+    // condition: function() {
+    //   return !!document.querySelector('pre');
+    // },
     callback: function() {
-        hljs.initHighlightingOnLoad();
+      console.log("init highlight")
+      hljs.initHighlightingOnLoad();
     }
   }, {
     src: '/slides/plugin/zoom-js/zoom.js',

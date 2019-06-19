@@ -11,5 +11,81 @@ layout: compress
 {{content}}
 </div>
 {% include structure/footer.html %}
+<script>
+
+  var cards = document.getElementsByClassName("card");
+  var tags = document.getElementsByClassName("tag");
+  var regex = /^[A-Za-z]+$/;
+
+  if (tags.length > 0 && cards.length > 0) {
+    
+    window.onload = function() {
+      if (window.location.pathname === "/blog/") {
+        var hash = (window.location.hash).replace("#", "");
+        if (hash && hash.match(regex)) {
+          tagFilter(hash, cards);
+        }
+      }
+    };
+
+    for (var i = 0; i < tags.length; i++) {
+      tags[i].addEventListener("click", function(e) {
+        e.preventDefault();
+        let id = e.target.dataset.id;
+
+        tagFilter(id, cards);
+
+      })
+    }
+  }
+
+  function tagFilter(t, collection) {
+    
+    if (window.location.pathname != "/blog/") {
+      let url = window.location.origin;
+      window.location.replace(url + "/blog/#" + t);
+      return
+    }
+
+    window.location.hash = t;
+
+    if (!document.getElementById("tagFilterReset")) {
+      var div = document.createElement("div");
+      div.id = "tagFilterReset";
+      div.classList.add("has-text-centered");
+      div.style.padding = "40px 0 0";
+      div.innerHTML = "<button class='button is-primary has-outline'>Filtered by " + t + " | Click to Reset</button>";
+      div.onclick = function() {
+        for (let c = 0; c < collection.length; c++) {
+          collection[c].parentElement.classList.remove("card-hidden");
+          this.classList.add("card-hidden");
+          window.location.hash = "";
+        }
+      };
+      var content = document.getElementById("content");
+      content.insertBefore(div, content.children[0]);
+    }else{
+      var tagFilterReset = document.getElementById("tagFilterReset");
+      tagFilterReset.children[0].innerText = "Filtered by " + t + " | Click to Reset";
+      if (tagFilterReset.classList.contains("card-hidden")) {
+        tagFilterReset.classList.remove("card-hidden")
+      }
+    }
+
+    for (let c = 0; c < collection.length; c++) {
+      let hasTag = collection[c].getElementsByClassName(t);
+      if (hasTag.length === 0) {
+        if (!collection[c].parentElement.classList.contains("card-hidden")) {
+          collection[c].parentElement.classList.add("card-hidden");
+        }
+      }else{
+        if (collection[c].parentElement.classList.contains("card-hidden")) {
+          collection[c].parentElement.classList.remove("card-hidden");
+        }
+      }
+    }
+
+  }
+</script>
 </body>
 </html>

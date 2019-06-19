@@ -3,6 +3,7 @@ title: Tags
 subtitle: Blog Posts and Presentations Sorted by Tag and Date
 permalink: /tags/
 header-img: pattern_12.jpg
+redirect: "/blog/"
 ---
 {% capture tags %}
   {% for tag in site.tags %}{% if forloop.first%}_{%endif%}{{ tag[0] }}_{% endfor %}

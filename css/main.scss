@@ -16,9 +16,30 @@ body {
   font-size: 20px;
   line-height: 34px;
 }
+
+.container p,
+.container h3,
+.container h4,
+.container ul {
+  max-width: 960px;
+  margin: 1rem auto;
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1140px;
+  }
+  .container p>img {
+    max-width: 1140px;
+    margin: 0 -90px;
+  }
+}
+
 code {
   font-size: 20px;
 }
+
+
 .post-date {
   font-size: 14px;
   opacity: 0.8;
@@ -31,7 +52,8 @@ code {
   color: #fff;
 }
 .hero-cta {
-  padding: 30px 0;
+  padding: 8rem 0;
+  background: whitesmoke;
 }
 .panel-block.section {
   border-radius: 5px;
@@ -40,9 +62,6 @@ code {
   font-size: 17px;
   line-height: 1.4;
   color: #95A5A6;
-}
-.section.main {
-  background-color: #f5f5f5;
 }
 .icon-block {
   font-size: 5em;
@@ -68,16 +87,14 @@ code {
   border: none;
   opacity: 0.8;
 }
+
 @media screen and (max-width: 768px) {
   .pager .button {
     font-size: 12px;
   }
   .post-mobile-title {
-    display: block;
+    display: none;
     padding: 16px 0;
-  }
-  .hero-body {
-    display: none!important;
   }
   .hero-body.home {
     padding: 80px 20px 20px;
@@ -87,6 +104,7 @@ code {
     height: 294px;
   }
 }
+
 .related .columns {
   overflow: hidden;
   padding-bottom: 10px;
@@ -127,10 +145,12 @@ code {
   min-width: 35px;
   /* any other properties to override from FontAwesome's default .fa rule */
 }
+
 @-webkit-keyframes show {
   0% { opacity: 0; }
   100% { opacity: 1; }
 }
+
 @media screen and (max-width: 768px) {
   #search {
     position: absolute;
@@ -138,6 +158,7 @@ code {
     height:50px;
   }
 }
+
 #searchInput {
   font-size: 2.5rem;
   color: white;
@@ -186,28 +207,23 @@ code {
   -moz-transition: all 0.35s;
   transition: all 0.35s;
 }
-.cards .card:hover {
-  box-shadow: 0 0 30px 1px lightgray, 0 0 0 1px rgba(10,10,10,0.1) !important;
-  // -ms-transform: scale(1.05);
-  // -moz-transform: scale(1.05);
-  // -webkit-transform: scale(1.05);
-  // -o-transform: scale(1.05);
-  // transform: scale(1.05);
-}
 .cards a.title:hover, .cards a.title:active,
 .cards a.content:hover, .cards a.content:active {
   color: #26867e;
 }
-.cards .card figure {
+.cards .card figure,
+.slides .card figure,
+.blog .card figure {
   background-size: cover;
 }
 .card {
+  box-shadow: none;
   width: auto;
   z-index: 1;
   height: auto;
   border-radius: 2px;
   overflow: hidden;
-  transition: fadeIn;
+  // transition: fadeIn;
 }
 .card-content .title+.subtitle {
   margin-top: -10px;
@@ -215,6 +231,33 @@ code {
 .card-image {
   overflow: hidden;
 }
+.card:hover {
+  box-shadow: 0 0 30px 1px lightgray, 0 0 0 1px rgba(10,10,10,0.1) !important;
+  // -ms-transform: scale(1.05);
+  // -moz-transform: scale(1.05);
+  // -webkit-transform: scale(1.05);
+  // -o-transform: scale(1.05);
+  // transform: scale(1.05);
+}
+
+/*CARDS FILTER*/
+.column {
+  -webkit-transition: all 0s ease-in-out;
+  -moz-transition: all 0s ease-in-out;
+  transition: all 0s ease-in-out;
+}
+.card-hidden {
+  opacity: 0;
+  width: 0 !important;
+  padding: 0;
+  min-height: 0!important;
+  display: none;
+}
+
+.cards .column.is-4 {
+  flex: none;
+}
+
 .bulma-hero--subtitle {
   height:auto;
   padding-bottom: 10px;
@@ -639,60 +682,60 @@ a.tag:active,
 /*animations*/
 /*************/
 .floatUp {
-  animation: floatUp 500ms both;
+  animation: floatUp 0s both;
   animation-delay: 0.8s;
 }
 .slideDown {
-  animation: slideDown 500ms both;
-  animation-delay: 0.4s;
+  animation: slideDown 0.6s both;
+  animation-delay: 0.3s;
 }
 .fadeNav {
-  animation: fadeNav 100ms both;
-  animation-delay: 0.1s;
+  animation: fadeNav 0s both;
+  // animation-delay: 0.1s;
 }
 .fadein0 {
-  animation: fadeIn 500ms both;
-  animation-delay: 0s;
+  animation: fadeIn 0s both;
+  // animation-delay: 0s;
 }
 .fadein1 {
-  animation: slideDown 500ms both;
-  animation-delay: 0.2s;
+  animation: slideDown 0s both;
+  // animation-delay: 0.2s;
 }
 .fadein2 {
-  animation: fadeIn 500ms both;
-  animation-delay: 0.4s;
+  animation: fadeIn 0s both;
+  // animation-delay: 0.4s;
 }
 .fadein3 {
-  animation: fadeIn 500ms both;
-  animation-delay: 0.6s;
+  animation: fadeIn 0s both;
+  // animation-delay: 0.6s;
 }
 // .fadein4 {
-//   animation: fadeIn 500ms both;
+//   animation: fadeIn 0s both;
 //   animation-delay: 0.8s;
 // }
 // .fadein5 {
-//   animation: fadeIn 500ms both;
+//   animation: fadeIn 0s both;
 //   animation-delay: 1.0s;
 // }
 // .fadein6 {
-//   animation: fadeIn 500ms both;
+//   animation: fadeIn 0s both;
 //   animation-delay: 1.2s;
 // }
 // .fadein7 {
-//   animation: fadeIn 500ms both;
+//   animation: fadeIn 0s both;
 //   animation-delay: 1.4s;
 // }
 // .fadein9 {
-//   animation: fadeIn 500ms both;
+//   animation: fadeIn 0s both;
 //   animation-delay: 1.6s;
 // }
 .fadeout {
-  animation: fadeOut 500ms both;
-  animation-delay: 1s;
+  animation: fadeOut 0s both;
+  // animation-delay: 1s;
 }
 .fadeout0 {
-  animation: fadeOut 500ms both;
-  animation-delay: 0.3s;
+  animation: fadeOut 0s both;
+  // animation-delay: 0.3s;
 }
 
 @keyframes floatUp {
@@ -823,8 +866,8 @@ a.tag:active,
   }
 }
 @media screen and (min-width: 1600px) {
-  .column.is-4 {
-    width: 25%;
-  }
+  // .column.is-4:not(.realted) {
+  //   width: 25%;
+  // }
 }
 {%include css/font-awesome.min.css%}

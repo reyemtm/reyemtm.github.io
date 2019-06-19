@@ -1,11 +1,11 @@
 ---
 title: Blog
-subtitle: Blog Post Index Sorted by Date
+subtitle: Archive of all Posts and Presentations
 permalink: /blog/
 header-img: pattern_12.jpg
 ---
 <div class="columns is-multiline">
     {% for post in site.posts %}
-    {% if post.presentation %}{%else%}{%include loops/post-loop-cards.html%}{%endif%}
+    {%include loops/post-loop-cards.html%}
     {%endfor%}
 </div>

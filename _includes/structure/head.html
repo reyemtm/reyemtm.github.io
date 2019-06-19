@@ -14,6 +14,11 @@
     }
   </script>
   {%endif%}
+  {% if page.redirect %}
+  <script>
+  window.location.replace("{{site.baseurl}}{{page.redirect}}")
+  </script>
+  {% endif %}
   {%include structure/opengraph.html %}
   {% if page.layout == "cartodb" or page.layout == "compress" or page.layout == "default" or page.layout == "page" or page.layout == "post" or page.layout == "projects"%}<link rel="stylesheet" type="text/css" href="/css/main.css">{%endif%}
   <link href="https://fonts.googleapis.com/css?family=Catamaran|Nunito+Sans" rel="stylesheet">
@@ -34,7 +39,7 @@
   <link rel="stylesheet" href="/slides/css/theme/{% if page.theme %}{{ page.theme }}.css{% else %}blood.css{% endif %}" id="theme">
   <link rel="stylesheet" href="/slides/css/getbounds-reveal.css">
   <!-- Code syntax highlighting -->
-  <link rel="stylesheet" href="/slides/lib/css/zenburn.css">
+  <link rel="stylesheet" href="/slides/lib/css/xcode.css">
   <!-- Printing and PDF exports -->
   <script>
     var link = document.createElement('link');
