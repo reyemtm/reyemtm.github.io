@@ -256,6 +256,7 @@ Notes: So again we are going to do the PWA Audit in Chrome as well as test the o
 - service-worker.js
 - *Mobile First Design
 - *Progressive Enhancement
+
 <aside class="notes" data-markdown>
 
 Notes: From the results of the audit we see that we need to add a manifest.json file and the service worker. These, along with a mobile first design and progressive enhancement, are the keys to a PWA. Since our application is a simple web map, we do not need to worry too much about the second two aspects here. We will focus on getting the core functionality of the PWA working.
