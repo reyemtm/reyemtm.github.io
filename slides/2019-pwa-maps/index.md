@@ -364,16 +364,13 @@ this will simply copy a prepared sw.js file to the public folder
 141 self.addEventListener("activate", function(event) {
 
 ```
-<aside class="notes" data-markdown>
 
+<aside class="notes" data-markdown>
 Notes: take a look at the service worker file and go through the various functions
 </aside>
 ---
-
 ## Service Worker Test
-* Installable
-* PWA optimized
-* Offline support
+* Installable, PWA optimized, Offline support
 * But that's not much of a map...<!-- .element: class="fragment" data-fragment-index="1" -->
 * And that's a lot of code <!-- .element: class="fragment" data-fragment-index="2" -->
 
@@ -381,13 +378,14 @@ Notes: take a look at the service worker file and go through the various functio
 
 Automate the creation of the service worker
 
-```dockerfile"
+```
 npm install workbox-cli # this is already installed
 ```
 
 Commands
 
 ```
+# you could use the native cli commands if installed globally
 npm run workbox-wizard # workbox wizard 
 ```
 
@@ -395,11 +393,6 @@ npm run workbox-wizard # workbox wizard
 npm run workbox-cache # workbox generateSW workbox-config.js
 ```
 
-```
-/*
-you could use the native cli commands if installed globally
-*/
-```
 <aside class="notes" data-markdown>
 
 Notes: I just added some simple node scripts to run the workbox-cli without needing to install it globally. Workbox replaces 
