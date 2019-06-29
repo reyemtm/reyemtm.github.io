@@ -375,6 +375,7 @@ Notes: take a look at the service worker file and go through the various functio
 * But that's not much of a map...<!-- .element: class="fragment" data-fragment-index="1" -->
 * And that's a lot of code <!-- .element: class="fragment" data-fragment-index="2" -->
 
+---
 ## Workbox
 
 Automate the creation of the service worker
