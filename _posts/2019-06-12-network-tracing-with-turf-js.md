@@ -14,8 +14,6 @@ A primary focus of my day job is managing utility datasets for a small municipal
 
 My first attempt at network tracing involved looping through all the linear features and checking for equal upstream and downstream asset IDs assigned to each feature. This seemed like a common sense approach, but it would mean I would have to first calculate these IDs for each feature. I wanted to focus solely on the geometry so I took a look through the Turf JS API. The basic idea became quit simple: grab all the connected lines to an origin point using `turf.booleanPointOnLine()` and then use the first or last point in the coordinates array of the linear feature to seed the network trace. By iterating over this method the tool could return the entire upstream or downstream network.
 
-In the first iteration I was simply focused on identifying all the intersecting lines of the origin point to test the `turf.booleanPointOnLine()` method. I did run into some issues with the points and lines not being coincident, which was fixed by limited the coordinate check to six decimals using `coordinate.toFixed(6)`. This is the same approach used by the [geojons-equality](https://www.npmjs.com/package/geojson-equality) package. The coordinates could also be trimmed before adding them to the browser using QGIS, or in NodeJS using [geojson-precision](https://www.npmjs.com/package/geojson-precision), or [mapshaper](https://github.com/mbloch/mapshaper/wiki/Command-Reference). 
-
 ```javascript
 function getIntersectingLines(point, lines) {
   var point = point;
@@ -33,8 +31,12 @@ function getIntersectingLines(point, lines) {
 }
 ```
 
-This method worked well, however it only returns the **first** intersecting lines, and it returns the lines in both directions. To achieve the desired upstream or downstream network trace the tool uses either the first of last coordinate pair of the initial network. The result can be found below. Here I am only using the upstream trace, but in production the tool has a toggle to switch between upstream and downstream traces. Running this tool in production on the entire utility network took close to five seconds, so I moved most of the computation to a worker thread so as to not lock up the UI.
+In the first iteration I was simply focused on identifying all the intersecting lines of the origin point to test the `turf.booleanPointOnLine()` method. I did run into some issues with the points and lines not being coincident, which was fixed by limited the coordinate check to six decimals using `coordinate.toFixed(6)`. This is the same approach used by the [geojons-equality](https://www.npmjs.com/package/geojson-equality) package. The coordinates could also be trimmed before adding them to the browser using QGIS, or in NodeJS using [geojson-precision](https://www.npmjs.com/package/geojson-precision), or [mapshaper](https://github.com/mbloch/mapshaper/wiki/Command-Reference). 
 
-<iframe src="/apps/turf-trace.html/#17/39.915321/-82.005697" width="100%" height="400px">
+<iframe src="/apps/turf-trace.html/#17/39.915321/-82.005697" width="100%" height="400">
 
 _To trace the upstream network simply click on a point._
+
+This method worked well, however it only returns the **first** intersecting lines, and it returns the lines in both directions. To achieve the desired upstream or downstream network trace the tool uses either the first of last coordinate pair of the initial network. The result can be found above. Here I am only using the upstream trace, but in production the tool has a toggle to switch between upstream and downstream traces. Running this tool in production on the entire utility network took close to five seconds, so I moved most of the computation to a worker thread so as to not lock up the UI.
+
+__
