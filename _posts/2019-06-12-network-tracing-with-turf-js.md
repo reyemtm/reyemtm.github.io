@@ -33,7 +33,7 @@ function getIntersectingLines(point, lines) {
 
 In the first iteration I was simply focused on identifying all the intersecting lines of the origin point to test the `turf.booleanPointOnLine()` method. I did run into some issues with the points and lines not being coincident, which was fixed by limited the coordinate check to six decimals using `coordinate.toFixed(6)`. This is the same approach used by the [geojons-equality](https://www.npmjs.com/package/geojson-equality) package. The coordinates could also be trimmed before adding them to the browser using QGIS, or in NodeJS using [geojson-precision](https://www.npmjs.com/package/geojson-precision), or [mapshaper](https://github.com/mbloch/mapshaper/wiki/Command-Reference). 
 
-<iframe src="/apps/turf-trace.html/#17/39.915321/-82.005697" width="100%" height="400">
+<iframe src="/apps/turf-trace.html/#17/39.915321/-82.005697" width="100%" height="400"></iframe>
 
 _To trace the upstream network simply click on a point._
 
