@@ -38,5 +38,3 @@ In the first iteration I was simply focused on identifying all the intersecting 
 _To trace the upstream network simply click on a point._
 
 This method worked well, however it only returns the **first** intersecting lines, and it returns the lines in both directions. To achieve the desired upstream or downstream network trace the tool uses either the first of last coordinate pair of the initial network. The result can be found above. Here I am only using the upstream trace, but in production the tool has a toggle to switch between upstream and downstream traces. Running this tool in production on the entire utility network took close to five seconds, so I moved most of the computation to a worker thread so as to not lock up the UI.
-
-__
