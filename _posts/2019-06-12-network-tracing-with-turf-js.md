@@ -14,7 +14,7 @@ A primary focus of my day job is managing utility datasets for a small municipal
 
 My first attempt at network tracing involved looping through all the linear features and checking for equal upstream and downstream asset IDs assigned to each feature. This seemed like a common sense approach, but it would mean these IDs would need to be calculated for each feature beforehand. This did work, but I wanted to find a way to eliminate the need to calculate these IDs and focus solely on the geometry. I found the answer in the Turf JS API.
 
-The basic idea became quit simple: grab all the connected lines to an origin point using `turf.booleanPointOnLine()` and then use the resulting lines to seed the network trace. By iterating over this method the tool could return the entire network.
+The basic idea became quit simple: find all the connected lines to an origin point using `turf.booleanPointOnLine()` and then use these resulting lines to seed the network trace. By iterating over this method the tool could return the entire network.
 
 ```javascript
 function getIntersectingLines(point, lines) {
