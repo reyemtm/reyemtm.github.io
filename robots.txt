@@ -1,7 +1,8 @@
 User-agent: Twitterbot
-Disallow:
+Disallow: *
 
 User-agent: *
+Disallow: *
 Disallow: /drafts/
 Disallow: /virtual-resume/
 Disallow: /virtual-resume-images/
@@ -15,6 +16,3 @@ Disallow: /img/
 Disallow: /less/
 Disallow: /apps/
 Disallow: /slides/
-
-Allow: /images
-Allow: /assets/images
